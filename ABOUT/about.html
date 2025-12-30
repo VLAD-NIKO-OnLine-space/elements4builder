@@ -1,0 +1,60 @@
+<section id="about" class="hiw">
+  <div class="container hiwWrapper">
+    <div class="him-left">
+      <h2>About Us</h2>
+      <p>
+        Technologie pozwalają na korzystanie z nowoczesnego rozwiązania o nazwie
+        Szymonadamus. Z jego pomocą można realistycznie zmieniać zdjęcia i
+        wyglądać na najbardziej intymne. Program działa automatycznie i generuje
+        zdjęcia na podstawie dostarczonych obrazów. Jak można zrozumieć z nazwy,
+        Szymonadamus działa w oparciu o sztuczną inteligencję, która pozwala na
+        oglądanie aktów.
+      </p>
+    </div>
+    <div class="hiw_image">
+      <img data-illustation alt="" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hiwWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .him-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    h2,
+    p {
+      color: var(--textColor1);
+    }
+  }
+  .hiw_image {
+    border-radius: var(--borderRadius);
+    width: 400px;
+    height: 500px;
+    img {
+      border-radius: inherit;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hiwWrapper {
+      flex-direction: column;
+    }
+    .him-left {
+      width: 100%;
+    }
+    .hiw_image {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+</style>
