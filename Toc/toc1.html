@@ -140,17 +140,18 @@
 
 <script>
   (function () {
-    function buildTOC() {
-      const toc = document.querySelector(".toc-swiper");
-      if (!toc) return;
+    const SWIPER_SELECTOR = ".toc-swiper";
+
+    function buildSlides() {
+      const toc = document.querySelector(SWIPER_SELECTOR);
+      if (!toc) return false;
 
       const wrapper = toc.querySelector(".swiper-wrapper");
-      if (!wrapper) return;
+      if (!wrapper) return false;
 
-      // очищаем старые
       wrapper.innerHTML = "";
 
-      // берём все секции с id, кроме самой toc
+      // берем все section[id], кроме toc
       const sections = Array.from(
         document.querySelectorAll("section[id]")
       ).filter((sec) => !sec.classList.contains("toc"));
@@ -160,47 +161,69 @@
         if (!h2) return;
 
         const id = sec.id;
-        const text = h2.textContent.trim();
+        const text = (h2.textContent || "").trim();
         if (!id || !text) return;
 
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
-
-        const a = document.createElement("a");
-        a.href = `#${id}`;
-        a.textContent = text;
-
-        slide.appendChild(a);
+        slide.innerHTML = `<a href="#${id}">${text}</a>`;
         wrapper.appendChild(slide);
       });
 
-      // (пере)инициализация swiper
-      if (window.__tocSwiper) {
-        window.__tocSwiper.update();
-      } else {
-        window.__tocSwiper = new Swiper(".toc-swiper", {
-          slidesPerView: "auto",
-          spaceBetween: 16,
-          freeMode: true,
-          grabCursor: true,
-          scrollbar: {
-            el: ".toc-swiper .swiper-scrollbar",
-            draggable: true,
-          },
-        });
+      return true;
+    }
+
+    function initSwiper() {
+      const toc = document.querySelector(SWIPER_SELECTOR);
+      if (!toc) return;
+
+      // если уже был — гасим и создаём заново (самое стабильное после rebuild DOM)
+      if (
+        window.__tocSwiper &&
+        typeof window.__tocSwiper.destroy === "function"
+      ) {
+        window.__tocSwiper.destroy(true, true);
+        window.__tocSwiper = null;
       }
+
+      window.__tocSwiper = new Swiper(SWIPER_SELECTOR, {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        freeMode: true,
+        grabCursor: true,
+        scrollbar: {
+          el: toc.querySelector(".swiper-scrollbar"),
+          draggable: true,
+        },
+      });
     }
 
-    // первый запуск
+    function run() {
+      // ждём Swiper
+      if (!window.Swiper) {
+        setTimeout(run, 50);
+        return;
+      }
+
+      const ok = buildSlides();
+      if (!ok) {
+        setTimeout(run, 50);
+        return;
+      }
+
+      initSwiper();
+    }
+
+    // 1) первый запуск
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", buildTOC);
+      document.addEventListener("DOMContentLoaded", run);
     } else {
-      buildTOC();
+      run();
     }
 
-    // обновление после изменений в билдере
+    // 2) после изменений в билдере/preview (у тебя это событие уже есть)
     window.addEventListener("builder:updated", () => {
-      setTimeout(buildTOC, 50);
+      setTimeout(run, 20);
     });
   })();
 </script>
