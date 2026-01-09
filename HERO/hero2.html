@@ -1,0 +1,137 @@
+<section class="hero hero--side">
+  <img
+    data-image
+    alt="{{hero_bg_alt}}"
+    class="heroBG"
+    loading="lazy"
+    decoding="async" />
+
+  <div class="container hero-flex">
+    <img
+      data-illustration
+      alt="{{hero_image_url_alt}}"
+      class="hero-img"
+      loading="lazy"
+      decoding="async" />
+
+    <div class="hero-content">
+      <h1 data-var="domain_name"></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt nostrum
+    quasi laborum atque, error ad expedita dolorem veniam minima, ex delectus
+    nulla reprehenderit?</p>
+      <a>join Now</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 140px 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  /* Background */
+  .heroBG {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px) brightness(0.45);
+    z-index: -1;
+  }
+
+  /* Layout */
+  .hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  /* Left image */
+  .hero-img {
+    max-width: 520px;
+    border-radius: var(--borderRadius);
+    object-fit: contain;
+    max-height: 500px;
+  }
+
+  /* Right text */
+  .hero-content {
+    width: 50%;
+    max-width: 560px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--textColor1);
+    margin-bottom: 30px;
+  }
+
+  .hero-content a {
+    display: inline-block;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--borderRadius);
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .hero-content a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero-flex {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+    }
+
+    .hero-img {
+      width: 80%;
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 110px 0;
+    }
+
+    .hero-img {
+      display: none;
+    }
+
+    .hero-content h1 {
+      font-size: 30px;
+    }
+  }
+</style>
