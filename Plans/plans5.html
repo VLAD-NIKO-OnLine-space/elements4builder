@@ -1,0 +1,203 @@
+<section id="plans">
+  <div class="container plansWrapper">
+    <div class="planshead">
+      <h2>UL product plan cards</h2>
+    </div>
+    <ul class="product-plans">
+      <li class="product-plan">
+        <h3 class="title">Basic</h3>
+        <div class="price">$2.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="cross">Other Text Title</li>
+          <li class="cross">Text Space Goes Here</li>
+          <li class="cross">Description Space</li>
+          <li class="cross">Sample Text Here</li>
+        </ul>
+        <button class="btn">Select</button>
+      </li>
+      <li class="product-plan">
+        <h3 class="title">Standard</h3>
+        <div class="price">$15.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="check">Other Text Title</li>
+          <li class="check">Text Space Goes Here</li>
+          <li class="cross">Description Space</li>
+          <li class="cross">Sample Text Here</li>
+        </ul>
+        <button class="btn">Select</button>
+      </li>
+      <li class="product-plan">
+        <h3 class="title">Premium</h3>
+        <div class="price">$39.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="check">Other Text Title</li>
+          <li class="check">Text Space Goes Here</li>
+          <li class="check">Description Space</li>
+          <li class="check">Sample Text Here</li>
+        </ul>
+        <button class="btn">Select</button>
+      </li>
+    </ul>
+  </div>
+</section>
+<style>
+  .plansWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .planshead {
+    margin-bottom: 45px;
+  }
+
+  ul.product-plans {
+    /* width: min(60rem, 90%); */
+    margin-inline: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  ul.product-plans li.product-plan:nth-child(1) {
+    --accent-color: var(--secondStyleColor);
+  }
+  ul.product-plans li.product-plan:nth-child(2) {
+    --accent-color: var(--secondStyleColor);
+  }
+  ul.product-plans li.product-plan:nth-child(3) {
+    --accent-color: var(--secondStyleColor);
+  }
+
+  ul.product-plans li.product-plan {
+    --overlap-size: 1.5rem;
+    --border-radius: 5rem;
+    /* width: min(15rem, 100%); */
+    margin-inline: var(--overlap-size);
+    padding-block: 2rem;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    gap: 0.5rem;
+    border-radius: var(--border-radius) 0 var(--border-radius) 0;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+
+  ul.product-plans li.product-plan .title {
+    font-size: 2rem;
+    color: var(--textColor1);
+    text-align: center;
+  }
+
+  ul.product-plans li.product-plan .price {
+    margin-right: calc(var(--overlap-size) * -1);
+    justify-self: end;
+    padding-block: 0.25rem;
+    padding-inline: var(--overlap-size);
+    background-color: var(--accent-color);
+    color: var(--textColor2);
+    position: relative;
+  }
+  ul.product-plans li.product-plan .price::after {
+    content: "";
+    position: absolute;
+    height: var(--overlap-size);
+    width: var(--overlap-size);
+    right: 0;
+    top: 100%;
+    background-color: inherit;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  ul.product-plans li.product-plan .btn {
+    justify-self: start;
+    margin-left: calc(var(--overlap-size) * -1);
+    padding-block: 0.5rem;
+    padding-inline: 2.5rem;
+    border: none;
+    font-family: inherit;
+    color: var(--textColor2);
+    font-size: 1.1rem;
+    background-color: var(--secondStyleColor);
+    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 0);
+    background-size: 100% 200%;
+    transition: background-position 100ms ease;
+    border-radius: var(--border-radius);
+    position: relative;
+    cursor: pointer;
+  }
+  ul.product-plans li.product-plan .btn:focus-visible {
+    outline-offset: 5px;
+    outline: 2px solid var(--accent-color);
+    background-position: 0 100%;
+  }
+
+  ul.product-plans li.product-plan .btn:hover {
+    background-position: 0 100%;
+    color: #fff;
+  }
+
+  ul.product-plans li.product-plan .btn:active {
+    transform: scale(0.95);
+  }
+  ul.product-plans li.product-plan .btn:active::after {
+    transform-origin: left bottom;
+    transform: scale(0.9);
+  }
+
+  ul.product-plans li.product-plan .features {
+    align-self: flex-start;
+    list-style: none;
+    padding-inline: 2rem;
+    display: grid;
+  }
+
+  ul.product-plans li.product-plan .features li:not(:first-child) {
+    border-top: 1px solid rgb(200, 200, 200);
+  }
+  ul.product-plans li.product-plan .features li {
+    padding: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1rem 1fr;
+  }
+
+  ul.product-plans li.product-plan .features li::before {
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+  }
+  ul.product-plans li.product-plan .features li.check::before {
+    content: "\2713";
+    color: green;
+  }
+  ul.product-plans li.product-plan .features li.cross::before {
+    content: "\d7";
+    color: red;
+  }
+  .credits {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .credits a ul.product-plans li.product-plan {
+    color: var(--color);
+  }
+  .product-plan {
+    border: 1px solid var(--secondStyleColor);
+    color: var(--textColor1);
+  }
+
+  @media (max-width: 800px) {
+    .product-plans {
+      margin-bottom: 20px;
+    }
+    .planshead {
+      margin-bottom: 30px;
+    }
+  }
+</style>

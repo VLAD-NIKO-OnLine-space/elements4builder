@@ -1,0 +1,203 @@
+<section class="pricing-section" id="plans">
+  <div class="container">
+    <h2>PLANS & PRICING</h2>
+    <div class="cardsPlanWrapper">
+      <article class="pricing-card starter">
+        <div>
+          <div class="pricing-header">
+            <span>Starter</span>
+            <span class="price">$2.99</span>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <ul class="pricing-list">
+          <li>
+            <span class="check"></span>
+            <p>5 coins = 5 requests</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Without a queue</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>1 photo worth 5&cent;.?</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>High-quality photos</p>
+          </li>
+        </ul>
+      </article>
+
+      <!-- PRO -->
+      <article class="pricing-card pro">
+        <div>
+          <div class="pricing-header">
+            <span>PRO</span>
+            <span class="price">$19.99</span>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <ul class="pricing-list">
+          <li>
+            <span class="check"></span>
+            <p>Unlimited fun: 20 coins = 20 requests</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>The cost of one photo is 44.05?</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Adjust the volume of photos at your discretion</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Access to unique categories of photos</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Priority Support</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Instant generation and an unforgettable impression</p>
+          </li>
+        </ul>
+      </article>
+
+      <!-- BASIC -->
+      <article class="pricing-card basic">
+        <div>
+          <div class="pricing-header">
+            <span>BASIC</span>
+            <span class="price">$8.99</span>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <ul class="pricing-list">
+          <li>
+            <span class="check"></span>
+            <p>As many as 80 coins = 80 requests</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Unique photos with additional adjustments out of turn</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>just one photo - 0.31$</p>
+          </li>
+          <li>
+            <span class="check"></span>
+            <p>Unforgettable enjoyment of exclusive photos</p>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  .cardsPlanWrapper {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .pricing-card {
+    flex: 1;
+    border-radius: 24px;
+    padding: 32px 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid var(--textColor1);
+  }
+
+  /* Центральная карточка (PRO) — с подсветкой */
+  .pricing-card.pro {
+    border: 3px solid var(--secondStyleColor);
+  }
+
+  .pricing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
+
+  .pricing-header span.price {
+    font-size: 30px;
+    color: var(--secondStyleColor);
+  }
+
+  .divider {
+    height: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+  }
+
+  .pricing-btn {
+    margin-top: 24px;
+    width: 100%;
+    padding: 18px 0;
+    border-radius: 999px;
+    border: none;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .pricing-btn:hover {
+    filter: brightness(1.1);
+  }
+
+  .pricing-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .pricing-list li {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    display: flex;
+    color: var(--textColor2);
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .check::before {
+    content: "✓";
+  }
+  @media (max-width: 800px) {
+    .cardsPlanWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
+    }
+  }
+</style>

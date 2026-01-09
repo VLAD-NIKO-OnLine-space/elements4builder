@@ -1,0 +1,318 @@
+<section id="plans">
+  <div class="container plansWrapper">
+    <div class="planshead">
+      <h2>PLANS & PRICING</h2>
+    </div>
+    <div class="billing-switcher monthly">
+      <span id="month">Bill Monthly</span>
+      <button><span></span></button>
+      <span id="year">Bill Yearly</span>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <img data-image alt="" />
+        <div class="plan-content">
+          <div class="meta">
+            <p class="price" data-y="$210" data-m="$19">$19</p>
+            <h3 class="title">Starter</h3>
+            <p class="description">Just what you need to get you started.</p>
+          </div>
+          <ul class="features">
+            <li>- 1 User</li>
+            <li>- 5 Projects</li>
+          </ul>
+          <a href="#faq" class="btn">Choose Starter</a>
+        </div>
+        <div class="shadow-1"></div>
+        <div class="shadow-2"></div>
+      </div>
+      <div class="plan">
+        <img data-image alt="" />
+        <div class="plan-content">
+          <div class="meta">
+            <p class="price" data-y="$410" data-m="$39">$39</p>
+            <h3 class="title">Pro</h3>
+            <p class="description">For professionals and small businesses.</p>
+          </div>
+
+          <ul class="features">
+            <li>- 5 Users</li>
+            <li>- 20 Projects</li>
+            <li>- Secure Data Storage</li>
+          </ul>
+          <a href="#faq" class="btn highlight">Choose Pro</a>
+        </div>
+        <div class="shadow-1"></div>
+        <div class="shadow-2"></div>
+      </div>
+      <div class="plan">
+        <img data-image alt="" />
+        <div class="plan-content">
+          <div class="meta">
+            <p class="price" data-y="$1700" data-m="$189">$189</p>
+            <h3 class="title">Elite</h3>
+            <p class="description">
+              For large businesses that require frequent scaling.
+            </p>
+          </div>
+          <ul class="features">
+            <li>- Unlimited Users</li>
+            <li>- Unlimited projects</li>
+            <li>- Secure Data Storage</li>
+            <li>- Included Stock Footage</li>
+            <li>- On-site Support</li>
+          </ul>
+          <a href="#faq" class="btn">Choose Elite</a>
+        </div>
+        <div class="shadow-1"></div>
+        <div class="shadow-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .planshead {
+    margin-bottom: 45px;
+  }
+
+  /* Billing switcher */
+  .billing-switcher {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .plansWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .billing-switcher * {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .yearly #month,
+  #year {
+    color: var(--textColor1);
+    text-transform: uppercase;
+  }
+
+  .yearly #year {
+    color: var(--textColor1);
+  }
+
+  .billing-switcher button {
+    width: 4rem;
+    height: 2rem;
+    background: var(--secondStyleColor);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .billing-switcher button span {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.25rem;
+
+    background: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .yearly button span {
+    transform: translateX(2rem);
+  }
+
+  /* Pricing plans */
+  .plans {
+    display: flex;
+    gap: 4vw;
+    align-items: flex-start;
+  }
+
+  .plan-content {
+    background-color: transparent;
+    border: 1px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 20rem;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+      0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+      0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+      0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+      0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+      0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 1px solid var(--text-color-10);
+    padding-bottom: 2rem;
+  }
+
+  .price {
+    font-size: 2.441rem;
+    font-weight: 100;
+  }
+
+  .title {
+    font-size: 1.953rem;
+    font-weight: 900;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    color: var(--text-color-60);
+  }
+
+  .features {
+    font-weight: 500;
+    color: var(--text-color-90);
+    list-style: none;
+    padding: 0;
+  }
+
+  .features li {
+    margin-bottom: 10px;
+    /* padding-left: 40px; */
+    /* list-style: disc; */
+  }
+
+  .btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--textColor1);
+  }
+
+  /* Awesome additions using CSS transforms */
+  /* Translate */
+  .plan {
+    position: relative;
+    transition: 0.2s all linear;
+    &&:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      z-index: -1;
+      border-radius: var(--borderRadius);
+      filter: blur(5px);
+      opacity: 0.2;
+    }
+  }
+
+  .plan :is(.shadow-1, .shadow-2) {
+    background-color: var(--card-shadow-color);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card-radius);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+  }
+
+  .plan:hover .shadow-1 {
+    transform: translate(-1rem, 1rem);
+    width: calc(100% + 2rem);
+  }
+
+  .plan:hover .shadow-2 {
+    transform: translate(-2rem, 2rem);
+    width: calc(100% + 4rem);
+  }
+
+  /* Scale */
+  .yearly #month,
+  #year {
+    transform: scale(0.8);
+  }
+
+  .yearly #year {
+    transform: scale(1);
+  }
+
+  /* Rotate */
+  .billing-switcher button span {
+    background: white
+      url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.58225 6.79651C0.3685 6.58276 0.25 6.30151 0.25 6.00151C0.25 5.69926 0.3685 5.41651 0.58225 5.20501L5.707 0.219756C6.00325 -0.0727435 6.48175 -0.0727435 6.778 0.219756C7.07425 0.512256 7.07425 0.987756 6.778 1.27951L1.921 6.00151L6.778 10.722C7.07425 11.0145 7.07425 11.49 6.778 11.7833C6.48175 12.0758 6.00325 12.0758 5.707 11.7818L0.58225 6.79726V6.79651Z' fill='%23ECAD1D'/%3E%3C/svg%3E%0A")
+      no-repeat 45% center;
+  }
+
+  .yearly button span {
+    transform: translateX(2rem) rotate(0.5turn);
+  }
+
+  /* Skew */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 0;
+    height: 100%;
+    background-color: var(--text-color);
+    transform: skew(35deg);
+    transition: width 0.2s ease-in-out;
+    z-index: -1;
+  }
+
+  @media (max-width: 800px) {
+    .plans {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  let billingSwitcher = document.querySelector(".billing-switcher"),
+    switchButton = document.querySelector(".billing-switcher button"),
+    prices = document.querySelectorAll(".price");
+
+  switchButton.addEventListener("click", () => {
+    billingSwitcher.classList.toggle("yearly");
+
+    for (const price of prices) {
+      if (billingSwitcher.classList.contains("yearly")) {
+        price.innerHTML = price.getAttribute("data-y");
+      } else {
+        price.innerHTML = price.getAttribute("data-m");
+      }
+    }
+  });
+</script>
