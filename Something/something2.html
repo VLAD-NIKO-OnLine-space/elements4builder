@@ -1,0 +1,132 @@
+<section class="b7x-wrap">
+  <div class="b7x-inner">
+    <div class="b7x-head">
+      <p class="b7x-label">Inside the workflow</p>
+      <h2 class="b7x-title">How this setup shapes the project</h2>
+      <p class="b7x-sub">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus
+        erat sed nisl tincidunt, vel tristique magna porta.
+      </p>
+    </div>
+
+    <div class="b7x-grid">
+      <article class="b7x-card">
+        <h3 class="b7x-card-title">Consistent layouts</h3>
+        <p class="b7x-card-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+          feugiat, lorem ut pharetra commodo, justo metus fermentum mi, ut
+          convallis orci magna nec sem.
+        </p>
+      </article>
+
+      <article class="b7x-card">
+        <h3 class="b7x-card-title">Reusable sections</h3>
+        <p class="b7x-card-text">
+          Curabitur non lacus augue. Etiam consequat, magna ut laoreet placerat,
+          justo ligula posuere magna, sed viverra dui mi vitae quam. Integer
+          bibendum viverra mi.
+        </p>
+      </article>
+
+      <article class="b7x-card">
+        <h3 class="b7x-card-title">Faster launches</h3>
+        <p class="b7x-card-text">
+          Phasellus ac sapien a nibh gravida convallis. Mauris eu purus ac metus
+          iaculis tristique. Mauris pulvinar, urna vel aliquam ullamcorper,
+          ipsum lorem dictum ligula.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .b7x-wrap {
+    padding: 80px 0;
+    color: var(--textColor1);
+  }
+
+  .b7x-inner {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .b7x-head {
+    max-width: calc(var(--maxWidthContainer) - 40px);
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  .b7x-label {
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .b7x-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .b7x-sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .b7x-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  /* Cards */
+  .b7x-card {
+    border-radius: var(--borderRadius);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    padding: 20px 18px;
+    transition: 0.2s ease;
+  }
+
+  .b7x-card:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .b7x-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .b7x-card-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dedede;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .b7x-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .b7x-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .b7x-head {
+      margin-bottom: 30px;
+    }
+  }
+</style>

@@ -1,0 +1,139 @@
+<section class="beamSlot" id="beam-slot">
+  <div class="beamSlotShell">
+    <div class="beamSlotText">
+      <h2 class="beamSlotTitle">Odkryj Realistyczne Sex Lalki Premium</h2>
+      <p class="beamSlotLead">
+        Wybierz model idealnie dopasowany do Twoich potrzeb i zamów z dyskretną
+        dostawą.
+      </p>
+    </div>
+
+    <div class="beamSlotPanel">
+      <div class="beamSlotFieldGroup">
+        <input
+          type="text"
+          class="beamSlotInput"
+          placeholder="Paste a domain, brief or note" />
+        <button class="beamSlotButton" type="button">Wygeneruj podgląd</button>
+      </div>
+      <p class="beamSlotHint">
+        To jedynie wersja demonstracyjna — żadne dane nie są nigdzie wysyłane.
+        Zastąp ten moduł własnym endpointem lub logiką formularza.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .beamSlot {
+    padding: 64px 0;
+    color: var(--textColor1);
+  }
+
+  .beamSlotShell {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr);
+    gap: 28px;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  /* Текст слева */
+  .beamSlotLabel {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .beamSlotTitle {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+  }
+
+  .beamSlotLead {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d2d2d2;
+  }
+
+  /* Панель справа */
+  .beamSlotPanel {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    padding: 18px 18px 16px 18px;
+  }
+
+  .beamSlotFieldGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .beamSlotInput {
+    flex: 1;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: #181818;
+    color: var(--textColor1);
+    padding: 10px 14px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .beamSlotInput::placeholder {
+    color: #808080;
+  }
+
+  .beamSlotInput:focus {
+    border-color: var(--secondStyleColor);
+  }
+
+  .beamSlotButton {
+    border-radius: 999px;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    white-space: nowrap;
+    transition: 0.18s ease;
+  }
+
+  .beamSlotButton:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  .beamSlotHint {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #a0a0a0;
+  }
+
+  /* Адаптив */
+  @media (max-width: 900px) {
+    .beamSlotShell {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .beamSlotFieldGroup {
+      flex-direction: column;
+    }
+
+    .beamSlotButton {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

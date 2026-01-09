@@ -1,0 +1,251 @@
+<section class="stats--dynamic" id="stats">
+  <div class="container">
+    <div class="stats--dynamic-head">
+      <h2>Statystyki na żywo</h2>
+      <p>Dane z meczu w czasie rzeczywistym i osiągnięcia graczy</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card--glow">
+        <div class="stat-card__header">
+          <h3>Aktualny mecz</h3>
+          <div class="live-indicator">
+            <span class="pulse-dot"></span>
+            NA ŻYWO
+          </div>
+        </div>
+
+        <div class="stat-values">
+          <div class="stat-item">
+            <span class="stat-label">Mnożnik</span>
+            <span class="stat-value" data-target="14.72">14.27</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Gracze</span>
+            <span class="stat-value" data-target="2437">3455</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Łączna </span>
+            <span class="stat-value" data-target="1.2">1.20</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card--glow">
+        <div class="stat-card__header">
+          <h3>Najlepsi gracze</h3>
+          <span class="stat-period">24H</span>
+        </div>
+        <div class="players-list">
+          <div class="player-item">
+            <span class="player-rank">1</span>
+            <span class="player-name">Varnava</span>
+            <span class="player-win">$12,450</span>
+          </div>
+          <div class="player-item">
+            <span class="player-rank">2</span>
+            <span class="player-name">Lariona</span>
+            <span class="player-win">$8,920</span>
+          </div>
+          <div class="player-item">
+            <span class="player-rank">3</span>
+            <span class="player-name">Collina</span>
+            <span class="player-win">$7,310</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card--glow">
+        <div class="stat-card__header">
+          <h3>Największe wygrane</h3>
+          <span class="stat-period">Today</span>
+        </div>
+        <div class="wins-list">
+          <div class="win-item">
+            <div class="win-multiplier">x124.8</div>
+            <div class="win-details">
+              <span class="win-amount">$6,240</span>
+              <span class="win-time">2 godziny temu</span>
+            </div>
+          </div>
+          <div class="win-item">
+            <div class="win-multiplier">x89.3</div>
+            <div class="win-details">
+              <span class="win-amount">$4,465</span>
+              <span class="win-time">5 godziny temu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats--dynamic-head {
+    margin: 0 auto 45px auto;
+  }
+  .stats--dynamic {
+    background: var(--bodyBG);
+    h2,
+    h2 + p {
+      text-align: center;
+    }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .stat-card--glow {
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--secondStyleColor);
+
+    border-radius: var(--borderRadius);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card__header h3 {
+    color: var(--textColor1);
+    margin: 0;
+  }
+
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondStyleColor);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--secondStyleColor);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  .stat-period {
+    color: var(--secondStyleColor);
+    font-size: 0.9rem;
+  }
+
+  .stat-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--secondStyleColor);
+  }
+
+  .stat-label {
+    color: var(--textColor1);
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--secondStyleColor);
+  }
+
+  .stat-suffix {
+    color: var(--secondStyleColor);
+    font-size: 0.9rem;
+  }
+
+  .players-list,
+  .wins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .player-item,
+  .win-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: background 0.3s ease;
+  }
+
+  .player-item:hover,
+  .win-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .player-rank {
+    width: 24px;
+    height: 24px;
+    background: var(--secondStyleColor);
+    color: var(--bg-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .player-name {
+    flex: 1;
+    color: var(--text-primary);
+  }
+
+  .player-win {
+    color: var(--secondStyleColor);
+    font-weight: 700;
+  }
+
+  .win-multiplier {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    color: var(--secondStyleColor);
+  }
+
+  .win-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .win-amount {
+    color: var(--text-primary);
+    font-weight: 700;
+  }
+
+  .win-time {
+    color: var(--secondStyleColor);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 800px) {
+    .stats-grid {
+      display: flex;
+      flex-direction: column;
+      width: inherit;
+    }
+  }
+</style>

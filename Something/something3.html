@@ -1,0 +1,134 @@
+<section class="unitLuma" id="unit-luma">
+  <div class="unitLumaShell">
+    <div class="unitLumaText">
+      <h2 class="unitLumaTitle">Włącz nasze modele do swojego wyboru</h2>
+      <p class="unitLumaLead">
+        Ten blok ma jedynie przypomnieć, że przejście od przeglądania do zakupu
+        może odbyć się jednym kliknięciem — szybko, wygodnie i dyskretnie.
+      </p>
+    </div>
+
+    <div class="unitLumaGrid">
+      <article class="unitLumaCard">
+        <h3 class="unitLumaCardTitle">Wybierz model</h3>
+        <p class="unitLumaCardText">
+          Przeglądaj kolekcję realistycznych lalek premium i znajdź wariant,
+          który najlepiej odpowiada Twoim preferencjom.
+        </p>
+      </article>
+
+      <article class="unitLumaCard">
+        <h3 class="unitLumaCardTitle">Sprawdź szczegóły</h3>
+        <p class="unitLumaCardText">
+          Zobacz materiały, gabaryty, zdjęcia oraz dostępne konfiguracje —
+          wszystko przygotowane tak, aby ułatwić szybkie porównanie modeli.
+        </p>
+      </article>
+
+      <article class="unitLumaCard unitLumaCardAccent">
+        <h3 class="unitLumaCardTitle">Zamów z dyskretną dostawą</h3>
+        <p class="unitLumaCardText">
+          Dodaj wybrany model do koszyka i zamów bez ukrytych kosztów. Wysyłka
+          jest szybka, poufna i starannie zabezpieczona.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .unitLuma {
+    padding: 80px 0;
+    color: var(--textColor1);
+  }
+
+  .unitLumaShell {
+    max-width: var(--maxWidthContainer);
+    padding: 0 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
+    gap: 32px;
+    align-items: center;
+  }
+
+  /* Левая колонка */
+  .unitLumaLabel {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .unitLumaTitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+  }
+
+  .unitLumaLead {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--textColor1);
+    max-width: 420px;
+  }
+
+  /* Правая колонка: карточки */
+  .unitLumaGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .unitLumaCard {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.55);
+    padding: 18px 18px 20px 18px;
+    transition: 0.18s ease;
+  }
+
+  .unitLumaCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .unitLumaCardAccent {
+    background: radial-gradient(
+      circle at top left,
+      rgba(2, 255, 57, 0.16),
+      #262626 55%
+    );
+  }
+
+  .unitLumaCardTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+
+  .unitLumaCardText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+
+  /* Адаптив */
+  @media (max-width: 900px) {
+    .unitLumaShell {
+      grid-template-columns: 1fr;
+    }
+
+    .unitLumaGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .unitLumaGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

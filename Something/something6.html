@@ -1,0 +1,62 @@
+<section class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>AI Virtual Models</span>
+    <span>Instant Worldwide Access</span>
+    <span>Ultra-Realistic Visual Quality</span>
+    <span>Custom Styles & Body Types</span>
+    <span>Private & Secure Usage</span>
+    <span>AI Virtual Models</span>
+    <span>Instant Worldwide Access</span>
+    <span>Ultra-Realistic Visual Quality</span>
+    <span>Custom Styles & Body Types</span>
+    <span>Private & Secure Usage</span>
+    <span>AI Virtual Models</span>
+    <span>Instant Worldwide Access</span>
+    <span>Ultra-Realistic Visual Quality</span>
+    <span>Custom Styles & Body Types</span>
+    <span>Private & Secure Usage</span>
+  </div>
+</section>
+
+<style>
+  .marquee {
+    padding: 10px 0;
+    border-top: 1px solid var(--secondStyleColor);
+    border-bottom: 1px solid var(--secondStyleColor);
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+  }
+
+  .marquee .track {
+    display: flex;
+    gap: 40px;
+    text-transform: uppercase;
+    padding: 12px 0;
+    width: max-content;
+    animation: scroll 56s linear infinite;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--textColor1);
+    -webkit-animation: scroll 56s linear infinite;
+  }
+  .marquee span::before {
+    content: "♥";
+    /* font-size: 24px; */
+    margin: 0 10px 0 0;
+    color: var(--secondStyleColor);
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
