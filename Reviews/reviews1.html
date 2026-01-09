@@ -1,0 +1,205 @@
+<section id="testimonials" class="section testimonialsSection">
+  <div class="container testimonialsWrapper">
+    <div class="testimonialsHeader">
+      <p class="testimonialsEyebrow">Co mówią klienci</p>
+      <h2 class="testimonialsTitle">Opinie zespołów i partnerów</h2>
+      <p class="testimonialsSubtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+        hendrerit, nibh eget condimentum euismod, est justo facilisis ipsum, sed
+        ullamcorper magna ipsum at lacus.
+      </p>
+    </div>
+
+    <div class="testimonialsGrid">
+      <article class="testimonialCard">
+        <div class="testimonialQuoteIcon">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <p class="testimonialText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+          vulputate, velit ut commodo convallis, risus leo gravida tortor, id
+          rhoncus ex orci in odio."
+        </p>
+        <div class="testimonialMeta">
+          <p class="testimonialName">Alex Sharma</p>
+          <p class="testimonialRole">Kierownik Operacyjny, Digital League</p>
+        </div>
+      </article>
+
+      <article class="testimonialCard">
+        <div class="testimonialQuoteIcon">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <p class="testimonialText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+          vulputate, velit ut commodo convallis, risus leo gravida tortor, id
+          rhoncus ex orci in odio."
+        </p>
+        <div class="testimonialMeta">
+          <p class="testimonialName">Priya Nair</p>
+          <p class="testimonialRole">Założyciel, Studio Eleven</p>
+        </div>
+      </article>
+
+      <article class="testimonialCard">
+        <div class="testimonialQuoteIcon">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <p class="testimonialText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+          vulputate, velit ut commodo convallis, risus leo gravida tortor, id
+          rhoncus ex orci in odio."
+        </p>
+        <div class="testimonialMeta">
+          <p class="testimonialName">Rahul Mehta</p>
+          <p class="testimonialRole">Dyrektor Techniczny, Orion Labs</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== TESTIMONIALS SECTION ===== */
+
+  .testimonialsSection {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .testimonialsWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .testimonialsHeader {
+    max-width: 760px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+  }
+
+  .testimonialsEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .testimonialsTitle {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--textColor1);
+  }
+
+  .testimonialsSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .testimonialsGrid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  /* Card */
+  .testimonialCard {
+    position: relative;
+    border-radius: var(--borderRadius);
+    padding: 26px 22px 24px 22px;
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: 0.2s ease;
+    overflow: hidden;
+  }
+
+  .testimonialCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top center,
+      color-mix(in srgb, var(--secondStyleColor) 18%, transparent),
+      transparent 55%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+  }
+
+  .testimonialCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .testimonialCard:hover::before {
+    opacity: 1;
+  }
+
+  /* Quote icon */
+  .testimonialQuoteIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(2, 255, 57, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonialQuoteIcon i {
+    color: var(--secondStyleColor);
+    font-size: 16px;
+  }
+
+  /* Text + meta */
+  .testimonialText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #e0e0e0;
+    flex: 1;
+  }
+
+  .testimonialMeta {
+    margin-top: 6px;
+  }
+
+  .testimonialName {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .testimonialRole {
+    font-size: 13px;
+    color: #b0b0b0;
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .testimonialsGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 700px) {
+    .testimonialsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonialCard {
+      padding: 22px 18px;
+    }
+  }
+</style>

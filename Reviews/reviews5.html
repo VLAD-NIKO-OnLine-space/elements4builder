@@ -1,0 +1,123 @@
+<section id="expertreview" class="expertreview">
+  <div class="container">
+    <h2>Co Mówią Eksperci</h2>
+    <div class="expertReview">
+      <div class="review-card">
+        <p>
+          "Friedman &amp; Moses łączą precyzję z realnym wpływem. W dziedzinie
+          pełnej obietnic, dostarczają strategie prawne, które są praktyczne,
+          niezawodne i ukierunkowane na wyniki."
+        </p>
+        <span>— Sarah Coleman, Główny Radca Prawny, GlobalTech Inc.</span>
+      </div>
+
+      <div class="review-card">
+        <p>
+          "Współpracowałem z wieloma kancelariami na przestrzeni lat. To, co
+          wyróżnia Friedman &amp; Moses, to ich zdolność do przełożenia
+          złożonych kwestii prawnych na jasne, stanowcze rozwiązania, które
+          chronią interesy biznesowe."
+        </p>
+        <span>— Michael Brown, CEO, Horizon Enterprises</span>
+      </div>
+
+      <div class="review-card">
+        <p>
+          "Ich globalny zasięg idzie w parze z osobistym podejściem. Prowadzili
+          nasze negocjacje transgraniczne z precyzją, zawsze stawiając nasze
+          priorytety w centrum uwagi."
+        </p>
+        <span>— David Kim, Doradca ds. Biznesu Międzynarodowego</span>
+      </div>
+
+      <div class="review-card">
+        <p>
+          "Friedman &amp; Moses nie skupiają się tylko na wygrywaniu spraw —
+          budują długoterminowe bezpieczeństwo dla klientów. Ich
+          dalekowzroczność i strategia tworzą trwałe rezultaty."
+        </p>
+        <span>— Laura Martinez, Partner, Venture Capital Group</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== EXPERT REVIEW (ADAPTED TO DARK THEME) ===== */
+
+  .expertreview {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .expertreview .container {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  .expertreview h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  /* сетка */
+  .expertReview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* ссылки внутри цитат — акцент тем же зелёным */
+  .expertReview a {
+    color: var(--secondStyleColor);
+    text-decoration: none;
+    border-bottom: 1px solid var(--secondStyleColor);
+  }
+  .expertReview a:hover {
+    border-color: var(--secondStyleColor);
+  }
+
+  /* левый штрих у абзаца — градиент от ярко-зелёного к прозрачному */
+  .expertReview p {
+    border-left: 4px solid transparent;
+    border-image: linear-gradient(180deg, var(--secondStyleColor), transparent)
+      1;
+    padding-left: 18px;
+    margin: 0 0 1rem;
+    font-style: italic;
+    color: #e0e0e0;
+  }
+
+  /* автор */
+  .expertReview span {
+    font-style: italic;
+    opacity: 0.75;
+    display: block;
+    text-align: right;
+    color: #c4c4c4;
+  }
+
+  /* карточки */
+  .review-card {
+    border: 1px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    padding: 2rem 2.2rem;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.75);
+    border-color: var(--secondStyleColor);
+  }
+
+  /* 2 колонки на десктопе */
+  @media (min-width: 900px) {
+    .expertReview {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

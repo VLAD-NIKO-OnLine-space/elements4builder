@@ -1,0 +1,211 @@
+<section
+  id="testimonials"
+  class="section testimonialsSection testimonialsSection-stars">
+  <div class="container testimonialsStarsWrapper">
+    <div class="testimonialsStarsHeader">
+      <p class="testimonialsEyebrow">Zaufane przez zespoły</p>
+      <h2 class="testimonialsTitle">Co ludzie myślą o tym rozwiązaniu</h2>
+      <p class="testimonialsSubtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        iaculis elit ac justo viverra, in interdum magna luctus.
+      </p>
+    </div>
+
+    <div class="testimonialsStarsGrid">
+      <article class="testimonialStarCard testimonialStarCard--highlight">
+        <div class="testimonialStarsRow">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonialStarText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          molestie, urna nec auctor tempus, enim leo consectetur augue, non
+          fermentum lorem arcu ut nisi."
+        </p>
+        <div class="testimonialStarMeta">
+          <p class="testimonialStarName">Ishaan Verma</p>
+          <p class="testimonialStarRole">
+            Kierownik Działu Cyfrowego, Nova Sports
+          </p>
+        </div>
+      </article>
+
+      <article class="testimonialStarCard">
+        <div class="testimonialStarsRow">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="testimonialStarText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          molestie, urna nec auctor tempus, enim leo consectetur augue, non
+          fermentum lorem arcu ut nisi."
+        </p>
+        <div class="testimonialStarMeta">
+          <p class="testimonialStarName">Neha Kulkarni</p>
+          <p class="testimonialStarRole">Kierownik Produktu, Relay Studio</p>
+        </div>
+      </article>
+
+      <article class="testimonialStarCard">
+        <div class="testimonialStarsRow">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p class="testimonialStarText">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          molestie, urna nec auctor tempus, enim leo consectetur augue, non
+          fermentum lorem arcu ut nisi."
+        </p>
+        <div class="testimonialStarMeta">
+          <p class="testimonialStarName">Karan Patel</p>
+          <p class="testimonialStarRole">Kierownik SEO, Orbit Lab</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== TESTIMONIALS SECTION STARS (VARIANT 3) ===== */
+
+  .testimonialsSection-stars {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .testimonialsStarsWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .testimonialsStarsHeader {
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  .testimonialsEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .testimonialsTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .testimonialsSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .testimonialsStarsGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  /* Card base */
+  .testimonialStarCard {
+    position: relative;
+    background: #262626;
+    border-radius: var(--borderRadius);
+    padding: 24px 22px 22px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: 0.2s ease;
+    overflow: hidden;
+  }
+
+  .testimonialStarCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top center,
+      color-mix(in srgb, var(--secondStyleColor) 18%, transparent),
+      transparent 55%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+  }
+
+  .testimonialStarCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .testimonialStarCard:hover::before {
+    opacity: 1;
+  }
+
+  /* Highlighted main card */
+  .testimonialStarCard--highlight {
+    grid-row: span 2;
+  }
+
+  /* Stars row */
+  .testimonialStarsRow {
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .testimonialStarsRow i {
+    color: var(--secondStyleColor);
+  }
+
+  /* Text + meta */
+  .testimonialStarText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #e0e0e0;
+  }
+
+  .testimonialStarMeta {
+    margin-top: 4px;
+  }
+
+  .testimonialStarName {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .testimonialStarRole {
+    font-size: 13px;
+    color: #b2b2b2;
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .testimonialsStarsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonialStarCard--highlight {
+      grid-row: auto;
+    }
+  }
+</style>
