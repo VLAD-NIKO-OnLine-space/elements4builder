@@ -1,0 +1,78 @@
+<section id="about">
+  <div class="container aboutWrapper">
+    <div class="about-left">
+      <h2>Lorem, ipsum.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+        distinctio ut magnam soluta deleniti, provident doloremque voluptates
+        possimus illo cum neque, nam odio nostrum quae nihil necessitatibus iste
+        incidunt. Suscipit nobis saepe maxime voluptas in totam officia a ipsum
+        ipsam!
+      </p>
+      <a href="#partners">Wypróbuj teraz</a>
+    </div>
+    <div class="about-right">
+      <div class="a_img">
+        <img data-image alt="" loading="lazy" decoding="async" />
+      </div>
+      <div class="a_img">
+        <img data-image alt="" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .aboutWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+  }
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-left a {
+    padding: 15px 20px;
+    background-color: var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    width: fit-content;
+    color: var(--textColor2);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .about-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .a_img {
+      height: 400px;
+      object-position: top;
+      border-radius: var(--borderRadius);
+      img {
+        border-radius: inherit;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .aboutWrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .about-right {
+      display: flex;
+      flex-direction: column;
+    }
+    .about-right {
+      width: 100%;
+    }
+    .a_img {
+      width: 100%;
+    }
+  }
+</style>

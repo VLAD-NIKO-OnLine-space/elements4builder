@@ -1,0 +1,192 @@
+<section class="fxl-section fxl-atmo fxl-io" id="about">
+  <div class="container">
+    <div class="fxl-shell fxl-atmo__grid">
+      <div class="fxl-atmo__copy">
+        <div class="head-about-s">
+          <h2 id="atmo-title">Lorem, ipsum.</h2>
+          <p class="fxl-sub">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+            voluptatum tempora temporibus id autem totam aliquam dicta, maiores
+            recusandae illum laboriosam! Expedita incidunt, error debitis
+            repellendus sint provident libero dicta quia minima assumenda!
+          </p>
+        </div>
+
+        <ul class="fxl-bullets" role="list">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+            repellendus.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+            repellendus.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
+            repellendus.
+          </li>
+        </ul>
+
+        <a class="fxl-btn" href="#faq">EXPLORE</a>
+      </div>
+
+      <div class="fxl-atmo__visuals fxl-parallax">
+        <div class="fxl-blob" data-depth="0.06"></div>
+        <div class="fxl-blob fxl-blob--b" data-depth="0.12"></div>
+
+        <figure class="fxl-polaroid fxl-polaroid--a">
+          <img
+            data-image
+            alt="Gallery image 1"
+            loading="lazy"
+            decoding="async" />
+        </figure>
+
+        <figure class="fxl-polaroid fxl-polaroid--b">
+          <img
+            data-image
+            alt="Gallery image 2"
+            loading="lazy"
+            decoding="async" />
+        </figure>
+
+        <figure class="fxl-polaroid fxl-polaroid--c">
+          <img
+            data-image
+            alt="Gallery image 3"
+            loading="lazy"
+            decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============ Matchday Atmosphere (Layered stack) ============ */
+  .fxl-atmo__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .fxl-btn {
+    padding: 15px 20px;
+    background-color: var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    color: var(--textColor2);
+    text-transform: uppercase;
+    font-weight: 800;
+    width: fit-content;
+    transition: 0.3s all linear;
+    &&:hover {
+      transform: translateY(-2px);
+    }
+  }
+  .head-about-s {
+    color: var(--textColor1);
+  }
+  .fxl-atmo__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .fxl-atmo__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .head-about-s--left {
+    text-align: left;
+  }
+
+  .fxl-bullets {
+    margin: 12px 0 20px;
+    padding: 0;
+    list-style: none;
+  }
+  .fxl-bullets li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    color: var(--textColor1);
+  }
+  .fxl-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--secondStyleColor);
+    box-shadow: 0 0 0 3px rgba(121, 255, 207, 0.18);
+  }
+
+  .fxl-atmo__visuals {
+    position: relative;
+    min-height: 420px;
+  }
+  .fxl-blob,
+  .fxl-blob--b {
+    position: absolute;
+    inset: auto;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.7;
+    z-index: 0;
+    background: radial-gradient(
+        45% 45% at 60% 40%,
+        var(--secondStyleColor),
+        transparent 70%
+      ),
+      radial-gradient(
+        45% 45% at 30% 70%,
+        var(--secondStyleColor),
+        transparent 70%
+      ),
+      #0f2a1f;
+    top: -20px;
+    left: -10px;
+  }
+  .fxl-blob--b {
+    width: 280px;
+    height: 280px;
+    bottom: -30px;
+    right: -20px;
+    top: auto;
+    left: auto;
+  }
+
+  .fxl-polaroid {
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 4/3;
+    border-radius: var(--borderRadius);
+    padding: 8px;
+  }
+  .fxl-polaroid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 12px;
+  }
+  .fxl-polaroid--a {
+    top: 8%;
+    left: 10%;
+    transform: rotate(-6deg);
+  }
+  .fxl-polaroid--b {
+    top: 28%;
+    right: 2%;
+    transform: rotate(5deg);
+  }
+  .fxl-polaroid--c {
+    bottom: 0;
+    left: 18%;
+    transform: rotate(2deg);
+  }
+</style>

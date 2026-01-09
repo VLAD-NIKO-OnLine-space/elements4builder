@@ -1,0 +1,135 @@
+<section class="ai-technology" id="about">
+  <div class="container">
+    <div class="ai-technology__header">
+      <h2>Understanding Ai Undressing Technology</h2>
+    </div>
+    <div class="ai-technology__body">
+      <div class="ai-technology__body-text">
+        <ul>
+          <li>
+            <div>
+              <span>Step 1</span>
+              <p>
+                Deep Image Analysis. Machine-learning artificial intelligence
+                meticulously examines the uploaded photo to understand its focal
+                points.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>Step 2</span>
+              <p>
+                Undress AI Processing. DeepNude App works its magic,
+                reconstructing your image into a highly realistic and lifelike
+                fake nude.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>Step 3</span>
+              <p>
+                Final Rendering. The deep nude AI technology makes the final
+                brushes to excellent results that spice up your imagination.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ai-technology__body-img">
+        <img data-illustration alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ai-technology h2 {
+    text-align: left;
+  }
+  .ai-technology__body {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .ai-technology__body-text ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .ai-technology__body-img {
+    width: 400px;
+    height: 420px;
+    border-radius: var(--borderRadius);
+    img {
+      object-fit: cover;
+      border-radius: inherit;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+    }
+  }
+  .ai-technology__body-text li {
+    flex: 1 1 30%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    border-radius: var(--borderRadius);
+    background-color: var(--secondStyleColor);
+    color: var(--textColor2);
+  }
+  .ai-technology__body-text li > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* color: var(--pink); */
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    font-family: "Inter", serif;
+  }
+  .ai-technology__body-text li > span:first-child {
+    position: relative;
+    z-index: 0; /* чтобы сам span был поверх псевдоэлемента */
+  }
+
+  .ai-technology__body-text li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    p {
+      text-align: left;
+    }
+  }
+  .ai-technology__body-text li > div span {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+
+  @media (max-width: 800px) {
+    .ai-technology__body {
+      flex-direction: column;
+    }
+    .ai-technology__body-img {
+      width: 100%;
+    }
+    .ai-technology__header h2 {
+      text-align: center;
+    }
+  }
+</style>
