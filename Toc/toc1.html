@@ -139,38 +139,68 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const wrapper = document.querySelector(".toc-swiper .swiper-wrapper");
-    if (!wrapper) return;
+  (function () {
+    function buildTOC() {
+      const toc = document.querySelector(".toc-swiper");
+      if (!toc) return;
 
-    // ✅ Берём ВСЕ секции с id (кроме самой TOC), и у которых есть h2
-    const sections = Array.from(
-      document.querySelectorAll("section[id]")
-    ).filter((sec) => !sec.classList.contains("toc"));
+      const wrapper = toc.querySelector(".swiper-wrapper");
+      if (!wrapper) return;
 
-    sections.forEach((sec) => {
-      const h2 = sec.querySelector("h2");
-      if (!h2) return;
+      // очищаем старые
+      wrapper.innerHTML = "";
 
-      const id = sec.getAttribute("id");
-      const text = (h2.textContent || "").trim();
-      if (!id || !text) return;
+      // берём все секции с id, кроме самой toc
+      const sections = Array.from(
+        document.querySelectorAll("section[id]")
+      ).filter((sec) => !sec.classList.contains("toc"));
 
-      // ✅ Создаём строго статичную разметку swiper-slide
-      const slide = document.createElement("div");
-      slide.className = "swiper-slide";
+      sections.forEach((sec) => {
+        const h2 = sec.querySelector("h2");
+        if (!h2) return;
 
-      const a = document.createElement("a");
-      a.href = `#${id}`;
-      a.textContent = text;
+        const id = sec.id;
+        const text = h2.textContent.trim();
+        if (!id || !text) return;
 
-      slide.appendChild(a);
-      wrapper.appendChild(slide);
-    });
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
 
-    // ✅ если Swiper уже инициализирован — обновим
-    if (window.tocSwiper && typeof window.tocSwiper.update === "function") {
-      window.tocSwiper.update();
+        const a = document.createElement("a");
+        a.href = `#${id}`;
+        a.textContent = text;
+
+        slide.appendChild(a);
+        wrapper.appendChild(slide);
+      });
+
+      // (пере)инициализация swiper
+      if (window.__tocSwiper) {
+        window.__tocSwiper.update();
+      } else {
+        window.__tocSwiper = new Swiper(".toc-swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          freeMode: true,
+          grabCursor: true,
+          scrollbar: {
+            el: ".toc-swiper .swiper-scrollbar",
+            draggable: true,
+          },
+        });
+      }
     }
-  });
+
+    // первый запуск
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", buildTOC);
+    } else {
+      buildTOC();
+    }
+
+    // обновление после изменений в билдере
+    window.addEventListener("builder:updated", () => {
+      setTimeout(buildTOC, 50);
+    });
+  })();
 </script>
