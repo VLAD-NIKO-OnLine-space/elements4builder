@@ -1,0 +1,110 @@
+<section id="collaborations">
+  <div class="container">
+    <div class="headGallery">
+      <h2>Lorem, ipsum dolor.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        laboriosam maxime perferendis nobis repellendus libero autem? Dicta
+        commodi dignissimos hic.
+      </p>
+    </div>
+
+    <div class="gal-cardsWrapper">
+      <div class="card-g">
+        <img data-image alt="" loading="lazy" />
+        <div class="carg-g-body">
+          <h3>Lorem, ipsum dolor.</h3>
+          <span>Lorem ipsum dolor sit.</span>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+            deleniti corrupti, pariatur nemo rerum, qui suscipit animi
+            architecto nesciunt, libero facere.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-g">
+        <img data-image alt="" loading="lazy" />
+        <div class="carg-g-body">
+          <h3>Lorem, ipsum.</h3>
+          <span>Lorem ipsum dolor sit.</span>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+            deleniti corrupti, pariatur nemo rerum, qui suscipit animi
+            architecto nesciunt, libero facere.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-g">
+        <img data-image alt="" loading="lazy" />
+        <div class="carg-g-body">
+          <h3>Lorem, ipsum.</h3>
+          <span>Lorem ipsum dolor sit.</span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+            deleniti corrupti, pariatur nemo rerum, qui suscipit animi
+            architecto nesciunt, libero facere.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #collaborations > .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .headGallery {
+    margin-bottom: 45px;
+  }
+  .gal-cardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .card-g img {
+    height: 220px;
+    object-fit: cover;
+  }
+  .card-g {
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s all linear;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-g:hover {
+      border: 1px solid var(--secondStyleColor);
+      transform: translateY(-5px);
+    }
+  }
+  .carg-g-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    span {
+      color: var(--secondStyleColor);
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .gal-cardsWrapper {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .card-g {
+      border: 1px solid var(--secondStyleColor);
+    }
+    .headGallery {
+      margin-bottom: 30px;
+    }
+  }
+</style>

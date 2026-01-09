@@ -1,0 +1,191 @@
+<section class="real-gallery" id="gallery">
+  <div class="container">
+    <div class="galeryhead">
+      <h2>Lorem, ipsum.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium,
+        aperiam, pariatur porro voluptatem repudiandae ea et voluptatibus,
+        corporis labore velit quasi ullam unde vel suscipit blanditiis? Cumque
+        officia delectus blanditiis explicabo. Praesentium.
+      </p>
+    </div>
+    <div class="real-gallery__inner">
+      <div class="real-gallery__swiper swiper">
+        <div class="real-gallery__wrapper swiper-wrapper">
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="real-gallery__slide swiper-slide">
+            <img data-image alt="" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-naw-wrapper">
+      <button
+        class="real-gallery__nav real-gallery__nav--prev"
+        type="button"
+        aria-label="Previous">
+        <span>‹</span>
+      </button>
+      <button
+        class="real-gallery__nav real-gallery__nav--next"
+        type="button"
+        aria-label="Next">
+        <span>›</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .real-gallery {
+    padding: 60px 0;
+  }
+
+  .real-gallery__inner {
+    position: relative;
+  }
+
+  .real-gallery__swiper {
+    width: 100%;
+    position: relative;
+    padding: 0 80px;
+  }
+  .galeryhead {
+    margin-bottom: 45px;
+  }
+
+  /* слайд-лента */
+  .real-gallery__wrapper {
+    align-items: center;
+  }
+
+  /* отдельный слайд */
+  .real-gallery__slide {
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+    &&:active {
+      cursor: grabbing;
+    }
+  }
+
+  .real-gallery__slide img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 32px;
+    user-select: none;
+  }
+
+  .gallery-naw-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  /* стрелки */
+  .real-gallery__nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    line-height: 1;
+    font-size: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  .real-gallery__nav span {
+    /* если внутри стрелка в span */
+    transform: translate(-1px, -2px); /* или translateY(-1px); по вкусу */
+  }
+
+  .real-gallery__nav--next span {
+    transform: translate(1px, -2px);
+  }
+
+  /* адаптивно */
+  @media (max-width: 992px) {
+    .real-gallery__slide img {
+      height: 420px;
+    }
+    .galeryhead {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .real-gallery__slide img {
+      height: 360px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const realGalleryInstance = new Swiper(".real-gallery__swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      centeredSlides: true,
+      loop: true,
+
+      navigation: {
+        nextEl: ".real-gallery__nav--next",
+        prevEl: ".real-gallery__nav--prev",
+      },
+      autoplay: {
+        delay: 3500, // пауза между слайдами, мс
+        disableOnInteraction: false, // не выключать после ручного свайпа/клика
+        pauseOnMouseEnter: true, // остановка при наведении мыши
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  });
+</script>
