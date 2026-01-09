@@ -1,0 +1,180 @@
+<section class="tytyyya">
+  <img data-image alt="" class="heroBG" />
+  <div class="hero__overlay"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <span class="tag">lorem</span>
+      <h1 class="hero__title" data-var="domain_name"></h1>
+      <p class="hero__subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt nostrum
+        quasi laborum atque, error ad expedita dolorem veniam minima, ex
+        delectus nulla reprehenderit?
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary">Join Now</a>
+      </div>
+    </div>
+    <div class="hero__statpanel">
+      <img data-illustration alt="" class="hero_rigth_img" />
+    </div>
+  </div>
+  <svg
+    class="hero__shape"
+    viewBox="0 0 100 10"
+    preserveAspectRatio="none"
+    aria-hidden="true">
+    <polygon points="0,10 0,0 100,10"></polygon>
+  </svg>
+</section>
+
+<style>
+  /* -------- HERO -------- */
+  .tytyyya {
+    position: relative;
+    overflow: hidden;
+  }
+  .heroBG {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    filter: blur(5px);
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 12, 16, 0.9) 0%,
+        rgba(10, 12, 16, 0.75) 42%,
+        rgba(10, 12, 16, 0.3) 70%,
+        rgba(10, 12, 16, 0) 100%
+      ),
+      radial-gradient(
+        700px 400px at 20% 30%,
+        rgba(122, 31, 43, 0.35),
+        transparent 60%
+      ),
+      radial-gradient(
+        700px 400px at 45% 60%,
+        rgba(25, 135, 84, 0.25),
+        transparent 60%
+      );
+  }
+  .hero__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: clamp(68vh, 72vh, 780px);
+    gap: clamp(16px, 4vw, 48px);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: 800;
+    color: var(--textColor2);
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+  }
+  .hero__title {
+    margin: 12px 0 8px;
+    line-height: 1.05;
+    text-wrap: balance;
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .hero__subtitle {
+    color: var(--textColor1);
+    margin: 0 0 18px;
+    max-width: 56ch;
+  }
+  .hero__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    --pad-x: 18px;
+    --pad-y: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    transition: transform 0.18s ease, box-shadow 0.18s ease,
+      background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    will-change: transform;
+  }
+  .btn--primary {
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+  }
+  .btn--primary:hover {
+    transform: translateY(-2px);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: #fff;
+    border-color: var(--ring);
+  }
+  .btn--ghost:hover {
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+  .btn--tiny {
+    --pad-x: 14px;
+    --pad-y: 8px;
+    font-weight: 700;
+    border-radius: 10px;
+    background: var(--secondStyleColor);
+    color: #fff;
+    border: 1px solid var(--borderRadius);
+  }
+  .btn--tiny:hover {
+    transform: translateY(-2px);
+    border-color: #fff;
+  }
+  .hero_rigth_img {
+    width: 500px;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    -o-transform: translateY(50px);
+  }
+  .hero__shape {
+    position: absolute;
+    inset: auto 0 0 0;
+    width: 100%;
+    height: 48px;
+    fill: var(--bodyBG);
+  }
+
+  .hero__statpanel {
+    margin-right: clamp(16px, 4vw, 40px);
+  }
+
+  @media (max-width: 800px) {
+    .hero__statpanel {
+      display: none;
+    }
+    .hero__inner {
+      height: 60vh;
+      min-height: auto;
+    }
+  }
+</style>

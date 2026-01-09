@@ -1,0 +1,254 @@
+<section class="home-section">
+  <img data-image class="body-back" />
+  <div class="container heroWrapper">
+    <div class="svine-slider swiper">
+      <div class="svine-slider__wrapper swiper-wrapper">
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="svine-slider__slide swiper-slide">
+          <div class="svine-slide-card">
+            <div class="svine-slide-card__image">
+              <img data-image alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="svine-slider__pagination swiper-pagination"></div>
+    </div>
+    <div class="hero-left">
+      <h1 data-var="domain_name"></h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt nostrum
+        quasi laborum atque, error ad expedita dolorem veniam minima, ex
+        delectus nulla reprehenderit?
+      </p>
+      <a>Join Now</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ----hero---- */
+  .home-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  .body-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 50% 20%;
+    filter: blur(5px);
+    opacity: 0.1;
+  }
+
+  .heroWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    h1 {
+      text-transform: uppercase;
+    }
+    p {
+      max-width: 650px;
+      text-align: right;
+    }
+    a {
+      padding: 15px 20px;
+      background-color: var(--secondStyleColor);
+      width: fit-content;
+      border-radius: var(--borderRadius);
+      color: var(--textColor2);
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+  /* обёртка свайпера */
+  .svine-slider {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: var(--borderRadius);
+    margin: 0 !important;
+  }
+
+  /* сами слайды */
+  .svine-slider__slide {
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+    border-radius: var(--borderRadius);
+    &&:active {
+      cursor: grabbing;
+    }
+  }
+
+  /* карточка */
+  .svine-slide-card {
+    border-radius: var(--borderRadius);
+    max-width: 720px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .svine-slider__pagination {
+    position: absolute;
+    margin-top: 12px;
+    bottom: 40px !important;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .svine-slider__pagination .swiper-pagination-bullet {
+    width: 50px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--bodyBG);
+    opacity: 1;
+    margin: 0;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+
+  /* активная полоска */
+  .svine-slider__pagination .swiper-pagination-bullet-active {
+    background: var(--secondStyleColor);
+    transform: scaleX(1.15);
+  }
+
+  /* блок под картинку */
+  .svine-slide-card__image {
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+
+  /* картинка внутри — тянем и обрезаем аккуратно */
+  .svine-slide-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .svine-slide-card__seg {
+    height: 4px;
+    border-radius: 999px;
+    flex: 1 1 0;
+    max-width: 120px;
+    background: #486955;
+  }
+
+  .svine-slide-card__seg--2 {
+    background: #7fb28a;
+  }
+  .svine-slide-card__seg--3 {
+    background: #e79ab8;
+  }
+
+  /* адаптив */
+  @media (max-width: 768px) {
+    .svine-slider {
+      width: 90%;
+      overflow: hidden;
+    }
+    .home-section {
+      overflow: hidden;
+      height: fit-content;
+    }
+    .svine-slide-card {
+      padding: 16px;
+      border-radius: 18px;
+    }
+
+    .svine-slide-card__progress {
+      gap: 8px;
+    }
+
+    .svine-slide-card__seg {
+      max-width: 80px;
+    }
+    .heroWrapper {
+      flex-direction: column;
+    }
+    .hero-left {
+      margin-top: 20px;
+      align-items: center;
+      p {
+        text-align: center;
+      }
+    }
+    .home-section {
+      height: fit-content;
+    }
+    .svine-slider__pagination .swiper-pagination-bullet {
+      width: 30px;
+    }
+  }
+</style>
+
+<script>
+  const svineSwiper = new Swiper(".svine-slider", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    centeredSlides: true,
+    loop: true,
+    effect: "fade",
+    pagination: {
+      el: ".svine-slider__pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    speed: 600,
+  });
+</script>

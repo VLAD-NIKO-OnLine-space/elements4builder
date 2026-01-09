@@ -1,0 +1,123 @@
+<section class="hero">
+  <img data-image class="heroBG" loading="lazy" decoding="async" />
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__left">
+        <h1 class="hero__title" data-var="domain_name"></h1>
+        <p class="hero__subtitle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt
+          nostrum quasi laborum atque, error ad expedita dolorem veniam minima,
+          ex delectus nulla reprehenderit?
+        </p>
+        <a class="hero__btn">Join Now</a>
+      </div>
+
+      <div class="hero__right metrics">
+        <div class="metric">
+          <span class="metric__num">2.485</span>
+          <span class="metric__label"> Lorem, ipsum.</span>
+        </div>
+        <div class="metric">
+          <span class="metric__num">19.674</span>
+          <span class="metric__label"> Lorem, ipsum.</span>
+        </div>
+        <div class="metric">
+          <span class="metric__num">23</span>
+          <span class="metric__label"> Lorem, ipsum.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* new */
+  .hero {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    overflow: hidden;
+    background: var(--bodyBG);
+  }
+
+  /* Фоновое изображение */
+  .heroBG {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(12px) brightness(0.55);
+    transform: scale(1.1);
+    z-index: -1;
+  }
+
+  .hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 60%;
+    a {
+      width: fit-content;
+    }
+  }
+
+  .hero__title {
+    margin: 0 0 18px;
+  }
+
+  .hero__subtitle {
+    font-size: 22px;
+    color: var(--textColor1);
+  }
+
+  .hero__btn {
+    margin-top: 28px;
+    padding: 14px 30px;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .hero__right.metrics {
+    display: grid;
+    gap: 26px;
+  }
+
+  .metric__num {
+    font: 900 54px/1 Montserrat, sans-serif;
+  }
+
+  .metric__label {
+    font-size: 16px;
+    color: var(--textColor1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 900px) {
+    .hero__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero__left {
+      max-width: 100%;
+      align-items: center;
+    }
+    .hero {
+      height: 80vh !important;
+    }
+    .hero__right.metrics {
+      display: none;
+    }
+  }
+</style>
