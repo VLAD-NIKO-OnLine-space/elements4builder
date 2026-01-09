@@ -1,0 +1,148 @@
+<section id="features" class="section featuresSection">
+  <div class="container featuresWrapper">
+    <div class="featuresHeader">
+      <h2 class="featuresTitle">Dlaczego warto wybrać Szymonadamus?</h2>
+      <p class="featuresSubtitle">
+        szymonadamus jest w stanie wygenerować akty w wysokiej rozdzielczości w
+        mgnieniu oka. Co oferujemy:
+      </p>
+    </div>
+
+    <div class="featuresGrid">
+      <article class="featureCard">
+        <div class="featureIcon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <h3 class="featureTitle">10 mln +</h3>
+        <p class="featureText">
+          Średni dochód z polecenia to kwota, jaką firma zarabia średnio na
+          jednym skutecznym poleceniu.
+        </p>
+      </article>
+
+      <article class="featureCard">
+        <div class="featureIcon">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h3 class="featureTitle">60 tys +</h3>
+        <p class="featureText">
+          Średni dochód z polecenia to kwota, jaką firma zarabia średnio na
+          jednym skutecznym poleceniu.
+        </p>
+      </article>
+
+      <article class="featureCard">
+        <div class="featureIcon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="featureTitle">15 mln +</h3>
+        <p class="featureText">
+          Średni dochód z polecenia to kwota, jaką firma zarabia średnio na
+          jednym skutecznym poleceniu.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featuresSection {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .featuresWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .featuresHeader {
+    max-width: 720px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+  }
+
+  .featuresEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .featuresTitle {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--textColor1);
+  }
+
+  .featuresSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .featuresGrid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .featureCard {
+    background: transparent;
+    border-radius: var(--borderRadius);
+    padding: 22px 22px 24px 22px;
+    border: 4px dotted var(--secondStyleColor);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+    transition: 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .featureCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-4px);
+  }
+
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(2, 255, 57, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .featureIcon i {
+    color: var(--secondStyleColor);
+    font-size: 18px;
+  }
+
+  .featureTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .featureText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d2d2d2;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .featuresGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
