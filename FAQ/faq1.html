@@ -1,0 +1,127 @@
+<section id="faq" class="section faqSection">
+  <div class="container faqWrapper">
+    <div class="faqHeader">
+      <h2 class="faqTitle">FAQ</h2>
+    </div>
+    <div class="faqList">
+      <div class="faqItem">
+        <h3 class="faqQuestion">Lorem ipsum dolor sit amet consectetur.</h3>
+        <p class="faqAnswer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi totam
+          est sed error? Libero quidem animi deserunt id culpa cum at repellat
+          quisquam.
+        </p>
+      </div>
+      <div class="faqItem">
+        <h3 class="faqQuestion">Lorem ipsum dolor sit amet consectetur.</h3>
+        <p class="faqAnswer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+          beatae aut dolore ipsa pariatur non rem error quo accusamus, eligendi
+          commodi corrupti enim laudantium autem repellat nisi sit voluptate
+          deserunt.
+        </p>
+      </div>
+      <div class="faqItem">
+        <h3 class="faqQuestion">Lorem ipsum dolor sit amet consectetur.</h3>
+        <p class="faqAnswer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure
+          itaque nobis corrupti, deleniti expedita saepe dignissimos rerum,
+          magni illum adipisci deserunt odit voluptate, iste incidunt in
+          asperiores.
+        </p>
+      </div>
+
+      <div class="faqItem">
+        <h3 class="faqQuestion">Lorem ipsum dolor sit amet consectetur.</h3>
+        <p class="faqAnswer">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam,
+          ratione.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FAQ SECTION ===== */
+
+  .faqSection {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .faqWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .faqHeader {
+    max-width: 760px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+  }
+
+  .faqEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .faqTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .faqSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* List */
+  .faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Item */
+  .faqItem {
+    border: 1px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    padding: 22px 24px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+  }
+
+  .faqItem:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .faqQuestion {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--secondStyleColor);
+  }
+
+  .faqAnswer {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e0e0e0;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .faqItem {
+      padding: 20px 18px;
+    }
+  }
+</style>

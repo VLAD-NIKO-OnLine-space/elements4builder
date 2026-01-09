@@ -1,0 +1,228 @@
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section__head">
+      <h2>FAQ</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question active">
+        <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+      </button>
+      <div class="faq-answer open">
+        <p>
+          Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej sprawdzają
+          się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są generowane
+          automatycznie przez system AI.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej sprawdzają
+          się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są generowane
+          automatycznie przez system AI.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej sprawdzają
+          się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są generowane
+          automatycznie przez system AI.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej sprawdzają
+          się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są generowane
+          automatycznie przez system AI.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej sprawdzają
+          się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są generowane
+          automatycznie przez system AI.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    margin-bottom: 100px;
+    color: var(--textColor1);
+  }
+
+  /* Внутренняя секция */
+  .faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #262626;
+    border-radius: var(--borderRadius);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--textColor1);
+  }
+
+  /* Элементы FAQ */
+  .faq-item {
+    border-bottom: 2px solid var(--secondStyleColor);
+    padding: 12px 0;
+  }
+
+  .faq h3 {
+    margin: 10px 0;
+  }
+
+  /* Кнопка-вопрос */
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--textColor1);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .faq-question::after {
+    content: "+";
+    font-size: 32px;
+    transition: transform 0.2s ease;
+    color: var(--secondStyleColor);
+  }
+
+  .faq-question.active::after {
+    content: "-";
+    transform: rotate(180deg);
+  }
+
+  /* Ответ */
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    font-size: 15px;
+    color: var(--textColor1);
+    padding-top: 0;
+  }
+
+  .faq-answer p {
+    margin-top: 0;
+  }
+
+  /* Открытый ответ (по классу из твоего JS) */
+  .faq-answer.open {
+    max-height: 200px; /* можно увеличить, если текст длиннее */
+    /* padding-top: 10px; */
+  }
+
+  /* Если используешь .reviewsWrapper рядом — оставил хук */
+  .reviewsWrapper h2 {
+    margin-bottom: 20px;
+  }
+
+  /* Мобилка */
+  @media screen and (max-width: 750px) {
+    .faq {
+      margin-bottom: 60px;
+    }
+
+    .faq-section {
+      padding: 30px 16px;
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const firstItem = document.querySelector(".faq-item");
+    if (!firstItem) return;
+
+    const firstQuestion = firstItem.querySelector(".faq-question");
+    const firstAnswer = firstItem.querySelector(".faq-answer");
+
+    firstAnswer.classList.add("open");
+    firstQuestion.classList.add("active");
+
+    // считаем высоту уже после загрузки шрифтов/стилей
+    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+  });
+
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    function toggle() {
+      const isOpen = answer.classList.contains("open");
+
+      // Закрываем всё
+      document.querySelectorAll(".faq-answer").forEach((a) => {
+        a.style.maxHeight = null;
+        a.classList.remove("open");
+      });
+      document
+        .querySelectorAll(".faq-question")
+        .forEach((q) => q.classList.remove("active"));
+
+      // Если текущий был закрыт — открываем его
+      if (!isOpen) {
+        answer.classList.add("open");
+        question.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    }
+
+    question.addEventListener("click", toggle);
+    answer.addEventListener("click", toggle);
+  });
+
+  // ---- ОТКРЫВАЕМ ПЕРВЫЙ ПУНКТ ПРИ ЗАГРУЗКЕ ----
+  const firstItem = document.querySelector(".faq-item");
+  if (firstItem) {
+    const firstQuestion = firstItem.querySelector(".faq-question");
+    const firstAnswer = firstItem.querySelector(".faq-answer");
+
+    firstAnswer.classList.add("open");
+    firstQuestion.classList.add("active");
+    firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+  }
+</script>

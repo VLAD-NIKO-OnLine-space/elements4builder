@@ -1,0 +1,294 @@
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="containerFAQ">
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+      <div class="accord__item">
+        <div>
+          <h3>Czy mogę przesyłać dowolne zdjęcia?</h3>
+          <p>+</p>
+        </div>
+        <div class="" style="max-height: 0px; visibility: visible">
+          <p style="visibility: hidden; margin-top: 0px">
+            Tak, narzędzie obsługuje szeroki zakres obrazów – najlepiej
+            sprawdzają się dobrze oświetlone, wyraźne zdjęcia postaci. Efekty są
+            generowane automatycznie przez system AI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .containerFAQ {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .faq h2 {
+    text-align: center;
+  }
+
+  .faq > div {
+    border-radius: var(--borderRadius);
+  }
+
+  #faq {
+    border-radius: var(--borderRadius);
+    padding: var(--sectionPadding);
+  }
+
+  .accord__item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 32px;
+    border: 4px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+  }
+
+  .accord__item h3,
+  .accord__item p {
+    margin-bottom: 0;
+    margin: 0;
+    color: var(--textColor1);
+  }
+
+  .accord__item > div:first-child > p {
+    font-weight: 900;
+    color: var(--textColor1) !important;
+    font-size: 24px !important;
+    margin-bottom: 0;
+  }
+
+  .accord__item > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accord__item > div:last-child {
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.3s all linear;
+  }
+
+  .accord__item > div:last-child p {
+    color: var(--textColor1) !important;
+    text-align: left;
+  }
+
+  .show {
+    visibility: visible !important;
+  }
+
+  .accord__item div + div {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    /* padding: 20px; padding будет учтен в scrollHeight */
+    box-sizing: border-box; /* важно! */
+  }
+
+  .accord__item div + div p {
+    transition: margin-top 0.3s ease;
+    visibility: hidden;
+    margin: 0;
+  }
+
+  .accord__item div + div.show p {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  div.show {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 768px) {
+    .accord__item {
+      padding: 32px 16px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function setParagraphMarginTop(paragraph) {
+      if (window.innerWidth < 768) {
+        paragraph.style.marginTop = "0";
+      } else {
+        paragraph.style.marginTop = "0";
+      }
+    }
+
+    function toggleAccordionIcon(item, isOpen) {
+      var iconParagraph = item.querySelector(".accord__item>div:first-child>p");
+      if (iconParagraph) {
+        if (isOpen) {
+          iconParagraph.textContent = "-";
+        } else {
+          iconParagraph.textContent = "+";
+        }
+      }
+    }
+
+    var sections = document.querySelectorAll("section");
+    sections.forEach(function (section) {
+      var items = section.querySelectorAll(".accord__item");
+      if (items.length > 0) {
+        var firstItem = items[0];
+        var descr = firstItem.querySelector("div + div");
+        setTimeout(() => {
+          descr.classList.add("show");
+
+          var firstParagraph = descr.querySelector("p");
+
+          if (firstParagraph) {
+            firstParagraph.style.visibility = "visible";
+            setParagraphMarginTop(firstParagraph);
+          }
+
+          descr.style.maxHeight = descr.scrollHeight + "px";
+
+          // Устанавливаем иконку "-" для первого открытого элемента
+          toggleAccordionIcon(firstItem, true);
+        }, 0);
+
+        items.forEach(function (item) {
+          // Устанавливаем иконку "+" для всех остальных элементов
+          if (item !== firstItem) {
+            toggleAccordionIcon(item, false);
+          }
+
+          item.addEventListener("click", function () {
+            var descr = item.querySelector("div + div");
+            var secondDiv = item.querySelector("div + div");
+            var paragraph = secondDiv ? secondDiv.querySelector("p") : null;
+
+            // Закрываем все другие аккордеоны
+            items.forEach(function (otherItem) {
+              if (otherItem !== item) {
+                var otherDescr = otherItem.querySelector("div + div");
+                var otherSecondDiv = otherItem.querySelector("div + div");
+                var otherParagraph = otherSecondDiv
+                  ? otherSecondDiv.querySelector("p")
+                  : null;
+
+                otherDescr.classList.remove("show");
+                otherDescr.style.maxHeight = "0";
+                if (otherParagraph) {
+                  otherParagraph.style.visibility = "hidden";
+                  otherParagraph.style.marginTop = "0";
+                }
+                // Меняем иконку на "+" для закрытых аккордеонов
+                toggleAccordionIcon(otherItem, false);
+              }
+            });
+
+            // Переключаем текущий аккордеон
+            if (descr.classList.contains("show")) {
+              descr.classList.remove("show");
+              descr.style.maxHeight = "0";
+              if (paragraph) {
+                paragraph.style.visibility = "hidden";
+                paragraph.style.marginTop = "0";
+              }
+              toggleAccordionIcon(item, false);
+            } else {
+              descr.classList.add("show");
+              descr.style.maxHeight = descr.scrollHeight + "px";
+              if (paragraph) {
+                paragraph.style.visibility = "visible";
+                setParagraphMarginTop(paragraph);
+              }
+              toggleAccordionIcon(item, true);
+            }
+          });
+        });
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      var sections = document.querySelectorAll("section");
+      sections.forEach(function (section) {
+        var items = section.querySelectorAll(".accord__item");
+        items.forEach(function (item) {
+          var descr = item.querySelector("div + div");
+          if (descr.classList.contains("show")) {
+            var paragraph = descr.querySelector("p");
+            if (paragraph) {
+              setParagraphMarginTop(paragraph);
+            }
+          }
+        });
+      });
+    });
+  });
+</script>

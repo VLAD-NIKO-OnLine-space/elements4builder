@@ -1,310 +1,203 @@
-<section class="pricing-alt" id="plans">
+<section id="plans">
   <div class="container plansWrapper">
     <div class="planshead">
-      <h2 class="pricing-alt__title">Scegli la tua modalità</h2>
+      <h2>UL product plan cards</h2>
     </div>
-
-    <div class="pricing-alt__grid">
-      <article class="plan plan--main">
-        <div class="plan__top">
-          <div>
-            <h3 class="plan__name">Creator</h3>
-            <p class="plan__desc">Per chi crea contenuti ogni giorno.</p>
-          </div>
-          <div class="plan__price-wrap">
-            <span class="plan__price">$129</span>
-          </div>
-        </div>
-
-        <ul class="plan__features">
-          <li>
-            <span class="plan__dot"></span>Richieste illimitate in alta qualità
-          </li>
-          <li>
-            <span class="plan__dot"></span>Accesso ai modelli sperimentali
-          </li>
-          <li>
-            <span class="plan__dot"></span>Pacchetto di 300 immagini al mese
-          </li>
-          <li><span class="plan__dot"></span>Posizione prioritaria in coda</li>
+    <ul class="product-plans">
+      <li class="product-plan">
+        <h3 class="title">Basic</h3>
+        <div class="price">$2.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="cross">Other Text Title</li>
+          <li class="cross">Text Space Goes Here</li>
+          <li class="cross">Description Space</li>
+          <li class="cross">Sample Text Here</li>
         </ul>
-      </article>
-
-      <article class="plan">
-        <div class="plan__top">
-          <div>
-            <h3 class="plan__name">Junior</h3>
-            <p class="plan__desc">Per chi crea contenuti ogni giorno.</p>
-          </div>
-          <div class="plan__price-wrap">
-            <span class="plan__price">$29</span>
-          </div>
-        </div>
-
-        <ul class="plan__features">
-          <li>
-            <span class="plan__dot"></span>Richieste illimitate in alta qualità
-          </li>
-          <li>
-            <span class="plan__dot"></span>Accesso ai modelli sperimentali
-          </li>
-          <li>
-            <span class="plan__dot"></span>Pacchetto di 300 immagini al mese
-          </li>
-          <li><span class="plan__dot"></span>Posizione prioritaria in coda</li>
+        <button class="btn">Select</button>
+      </li>
+      <li class="product-plan">
+        <h3 class="title">Standard</h3>
+        <div class="price">$15.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="check">Other Text Title</li>
+          <li class="check">Text Space Goes Here</li>
+          <li class="cross">Description Space</li>
+          <li class="cross">Sample Text Here</li>
         </ul>
-      </article>
-
-      <!-- Secondo piano -->
-      <article class="plan">
-        <h3 class="plan__name">Starter</h3>
-        <p class="plan__desc">Per provare il servizio in modo tranquillo.</p>
-
-        <div class="plan__price-wrap">
-          <span class="plan__price">$7</span>
-        </div>
-
-        <ul class="plan__features">
-          <li><span class="plan__dot"></span>Fino a 50 richieste</li>
-          <li>
-            <span class="plan__dot"></span>Velocità di generazione standard
-          </li>
-          <li><span class="plan__dot"></span>Libreria base di stili</li>
+        <button class="btn">Select</button>
+      </li>
+      <li class="product-plan">
+        <h3 class="title">Premium</h3>
+        <div class="price">$39.99</div>
+        <ul class="features">
+          <li class="check">Sample Text Here</li>
+          <li class="check">Other Text Title</li>
+          <li class="check">Text Space Goes Here</li>
+          <li class="check">Description Space</li>
+          <li class="check">Sample Text Here</li>
         </ul>
-      </article>
-
-      <!-- Terzo piano -->
-      <article class="plan">
-        <h3 class="plan__name">Studio</h3>
-        <p class="plan__desc">Per i team.</p>
-
-        <div class="plan__price-wrap">
-          <span class="plan__price">$59</span>
-        </div>
-
-        <ul class="plan__features">
-          <li><span class="plan__dot"></span>Spazi di lavoro condivisi</li>
-          <li><span class="plan__dot"></span>Limiti di immagini aumentati</li>
-          <li><span class="plan__dot"></span>Canale di supporto dedicato</li>
-        </ul>
-      </article>
-    </div>
-
-    <a href="#faq" class="priceBitton">Richiedi una demo</a>
+        <button class="btn">Select</button>
+      </li>
+    </ul>
   </div>
 </section>
-
 <style>
   .plansWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .planshead {
     margin-bottom: 45px;
   }
 
-  .priceBitton {
+  ul.product-plans {
+    /* width: min(60rem, 90%); */
+    margin-inline: auto;
     display: flex;
-    width: fit-content;
-    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    border: none;
-    border-radius: var(--borderRadius);
-    color: var(--textColor2);
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-top: 20px;
-    background-color: var(--secondStyleColor);
-    transition: 0.3s all linear;
-    &&:hover {
-      transform: translateY(-2px);
-    }
+    list-style: none;
+  }
+  ul.product-plans li.product-plan:nth-child(1) {
+    --accent-color: var(--secondStyleColor);
+  }
+  ul.product-plans li.product-plan:nth-child(2) {
+    --accent-color: var(--secondStyleColor);
+  }
+  ul.product-plans li.product-plan:nth-child(3) {
+    --accent-color: var(--secondStyleColor);
   }
 
-  /* ===== Новая интересная секция цен ===== */
+  ul.product-plans li.product-plan {
+    --overlap-size: 1.5rem;
+    --border-radius: 5rem;
+    /* width: min(15rem, 100%); */
+    margin-inline: var(--overlap-size);
+    padding-block: 2rem;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    gap: 0.5rem;
+    border-radius: var(--border-radius) 0 var(--border-radius) 0;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
 
-  .pricing-alt {
-    padding: 0 20px 40px;
+  ul.product-plans li.product-plan .title {
+    font-size: 2rem;
+    color: var(--textColor1);
+    text-align: center;
+  }
+
+  ul.product-plans li.product-plan .price {
+    margin-right: calc(var(--overlap-size) * -1);
+    justify-self: end;
+    padding-block: 0.25rem;
+    padding-inline: var(--overlap-size);
+    background-color: var(--accent-color);
+    color: var(--textColor2);
+    position: relative;
+  }
+  ul.product-plans li.product-plan .price::after {
+    content: "";
+    position: absolute;
+    height: var(--overlap-size);
+    width: var(--overlap-size);
+    right: 0;
+    top: 100%;
+    background-color: inherit;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  ul.product-plans li.product-plan .btn {
+    justify-self: start;
+    margin-left: calc(var(--overlap-size) * -1);
+    padding-block: 0.5rem;
+    padding-inline: 2.5rem;
+    border: none;
+    font-family: inherit;
+    color: var(--textColor2);
+    font-size: 1.1rem;
+    background-color: var(--secondStyleColor);
+    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 0);
+    background-size: 100% 200%;
+    transition: background-position 100ms ease;
+    border-radius: var(--border-radius);
+    position: relative;
+    cursor: pointer;
+  }
+  ul.product-plans li.product-plan .btn:focus-visible {
+    outline-offset: 5px;
+    outline: 2px solid var(--accent-color);
+    background-position: 0 100%;
+  }
+
+  ul.product-plans li.product-plan .btn:hover {
+    background-position: 0 100%;
+    color: #fff;
+  }
+
+  ul.product-plans li.product-plan .btn:active {
+    transform: scale(0.95);
+  }
+  ul.product-plans li.product-plan .btn:active::after {
+    transform-origin: left bottom;
+    transform: scale(0.9);
+  }
+
+  ul.product-plans li.product-plan .features {
+    align-self: flex-start;
+    list-style: none;
+    padding-inline: 2rem;
+    display: grid;
+  }
+
+  ul.product-plans li.product-plan .features li:not(:first-child) {
+    border-top: 1px solid rgb(200, 200, 200);
+  }
+  ul.product-plans li.product-plan .features li {
+    padding: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1rem 1fr;
+  }
+
+  ul.product-plans li.product-plan .features li::before {
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+  }
+  ul.product-plans li.product-plan .features li.check::before {
+    content: "\2713";
+    color: green;
+  }
+  ul.product-plans li.product-plan .features li.cross::before {
+    content: "\d7";
+    color: red;
+  }
+  .credits {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .credits a ul.product-plans li.product-plan {
+    color: var(--color);
+  }
+  .product-plan {
+    border: 1px solid var(--secondStyleColor);
     color: var(--textColor1);
   }
 
-  .pricing-alt__title {
-    font-size: 32px;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .pricing-alt__subtitle {
-    margin-top: 6px;
-    font-size: 14px;
-    opacity: 0.7;
-  }
-
-  .pricing-alt__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .plan {
-    position: relative;
-    border-radius: var(--borderRadius);
-    padding: 22px 42px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--secondStyleColor);
-    transition: 0.2s all linear;
-    &&:hover {
-      transform: translateY(-2px);
+  @media (max-width: 800px) {
+    .product-plans {
+      margin-bottom: 20px;
     }
-  }
-
-  .plan--main {
-    padding: 26px 26px 28px;
-    background-color: var(--secondStyleColor);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
-    color: var(--textColor2);
-    .plan__dot {
-      background: var(--textColor2);
-    }
-  }
-
-  .plan__badge {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    padding: 5px 10px;
-    border-radius: 999px;
-    background: rgba(12, 5, 24, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-  }
-
-  .plan__top {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    margin-bottom: 18px;
-  }
-
-  .plan__name {
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  .plan__desc {
-    margin-top: 4px;
-    font-size: 13px;
-    opacity: 0.8;
-  }
-
-  .plan__price-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-
-  .plan__price {
-    font-size: 30px;
-    font-weight: 700;
-  }
-
-  .plan__period {
-    font-size: 12px;
-    opacity: 0.8;
-  }
-
-  .plan__features {
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 13px;
-  }
-
-  .plan__features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .plan__dot {
-    margin-top: 5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    flex-shrink: 0;
-  }
-
-  .plan__button {
-    border-radius: 999px;
-    border: none;
-    padding: 11px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: auto;
-    transition: transform 0.12s ease, box-shadow 0.12s ease,
-      background 0.12s ease, opacity 0.12s ease;
-  }
-
-  .plan__button--main {
-    background: #0b0517;
-    color: #f5e9ff;
-    box-shadow: 0 12px 30px rgba(5, 1, 15, 0.9);
-  }
-
-  .plan__button--main:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 18px 40px rgba(5, 1, 15, 1);
-  }
-
-  .plan__button--ghost {
-    background: transparent;
-    color: #ffe2ff;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .plan__button--ghost:hover {
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .plan__button:not(.plan__button--main):not(.plan__button--ghost) {
-    background: rgba(5, 1, 15, 0.9);
-    color: #ffffff;
-  }
-
-  .plan__button:not(.plan__button--main):not(.plan__button--ghost):hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
-  }
-
-  .plan__note {
-    margin-top: 10px;
-    font-size: 12px;
-    opacity: 0.85;
-  }
-
-  /* Адаптив */
-
-  @media (max-width: 900px) {
     .planshead {
-      margin-bottom: 32px;
-    }
-    .pricing-alt__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .plan--main {
-      grid-row: auto;
+      margin-bottom: 30px;
     }
   }
 </style>
