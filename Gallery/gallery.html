@@ -1,0 +1,114 @@
+<section id="gallery">
+  <div class="container">
+    <div class="galeryhead">
+      <h2>Lorem, ipsum dolor.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo commodi
+        impedit rem officia fugit repellendus vero recusandae, nihil praesentium
+        laudantium.
+      </p>
+    </div>
+    <div class="galleryGrid">
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+      <div class="galleryItem">
+        <div class="imageContainer">
+          <img data-image alt="galery image" loading="lazy" />
+        </div>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
+          necessitatibus?
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .galeryhead {
+    margin-bottom: 45px;
+  }
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .imageContainer {
+    width: 430px;
+    height: 560px;
+    border-radius: var(--borderRadius);
+    margin-bottom: 20px;
+    img {
+      border-radius: inherit;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .galleryItem {
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 800px) {
+    .galleryGrid {
+      display: flex;
+      flex-direction: column;
+    }
+    .imageContainer {
+      width: 100%;
+      height: 330px;
+    }
+  }
+</style>

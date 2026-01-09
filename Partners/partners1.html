@@ -1,0 +1,107 @@
+<section class="section partners" id="partners">
+  <div class="container partners__container">
+    <div class="partnersHead">
+      <h2 class="partners__title">Partnerzy</h2>
+      <p>
+        Nawiązaliśmy kilka strategicznych partnerstw, aby ulepszyć
+        funkcjonalność platformy i poszerzyć jej zasięg. Poniżej przedstawiamy
+        naszych kluczowych partnerów:
+      </p>
+    </div>
+    <div class="partners__logo-wrapper">
+      <a title="ai partnerzy">
+        <img
+          src="{{ partners_logo2 }}"
+          alt="partnerzy ai"
+          loading="lazy"
+          class="partners__logo" />
+      </a>
+      <a href="{{ partners_link }}" title="{{ partners_logo_title }}">
+        <img
+          src="{{ partners_logo }}"
+          loading="lazy"
+          alt="{{ partners_logo_alt }}"
+          class="partners__logo" />
+      </a>
+      <a title="partnerzy ai">
+        <img
+          src="{{ partners_logo3 }}"
+          loading="lazy"
+          alt="partnerzy ai"
+          class="partners__logo" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners {
+    position: relative;
+  }
+
+  .partners::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    inset: 0;
+    background-color: var(--secondStyleColor);
+    opacity: 0.1;
+  }
+
+  .partners__container {
+    text-align: center;
+  }
+  .partnersHead {
+    margin-bottom: 45px;
+  }
+
+  .partners__title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: var(--textColor1);
+  }
+
+  .partners__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+    transition: transform 0.25s ease;
+    padding-bottom: 0;
+    gap: 30px;
+  }
+
+  .partners__logo-wrapper a {
+    display: flex;
+    min-height: 180px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 30%;
+    padding: 40px;
+    border: 4px solid var(--secondStyleColor);
+    transition: 0.3s all linear;
+    img {
+      height: 50%;
+    }
+  }
+
+  .partners__logo-wrapper a:hover {
+    transform: scale(1.05);
+  }
+
+  .partners__logo {
+    max-width: 260px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  }
+  @media (max-width: 800px) {
+    .partners__logo-wrapper {
+      flex-direction: column;
+    }
+    .partners__logo-wrapper a {
+      width: 100%;
+    }
+  }
+</style>
