@@ -1,0 +1,212 @@
+<footer class="footer">
+  <div class="container footerWrapper">
+    <div class="footerTop">
+      <div class="footerBrand">
+        <div>
+          <a class="logo footerLogo" data-href="site_domain">
+            <span class="logo-text" data-var="domain_name"></span>
+          </a>
+          <p class="footerBrandTagline">
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+
+      <div class="footerNav">
+        <p class="footerNavLabel">Navigation</p>
+        <ul>
+          <li>
+            <a href="https://{{site_domain}}/{{ slug_about }}"
+              >{{ label_about }}</a
+            >
+          </li>
+          <li>
+            <a href="https://{{site_domain}}/{{ slug_terms }}"
+              >{{ label_terms }}</a
+            >
+          </li>
+          <li>
+            <a href="https://{{site_domain}}/{{ slug_privacy }}"
+              >{{ label_privacy }}</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="footerContact">
+        <p class="footerNavLabel">Contact</p>
+        <p class="footerContactLine">support@{{site_domain}}</p>
+
+        <div class="footerSocial">
+          <a href="{{ social_links['x-com'] }}" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="{{ social_links['instagram'] }}" aria-label="LinkedIn">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="{{ social_links['youtube'] }}" aria-label="Telegram">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerBottom">
+      <p class="footerCopy">
+        © 2026 <span data-var="domain_name"></span>. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ===== FOOTER ===== */
+
+  .footer {
+    background: #181818;
+    color: var(--textColor1);
+    padding: 40px 0 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footerWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Верхняя часть */
+  .footerTop {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+    padding-bottom: 24px;
+  }
+
+  /* Бренд */
+  .footerBrand {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .footerLogo {
+    color: var(--secondStyleColor);
+  }
+
+  .footerLogo i {
+    color: var(--secondStyleColor);
+    font-size: 18px;
+  }
+
+  .footerBrandName {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .footerBrandTagline {
+    font-size: 14px;
+    color: #bcbcbc;
+    padding-top: 10px;
+  }
+
+  /* Навигация и контакты */
+  .footerNavLabel {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .footerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footerNav li + li {
+    margin-top: 6px;
+  }
+
+  .footerNav a {
+    font-size: 14px;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: 0.15s ease;
+  }
+
+  .footerNav a:hover {
+    color: var(--secondStyleColor);
+  }
+
+  /* Контакты */
+  .footerContactLine {
+    font-size: 14px;
+    color: #d0d0d0;
+    margin-bottom: 4px;
+  }
+
+  .footerSocial {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .footerSocial a {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 14px;
+    transition: 0.15s ease;
+  }
+
+  .footerSocial a:hover {
+    border-color: var(--secondStyleColor);
+    color: var(--secondStyleColor);
+  }
+
+  /* Нижняя полоска */
+  .footerBottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    font-size: 13px;
+    color: #9a9a9a;
+  }
+
+  .footerMeta {
+    text-align: right;
+  }
+
+  /* Адаптив */
+  @media (max-width: 900px) {
+    .footerTop {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .footerTop {
+      grid-template-columns: 1fr;
+    }
+
+    .footerBottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footerMeta {
+      text-align: left;
+    }
+  }
+</style>

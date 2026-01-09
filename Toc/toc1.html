@@ -1,0 +1,176 @@
+<section class="toc wrapper">
+  <div class="container">
+    <h2>Spis treści</h2>
+  </div>
+  <div class="swiper toc-swiper">
+    <div class="swiper-wrapper">
+      <!-- <div class="swiper-slide">
+        <a href="#partners">Partners</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#movies">New Movies</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#tv">Best TV Shows</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#streaming">Streaming</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#comics">Comics Today</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#trailers"> New Movies Coming Soon</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#games">New Games</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#addictive">The Most Addictive</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#movies-and-shows"> Movies and Shows</a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#top-industry">Top Players in the Industry</a>
+      </div>
+      <div class="swiper-slide"><a href="#faq">FAQ</a></div> -->
+    </div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --scrollbarBg: rgba(255, 255, 255, 0.1);
+    --itemBgColor: transparent;
+  }
+  .swiper {
+    padding-bottom: 10px !important;
+  }
+
+  .toc .swiper-slide {
+    width: fit-content;
+  }
+
+  .toc h2 {
+    white-space: nowrap;
+    margin: 0 !important;
+    text-align: center;
+  }
+
+  .toc {
+    background-color: transparent;
+  }
+
+  .toc a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: nowrap;
+    color: var(--textColor1);
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    border: 1px solid var(--secondStyleColor);
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: var(--itemBgColor);
+  }
+
+  .toc a:active,
+  .toc a:hover,
+  .toc a:focus {
+    color: #fff;
+    background-color: rgba(17, 17, 17, 0.2);
+  }
+
+  .toc .swiper-wrapper {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .toc-swiper .swiper-scrollbar {
+    background: var(--scrollbarBg);
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .toc-swiper .swiper-scrollbar-drag {
+    background: var(--secondStyleColor);
+    border-radius: 2px;
+    width: 20%;
+  }
+
+  .toc.wrapper {
+    margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .toc-swiper {
+    max-width: calc(var(--maxWidthContainer) - 40px);
+  }
+
+  .swiper-horizontal > .swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  @media screen and (max-width: 750px) {
+    .toc.wrapper {
+      margin-left: auto;
+    }
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector(".toc-swiper .swiper-wrapper");
+    if (!wrapper) return;
+
+    // ✅ Берём ВСЕ секции с id (кроме самой TOC), и у которых есть h2
+    const sections = Array.from(
+      document.querySelectorAll("section[id]")
+    ).filter((sec) => !sec.classList.contains("toc"));
+
+    sections.forEach((sec) => {
+      const h2 = sec.querySelector("h2");
+      if (!h2) return;
+
+      const id = sec.getAttribute("id");
+      const text = (h2.textContent || "").trim();
+      if (!id || !text) return;
+
+      // ✅ Создаём строго статичную разметку swiper-slide
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+
+      const a = document.createElement("a");
+      a.href = `#${id}`;
+      a.textContent = text;
+
+      slide.appendChild(a);
+      wrapper.appendChild(slide);
+    });
+
+    // ✅ если Swiper уже инициализирован — обновим
+    if (window.tocSwiper && typeof window.tocSwiper.update === "function") {
+      window.tocSwiper.update();
+    }
+  });
+</script>
