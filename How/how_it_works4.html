@@ -1,0 +1,144 @@
+<section class="steps--diagonal" id="how-it-works">
+  <div class="container">
+    <h2 class="howTitle">Najbardziej bezpośrednie i powszechne tłumaczenia</h2>
+    <div class="steps-container">
+      <div class="step--outline">
+        <div class="step__number">01</div>
+        <div class="step__content">
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Set your stake in the Aviator game before takeoff. Watch the
+            multiplier grow in the Aviator bonus game as the plane climbs.
+          </p>
+          <div class="step-arc" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="step--outline">
+        <div class="step__number">02</div>
+        <div class="step__content">
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Cash out anytime in the Aviator game before the plane disappears.
+            Master your timing in the Aviator demo game - it's everything.
+          </p>
+          <div class="step-arc" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="step--outline">
+        <div class="step__number">03</div>
+        <div class="step__content">
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Get instant payout from the Aviator game to your account. Withdraw
+            immediately or use the Aviator bonus game for bigger rewards.
+          </p>
+          <div class="step-arc" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .steps--diagonal {
+    position: relative;
+    overflow: hidden;
+    h2,
+    h2 + p {
+      text-align: center;
+    }
+  }
+
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .step--outline {
+    background: transparent;
+    border: 2px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .step--outline:hover {
+    transform: translateY(-5px);
+  }
+
+  .step__number {
+    font-size: 4rem;
+    color: var(--secondStyleColor);
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    line-height: 1;
+  }
+
+  .step__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .step__content h3 {
+    margin-bottom: 1rem;
+    color: var(--textColor1);
+  }
+
+  .step__content p {
+    color: var(--textColor1);
+    line-height: 1.6;
+  }
+
+  .step-arc {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--secondStyleColor);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    bottom: -10px;
+    left: -10px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
+
+  .step--outline:hover .step-arc {
+    opacity: 1;
+  }
+
+  .steps-visual {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 200px;
+    opacity: 0.5;
+  }
+
+  .plane-trajectory {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .plane-trajectory svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .steps-visual {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,169 @@
+<section id="how-it-works" class="section howSection">
+  <div class="container howWrapper">
+    <div class="howHeader">
+      <h2 class="howTitle">
+        Najbardziej bezpośrednie i powszechne tłumaczenia
+      </h2>
+      <p class="howSubtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut lectus
+        urna. Morbi molestie, risus non bibendum tincidunt, ligula metus pretium
+        tortor, sit amet facilisis urna odio at sapien.
+      </p>
+    </div>
+
+    <ol class="howSteps">
+      <li class="howStepItem">
+        <div class="howStepBadge">01</div>
+        <h3 class="howStepTitle">Zdefiniuj dane strony</h3>
+        <p class="howStepText">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+        </p>
+      </li>
+
+      <li class="howStepItem">
+        <div class="howStepBadge">02</div>
+        <h3 class="howStepTitle">Zdefiniuj dane strony</h3>
+        <p class="howStepText">
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero ante et urna.
+        </p>
+      </li>
+
+      <li class="howStepItem">
+        <div class="howStepBadge">03</div>
+        <h3 class="howStepTitle">Zdefiniuj dane strony</h3>
+        <p class="howStepText">
+          Cras in malesuada est. Pellentesque a orci semper, efficitur arcu ac,
+          dignissim metus. Nullam nec dictum velit.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW IT WORKS SECTION ===== */
+
+  .howSection {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .howWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .howHeader {
+    max-width: 760px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+  }
+
+  .howEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .howTitle {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--textColor1);
+  }
+
+  .howSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Steps */
+  .howSteps {
+    list-style: none;
+    padding: 0;
+    margin: 35px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .howStepItem {
+    position: relative;
+    border-radius: var(--borderRadius);
+    padding: 24px 20px 22px 20px;
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+    transition: 0.2s ease;
+  }
+
+  .howStepItem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top center,
+      color-mix(in srgb, var(--secondStyleColor) 18%, transparent),
+      transparent 55%
+    );
+    opacity: 0;
+    transition: 0.25s ease;
+    pointer-events: none;
+  }
+
+  .howStepItem:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .howStepItem:hover::before {
+    opacity: 1;
+  }
+
+  /* Badge + text */
+  .howStepBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(2, 255, 57, 0.12);
+    border: 1px solid rgba(2, 255, 57, 0.6);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    margin-bottom: 14px;
+  }
+
+  .howStepTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .howStepText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d5d5d5;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .howSteps {
+      grid-template-columns: 1fr;
+    }
+
+    .howStepItem {
+      padding: 22px 18px;
+    }
+  }
+</style>

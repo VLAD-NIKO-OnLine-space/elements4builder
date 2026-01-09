@@ -1,0 +1,187 @@
+<section id="how-it-works" class="section howSection howSection-alt">
+  <div class="container howAltWrapper">
+    <div class="howAltHeader">
+      <h2 class="howTitle">
+        Najbardziej bezpośrednie i powszechne tłumaczenia
+      </h2>
+      <p class="howSubtitle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero
+        at arcu tempor blandit. Aliquam erat volutpat.
+      </p>
+    </div>
+
+    <div class="howAltTimeline">
+      <div class="howAltLine"></div>
+
+      <div class="howAltStep">
+        <div class="howAltDot">01</div>
+        <div class="howAltStepBody">
+          <h3 class="howAltStepTitle">Zdefiniuj dane strony</h3>
+          <p class="howAltStepText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in
+            tortor non felis luctus tincidunt. Phasellus malesuada dictum
+            tortor, eu sollicitudin lorem.
+          </p>
+        </div>
+      </div>
+
+      <div class="howAltStep">
+        <div class="howAltDot">02</div>
+        <div class="howAltStepBody">
+          <h3 class="howAltStepTitle">Zdefiniuj dane strony</h3>
+          <p class="howAltStepText">
+            Suspendisse laoreet sapien id placerat egestas. Donec malesuada,
+            enim in venenatis sagittis, lorem lorem volutpat erat.
+          </p>
+        </div>
+      </div>
+
+      <div class="howAltStep">
+        <div class="howAltDot">03</div>
+        <div class="howAltStepBody">
+          <h3 class="howAltStepTitle">Zdefiniuj dane strony</h3>
+          <p class="howAltStepText">
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus
+            scelerisque, ut volutpat nunc accumsan. Sed nec eros vel sapien
+            mattis faucibus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW IT WORKS SECTION ALT (VARIANT 2) ===== */
+
+  .howSection-alt {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .howAltWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .howAltHeader {
+    max-width: 700px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+  }
+
+  .howEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .howTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--textColor1);
+  }
+
+  .howSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Timeline */
+  .howAltTimeline {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-left: 28px;
+  }
+
+  .howAltLine {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba(2, 255, 57, 0.4),
+      rgba(2, 255, 57, 0.05)
+    );
+  }
+
+  /* Step */
+  .howAltStep {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 26px;
+  }
+
+  .howAltDot {
+    position: relative;
+    flex: 0 0 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #2b2b2b;
+    border: 1px solid rgba(2, 255, 57, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    margin-left: -2px;
+  }
+
+  .howAltStepBody {
+    border-radius: var(--borderRadius);
+    padding: 18px 20px 18px 20px;
+    border: 4px dotted var(--secondStyleColor);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55);
+    transition: 0.18s ease;
+  }
+
+  .howAltStepTitle {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .howAltStepText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d4d4d4;
+  }
+
+  .howAltStepBody:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .howAltTimeline {
+      padding-left: 18px;
+    }
+
+    .howAltLine {
+      left: 10px;
+    }
+
+    .howAltStep {
+      gap: 12px;
+    }
+
+    .howAltStepBody {
+      padding: 16px 16px;
+    }
+  }
+</style>

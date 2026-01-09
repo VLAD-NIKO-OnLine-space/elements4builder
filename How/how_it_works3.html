@@ -1,0 +1,186 @@
+<section id="how-it-works" class="howBlock_wk29">
+  <div class="container">
+    <div class="howHead_p3q1">
+      <h2 class="howTitle">
+        Najbardziej bezpośrednie i powszechne tłumaczenia
+      </h2>
+      <p class="howDesc_d9z1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
+        tortor vitae nisl suscipit, id porttitor sapien suscipit.
+      </p>
+    </div>
+
+    <div class="howSteps_l1a0">
+      <div class="howTile_r0x4">
+        <div class="howNum_b7d2">01</div>
+        <div class="howIcon_f2m9">
+          <i class="fa-solid fa-folder-open"></i>
+        </div>
+        <h3 class="howTitle_g4s0">Zdefiniuj dane strony</h3>
+        <p class="howText_u8e1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at
+          malesuada lorem, vitae dictum ligula.
+        </p>
+      </div>
+
+      <div class="howTile_r0x4">
+        <div class="howNum_b7d2">02</div>
+        <div class="howIcon_f2m9">
+          <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <h3 class="howTitle_g4s0">Zdefiniuj dane strony</h3>
+        <p class="howText_u8e1">
+          Curabitur id sapien ut massa tempor cursus. Morbi id odio vel est
+          posuere consequat sed in libero.
+        </p>
+      </div>
+
+      <div class="howTile_r0x4">
+        <div class="howNum_b7d2">03</div>
+        <div class="howIcon_f2m9">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <h3 class="howTitle_g4s0">Zdefiniuj dane strony</h3>
+        <p class="howText_u8e1">
+          Integer id erat ac magna sodales volutpat. Sed viverra libero velit,
+          at bibendum purus vehicula nec.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v4 (random class variant) ===== */
+
+  .howBlock_wk29 {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .howWrap_t91d {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  .howHead_p3q1 {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+  }
+
+  .howLabel_m4t2 {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .howMainTitle_jx7p {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .howDesc_d9z1 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .howSteps_l1a0 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  /* Tile */
+  .howTile_r0x4 {
+    position: relative;
+    text-align: center;
+    border-radius: var(--borderRadius);
+    padding: 26px 20px 24px;
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+    overflow: hidden;
+  }
+
+  .howTile_r0x4:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-4px);
+  }
+
+  .howTile_r0x4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top center,
+      color-mix(in srgb, var(--secondStyleColor) 18%, transparent),
+      transparent 55%
+    );
+    opacity: 0;
+    transition: 0.25s ease;
+  }
+
+  .howTile_r0x4:hover::before {
+    opacity: 1;
+  }
+
+  /* Badge */
+  .howNum_b7d2 {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    background: rgba(2, 255, 57, 0.1);
+    border: 1px solid rgba(2, 255, 57, 0.6);
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+  }
+
+  /* Icon */
+  .howIcon_f2m9 {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: rgba(2, 255, 57, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+  }
+
+  .howIcon_f2m9 i {
+    font-size: 22px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Titles */
+  .howTitle_g4s0 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .howText_u8e1 {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d4d4d4;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .howSteps_l1a0 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
