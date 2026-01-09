@@ -1,0 +1,100 @@
+<section class="hero">
+  <img data-image alt="" class="heroBG" loading="lazy" decoding="async" />
+  <div class="container">
+    <div>
+      <h1 data-var="domain_name"></h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt nostrum
+        quasi laborum atque, error ad expedita dolorem veniam minima, ex
+        delectus nulla reprehenderit?
+      </p>
+      <a>Join Now</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 130px 0;
+    text-align: center;
+    background: var(--bodyBG);
+    overflow: hidden;
+    color: var(--textColor1);
+  }
+  h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  /* Фоновая картинка */
+  .heroBG {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.5);
+    z-index: 1;
+  }
+
+  /* Контейнер поверх */
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Заголовок */
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
+
+  /* Подзаголовок */
+  .hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.7;
+    color: var(--textColor1);
+  }
+
+  /* Кнопка */
+  .hero a {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    transition: 0.2s ease;
+  }
+
+  .hero a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+
+  /* Адаптив */
+  @media (max-width: 700px) {
+    .hero {
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+    }
+
+    .hero p {
+      font-size: 16px;
+    }
+  }
+</style>
