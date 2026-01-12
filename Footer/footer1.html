@@ -13,38 +13,32 @@
       </div>
 
       <div class="footerNav">
-        <p class="footerNavLabel">Navigation</p>
+        <p class="footerNavLabel" data-footer-label="nav_title">Navigation</p>
         <ul>
           <li>
-            <a href="https://{{site_domain}}/{{ slug_about }}"
-              >{{ label_about }}</a
-            >
+            <a data-footer-link="about" href="#">About</a>
           </li>
           <li>
-            <a href="https://{{site_domain}}/{{ slug_terms }}"
-              >{{ label_terms }}</a
-            >
+            <a data-footer-link="terms" href="#">Terms</a>
           </li>
           <li>
-            <a href="https://{{site_domain}}/{{ slug_privacy }}"
-              >{{ label_privacy }}</a
-            >
+             <a data-footer-link="privacy" href="#">Privacy</a>
           </li>
         </ul>
       </div>
 
       <div class="footerContact">
-        <p class="footerNavLabel">Contact</p>
-        <p class="footerContactLine">support@{{site_domain}}</p>
+        <p class="footerNavLabel" data-footer-label="contact_title">Contact</p>
+        <p class="footerContactLine"><span data-footer-email></span></p>
 
-        <div class="footerSocial">
-          <a href="{{ social_links['x-com'] }}" aria-label="Twitter">
+       <div class="footerSocial">
+          <a data-social="x" href="#" aria-label="X" target="_blank">
             <i class="fa-brands fa-x-twitter"></i>
           </a>
-          <a href="{{ social_links['instagram'] }}" aria-label="LinkedIn">
+          <a data-social="instagram" href="#" aria-label="Instagram" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="{{ social_links['youtube'] }}" aria-label="Telegram">
+          <a data-social="youtube" href="#" aria-label="YouTube" target="_blank">
             <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
