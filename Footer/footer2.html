@@ -1,0 +1,112 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="logo footerLogo" data-href="site_domain">
+      <span class="logo-text" data-var="domain_name"></span>
+    </a>
+    <div class="f-social">
+      <a data-social="x" href="#" aria-label="X" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a
+        data-social="instagram"
+        href="#"
+        aria-label="Instagram"
+        target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a data-social="youtube" href="#" aria-label="YouTube" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+
+    <nav class="intoLinks">
+      <a data-footer-link="about" href="#">About</a>
+      <span></span>
+      <a data-footer-link="terms" href="#">Terms</a>
+      <span></span>
+      <a data-footer-link="privacy" href="#">Privacy</a>
+    </nav>
+
+    <p class="copy">
+      © 2026 <span data-var="domain_name"></span> <br />
+      All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 0.5px solid var(--secondStyleColor);
+    padding: 20px 0;
+  }
+  .footerLogo {
+    color: var(--textColor1);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .intoLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    span {
+      width: 8px;
+      height: 8px;
+      background-color: var(--secondStyleColor);
+      border-radius: 50%;
+    }
+    a {
+      transition: 0.3s all linear;
+      transform-origin: left;
+      text-decoration: none;
+      color: var(--textColor1);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .intoLinks {
+      flex-direction: column;
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .f-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .f-social i {
+    color: var(--secondStyleColor);
+  }
+  .copy {
+    text-align: center;
+    opacity: 0.5;
+  }
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.75rem;
+  }
+
+  .footer-links a:hover {
+    color: #fff;
+  }
+</style>
