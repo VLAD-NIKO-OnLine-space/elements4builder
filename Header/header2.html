@@ -1,226 +1,304 @@
-<header class="header">
-  <div class="container headerWrapper">
-    <a class="logo" data-href="site_domain">
-      <span class="logo-text" data-var="domain_name"></span>
+<header>
+  <div class="headerContainer wrapper">
+    <a data-href="site_domain" class="domain-logo"
+      ><span data-var="domain_name"></span>
     </a>
-    <nav class="nav">
+    <nav class="header-nav">
       <ul>
-        <li>
-          <a href="#about" class="headerNavLink"> About </a>
-        </li>
-
-        <li>
-          <a href="#testimonials" class="headerNavLink"> Reviews </a>
-        </li>
-
-        <li>
-          <a href="#partners" class="headerNavLink"> Partners </a>
-        </li>
-
-        <li>
-          <a href="#faq" class="headerNavLink"> FAQ </a>
-        </li>
+        <li class="headerLI"><a href="#about">About</a></li>
+        <li class="headerLI"><a href="#testimonials">Reviews</a></li>
+        <li class="headerLI"><a href="#partners">Partners</a></li>
+        <li class="headerLI"><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
 
-    <svg class="ham hamRotate ham7" viewBox="0 0 100 100" width="65">
-      <path
-        class="line top"
-        d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
-      <path class="line middle" d="m 70,50 h -40" />
-      <path
-        class="line bottom"
-        d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
-    </svg>
+    <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" />
+    <label for="checkbox1" class="label">
+      <div class="hamburger hamburger1">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+        <span class="bar bar4"></span>
+      </div>
+    </label>
   </div>
 </header>
 
 <style>
-  /* HEADER */
-  .header {
+  header {
     background-color: transparent;
-    color: var(--textColor2);
     position: absolute;
+    padding: 20px 0;
     left: 0;
     right: 0;
+    z-index: 1000;
+    overflow: hidden;
   }
-  .headerWrapper {
+
+  .headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
   }
 
-  .nav {
-  }
-  .ham {
-    display: none;
-  }
-
-  .nav ul {
+  .header-nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-left: 0;
-    margin: 0;
   }
 
-  .nav li {
+  header li {
     list-style: none;
   }
 
-  .nav a {
-    color: var(--textColor2);
-    text-decoration: none;
-    transition: 0.2s all linear;
-    -webkit-transition: 0.2s all linear;
-    -moz-transition: 0.2s all linear;
-    -ms-transition: 0.2s all linear;
-    -o-transition: 0.2s all linear;
+  .domain-logo {
     position: relative;
-    font-weight: 600;
+    z-index: 995;
+    font-weight: 900;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--secondStyleColor);
   }
 
-  .nav a::after {
+  /* ---- */
+  .visuallyHidden {
     position: absolute;
-    content: "";
-    left: 0;
-    bottom: -7px;
-    width: 0;
-    height: 2px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  /* HAMBURGER 1 */
+  .hamburger {
+    margin: 0 auto;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 3px;
     background-color: var(--textColor2);
-    transition: 0.2s all linear;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
   }
 
-  .nav a:hover::after {
-    width: 100%;
+  .bar1 {
+    top: 0;
   }
 
+  .bar2,
+  .bar3 {
+    top: 11px;
+  }
+
+  .bar3 {
+    right: 0;
+  }
+
+  .bar4 {
+    bottom: 0;
+  }
+
+  .checkbox1.active + label > .hamburger1 > .bar1 {
+    transform: rotate(45deg);
+    transform-origin: 5%;
+    width: 35px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+  .checkbox1.active + label > .hamburger1 > .bar2 {
+    transform: translateX(-40px);
+    background-color: transparent;
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+  }
+
+  .checkbox1.active + label > .hamburger1 > .bar3 {
+    transform: translateX(40px);
+    background-color: transparent;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+  }
+
+  .checkbox1.active + label > .hamburger1 > .bar4 {
+    transform-origin: 5%;
+    transform: rotate(-45deg);
+    width: 35px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
   .stopScroll {
     overflow: hidden;
   }
-  .logo {
-    position: relative;
-    z-index: 1000;
-    font-weight: 800;
-    font-size: 24px;
+
+  .checkbox1 {
+    display: none;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .headerLI a {
     color: var(--textColor2);
     text-decoration: none;
   }
-
-  @media screen and (max-width: 800px) {
-    .headerWrapper {
-      padding: 0 20px;
+  @media (max-width: 800px) {
+    .checkbox1 {
+      display: flex;
     }
-    .nav {
+
+    .label {
+      display: flex;
+    }
+    .header-nav {
       position: fixed;
       inset: 0;
-      background-color: var(--bodyBG);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100vw;
-      height: 100vh;
-      z-index: 999;
-      transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-      transition: 0.3s all cubic-bezier(0.23, 1, 0.32, 1);
-      -webkit-transition: 0.3s all cubic-bezier(0.23, 1, 0.32, 1);
-      -moz-transition: 0.3s all cubic-bezier(0.23, 1, 0.32, 1);
-      -ms-transition: 0.3s all cubic-bezier(0.23, 1, 0.32, 1);
-      -o-transition: 0.3s all cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .nav.active {
-      transform: translateX(0);
-      -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -o-transform: translateX(0);
-    }
-    .header:has(.nav.active) .logo {
-      color: var(--textColor1);
-    }
-    .header:has(.nav.active) .nav a {
-      color: var(--textColor1);
-    }
-    .nav ul {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .ham {
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-      transition: transform 400ms;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
       user-select: none;
+      pointer-events: none;
+      height: 100vh;
       display: flex;
-      z-index: 1000;
+      justify-content: center;
+      transition: 0.3s all linear;
+      -webkit-transition: 0.3s all linear;
+      -moz-transition: 0.3s all linear;
+      -ms-transition: 0.3s all linear;
+      -o-transition: 0.3s all linear;
     }
-    .hamRotate.active {
-      transform: rotate(45deg);
+
+    .header-nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding-left: 0;
+      pointer-events: none;
+      user-select: none;
     }
-    .hamRotate180.active {
-      transform: rotate(180deg);
+    .header-nav ul::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+      background-color: #111;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      opacity: 0;
+      transition: 0.3s all linear;
+      -webkit-transition: 0.3s all linear;
+      -moz-transition: 0.3s all linear;
+      -ms-transition: 0.3s all linear;
+      -o-transition: 0.3s all linear;
+      pointer-events: none;
+      user-select: none;
     }
-    .line {
-      fill: none;
-      transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-      stroke: var(--textColor2);
-      stroke-width: 5.5;
-      stroke-linecap: round;
+    .header-nav ul.active::before {
+      opacity: 0.9;
     }
-    .header:has(.nav.active) .line {
-      stroke: var(--textColor1);
+
+    .header-nav ul.active {
+      pointer-events: all;
+      user-select: all;
     }
-    .ham7 .top {
-      stroke-dasharray: 40 82;
+
+    .headerLI a {
+      color: var(--textColor2);
+      text-decoration: none;
+      text-transform: uppercase;
     }
-    .ham7 .middle {
-      stroke-dasharray: 40 111;
+
+    .headerLI {
+      user-select: none;
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.2s all linear;
+      -webkit-transition: 0.2s all linear;
+      -moz-transition: 0.2s all linear;
+      -ms-transition: 0.2s all linear;
+      -o-transition: 0.2s all linear;
     }
-    .ham7 .bottom {
-      stroke-dasharray: 40 161;
+
+    .headerLI.active {
+      opacity: 1;
+      user-select: all;
+      pointer-events: all;
     }
-    .ham7.active .top {
-      stroke-dasharray: 17 82;
-      stroke-dashoffset: -62px;
+    .headerLI.active:nth-child(1) {
+      transition-delay: 0.3s;
     }
-    .ham7.active .middle {
-      stroke-dashoffset: 23px;
+
+    .headerLI.active:nth-child(2) {
+      transition-delay: 0.4s;
     }
-    .ham7.active .bottom {
-      stroke-dashoffset: -83px;
+    .headerLI.active:nth-child(3) {
+      transition-delay: 0.5s;
     }
-    .ham8 .top {
-      stroke-dasharray: 40 160;
+    .headerLI.active:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+    .headerLI.active:nth-child(5) {
+      transition-delay: 0.7s;
     }
   }
 </style>
 
 <script>
-  const burger = document.querySelector(".ham");
-  const nav = document.querySelector(".nav");
+  const burger = document.querySelector(".checkbox1");
+  const nav = document.querySelector(".header-nav");
+  const ul = document.querySelector(".header-nav ul");
+  const headerLI = document.querySelectorAll(".headerLI");
   const body = document.body;
-  const headerNavLink = document.querySelectorAll(".headerNavLink");
 
   burger.addEventListener("click", () => {
     burger.classList.toggle("active");
     nav.classList.toggle("active");
+    ul.classList.toggle("active");
     body.classList.toggle("stopScroll");
+    headerLI.forEach((el) => {
+      el.classList.toggle("active");
+    });
   });
 
-  headerNavLink.forEach((el) => {
+  headerLI.forEach((el) => {
     el.addEventListener("click", () => {
-      burger.classList.remove("active");
       nav.classList.remove("active");
+      burger.classList.remove("active");
+      ul.classList.remove("active");
       body.classList.remove("stopScroll");
+      headerLI.forEach((el) => {
+        el.classList.remove("active");
+      });
     });
   });
 </script>
