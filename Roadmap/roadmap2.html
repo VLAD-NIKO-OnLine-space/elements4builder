@@ -1,0 +1,235 @@
+<section id="roadmap" class="section roadmapSection roadmapSection-v2">
+  <div class="container roadmapWrapper">
+    <div class="roadmapHeader">
+      <p class="roadmapEyebrow">Roadmap</p>
+      <h2 class="roadmapTitle">Rollout plan for the project</h2>
+      <p class="roadmapSubtitle">
+        This simple roadmap shows how the project moves from concept to stable
+        production. Each phase is small, focused and easy to track.
+      </p>
+    </div>
+
+    <div class="roadmapTimeline">
+      <div class="roadmapStep">
+        <div class="roadmapMarker">
+          <span class="roadmapDot"></span>
+          <span class="roadmapLine"></span>
+        </div>
+        <div class="roadmapCard">
+          <p class="roadmapPhase">Phase 1 · Discovery</p>
+          <h3 class="roadmapStepTitle">Collect ideas and structure content</h3>
+          <p class="roadmapStepText">
+            Map out the main pages, sections and navigation, decide on tone of
+            voice, and gather all assets needed for the first version of the
+            site.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapStep">
+        <div class="roadmapMarker">
+          <span class="roadmapDot"></span>
+          <span class="roadmapLine"></span>
+        </div>
+        <div class="roadmapCard">
+          <p class="roadmapPhase">Phase 2 · Build</p>
+          <h3 class="roadmapStepTitle">Generate layouts and wire the blocks</h3>
+          <p class="roadmapStepText">
+            Use the section library to assemble the landing, plug in the hero,
+            feature blocks, gallery, reviews and FAQ into one consistent flow.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapStep">
+        <div class="roadmapMarker">
+          <span class="roadmapDot"></span>
+          <span class="roadmapLine"></span>
+        </div>
+        <div class="roadmapCard">
+          <p class="roadmapPhase">Phase 3 · Launch</p>
+          <h3 class="roadmapStepTitle">Deploy and test on live traffic</h3>
+          <p class="roadmapStepText">
+            Ship the site to production, run basic checks for speed, layout and
+            tracking, and verify that every important action leads to a clear
+            CTA.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapStep">
+        <div class="roadmapMarker">
+          <span class="roadmapDot roadmapDot-final"></span>
+        </div>
+        <div class="roadmapCard roadmapCard-final">
+          <p class="roadmapPhase">Phase 4 · Scale</p>
+          <h3 class="roadmapStepTitle">Clone, adapt and grow the network</h3>
+          <p class="roadmapStepText">
+            Reuse the same structure for new sites, tweak sections per niche,
+            and keep the design system consistent across the whole network.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP SECTION v2 ===== */
+
+  .roadmapSection-v2 {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .roadmapWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+
+  .roadmapHeader {
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  .roadmapEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .roadmapTitle {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .roadmapSubtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #cfcfcf;
+  }
+
+  /* Timeline */
+
+  .roadmapTimeline {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* Один шаг */
+
+  .roadmapStep {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  /* Левая колонка — маркеры */
+
+  .roadmapMarker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .roadmapDot {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 4px rgba(2, 255, 57, 0.25);
+    margin-top: 6px;
+    z-index: 2;
+  }
+
+  .roadmapDot-final {
+    background: transparent;
+    border: 2px solid var(--secondStyleColor);
+    box-shadow: 0 0 0 4px rgba(2, 255, 57, 0.18);
+  }
+
+  /* Вертикальная линия */
+
+  .roadmapLine {
+    position: absolute;
+    top: 20px;
+    bottom: -18px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba(2, 255, 57, 0.5),
+      rgba(2, 255, 57, 0.1)
+    );
+    z-index: 1;
+  }
+
+  /* Правая колонка — карточка шага */
+
+  .roadmapCard {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    padding: 18px 20px 18px 20px;
+    transition: 0.2s ease;
+  }
+
+  .roadmapCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-2px);
+  }
+
+  .roadmapCard-final {
+    background: #272d27;
+  }
+
+  /* Тексты шага */
+
+  .roadmapPhase {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .roadmapStepTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .roadmapStepText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dedede;
+  }
+
+  /* Адаптив */
+
+  @media (max-width: 700px) {
+    .roadmapTitle {
+      font-size: 28px;
+    }
+
+    .roadmapStep {
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .roadmapCard {
+      padding: 16px 16px 16px 16px;
+    }
+  }
+</style>

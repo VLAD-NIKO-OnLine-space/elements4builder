@@ -1,0 +1,164 @@
+<section id="roadmap" class="section roadmapSection roadmapSection-v5">
+  <div class="container roadmapWrapper">
+    <div class="roadmapHeader">
+      <p class="roadmapEyebrow">Roadmap</p>
+      <h2 class="roadmapTitle">Project milestones & next steps</h2>
+      <p class="roadmapSubtitle">
+        A clear and structured path showing the evolution of the project, key
+        goals, and what comes next as development moves forward.
+      </p>
+    </div>
+
+    <div class="roadmapGrid-v5">
+      <!-- Block 1 -->
+      <div class="roadmapCard-v5">
+        <div class="roadmapDot-v5"></div>
+        <h3 class="roadmapCardTitle-v5">Phase 1 – Foundation</h3>
+        <p class="roadmapCardText-v5">
+          Initial planning, structural layout and feature scoping. Establishing
+          a stable framework for all future improvements.
+        </p>
+        <span class="roadmapBadge-v5">Completed</span>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="roadmapCard-v5">
+        <div class="roadmapDot-v5"></div>
+        <h3 class="roadmapCardTitle-v5">Phase 2 – Visual build</h3>
+        <p class="roadmapCardText-v5">
+          UI development, section layout creation and responsive refinement
+          across all breakpoints and viewport variations.
+        </p>
+        <span class="roadmapBadge-v5">In progress</span>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="roadmapCard-v5">
+        <div class="roadmapDot-v5"></div>
+        <h3 class="roadmapCardTitle-v5">Phase 3 – Content expansion</h3>
+        <p class="roadmapCardText-v5">
+          Adding new gallery blocks, testimonials, structured pages and rich
+          visual sections with extended assets.
+        </p>
+        <span class="roadmapBadge-v5">Next</span>
+      </div>
+
+      <!-- Block 4 -->
+      <div class="roadmapCard-v5">
+        <div class="roadmapDot-v5"></div>
+        <h3 class="roadmapCardTitle-v5">Phase 4 – Enhancements</h3>
+        <p class="roadmapCardText-v5">
+          Performance optimization, image compression, accessibility passes and
+          micro-interactions to improve user flow.
+        </p>
+        <span class="roadmapBadge-v5">Upcoming</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP v5 ===== */
+
+  .roadmapSection-v5 {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .roadmapWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .roadmapHeader {
+    max-width: 760px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+  }
+
+  .roadmapEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .roadmapTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .roadmapSubtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #cfcfcf;
+  }
+
+  /* Grid */
+  .roadmapGrid-v5 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  /* Card */
+  .roadmapCard-v5 {
+    position: relative;
+    border-radius: var(--borderRadius);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px 24px 34px 24px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+  }
+
+  .roadmapCard-v5:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  /* Dot */
+  .roadmapDot-v5 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    margin-bottom: 14px;
+  }
+
+  /* Text inside */
+  .roadmapCardTitle-v5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .roadmapCardText-v5 {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #dcdcdc;
+    margin-bottom: 18px;
+  }
+
+  /* Badge */
+  .roadmapBadge-v5 {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(2, 255, 57, 0.12);
+    color: var(--secondStyleColor);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 800px) {
+    .roadmapGrid-v5 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

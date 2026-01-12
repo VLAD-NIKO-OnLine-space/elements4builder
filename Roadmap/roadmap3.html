@@ -1,0 +1,309 @@
+<section id="roadmap" class="section roadmapSection roadmapSection-v3">
+  <div class="container roadmapWrapper">
+    <div class="roadmapHeader">
+      <p class="roadmapEyebrow">Roadmap</p>
+      <h2 class="roadmapTitle">From idea to stable network</h2>
+      <p class="roadmapSubtitle">
+        A compact overview of the main stages: starting small, expanding the
+        library and then tuning everything for real traffic.
+      </p>
+    </div>
+
+    <div class="roadmapTrack">
+      <div class="roadmapTrackLine"></div>
+
+      <div class="roadmapStage roadmapStage--active">
+        <div class="roadmapDot"></div>
+        <p class="roadmapStageLabel">Start</p>
+        <h3 class="roadmapStageTitle">Concept & first layout</h3>
+        <p class="roadmapStageText">
+          Sketch the structure, pick a base theme and launch a minimal but
+          working site to see how everything behaves.
+        </p>
+      </div>
+
+      <div class="roadmapStage">
+        <div class="roadmapDot"></div>
+        <p class="roadmapStageLabel">Step 02</p>
+        <h3 class="roadmapStageTitle">Multiple templates</h3>
+        <p class="roadmapStageText">
+          Add alternative headers, footers and content sections so each build
+          can look fresh even with similar data behind it.
+        </p>
+      </div>
+
+      <div class="roadmapStage">
+        <div class="roadmapDot"></div>
+        <p class="roadmapStageLabel">Step 03</p>
+        <h3 class="roadmapStageTitle">Automation focus</h3>
+        <p class="roadmapStageText">
+          Wire up randomization, pools of images and simple rules for which
+          sections appear and in what order.
+        </p>
+      </div>
+
+      <div class="roadmapStage">
+        <div class="roadmapDot"></div>
+        <p class="roadmapStageLabel">Step 04</p>
+        <h3 class="roadmapStageTitle">Stability & tuning</h3>
+        <p class="roadmapStageText">
+          Polish spacing, typography, SEO tags and loading speed so the whole
+          system is easy to extend and safe to scale.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP BASE ===== */
+
+  .roadmapSection {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .roadmapWrapper {
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  .roadmapHeader {
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  .roadmapEyebrow {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .roadmapTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .roadmapSubtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  /* ===== ROADMAP v1 (timeline) ===== */
+
+  .roadmapTimeline {
+    margin-top: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .roadmapStep {
+    position: relative;
+    border-radius: var(--borderRadius);
+    padding: 16px 18px 18px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+  }
+
+  .roadmapStep::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 4px rgba(2, 255, 57, 0.25);
+  }
+
+  .roadmapStep:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-2px);
+  }
+
+  .roadmapBadge {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--secondStyleColor);
+    margin-bottom: 6px;
+  }
+
+  .roadmapStepTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .roadmapStepText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dddddd;
+  }
+
+  /* ===== ROADMAP v2 (cards grid) ===== */
+
+  .roadmapSection-v2 .roadmapGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .roadmapCard {
+    border-radius: var(--borderRadius);
+    padding: 18px 20px 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+  }
+
+  .roadmapCard:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-2px);
+  }
+
+  .roadmapCardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .roadmapYear {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .roadmapTag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(2, 255, 57, 0.7);
+    color: var(--secondStyleColor);
+  }
+
+  .roadmapCardTitle {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .roadmapCardText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--textColor1);
+  }
+
+  /* ===== ROADMAP v3 (horizontal track) ===== */
+
+  .roadmapSection-v3 .roadmapTrack {
+    position: relative;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .roadmapTrackLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.18);
+    z-index: 0;
+  }
+
+  .roadmapStage {
+    position: relative;
+    border-radius: var(--borderRadius);
+    padding: 30px 18px 18px 18px;
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    transition: 0.2s ease;
+    z-index: 1;
+  }
+
+  .roadmapStage--active {
+    border-color: var(--secondStyleColor);
+  }
+
+  .roadmapDot {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 4px rgba(2, 255, 57, 0.25);
+  }
+
+  .roadmapStageLabel {
+    margin-left: 28px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #b5ffbf;
+    margin-bottom: 4px;
+  }
+
+  .roadmapStageTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0;
+    margin-bottom: 6px;
+  }
+
+  .roadmapStageText {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dddddd;
+  }
+
+  /* ===== RESPONSIVE ===== */
+
+  @media (max-width: 900px) {
+    .roadmapSection-v2 .roadmapGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .roadmapSection-v3 .roadmapTrack {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .roadmapTimeline {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .roadmapStep::before {
+      left: 14px;
+    }
+
+    .roadmapSection-v3 .roadmapTrack {
+      grid-template-columns: 1fr;
+    }
+
+    .roadmapTrackLine {
+      display: none;
+    }
+  }
+</style>

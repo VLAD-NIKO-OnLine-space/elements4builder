@@ -1,0 +1,184 @@
+<section id="roadmap" class="roadmapBlock_x91">
+  <div class="container roadmapWrap_k2v">
+    <div class="roadmapHead_z7m">
+      <p class="roadmapTag_c4e">Roadmap</p>
+      <h2 class="roadmapMainTitle_f0n">Milestones on the way</h2>
+      <p class="roadmapLeadText_s3p">
+        A simple timeline that shows the most important checkpoints the project
+        passes through before it feels complete.
+      </p>
+    </div>
+
+    <div class="roadmapZigzagList_q8t">
+      <article class="roadmapZigzagItem_h6b">
+        <div class="roadmapZigzagSide_u1c">
+          <span class="roadmapZigzagPoint_v5r">01</span>
+          <div class="roadmapZigzagLine_l0k"></div>
+        </div>
+        <div class="roadmapZigzagBody_m9y">
+          <p class="roadmapZigzagStage_a2d">Kickoff</p>
+          <h3 class="roadmapZigzagTitle_r4q">
+            Collect requirements and patterns
+          </h3>
+          <p class="roadmapZigzagText_j3s">
+            Review what each site in the network should contain and decide which
+            repeating fragments will become reusable sections.
+          </p>
+        </div>
+      </article>
+
+      <article class="roadmapZigzagItem_h6b roadmapZigzagItem_h6b--alt">
+        <div class="roadmapZigzagSide_u1c">
+          <span class="roadmapZigzagPoint_v5r">02</span>
+          <div class="roadmapZigzagLine_l0k"></div>
+        </div>
+        <div class="roadmapZigzagBody_m9y">
+          <p class="roadmapZigzagStage_a2d">Design</p>
+          <h3 class="roadmapZigzagTitle_r4q">Shape layouts and hierarchy</h3>
+          <p class="roadmapZigzagText_j3s">
+            Align typography, spacing, and hierarchy so every page looks
+            consistent, even when sections are swapped or reordered.
+          </p>
+        </div>
+      </article>
+
+      <article class="roadmapZigzagItem_h6b">
+        <div class="roadmapZigzagSide_u1c">
+          <span class="roadmapZigzagPoint_v5r">03</span>
+          <div class="roadmapZigzagLine_l0k"></div>
+        </div>
+        <div class="roadmapZigzagBody_m9y">
+          <p class="roadmapZigzagStage_a2d">Automation</p>
+          <h3 class="roadmapZigzagTitle_r4q">Wire content to the engine</h3>
+          <p class="roadmapZigzagText_j3s">
+            Connect JSON manifests, section definitions, and image folders so
+            new sites are generated with a single command.
+          </p>
+        </div>
+      </article>
+
+      <article class="roadmapZigzagItem_h6b roadmapZigzagItem_h6b--alt">
+        <div class="roadmapZigzagSide_u1c">
+          <span class="roadmapZigzagPoint_v5r">04</span>
+          <div class="roadmapZigzagLine_l0k"></div>
+        </div>
+        <div class="roadmapZigzagBody_m9y">
+          <p class="roadmapZigzagStage_a2d">Launch</p>
+          <h3 class="roadmapZigzagTitle_r4q">Deploy, measure, adjust</h3>
+          <p class="roadmapZigzagText_j3s">
+            Launch generated sites, review live output, and refine details while
+            keeping the core system stable.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .roadmapZigzagList_q8t {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .roadmapZigzagItem_h6b {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .roadmapZigzagItem_h6b--alt {
+    direction: rtl;
+  }
+
+  .roadmapZigzagItem_h6b--alt .roadmapZigzagBody_m9y {
+    direction: ltr;
+  }
+
+  .roadmapZigzagSide_u1c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .roadmapZigzagPoint_v5r {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(2, 255, 57, 0.7);
+    background: rgba(2, 255, 57, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondStyleColor);
+  }
+
+  .roadmapZigzagLine_l0k {
+    flex: 1;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .roadmapZigzagBody_m9y {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+    padding: 16px 18px;
+    transition: 0.2s ease;
+  }
+
+  .roadmapZigzagBody_m9y:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  .roadmapZigzagStage_a2d {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 6px;
+  }
+
+  .roadmapZigzagTitle_r4q {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .roadmapZigzagText_j3s {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dfdfdf;
+  }
+
+  /* ===== Responsive ===== */
+
+  @media (max-width: 900px) {
+    .roadmapSection-steps .roadmapStepsRow {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .roadmapSection-grid .roadmapGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .roadmapSection-steps .roadmapStepsRow {
+      grid-template-columns: 1fr;
+    }
+
+    .roadmapZigzagItem_h6b,
+    .roadmapZigzagItem_h6b--alt {
+      grid-template-columns: auto minmax(0, 1fr);
+      direction: ltr;
+    }
+  }
+</style>

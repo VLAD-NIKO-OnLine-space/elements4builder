@@ -1,0 +1,163 @@
+<section id="roadmap" class="section roadmapSection roadmapSection-v1">
+  <div class="container roadmapWrapper">
+    <div class="roadmapHeader">
+      <p class="roadmapEyebrow">Roadmap</p>
+      <h2 class="roadmapTitle">Development Journey</h2>
+      <p class="roadmapSubtitle">
+        Below is the planned progression of updates, improvements, and upcoming
+        milestones.
+      </p>
+    </div>
+
+    <div class="roadmapTimeline">
+      <div class="roadmapItem">
+        <div class="roadmapMarker"></div>
+        <div class="roadmapContent">
+          <h3 class="roadmapItemTitle">Phase 1 — Foundation</h3>
+          <p class="roadmapItemText">
+            Initial setup, core mechanics, essential UI, and system
+            stabilization.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapItem">
+        <div class="roadmapMarker"></div>
+        <div class="roadmapContent">
+          <h3 class="roadmapItemTitle">Phase 2 — Feature Expansion</h3>
+          <p class="roadmapItemText">
+            Adding new modes, improving user flow, refining visuals and
+            responsiveness.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapItem">
+        <div class="roadmapMarker"></div>
+        <div class="roadmapContent">
+          <h3 class="roadmapItemTitle">Phase 3 — Optimization</h3>
+          <p class="roadmapItemText">
+            Performance tuning, load optimization, accessibility improvements.
+          </p>
+        </div>
+      </div>
+
+      <div class="roadmapItem">
+        <div class="roadmapMarker"></div>
+        <div class="roadmapContent">
+          <h3 class="roadmapItemTitle">Phase 4 — Final Release</h3>
+          <p class="roadmapItemText">
+            Polishing the project, final QA testing, deployment and release.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP SECTION v1 ===== */
+
+  .roadmapSection-v1 {
+    padding: 80px 0;
+    background: var(--bodyBG);
+    color: var(--textColor1);
+  }
+
+  .roadmapHeader {
+    max-width: 750px;
+    margin: 0 auto 55px auto;
+    text-align: center;
+  }
+
+  .roadmapEyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondStyleColor);
+    margin-bottom: 8px;
+  }
+
+  .roadmapTitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--textColor1);
+  }
+
+  .roadmapSubtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ccc;
+    max-width: calc(var(--maxWidthContainer) - 20px);
+    margin: 0 auto;
+  }
+
+  .roadmapTimeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .roadmapTimeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .roadmapItem {
+    position: relative;
+    padding-left: 60px;
+  }
+
+  .roadmapMarker {
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--secondStyleColor);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 57, 0.4);
+  }
+
+  .roadmapItemTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--textColor1);
+  }
+
+  .roadmapItemText {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d1d1d1;
+  }
+
+  /* Адаптив */
+  @media (max-width: 650px) {
+    .roadmapTimeline::before {
+      left: 12px;
+    }
+
+    .roadmapItem {
+      padding-left: 45px;
+    }
+
+    .roadmapMarker {
+      left: 3px;
+    }
+
+    .roadmapTitle {
+      font-size: 26px;
+    }
+  }
+</style>
