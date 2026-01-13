@@ -1,0 +1,243 @@
+<section class="stats-curve" id="features">
+  <div class="container">
+    <div class="statsheader">
+      <h2>Stats Curve</h2>
+      <p class="featureText">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum illum
+        repudiandae porro ipsa amet!
+      </p>
+    </div>
+    <div class="stats-inner">
+      <!-- кривая -->
+      <svg class="curve-svg" viewBox="0 0 1400 260" preserveAspectRatio="none">
+        <!-- тонкая голубая линия -->
+        <path
+          d="M0 180 C 220 180, 320 150, 480 130 C 650 108, 720 70, 900 52 C 1100 32, 1220 46, 1400 64"
+          fill="none"
+          stroke="rgba(38,183,255,0.95)"
+          stroke-width="1.6" />
+      </svg>
+
+      <!-- узлы на линии -->
+      <div class="node n1"></div>
+      <div class="node n2"></div>
+      <div class="node n3"></div>
+      <div class="node n4"></div>
+
+      <!-- метрики -->
+      <div class="metric m1">
+        <p class="value">19k+</p>
+        <p class="label">Direct publishers</p>
+      </div>
+
+      <div class="metric m2">
+        <p class="value">50k+</p>
+        <p class="label">Advertisers</p>
+      </div>
+
+      <div class="metric m3">
+        <p class="value">7B+</p>
+        <p class="label">Daily impressions</p>
+      </div>
+
+      <div class="metric m4">
+        <p class="value">10M+</p>
+        <p class="label">Daily clicks</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .statsheader {
+    margin-bottom: 40px;
+  }
+
+  .stats-curve {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    h2 {
+      color: var(--textColor1);
+    }
+  }
+  .featureText {
+    color: var(--textColor1);
+  }
+
+  .stats-inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 320px; /* высота блока как на скрине */
+  }
+
+  /* SVG кривая */
+  .curve-svg {
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    top: 8px;
+    width: 104%;
+    height: 210px;
+    pointer-events: none;
+  }
+
+  /* точки на кривой */
+  .node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(38, 183, 255, 0.08);
+    border: 1px solid rgba(38, 183, 255, 0.28);
+    display: grid;
+    place-items: center;
+  }
+
+  .node::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(38, 183, 255, 0.55);
+    background: rgba(38, 183, 255, 0.06);
+    display: block;
+  }
+
+  .node::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95);
+  }
+
+  /* блоки метрик */
+  .metric {
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: left;
+  }
+
+  .metric .value {
+    font-size: clamp(54px, 6.6vw, 92px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--secondStyleColor);
+    margin: 0;
+  }
+
+  .metric .label {
+    margin: 14px 0 0;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--textColor1);
+    text-transform: uppercase;
+  }
+
+  /* Позиции как на макете (проценты по ширине + px по высоте) */
+  .m1 {
+    left: 14%;
+    top: 169px;
+  }
+  .m2 {
+    left: 36%;
+    top: 134px;
+  }
+  .m3 {
+    left: 58%;
+    top: 86px;
+  }
+  .m4 {
+    left: 78%;
+    top: 54px;
+  }
+
+  /* узлы на кривой (примерно над метриками) */
+  .n1 {
+    left: 6%;
+    top: 152px;
+  }
+  .n2 {
+    left: 30%;
+    top: 120px;
+  }
+  .n3 {
+    left: 52%;
+    top: 74px;
+  }
+  .n4 {
+    left: 72%;
+    top: 44px;
+  }
+
+  /* аккуратная адаптация */
+  @media (max-width: 900px) {
+    .statsheader {
+      margin-bottom: 20px;
+    }
+    .stats-inner {
+      padding: 0;
+    }
+    .metric {
+      position: relative;
+    }
+    .node {
+      display: none;
+    }
+    .curve-svg {
+      display: none;
+    }
+    .stats-inner {
+      height: 520px;
+    }
+    .curve-svg {
+      top: 0;
+      height: 220px;
+    }
+
+    .metric {
+      transform: none;
+      left: 0 !important;
+      right: 0;
+    }
+
+    .m1 {
+      top: 0;
+    }
+    .m2 {
+      top: 0;
+    }
+    .m3 {
+      top: 0;
+    }
+    .m4 {
+      top: 0;
+    }
+
+    .node {
+      transform: translate(0, -50%);
+      left: 18px !important;
+    }
+
+    .n1 {
+      top: 0;
+    }
+    .n2 {
+      top: 0;
+    }
+    .n3 {
+      top: 0;
+    }
+    .n4 {
+      top: 0;
+    }
+  }
+</style>
