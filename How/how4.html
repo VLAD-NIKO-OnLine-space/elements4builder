@@ -1,6 +1,10 @@
 <section class="steps--diagonal" id="how-it-works">
   <div class="container">
-    <h2 class="howTitle">Najbardziej bezpośrednie i powszechne tłumaczenia</h2>
+    <div class="steps-dheader">
+      <h2 class="howTitle">
+        Najbardziej bezpośrednie i powszechne tłumaczenia
+      </h2>
+    </div>
     <div class="steps-container">
       <div class="step--outline">
         <div class="step__number">01</div>
@@ -42,6 +46,9 @@
 </section>
 
 <style>
+  .steps-dheader {
+    margin-bottom: 40px;
+  }
   .steps--diagonal {
     position: relative;
     overflow: hidden;
@@ -139,6 +146,9 @@
   @media (max-width: 1024px) {
     .steps-visual {
       display: none;
+    }
+    .steps-dheader {
+      margin-bottom: 20px;
     }
   }
 </style>
