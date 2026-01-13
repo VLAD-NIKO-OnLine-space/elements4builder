@@ -1,0 +1,238 @@
+<section class="heroSection">
+  <img data-image class="heroSectionBG" />
+  <div class="container">
+    <div class="panel">
+      <div class="content">
+        <h1>Made for affiliates <br />and marketers</h1>
+        <p class="sub">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt
+          soluta unde dicta similique, sequi doloribus deleniti necessitatibus
+          quaerat omnis?
+        </p>
+        <a class="btn" href="#partners">Create Ads</a>
+      </div>
+
+      <!-- декоративные блоки -->
+      <div class="blocks" aria-hidden="true">
+        <div class="b red"><div class="diamond"></div></div>
+        <div class="b yellow"><div class="circle"></div></div>
+        <div class="b green"><div class="chevrons"></div></div>
+        <div class="b blue"><div class="tri"></div></div>
+        <div class="b indigo"><div class="square"></div></div>
+        <div class="b purple"><div class="spark"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .heroSection {
+    overflow: hidden;
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .heroSectionBG {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: blur(15px);
+    opacity: 0.2;
+  }
+
+  /* серый “лист” как на скрине */
+  .panel {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .content {
+    max-width: 680px;
+  }
+
+  h1 {
+    margin: 0 0 18px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    font-size: clamp(38px, 4.8vw, 66px);
+    color: var(--textColor1);
+    text-transform: uppercase;
+  }
+
+  .sub {
+    margin: 0 0 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--textColor1);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 46px;
+    border-radius: 4px;
+    border: 0;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  /* Блоки справа снизу (ступеньки) */
+  .blocks {
+    position: relative;
+    right: 0;
+    width: 560px;
+    height: 360px;
+    pointer-events: none;
+  }
+
+  .b {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    display: grid;
+    place-items: center;
+  }
+
+  .b.red {
+    background: var(--c-red);
+    left: 80px;
+    bottom: 0px;
+  }
+  .b.yellow {
+    background: var(--c-yellow);
+    left: 210px;
+    bottom: 130px;
+  }
+  .b.green {
+    background: var(--c-green);
+    left: 340px;
+    bottom: 0px;
+  }
+  .b.indigo {
+    background: var(--c-indigo);
+    left: 470px;
+    bottom: 130px;
+  }
+  .b.blue {
+    background: var(--c-blue);
+    left: 470px;
+    bottom: 0px;
+  }
+  .b.purple {
+    background: var(--c-purple);
+    left: 600px; /* вылезает правее панели, как на скрине */
+    bottom: 260px;
+  }
+
+  /* Иконки (все белые) */
+  .icon {
+    width: 64px;
+    height: 64px;
+    background: #fff;
+  }
+
+  /* ромб */
+  .diamond {
+    width: 62px;
+    height: 62px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+  /* круг */
+  .circle {
+    width: 54px;
+    height: 54px;
+    background: #fff;
+    border-radius: 999px;
+  }
+
+  /* квадрат */
+  .square {
+    width: 44px;
+    height: 44px;
+    background: #fff;
+  }
+
+  /* двойная стрелка (>>) */
+  .chevrons {
+    width: 70px;
+    height: 42px;
+    position: relative;
+  }
+  .chevrons::before,
+  .chevrons::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid transparent;
+    border-left: 28px solid #fff;
+    transform: translateY(-50%);
+  }
+  .chevrons::before {
+    left: 6px;
+  }
+  .chevrons::after {
+    left: 30px;
+  }
+
+  /* треугольник вниз */
+  .tri {
+    width: 0;
+    height: 0;
+    border-left: 34px solid transparent;
+    border-right: 34px solid transparent;
+    border-top: 56px solid #fff;
+    transform: rotate(-12deg);
+  }
+
+  /* “звезда” 4 луча */
+  .spark {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    clip-path: polygon(
+      50% 0%,
+      60% 32%,
+      100% 50%,
+      60% 68%,
+      50% 100%,
+      40% 68%,
+      0% 50%,
+      40% 32%
+    );
+  }
+
+  /* адаптив */
+  @media (max-width: 1100px) {
+    .panel {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .blocks {
+      display: none;
+    }
+    .heroSection {
+      max-height: 650px;
+    }
+  }
+</style>
