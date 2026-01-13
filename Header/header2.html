@@ -52,10 +52,10 @@
 
   .headerButton {
     transition: 0.2s all linear;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border: none;
     text-transform: uppercase;
-    background-color: var(--secondStyleColor);
+    background-color: var(--textColor2);
     color: var(--textColor2);
     cursor: pointer;
     border-radius: var(--borderRadius);
@@ -119,9 +119,12 @@
     text-decoration: none;
   }
 
-  @media screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     .headerWrapper {
       padding: 0 20px;
+    }
+    .headerButton {
+      display: none;
     }
     .nav {
       position: fixed;
