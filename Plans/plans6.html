@@ -1,0 +1,106 @@
+<section id="plans">
+  <div class="container">
+    <div class="plansHead">
+      <h2>Plans & Pricing</h2>
+      <p>
+        This is where your text starts. You can click here and start typing.
+        Incidunt ut labore et dolore magnam aliquam quaerat voluptatem ut enim
+        ad.
+      </p>
+    </div>
+    <div class="plansWrap">
+      <div class="planItem">
+        <div>
+          <h3>Lorem, ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <span class="planPrice">$25</span>
+      </div>
+      <div class="planItem">
+        <div>
+          <h3>Lorem, ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <span class="planPrice">$35</span>
+      </div>
+      <div class="planItem">
+        <div>
+          <h3>Lorem, ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <span class="planPrice">$70</span>
+      </div>
+      <a href="#partners">Pricelist</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .plansHead {
+    margin-bottom: 40px;
+    color: var(--textColor1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    p {
+      max-width: 500px;
+      text-align: center;
+      text-wrap: balance;
+    }
+  }
+  .plansWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--textColor1);
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .plansWrap a {
+    padding: 15px 40px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid var(--secondStyleColor);
+    color: var(--textColor1);
+    text-transform: uppercase;
+    border-radius: var(--borderRadius);
+    transition: 0.2s all linear;
+    letter-spacing: 2px;
+  }
+  .plansWrap a:hover {
+    transform: translateY(-5px);
+  }
+  .planItem {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondStyleColor);
+    transition: 0.2s all linear;
+  }
+  .planItem:hover {
+    transform: translateY(-5px);
+  }
+  .planPrice {
+    font-size: 32px;
+  }
+  .planItem > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .plansHead {
+      margin-bottom: 20px;
+    }
+    .plansWrap {
+      max-width: 100%;
+    }
+  }
+</style>
