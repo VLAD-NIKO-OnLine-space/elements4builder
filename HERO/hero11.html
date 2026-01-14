@@ -1,0 +1,90 @@
+<section class="hero-11">
+  <div class="container">
+    <div class="hero-lerft">
+      <h1 data-var="domain_name"></h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+        deserunt eaque quis vel, id recusandae?
+      </p>
+      <img data-image alt="" />
+    </div>
+
+    <div class="hero-gight">
+      <img data-image alt="" />
+      <a href="#partners">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-11 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-lerft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: var(--borderRadius);
+      object-position: top;
+    }
+  }
+
+  .hero-gight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: auto;
+    gap: 20px;
+    img {
+      height: 500px;
+      width: 500px;
+      object-position: top;
+      border-radius: var(--borderRadius);
+      object-fit: cover;
+    }
+    a {
+      padding: 12px 20px;
+      background-color: var(--secondStyleColor);
+      width: fit-content;
+      border-radius: var(--borderRadius);
+      color: var(--bodyBG);
+      font-weight: 900;
+      font-size: 24px;
+      transition: 0.2s all linear;
+    }
+    a:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hero-lerft img {
+      display: none;
+    }
+    .hero-lerft {
+      justify-content: center;
+      h1,
+      p {
+        text-align: center;
+      }
+    }
+    .hero-11 .container {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .hero-gight img {
+      width: 100%;
+    }
+    .hero-gight a {
+      margin: 0 auto;
+    }
+  }
+</style>
