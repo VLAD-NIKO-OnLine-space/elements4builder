@@ -77,22 +77,10 @@
 =============================== */
 
   .site-footer {
-    --footer-accent: var(--accent-2); /* cyan */
-    --footer-accent-alt: var(--accent); /* pink */
-    --footer-text: var(--text-main);
-    --footer-muted: var(--text-muted);
-
     margin-top: 60px;
     padding: 28px 0 22px;
-    background: linear-gradient(
-      to bottom,
-      rgba(3, 6, 24, 0.356),
-      rgba(3, 6, 24, 0.418),
-      rgba(3, 6, 24, 0.384)
-    );
-    border-top: 1px solid rgba(124, 144, 255, 0.32);
-    color: var(--footer-muted);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    border-top: 1px solid var(--secondStyleColor);
+    color: var(--textColor1);
     position: relative;
     backdrop-filter: blur(18px);
   }
@@ -156,7 +144,7 @@
     flex-direction: column;
     align-items: flex-start;
     text-decoration: none;
-    color: var(--footer-text);
+    color: var(--textColor1);
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -174,7 +162,7 @@
   .site-footer a,
   .site-footer address {
     position: relative;
-    color: var(--footer-muted);
+    color: var(--textColor1);
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
@@ -187,17 +175,14 @@
 
   .site-footer address {
     font-style: normal;
-    color: rgba(209, 213, 219, 0.8);
+    color: var(--textColor1);
   }
 
   /* ≡ ХОВЕР БЕЗ ЛИНИИ — МЯГКОЕ НЕОНОВОЕ СВЕЧЕНИЕ */
 
   .site-footer a:hover {
-    color: var(--text-main);
+    color: var(--secondStyleColor);
     transform: translateY(-2px);
-
-    text-shadow: 0 0 6px rgba(77, 243, 255, 0.45),
-      0 0 10px rgba(255, 79, 216, 0.35);
   }
 
   /* Social */
@@ -217,27 +202,14 @@
     height: 34px;
     border-radius: 50%;
     border: 1px solid rgba(148, 163, 184, 0.4);
-    background: radial-gradient(
-      circle at 30% 0,
-      rgba(255, 255, 255, 0.06),
-      transparent 70%
-    );
-    color: #e5e7eb;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.75);
+    color: var(--textColor1);
     transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease,
       transform 0.12s ease, box-shadow 0.18s ease;
   }
 
   .footer-social a:hover {
-    background: radial-gradient(
-      circle at 30% 0,
-      rgba(77, 243, 255, 0.55),
-      transparent 70%
-    );
-    color: #ffffff;
-    border-color: var(--footer-accent);
+    border-color: var(--secondStyleColor);
     transform: translateY(-1px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.95);
   }
 
   /* Contacts */
@@ -275,9 +247,9 @@
   .footer-bottom {
     text-align: center;
     padding-top: 14px;
-    border-top: 1px solid rgba(31, 41, 77, 0.85);
+    border-top: 1px solid var(--textColor1);
     font-size: 11.5px;
-    color: var(--footer-muted);
+    color: var(--textColor1);
   }
 
   .footer-bottom p {
@@ -285,7 +257,7 @@
   }
 
   .footer-bottom p span {
-    color: var(--footer-accent);
+    color: var(--textColor1);
     font-weight: 700;
   }
 </style>
