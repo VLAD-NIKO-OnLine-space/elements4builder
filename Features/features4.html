@@ -1,0 +1,66 @@
+<section id="features">
+  <div class="container">
+    <div class="feaWrap">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia, veniam architecto
+        nostrum corrupti autem?
+      </p>
+    </div>
+    <div class="featuresWrap">
+      <div class="feaItem">
+        <img data-image alt="" />
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <div class="feaItem">
+        <img data-image alt="" />
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <div class="feaItem">
+        <img data-image alt="" />
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featuresWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .feaItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    img {
+      height: 500px;
+      width: 400px;
+      border-radius: var(--borderRadius);
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .feaWrap {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 800px) {
+    .feaWrap {
+      margin-bottom: 20px;
+    }
+    .featuresWrap {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .feaItem {
+      gap: 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+</style>
