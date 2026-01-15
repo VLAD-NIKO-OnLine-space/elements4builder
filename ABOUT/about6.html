@@ -1,0 +1,155 @@
+<secion id="about" class="our-services">
+  <div class="container">
+    <div class="aboutImageWrapper">
+      <img data-illustration alt="" />
+    </div>
+    <div class="">
+      <div class="section-heading">
+        <h2>About Us</h2>
+        <p>
+          Space Dynamic HTML5 template is free to use for your website projects.
+          However, you are not permitted to redistribute the template ZIP file
+          on any CSS template collection websites. Please contact us for more
+          information. Thank you for your kind cooperation.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="first-bar progress-skill-bar">
+            <h3>Website Analysis</h3>
+            <span>84%</span>
+            <div class="filled-bar"></div>
+            <div class="full-bar"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="second-bar progress-skill-bar">
+            <h3>SEO Reports</h3>
+            <span>88%</span>
+            <div class="filled-bar"></div>
+            <div class="full-bar"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="third-bar progress-skill-bar">
+            <h3>Page Optimizations</h3>
+            <span>94%</span>
+            <div class="filled-bar"></div>
+            <div class="full-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</secion>
+
+<style>
+  .our-services .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .aboutImageWrapper {
+    width: 900px;
+    height: 400px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      object-position: top;
+      height: 100%;
+      border-radius: var(--borderRadius);
+    }
+  }
+
+  .our-services .left-image {
+    margin-right: 45px;
+  }
+
+  .our-services .section-heading h2 {
+    margin-right: 100px;
+  }
+
+  .our-services .section-heading p {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .our-services .progress-skill-bar {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+  }
+
+  .our-services .progress-skill-bar span {
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--secondStyleColor);
+  }
+
+  .our-services .first-bar span {
+    left: 69%;
+  }
+
+  .our-services .second-bar span {
+    left: 81%;
+  }
+
+  .our-services .third-bar span {
+    left: 88%;
+  }
+
+  .our-services .progress-skill-bar h3 {
+    font-weight: 700;
+    color: var(--textColor1);
+    margin-bottom: 14px;
+  }
+
+  .our-services .progress-skill-bar .full-bar {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--bodyBG);
+    position: relative;
+    z-index: 1;
+  }
+
+  .our-services .progress-skill-bar .filled-bar {
+    background: var(--secondStyleColor);
+    background: linear-gradient(
+      105deg,
+      var(--secondStyleColor) 0%,
+      var(--secondStyleColor) 100%
+    );
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: -6px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .our-services .first-bar .filled-bar {
+    width: 71%;
+  }
+
+  .our-services .second-bar .filled-bar {
+    width: 83%;
+  }
+
+  .our-services .third-bar .filled-bar {
+    width: 90%;
+  }
+
+  @media (max-width: 800px) {
+    .our-services .container {
+      flex-direction: column;
+    }
+    .aboutImageWrapper {
+      width: 100%;
+    }
+  }
+</style>
