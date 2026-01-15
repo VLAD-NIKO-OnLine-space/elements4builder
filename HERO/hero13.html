@@ -1,0 +1,519 @@
+<section class="xR9cF_sec">
+  <div class="container">
+    <div class="xR9cF_head">
+      <h1 class="xR9cF_title" data-var="domain_name"></h1>
+      <p class="xR9cF_sub">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
+        consequuntur!
+      </p>
+    </div>
+    <div class="xR9cF_stage" id="xR9cF_stage" tabindex="0">
+      <div class="xR9cF_flow" id="xR9cF_flow">
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="xR9cF_item">
+          <div class="xR9cF_card">
+            <img class="xR9cF_img" data-image loading="lazy" />
+            <div class="xR9cF_ref" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="xR9cF_dots" id="xR9cF_dots"></div>
+    </div>
+    <a href="#partners">Explore Now</a>
+  </div>
+</section>
+
+<style>
+  .xR9cF_sec {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 56px 18px 46px;
+    color: var(--textColor1);
+    background: radial-gradient(
+        1200px 420px at 50% -30%,
+        color-mix(in srgb, var(--secondStyleColor) 14%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 520px at 50% 30%,
+        color-mix(in srgb, var(--secondStyleColor) 14%, transparent),
+        transparent 55%
+      ),
+      linear-gradient(180deg, #0b0b12 0%, #07070c 60%, #050508 100%);
+    overflow: hidden;
+  }
+  .xR9cF_sec .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      margin-top: 40px;
+      padding: 15px 60px;
+      color: var(--textColor1);
+      text-transform: uppercase;
+      border-radius: var(--borderRadius);
+      border: 1px solid var(--secondStyleColor);
+      font-weight: 500;
+      transition: 0.2s all linear;
+    }
+    a:hover {
+      padding: 15px 80px;
+    }
+  }
+  .xR9cF_head {
+    text-align: center;
+    user-select: none;
+  }
+  .xR9cF_title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .xR9cF_sub {
+    margin: 8px 0 0;
+    opacity: 0.8;
+  }
+
+  .xR9cF_stage {
+    position: relative;
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    outline: none;
+    touch-action: pan-y;
+  }
+
+  .xR9cF_flow {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    transform-style: preserve-3d;
+  }
+
+  /* FIXED geometry -> perfect symmetry */
+  .xR9cF_item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 340px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    margin-left: -170px;
+    margin-top: -195px;
+    will-change: transform, opacity;
+    transition: transform 560ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 560ms,
+      filter 560ms;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .xR9cF_card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.55));
+    transform: translateZ(0);
+  }
+
+  .xR9cF_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: var(--borderRadius);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    pointer-events: auto;
+  }
+
+  .xR9cF_ref {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 16px);
+    height: 170px;
+    overflow: hidden;
+    border-radius: 16px;
+    opacity: 0.1;
+    pointer-events: none;
+
+    /* фон = картинка, ставится из JS */
+    background-image: var(--xR9cF_refimg);
+    background-size: cover;
+    background-position: center;
+
+    /* переворачиваем как отражение */
+    transform: scaleY(-1) translateZ(0);
+    /* filter: blur(2px); */
+  }
+
+  .xR9cF_ref::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 5, 8, 0) 0%,
+      rgba(5, 5, 8, 0.35) 40%,
+      rgba(5, 5, 8, 0.85) 75%,
+      rgba(5, 5, 8, 1) 100%
+    );
+  }
+  .xR9cF_imgRef {
+    transform: scaleY(-1);
+    filter: blur(0.2px);
+  }
+  .xR9cF_ref::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 5, 8, 0) 0%,
+      rgba(5, 5, 8, 0.35) 40%,
+      rgba(5, 5, 8, 0.85) 75%,
+      rgba(5, 5, 8, 1) 100%
+    );
+  }
+
+  /* dots */
+  .xR9cF_dots {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 60;
+  }
+  .xR9cF_dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+    transition: transform 220ms, background 220ms, opacity 220ms;
+    opacity: 0.9;
+  }
+  .xR9cF_dot.isOn {
+    background: rgba(255, 255, 255, 0.92);
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 920px) {
+    .xR9cF_item {
+      width: 280px;
+      height: 330px;
+      margin-left: -140px;
+      margin-top: -165px;
+    }
+    .xR9cF_stage {
+      height: 320px;
+    }
+    .xR9cF_flow {
+      height: 380px;
+    }
+  }
+  @media (max-width: 520px) {
+    .xR9cF_item {
+      width: 250px;
+      height: 320px;
+      margin-left: -115px;
+      margin-top: -135px;
+    }
+
+    .xR9cF_ref {
+      height: 140px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const stage = document.getElementById("xR9cF_stage");
+    const flow = document.getElementById("xR9cF_flow");
+    const items = Array.from(flow.querySelectorAll(".xR9cF_item"));
+    const dotsBox = document.getElementById("xR9cF_dots");
+
+    // ====== settings (tweak to taste) ======
+    const X_STEP = 240; // equal spacing left/right
+    const Z_STEP = 180;
+    const ROT_STEP = 58;
+    const MAX_SIDE = 3; // how many visible per side
+    const OP_STEP = 0.18;
+    const SCALE_STEP = 0.1;
+    const FAR_X = 820; // where hidden slides go (offscreen)
+    const DRAG_THRESHOLD = 42;
+
+    let current = Math.floor(items.length / 2);
+    let animLock = false;
+
+    let autoTimer = null;
+    let autoPlaying = true;
+    const AUTO_DELAY = 2000;
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoTimer = setInterval(() => {
+        if (!dragging && !animLock) next();
+      }, AUTO_DELAY);
+      autoPlaying = true;
+    }
+
+    function stopAutoplay() {
+      if (!autoTimer) return;
+      clearInterval(autoTimer);
+      autoTimer = null;
+      autoPlaying = false;
+    }
+
+    function handleUserInteraction() {
+      stopAutoplay();
+    }
+
+    // dots
+    items.forEach((_, i) => {
+      const d = document.createElement("div");
+      d.className = "xR9cF_dot";
+      d.addEventListener("click", () => goTo(i));
+      dotsBox.appendChild(d);
+    });
+    const dots = Array.from(dotsBox.querySelectorAll(".xR9cF_dot"));
+
+    function normOffset(index) {
+      // circular symmetric offset (always equal left/right)
+      let o = index - current;
+      const half = items.length / 2;
+      if (o > half) o -= items.length;
+      if (o < -half) o += items.length;
+      return o;
+    }
+
+    items.forEach((item) => {
+      const img = item.querySelector(".xR9cF_img");
+      const ref = item.querySelector(".xR9cF_ref");
+      if (!img || !ref) return;
+
+      const apply = () => {
+        const src = img.currentSrc || img.src;
+        ref.style.setProperty("--xR9cF_refimg", `url("${src}")`);
+      };
+
+      img.addEventListener("load", apply);
+      if (img.complete && img.naturalWidth > 0) apply();
+    });
+
+    function render() {
+      if (animLock) return;
+      animLock = true;
+
+      items.forEach((el, i) => {
+        const o = normOffset(i);
+        const abs = Math.abs(o);
+        const sgn = Math.sign(o);
+
+        let tx = o * X_STEP;
+        let tz = -abs * Z_STEP;
+        let ry = -sgn * Math.min(abs * ROT_STEP, ROT_STEP);
+        let op = 1 - abs * OP_STEP;
+        let sc = 1 - abs * SCALE_STEP;
+
+        if (abs > MAX_SIDE) {
+          op = 0;
+          tx = sgn * FAR_X;
+          tz = -MAX_SIDE * Z_STEP;
+          ry = -sgn * ROT_STEP;
+          sc = 1 - MAX_SIDE * SCALE_STEP;
+        }
+
+        el.style.transform = `translateX(${tx}px) translateZ(${tz}px) rotateY(${ry}deg) scale(${sc})`;
+        el.style.opacity = op;
+        el.style.zIndex = String(100 - abs);
+        el.style.filter =
+          abs === 0
+            ? "brightness(1) saturate(1.05)"
+            : "brightness(.70) saturate(.95)";
+      });
+
+      dots.forEach((d, i) => d.classList.toggle("isOn", i === current));
+
+      setTimeout(() => {
+        animLock = false;
+      }, 260);
+    }
+
+    function next() {
+      goTo((current + 1) % items.length);
+    }
+    function prev() {
+      goTo((current - 1 + items.length) % items.length);
+    }
+
+    function goTo(i) {
+      if (animLock) return;
+      current = i;
+      render();
+    }
+
+    // click to focus
+    items.forEach((el, i) => el.addEventListener("click", () => goTo(i)));
+
+    // keyboard
+    stage.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    });
+
+    // pointer drag (works on active slide too)
+    let dragging = false;
+    let dragStartX = 0;
+    let dragLocked = false;
+    let pointerId = null;
+    let didDrag = false;
+
+    stage.style.cursor = "grab";
+
+    stage.addEventListener(
+      "pointerdown",
+      (e) => {
+        if (e.pointerType === "mouse" && e.button !== 0) return;
+
+        // ✅ гасим нативный drag картинки
+        if (e.target && e.target.closest(".xR9cF_card")) {
+          e.preventDefault();
+        }
+
+        dragging = true;
+        dragLocked = false;
+        didDrag = false;
+        dragStartX = e.clientX;
+        pointerId = e.pointerId;
+
+        stage.style.cursor = "grabbing";
+        try {
+          stage.setPointerCapture?.(e.pointerId);
+        } catch {}
+      },
+      { passive: false }
+    );
+
+    document.addEventListener(
+      "pointermove",
+      (e) => {
+        if (!dragging) return;
+        if (pointerId !== null && e.pointerId !== pointerId) return;
+
+        const dx = e.clientX - dragStartX;
+        if (Math.abs(dx) > 6) didDrag = true;
+
+        if (!dragLocked && Math.abs(dx) >= DRAG_THRESHOLD) {
+          dx < 0 ? next() : prev();
+          dragLocked = true;
+        }
+      },
+      { passive: true }
+    );
+
+    // ✅ полностью отключаем нативный drag изображений
+    stage.addEventListener("dragstart", (e) => e.preventDefault());
+    items.forEach((it) =>
+      it.querySelectorAll("img").forEach((img) => (img.draggable = false))
+    );
+
+    function endDrag(e) {
+      if (!dragging) return;
+      if (pointerId !== null && e.pointerId !== pointerId) return;
+      dragging = false;
+      pointerId = null;
+      dragLocked = false;
+      stage.style.cursor = "grab";
+      setTimeout(() => {
+        didDrag = false;
+      }, 0);
+    }
+
+    document.addEventListener("pointerup", endDrag, { passive: true });
+    document.addEventListener("pointercancel", endDrag, { passive: true });
+
+    // prevent “click after drag” from selecting
+    items.forEach((el) => {
+      el.addEventListener(
+        "click",
+        (ev) => {
+          if (!didDrag) return;
+          ev.preventDefault();
+          ev.stopPropagation();
+        },
+        true
+      );
+    });
+
+    items.forEach((el) => el.addEventListener("click", handleUserInteraction));
+    dots.forEach((d) => d.addEventListener("click", handleUserInteraction));
+
+    stage.addEventListener("pointerdown", handleUserInteraction, {
+      passive: true,
+    });
+    stage.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft" || e.key === "ArrowRight")
+        handleUserInteraction();
+    });
+
+    // init
+    render();
+    stage.focus();
+    startAutoplay();
+  })();
+</script>
