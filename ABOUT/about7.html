@@ -1,0 +1,103 @@
+<section class="jaifsdlliweif" id="about">
+  <div class="container jaifsdlliweifContainer">
+    <h2>About Us</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, fuga
+      ipsa? Veritatis?
+    </p>
+  </div>
+  <div class="container">
+    <div class="about-left">
+      <img data-image alt="" />
+    </div>
+
+    <div class="about-right">
+      <div class="about-righr-img">
+        <img data-image alt="" />
+      </div>
+      <div class="iiyyru">
+        <h3>Who we are?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          illum necessitatibus sapiente dignissimos veniam maxime aperiam vitae
+          adipisci veritatis alias!
+        </p>
+        <a href="#partners">Diskover more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .jaifsdlliweif .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .jaifsdlliweifContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .about-left {
+    flex: 0 0 60%;
+    height: 600px;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: var(--borderRadius);
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+  }
+  .about-righr-img {
+    height: 300px;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: var(--borderRadius);
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .iiyyru {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    && a {
+      padding: 12px 20px;
+      background-color: var(--secondStyleColor);
+      width: fit-content;
+      border-radius: var(--borderRadius);
+      color: var(--bodyBG);
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: 0.2s all linear;
+      &&:hover {
+        color: var(--textColor1);
+        background-color: transparent;
+        border: 1px solid var(--secondStyleColor);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .jaifsdlliweif .container {
+      flex-direction: column;
+    }
+    .about-right {
+      flex-direction: column-reverse;
+    }
+  }
+</style>
