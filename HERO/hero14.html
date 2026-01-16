@@ -1,0 +1,215 @@
+<section class="op6pujj">
+  <img data-image alt="" />
+  <div class="code-particles" aria-hidden="true"></div>
+  <div class="container">
+    <h1 data-var="domain_name"></h1>
+    <span class="ootyuth"></span>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tenetur
+      repellat placeat praesentium voluptatem maiores vero corrupti dicta
+      deserunt iure, enim tempore, facere ipsum eaque.
+    </p>
+    <a href="#partners">Lorem, ipsum.</a>
+  </div>
+</section>
+
+<style>
+  /* ==== */
+  .op6pujj {
+    position: relative;
+    min-height: 700px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    && img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.15;
+      filter: blur(2px);
+    }
+  }
+  .op6pujj .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    && h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    && p {
+      text-align: center;
+    }
+    && a {
+      margin: 0 auto;
+      color: var(--bodyBG);
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s all linear;
+      text-transform: uppercase;
+      background-color: var(--secondStyleColor);
+      border: 1px solid transparent;
+      padding: 12px 40px;
+      border-radius: var(--borderRadius);
+      &&:hover {
+        padding: 12px 60px;
+        background-color: transparent;
+        border: 1px solid var(--secondStyleColor);
+        color: var(--textColor1);
+      }
+    }
+  }
+
+  .ootyuth {
+    width: 100%;
+    position: relative;
+    height: 2px;
+    background-color: var(--secondStyleColor);
+
+    &&:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      left: 0;
+      height: 150px;
+      background-color: var(--secondStyleColor);
+      bottom: 0;
+    }
+    &&::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      right: 0;
+      height: 150px;
+      background-color: var(--secondStyleColor);
+    }
+  }
+
+  .code-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    contain: layout paint;
+  }
+
+  .particle {
+    position: absolute;
+    left: calc(var(--x) * 1%);
+    top: calc(var(--y) * 1%);
+    font-weight: 800;
+    font-size: calc(var(--s) * 1px);
+    letter-spacing: -0.06em;
+    opacity: var(--o);
+    transform: translate3d(-50%, -50%, 0) rotate(calc(var(--r) * 1deg));
+    will-change: transform, opacity;
+    animation: floatUp calc(var(--d) * 1s) linear infinite;
+    animation-delay: calc(var(--delay) * -1s);
+    user-select: none;
+  }
+  .particle::before {
+    content: ".";
+    -webkit-text-stroke: 1px var(--secondStyleColor);
+  }
+  @keyframes floatUp {
+    0% {
+      transform: translate3d(-50%, calc(-50% + 120px), 0)
+        rotate(calc(var(--r) * 1deg));
+      opacity: 0;
+    }
+    8% {
+      opacity: var(--o);
+    }
+    100% {
+      transform: translate3d(
+          calc(-50% + (var(--drift) * 1px)),
+          calc(-50% - 140vh),
+          0
+        )
+        rotate(calc((var(--r) + 220) * 1deg));
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .particle {
+      font-size: calc((var(--s) - 4) * 1px);
+    }
+    .op6pujj {
+      height: auto;
+      min-height: 600px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const count = window.innerWidth < 768 ? 28 : 50;
+    const particlesContainer = document.querySelector(".code-particles");
+
+    // Очищаем контейнер на случай, если частицы уже есть
+    particlesContainer.innerHTML = "";
+
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement("span");
+      particle.classList.add("particle");
+
+      const particleStyle = {
+        "--x": Math.random() * 100, // 0-100% по ширине
+        "--y": Math.random() * 100, // 0-100% по высоте
+        "--delay": Math.random() * 20,
+        "--d": 14 + Math.random() * 18, // длительность анимации
+        "--s": 12 + Math.random() * 22, // размер
+        "--o": 0.18 + Math.random() * 0.28,
+        "--r": -40 + Math.random() * 80, // вращение
+        "--drift": -120 + Math.random() * 240, // смещение
+      };
+
+      Object.keys(particleStyle).forEach((key) => {
+        particle.style.setProperty(key, particleStyle[key]);
+      });
+
+      particlesContainer.appendChild(particle);
+    }
+  });
+
+  // Пересоздаем частицы при изменении размера окна
+  window.addEventListener("resize", function () {
+    const count = window.innerWidth < 768 ? 28 : 50;
+    const particlesContainer = document.querySelector(".code-particles");
+    particlesContainer.innerHTML = "";
+
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement("span");
+      particle.classList.add("particle");
+
+      const style = {
+        "--x": Math.random() * 100,
+        "--y": Math.random() * 100,
+        "--delay": Math.random() * 20,
+        "--d": 14 + Math.random() * 18,
+        "--s": 12 + Math.random() * 22,
+        "--o": 0.18 + Math.random() * 0.28,
+        "--r": -40 + Math.random() * 80,
+        "--drift": -120 + Math.random() * 240,
+      };
+
+      Object.keys(style).forEach((key) => {
+        particle.style.setProperty(key, style[key]);
+      });
+
+      particlesContainer.appendChild(particle);
+    }
+  });
+</script>
