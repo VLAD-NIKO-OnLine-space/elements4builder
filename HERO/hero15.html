@@ -1,0 +1,137 @@
+<section class="vfdsdc">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 data-var="domain_name"></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo
+          vitae culpa alias est optio deserunt error esse obcaecati impedit.
+        </p>
+        <a class="hero__btn" href="#partners">Join Us Now</a>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <img data-image alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .vfdsdc {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(28px, 5vw, 56px) 0;
+    background: var(--secondStyleColor);
+    min-height: 700px;
+  }
+
+  /* Белый “треугольник” снизу (диагональный срез) */
+  .vfdsdc::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 36%;
+    background: var(--bodyBG);
+    clip-path: polygon(0 55%, 100% 5%, 100% 100%, 0% 100%);
+    pointer-events: none;
+  }
+
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    && h1 {
+      text-transform: uppercase;
+      text-wrap: balance;
+      font-weight: 900;
+    }
+  }
+
+  .hero__content {
+    margin: 0 0 14px;
+    color: var(--textColor1);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    && p {
+      max-width: 700px;
+    }
+  }
+
+  .hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: var(--borderRadius);
+    background: var(--textColor1);
+    color: var(--textColor2);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
+    width: fit-content;
+    transition: 0.2s all linear;
+  }
+
+  .hero__btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .hero__phone a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .hero__phoneIcon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .hero__art {
+    display: flex;
+    width: 500px;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
+    && img {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--borderRadius);
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .hero__svg {
+    width: min(440px, 100%);
+    height: auto;
+  }
+
+  /* Адаптив */
+  @media (max-width: 860px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .hero__art {
+      display: none;
+    }
+
+    .hero::after {
+      height: 40%;
+      clip-path: polygon(0 65%, 100% 20%, 100% 100%, 0% 100%);
+    }
+  }
+</style>
