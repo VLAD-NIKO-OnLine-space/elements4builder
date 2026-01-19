@@ -1,4 +1,5 @@
 <section class="vfdsdc">
+  <img data-image alt="" class="kmndzI" />
   <div class="container">
     <div class="hero__inner">
       <div class="hero__content">
@@ -23,10 +24,19 @@
     position: relative;
     overflow: hidden;
     padding: clamp(28px, 5vw, 56px) 0;
-    background: var(--secondStyleColor);
     min-height: 700px;
     display: flex;
     align-items: center;
+  }
+  .kmndzI {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    object-position: center;
+    filter: blur(5px);
+    opacity: 0.2;
   }
 
   /* Белый “треугольник” снизу (диагональный срез) */
@@ -36,7 +46,17 @@
     inset: auto 0 0 0;
     height: 36%;
     background: var(--bodyBG);
-    clip-path: polygon(0 55%, 100% 5%, 100% 100%, 0% 100%);
+    clip-path: polygon(
+      0 40%,
+      33% 40%,
+      33% 20%,
+      66% 20%,
+      66% 5%,
+      100% 5%,
+      100% 100%,
+      0 100%
+    );
+
     pointer-events: none;
   }
 
@@ -51,6 +71,9 @@
       text-transform: uppercase;
       text-wrap: balance;
       font-weight: 900;
+    }
+    && p {
+      text-wrap: balance;
     }
   }
 
@@ -121,21 +144,19 @@
     width: min(440px, 100%);
     height: auto;
   }
+
   /* Адаптив */
   @media (max-width: 860px) {
-    .hero__inner {
-      grid-template-columns: 1fr;
-      text-align: left;
-    }
     .vfdsdc {
-      min-height: 487px;
+      min-height: 500px;
     }
     .hero__art {
       display: none;
     }
+
     .vfdsdc::after {
       height: 40%;
-      clip-path: polygon(0 65%, 100% 20%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 55%, 50% 55%, 50% 35%, 100% 35%, 100% 100%, 0 100%);
     }
   }
 </style>
