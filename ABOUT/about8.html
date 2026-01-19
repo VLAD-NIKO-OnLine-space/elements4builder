@@ -1,0 +1,180 @@
+<section class="xqv9a" id="about">
+  <div class="container">
+    <div class="cefjhead">
+      <h2>About Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolore,
+        sapiente iste voluptas voluptates autem pariatur non reiciendis
+        laudantium, velit, omnis nulla tempore sit.
+      </p>
+    </div>
+    <div class="kdm42">
+      <div class="p1a7e g3">
+        <h3>Design</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.</p>
+      </div>
+
+      <div class="p1a7e g4">
+        <h3>Coding</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.</p>
+      </div>
+
+      <div class="p1a7e g5">
+        <h3>Mobile Ready</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.</p>
+      </div>
+
+      <div class="p1a7e g6">
+        <h3>Left Column</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.</p>
+        <a href="#partners">Read Detail</a>
+      </div>
+
+      <div class="p1a7e g7">
+        <h3>Right Column</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id, sollicitudin ut mi.</p>
+        <a href="#partners">Learn More</a>
+      </div>
+
+      <div class="p1a7e g8">
+        <h3>Our Team</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id.</p>
+      </div>
+
+      <div class="p1a7e g9">
+        <h3>History</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id.</p>
+      </div>
+
+      <div class="p1a7e g10">
+        <h3>Management</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id.</p>
+      </div>
+
+      <div class="p1a7e g11">
+        <h3>Career</h3>
+        <p>Praesent lorem dui, suscipit eu volutpat id.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .cefjhead {
+    margin-bottom: 40px;
+  }
+
+  .kdm42 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+  }
+
+  /* base */
+  .p1a7e {
+    padding: 28px;
+    color: #222;
+    border: 1px solid var(--secondStyleColor);
+  }
+
+  .p1a7e h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  .p1a7e p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* row 1 */
+  .g3 {
+    grid-column: span 4;
+    color: var(--textColor1);
+    /* background: #e6e6e6;s */
+  }
+  .g4 {
+    grid-column: span 4;
+    /* background: #bdbdbd; */
+    color: var(--textColor1);
+  }
+  .g5 {
+    grid-column: span 4;
+    /* background: #6d6d6d; */
+    color: var(--textColor1);
+  }
+
+  /* row 2 */
+  .g6 {
+    grid-column: span 6;
+    color: var(--textColor1);
+  }
+  .g7 {
+    grid-column: span 6;
+    color: var(--textColor1);
+  }
+
+  /* row 3 */
+  .g8 {
+    grid-column: span 3;
+    /* background: #b5651d; */
+    color: var(--textColor1);
+  }
+  .g9 {
+    grid-column: span 3;
+    /* background: #1f87b4; */
+    color: var(--textColor1);
+  }
+  .g10 {
+    grid-column: span 3;
+    color: var(--textColor1);
+  }
+  .g11 {
+    grid-column: span 3;
+    /* background: #9aa22f; */
+    color: #fff;
+  }
+
+  /* buttons */
+  .g6 a,
+  .g7 a {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+  }
+
+  .g6 a {
+    background: var(--secondStyleColor);
+    color: var(--textColor1);
+  }
+  .g7 a {
+    background: var(--secondStyleColor);
+    color: var(--textColor1);
+  }
+
+  /* mobile */
+  @media (max-width: 900px) {
+    .cefjhead {
+      margin-bottom: 20px;
+    }
+    .kdm42 {
+      grid-template-columns: 1fr;
+    }
+    .g3,
+    .g4,
+    .g5,
+    .g6,
+    .g7,
+    .g8,
+    .g9,
+    .g10,
+    .g11 {
+      grid-column: span 1;
+    }
+  }
+</style>
