@@ -1,0 +1,180 @@
+<section class="qwfwae" id="about">
+  <div class="container">
+    <div class="sljahvasbkawrgfisacg">
+      <h2>About Us</h2>
+    </div>
+    <div class="vTrxQn">
+      <div class="aQpZyX">
+        <h3 class="uLmTtR">
+          Donec pulvinar quis tortor<br />aliquam tincidunt
+        </h3>
+
+        <p>
+          Morbi quam dui, scelerisque cursus nisl et, placerat congue mi. Proin
+          odio massa, tempor id odio eget, mollis molestie dui. Cras elementum
+          mollis nisi, dapibus sagittis leo pretium nec.
+        </p>
+
+        <a class="pOeRrS" href="#partners">View more</a>
+      </div>
+
+      <div class="yYtVvW">
+        <div class="mMpQqA">
+          <img class="nNwEeR" data-image alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="vTrxQn">
+      <div class="xXrEeD">
+        <div class="mMpQqA mMpQqA--flip">
+          <img class="nNwEeR" data-image alt="" />
+        </div>
+      </div>
+
+      <div class="aQpZyX">
+        <h3 class="uLmTtR">Aliquam luctus convallis<br />tortor in cursus</h3>
+
+        <p>
+          Nulla elementum, purus at cursus sollicitudin, dolor est fermentum
+          justo, vel iaculis nibh lectus non elit. Cras bibendum felis tincidunt
+          mauris tincidunt facilisis. Aenean porttitor lectus quis nulla
+          laoreet, eget pulvinar leo ultricies.
+        </p>
+
+        <a class="pOeRrS" href="#faq">View more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .qwfwae {
+    padding: 20px 0;
+  }
+  .sljahvasbkawrgfisacg {
+    margin-bottom: 40px;
+  }
+
+  .vTrxQn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .vTrxQn + .vTrxQn {
+    margin-top: 130px;
+  }
+
+  .uLmTtR {
+    margin: 0 0 10px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--textColor1);
+  }
+
+  .bNmYyU {
+    color: var(--textColor1);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .aQpZyX p {
+    margin: 0 0 12px;
+    line-height: 1.7;
+    color: var(--textColor1);
+  }
+
+  .pOeRrS {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 2px solid var(--secondStyleColor);
+    color: var(--textColor1);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    transition: 0.2s all linear;
+    &&:hover {
+      padding: 12px 40px;
+    }
+  }
+
+  .yYtVvW {
+    display: flex;
+    justify-content: center;
+  }
+  .xXrEeD {
+    display: flex;
+  }
+
+  .mMpQqA {
+    position: relative;
+    width: 360px;
+    height: 250px;
+  }
+
+  .mMpQqA::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    border: 18px solid var(--secondStyleColor);
+    right: -56px;
+    bottom: -135px;
+    z-index: 0;
+  }
+
+  .nNwEeR {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid var(--secondStyleColor);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+  }
+
+  /* зеркалим рамку для второго блока */
+  .mMpQqA--flip::before {
+    left: 38px;
+    right: auto;
+    bottom: -42px;
+  }
+
+  .mMpQqA--flip .nNwEeR {
+    left: 0;
+    right: auto;
+  }
+
+  /* адаптив */
+  @media (max-width: 900px) {
+    .vTrxQn {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .yYtVvW,
+    .xXrEeD {
+      justify-content: flex-start;
+    }
+    .mMpQqA::before {
+      display: none;
+    }
+    .mMpQqA,
+    .nNwEeR {
+      width: 100%;
+    }
+    .sljahvasbkawrgfisacg {
+      margin-bottom: 20px;
+    }
+  }
+</style>
