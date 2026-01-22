@@ -1,0 +1,113 @@
+<section id="features">
+  <img data-image alt="" />
+  <div class="container">
+    <h2>Features</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
+      optio quo eum, alias sit tempora quia libero exercitationem aspernatur
+      temporibus commodi quos distinctio nisi, consequuntur et incidunt, aliquam
+      doloribus mollitia.
+    </p>
+    <div class="fcsardjarwi">
+      <div class="cdfeeooofwwqr">
+        <div class="fcoooo">
+          <span>10K+</span>
+          <p>Happy Customers</p>
+        </div>
+        <div class="fcoooo">
+          <span>10K+</span>
+          <p>Happy Customers</p>
+        </div>
+        <div class="fcoooo">
+          <span>$10M</span>
+          <p>Umbrella Policye</p>
+        </div>
+      </div>
+      <div class="cdfeeooofwwqr">
+        <div class="fcoooo">
+          <span>10K+</span>
+          <p>Happy Customers</p>
+        </div>
+        <div class="fcoooo">
+          <span>10K+</span>
+          <p>Happy Customers</p>
+        </div>
+        <div class="fcoooo">
+          <span>$10M</span>
+          <p>Umbrella Policye</p>
+        </div>
+      </div>
+    </div>
+    <a href="#partners">Book Now</a>
+  </div>
+</section>
+
+<style>
+  /*  */
+  #features {
+    position: relative;
+  }
+  #features img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    opacity: 0.1;
+  }
+  #features .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    && a {
+      padding: 15px 60px;
+      background-color: var(--secondStyleColor);
+      border-radius: var(--borderRadius);
+      font-size: 20px;
+      color: var(--textColor2);
+      transition: 0.2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+      &&:hover {
+        padding: 15px 80px;
+      }
+    }
+    && h2 + p {
+      text-align: center;
+      text-wrap: balance;
+    }
+  }
+  .fcsardjarwi {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+  }
+  .cdfeeooofwwqr {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+  }
+  .fcoooo {
+    padding: 40px;
+    color: var(--textColor1);
+    background-color: rgba(16, 16, 20, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--secondStyleColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: var(--borderRadius);
+    && span {
+      font-size: 40px;
+      font-weight: 900;
+    }
+  }
+</style>
