@@ -1,0 +1,241 @@
+<section class="tst" data-tst id="reviews">
+  <div class="container">
+    <h2>Reviews</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. A hic maiores
+      illum dicta sint labore?
+    </p>
+  </div>
+  <div class="tst__card">
+    <p class="tst__item is-active" data-tst-item>
+      <span class="tst__mark">"</span>
+      Pepe is like a unicorn in a field of horses, magically bridging the gap
+      between design and coding. His designs sparkle brighter than a disco ball
+      at a 70s party, hitting that sweet spot between trendy and 'wow, did he
+      really just pull that off?
+      <span class="tst__mark">"</span>
+    </p>
+    <p class="tst__item" data-tst-item>
+      <span class="tst__mark">"</span>
+      Working with Pepe is like finding a needle in a haystack – except the
+      needle comes to you, and it's golden. His design eye is sharper than my
+      grandma's kitchen knives.
+      <span class="tst__mark">"</span>
+    </p>
+    <p class="tst__item" data-tst-item>
+      <span class="tst__mark">"</span>
+      Pepe is that rare blend of designer and developer who actually knows what
+      'deadline' means. He whipped up landing pages faster than I could say
+      Banana.
+      <span class="tst__mark">"</span>
+    </p>
+    <div class="tst__avatars" data-tst-avatars>
+      <button
+        class="tst__avatarBtn is-active"
+        type="button"
+        data-tst-avatar
+        aria-label="Testimonial 1">
+        <img
+          src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D"
+          alt="" />
+      </button>
+
+      <button
+        class="tst__avatarBtn"
+        type="button"
+        data-tst-avatar
+        aria-label="Testimonial 2">
+        <img
+          src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+          alt="" />
+      </button>
+
+      <button
+        class="tst__avatarBtn"
+        type="button"
+        data-tst-avatar
+        aria-label="Testimonial 3">
+        <img
+          src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" />
+      </button>
+    </div>
+
+    <div class="tst__meta">
+      <p class="tst__name" data-tst-name>Jhonny Mnemonic</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px 20px;
+  }
+
+  .tst .container {
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    && p {
+      text-align: center;
+    }
+  }
+
+  .tst__card {
+    max-width: var(--maxWidthContainer);
+    border: 1px solid var(--secondStyleColor);
+    border-radius: var(--borderRadius);
+    padding: 48px 32px 28px;
+  }
+
+  /* ===== items ===== */
+  .tst__item {
+    display: none;
+    text-align: center;
+    color: var(--textColor1);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0 auto;
+    max-width: var(--maxWidthContainer);
+    text-wrap: balance;
+  }
+  .tst__item.is-active {
+    display: block;
+  }
+
+  .tst__mark {
+    color: var(--secondStyleColor);
+  }
+
+  /* ===== avatars ===== */
+  .tst__avatars {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .tst__avatarBtn {
+    width: 62px;
+    height: 62px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .tst__avatarBtn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .tst__avatarBtn.is-active {
+    border-color: var(--secondStyleColor);
+  }
+
+  /* ===== meta ===== */
+  .tst__meta {
+    text-align: center;
+    padding-top: 18px;
+  }
+  .tst__name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .tst__role {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--textColor1);
+    text-decoration: none;
+  }
+  .tst__role:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 800px) {
+    .tst__item {
+      min-height: 200px;
+    }
+    .tst .container {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const root = document.querySelector("[data-tst]");
+    if (!root) return;
+
+    const items = Array.from(root.querySelectorAll("[data-tst-item]"));
+    const avatars = Array.from(root.querySelectorAll("[data-tst-avatar]"));
+    const nameEl = root.querySelector("[data-tst-name]");
+    const roleEl = root.querySelector("[data-tst-role]");
+
+    if (!items.length || !avatars.length) return;
+
+    // Метаданные (имя/роль) — чтобы было как в твоём примере
+    const meta = [
+      {
+        name: "Jhonny Mnemonic",
+        role: "Chief Wizard of Nowhere Land",
+        href: "#",
+      },
+      {
+        name: "Roberta Austina",
+        role: "Grandmaster of Excuse Crafting",
+        href: "#",
+      },
+      {
+        name: "Manolito Gafotas",
+        role: "Professional Procrastinator & Part-Time Visionary",
+        href: "#",
+      },
+    ];
+
+    let active = 0;
+
+    const setActive = (idx) => {
+      const i = ((idx % items.length) + items.length) % items.length;
+
+      items.forEach((el, n) => el.classList.toggle("is-active", n === i));
+      avatars.forEach((el, n) => el.classList.toggle("is-active", n === i));
+
+      if (nameEl && meta[i]) nameEl.textContent = meta[i].name;
+      if (roleEl && meta[i]) {
+        roleEl.textContent = meta[i].role;
+        roleEl.setAttribute("href", meta[i].href || "#");
+      }
+
+      active = i;
+    };
+
+    // Клики по аватаркам
+    avatars.forEach((btn, idx) => {
+      btn.addEventListener("click", () => setActive(idx));
+    });
+
+    // Клавиатура (опционально)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") setActive(active + 1);
+      if (e.key === "ArrowLeft") setActive(active - 1);
+    });
+
+    // Инициализация (на случай если активный класс не проставлен)
+    setActive(active);
+  });
+</script>
