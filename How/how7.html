@@ -1,5 +1,4 @@
 <section class="how7__section" id="how-it-works">
-  <div class="how7__backdrop" aria-hidden="true"></div>
   <div class="container how7__layout">
     <div class="how7__intro">
       <span class="how7__eyebrow">How it works</span>
@@ -79,27 +78,7 @@
     padding: 90px 0 110px;
     overflow: hidden;
   }
-  .how7__backdrop {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(
-        circle at 12% 20%,
-        rgba(255, 214, 170, 0.45),
-        transparent 52%
-      ),
-      radial-gradient(
-        circle at 88% 10%,
-        rgba(147, 200, 255, 0.35),
-        transparent 48%
-      ),
-      linear-gradient(
-        135deg,
-        rgba(245, 245, 245, 0.9),
-        rgba(232, 240, 255, 0.9)
-      );
-    z-index: -2;
-  }
+
   .how7__backdrop::after {
     content: "";
     position: absolute;
@@ -144,8 +123,7 @@
     gap: 16px;
   }
   .how7__meta-card {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--secondStyleColor);
     border-radius: 18px;
     padding: 16px;
     display: grid;
@@ -178,19 +156,14 @@
     top: 10px;
     bottom: 10px;
     width: 2px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0)
-    );
+    background: linear-gradient(var(--secondStyleColor));
   }
   .how7__step {
     display: grid;
     grid-template-columns: 70px minmax(0, 1fr);
     gap: 18px;
     align-items: start;
-    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid var(--secondStyleColor);
     border-radius: 20px;
     padding: 20px 22px;
     border: 1px solid rgba(0, 0, 0, 0.06);
