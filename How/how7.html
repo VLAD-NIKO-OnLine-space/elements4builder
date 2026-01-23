@@ -1,0 +1,282 @@
+<section class="how7__section" id="how-it-works">
+  <div class="how7__backdrop" aria-hidden="true"></div>
+  <div class="container how7__layout">
+    <div class="how7__intro">
+      <span class="how7__eyebrow">How it works</span>
+      <h2>From idea to launch in three bold moves</h2>
+      <p class="how7__lead">
+        Turn a vague brief into a clean, working flow. We keep the steps short,
+        the feedback tight, and the handoff easy.
+      </p>
+      <div class="how7__meta">
+        <div class="how7__meta-card">
+          <strong>48h</strong>
+          <span>First playable draft</span>
+        </div>
+        <div class="how7__meta-card">
+          <strong>3</strong>
+          <span>Focus checkpoints</span>
+        </div>
+        <div class="how7__meta-card">
+          <strong>1</strong>
+          <span>Shared source of truth</span>
+        </div>
+      </div>
+    </div>
+    <ol class="how7__steps">
+      <li class="how7__step" style="--delay: 0s">
+        <div class="how7__step-badge">01</div>
+        <div class="how7__step-body">
+          <h3>Align the outcome</h3>
+          <p>
+            We map the goal, audience, and success metric into one page so every
+            decision stays aligned.
+          </p>
+          <div class="how7__chips">
+            <span>Goal map</span>
+            <span>Audience notes</span>
+            <span>Risk callouts</span>
+          </div>
+        </div>
+      </li>
+      <li class="how7__step" style="--delay: 0.15s">
+        <div class="how7__step-badge">02</div>
+        <div class="how7__step-body">
+          <h3>Build the flow</h3>
+          <p>
+            We assemble the screens with real content, stitch the transitions,
+            and make the logic feel inevitable.
+          </p>
+          <div class="how7__chips">
+            <span>Live prototype</span>
+            <span>Motion cues</span>
+            <span>Usability pass</span>
+          </div>
+        </div>
+      </li>
+      <li class="how7__step" style="--delay: 0.3s">
+        <div class="how7__step-badge">03</div>
+        <div class="how7__step-body">
+          <h3>Ship the kit</h3>
+          <p>
+            You get the components, tokens, and handoff notes ready for
+            production with zero guesswork.
+          </p>
+          <div class="how7__chips">
+            <span>Tokens</span>
+            <span>Specs</span>
+            <span>QA checklist</span>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<style>
+  .how7__section {
+    position: relative;
+    padding: 90px 0 110px;
+    overflow: hidden;
+  }
+  .how7__backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        circle at 12% 20%,
+        rgba(255, 214, 170, 0.45),
+        transparent 52%
+      ),
+      radial-gradient(
+        circle at 88% 10%,
+        rgba(147, 200, 255, 0.35),
+        transparent 48%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(245, 245, 245, 0.9),
+        rgba(232, 240, 255, 0.9)
+      );
+    z-index: -2;
+  }
+  .how7__backdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity: 0.5;
+  }
+  .how7__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 50px;
+    align-items: start;
+  }
+  .how7__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .how7__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--textColor1);
+  }
+  .how7__intro h2 {
+    font-family: "Syne", sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0;
+    color: var(--textColor1);
+  }
+  .how7__lead {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.7;
+    max-width: 480px;
+  }
+  .how7__meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .how7__meta-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    padding: 16px;
+    display: grid;
+    gap: 6px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+  .how7__meta-card strong {
+    font-family: "Syne", sans-serif;
+    font-size: 22px;
+    color: var(--textColor1);
+  }
+  .how7__meta-card span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    color: var(--textColor1);
+  }
+
+  .how7__steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 26px;
+    position: relative;
+  }
+  .how7__steps::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    );
+  }
+  .how7__step {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 20px;
+    padding: 20px 22px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+    animation: how7Rise 0.6s ease both;
+    animation-delay: var(--delay);
+  }
+  .how7__step-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    font-family: "Syne", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+  }
+  .how7__step-body h3 {
+    margin: 0 0 6px 0;
+    font-family: "Syne", sans-serif;
+    font-size: 20px;
+    color: var(--textColor1);
+  }
+  .how7__step-body p {
+    margin: 0 0 14px 0;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--textColor1);
+    line-height: 1.6;
+  }
+  .how7__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .how7__chips span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.08);
+    color: var(--textColor1);
+  }
+
+  @keyframes how7Rise {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .how7__step {
+      animation: none;
+    }
+  }
+  @media (max-width: 980px) {
+    .how7__layout {
+      grid-template-columns: 1fr;
+    }
+    .how7__meta {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .how7__section {
+      padding: 70px 0 90px;
+    }
+    .how7__meta {
+      grid-template-columns: 1fr;
+    }
+    .how7__step {
+      grid-template-columns: 1fr;
+    }
+    .how7__steps::before {
+      display: none;
+    }
+    .how7__step-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+    }
+  }
+</style>
