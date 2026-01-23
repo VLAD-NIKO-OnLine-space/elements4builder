@@ -1,0 +1,276 @@
+<section class="mN2__">
+  <div class="container">
+    <div class="headnMMMM2">
+      <h2>How it Works</h2>
+      <span></span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint totam
+        dignissimos modi ducimus adipisci reprehenderit itaque ipsam, obcaecati
+        reiciendis, sed illum, ratione molestiae? Id.
+      </p>
+    </div>
+    <div class="gR1dX">
+      <div class="bL0pA" aria-label="Businesses">
+        <div class="iNn3r">
+          <h3 class="t1Tl3">
+            <span> Businesses</span>
+          </h3>
+          <p class="xCrpT">
+            Start publish listings to show everyone the details and goodies of
+            your establishment.
+          </p>
+
+          <div class="d0Tt0" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="bL0pA" aria-label="Customers">
+        <div class="iNn3r">
+          <h3 class="t1Tl3">
+            <span> Customers</span>
+          </h3>
+          <p class="xCrpT">
+            Easily find interesting places by local experts, save time by
+            checking listing features.
+          </p>
+
+          <div class="d0Tt0" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="bL0pA" aria-label="Feedback">
+        <div class="iNn3r">
+          <h3 class="t1Tl3">
+            <span>Feedback</span>
+          </h3>
+          <p class="xCrpT">
+            Visitors discuss listings to share experiences, so businesses get
+            reputation consolidated.
+          </p>
+
+          <div class="d0Tt0" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mN2__ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .headnMMMM2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    && h2 {
+      text-align: center;
+    }
+    && p {
+      text-align: center;
+      text-wrap: balance;
+    }
+    && span {
+      width: 10%;
+      height: 2px;
+      border-radius: var(--borderRadius);
+      background-color: var(--secondStyleColor);
+    }
+  }
+
+  /* HERO */
+  .x9Qp1 {
+    /* hero */
+    position: relative;
+    height: 120px;
+    background: linear-gradient(326deg, var(--h1) 0%, var(--h2) 74%);
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .kZ_7m {
+    /* hero cta wrapper */
+    position: absolute;
+    inset: 0;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+  }
+  .kZ_7m span {
+    pointer-events: auto;
+    display: inline-block;
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    font-size: 15px;
+    height: 44px;
+    line-height: 24px;
+    padding: 10px 28px;
+    border-radius: 999px;
+    position: relative;
+    transition:
+      transform 0.2s ease,
+      padding 0.2s ease;
+  }
+  .kZ_7m span::after {
+    content: "";
+    position: absolute;
+    inset: -14px;
+    border: 12px solid var(--secondStyleColor);
+    border-radius: 999px;
+    opacity: 0.95;
+  }
+  .kZ_7m span:hover {
+    transform: translateY(-1px);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .wA_vv {
+    /* wave */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -67px;
+    height: 188px;
+    background: url("https://1.bp.blogspot.com/-NYl6L8pz8B4/XoIVXwfhlNI/AAAAAAAAU3k/nxJKiLT706Mb7jUFiM5vdCsOSNnFAh0yQCLcBGAsYHQ/s1600/hero-wave.png")
+      repeat-x;
+    animation: ZzWv9 10s cubic-bezier(0.44, 0.66, 0.67, 0.37) infinite;
+    z-index: 1;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.08));
+  }
+  @keyframes ZzWv9 {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1440px 0;
+    }
+  }
+
+  .gR1dX {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 54px;
+    align-items: stretch;
+  }
+  @media (max-width: 980px) {
+    .gR1dX {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .gR1dX {
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+  }
+
+  /* CARD */
+  .bL0pA {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .iNn3r {
+    position: relative;
+    height: 100%;
+    padding: 60px 30px 60px;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    overflow: visible;
+    transition: transform 0.2s ease;
+  }
+  /* TITLE PILL */
+  .t1Tl3 {
+    margin: 0 0 22px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .t1Tl3 > span {
+    color: var(--textColor2);
+    display: inline-block;
+    padding: 10px 20px 10px 28px;
+    border-radius: var(--borderRadius);
+    background: var(--textColor1);
+    position: relative;
+  }
+  .t1Tl3 > span > b {
+    position: absolute;
+    top: -3px;
+    left: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    background: var(--textColor1);
+    display: grid;
+    color: var(--textColor2);
+    place-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    box-shadow:
+      15px 15px 30px rgba(80, 80, 80, 0.2),
+      5px 0 80px rgba(80, 80, 80, 0.15);
+  }
+
+  .xCrpT {
+    margin: 0;
+    padding: 0 18px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: var(--textColor2);
+  }
+
+  /* RIPPLE DOT */
+  .d0Tt0 {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    background: var(--textColor1);
+    box-shadow:
+      5px 5px 10px rgba(163, 177, 198, 0.6),
+      -5px -5px 10px rgba(255, 255, 255, 0.5);
+  }
+  .d0Tt0::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    animation: rrPpL 0.7s linear infinite;
+    box-shadow:
+      0 0 0 0 rgba(163, 177, 198, 0.3),
+      0 0 0 1em rgba(163, 177, 198, 0.3),
+      0 0 0 3em rgba(163, 177, 198, 0.03),
+      0 0 0 5em rgba(163, 177, 198, 0.01);
+  }
+  @keyframes rrPpL {
+    0% {
+      box-shadow:
+        0 0 0 0 rgba(163, 177, 198, 0.3),
+        0 0 0 1em rgba(163, 177, 198, 0.3),
+        0 0 0 3em rgba(163, 177, 198, 0.03),
+        0 0 0 5em rgba(163, 177, 198, 0.01);
+    }
+    100% {
+      box-shadow:
+        0 0 0 1em rgba(163, 177, 198, 0.3),
+        0 0 0 3em rgba(163, 177, 198, 0.03),
+        0 0 0 5em rgba(163, 177, 198, 0.03),
+        0 0 0 8em rgba(163, 177, 198, 0.01);
+    }
+  }
+
+  .bL0pA:hover .iNn3r {
+    transform: translateY(-2px);
+  }
+</style>
