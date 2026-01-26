@@ -1,0 +1,159 @@
+<section id="features" class="zr-features">
+  <div class="container zr-shell">
+    <div class="zr-left">
+      <p class="zr-tag">Core features</p>
+      <h2>Build faster with clarity.</h2>
+      <p class="zr-lead">
+        A focused toolkit that keeps teams aligned, removes busywork, and helps
+        you ship with confidence.
+      </p>
+      <div class="zr-badges">
+        <span>Realtime sync</span>
+        <span>Smart templates</span>
+        <span>Secure storage</span>
+      </div>
+      <a href="#partners" class="zr-btn">See plans</a>
+    </div>
+
+    <div class="zr-right">
+      <article class="zr-card">
+        <div class="zr-cardTop">
+          <span class="zr-index">01</span>
+          <h3>Unified workspace</h3>
+        </div>
+        <p>Keep projects, files, and decisions in one clean place.</p>
+      </article>
+      <article class="zr-card">
+        <div class="zr-cardTop">
+          <span class="zr-index">02</span>
+          <h3>Automation lanes</h3>
+        </div>
+        <p>Cut repetitive steps with lightweight, reliable flows.</p>
+      </article>
+      <article class="zr-card">
+        <div class="zr-cardTop">
+          <span class="zr-index">03</span>
+          <h3>Insight dashboard</h3>
+        </div>
+        <p>Track progress with clear signals instead of noise.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .zr-features {
+    color: var(--textColor1);
+    position: relative;
+  }
+
+  .zr-features::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.2), transparent 55%),
+      linear-gradient(120deg, rgba(0, 0, 0, 0.15), transparent 60%);
+    z-index: -1;
+  }
+
+  .zr-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+
+  .zr-left {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .zr-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: var(--secondStyleColor);
+  }
+
+  .zr-lead {
+    max-width: 520px;
+    text-wrap: balance;
+    opacity: 0.85;
+  }
+
+  .zr-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .zr-badges span {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--secondStyleColor);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .zr-btn {
+    width: fit-content;
+    padding: 12px 26px;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .zr-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .zr-right {
+    display: grid;
+    gap: 16px;
+  }
+
+  .zr-card {
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    padding: 20px 22px;
+    background: rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .zr-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .zr-cardTop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .zr-index {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  @media (max-width: 900px) {
+    .zr-shell {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
