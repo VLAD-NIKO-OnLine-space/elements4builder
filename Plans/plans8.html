@@ -1,0 +1,252 @@
+<section id="plans" class="qx-plans">
+  <div class="container qx-shell">
+    <div class="qx-head">
+      <div>
+        <p class="qx-tag">Pricing map</p>
+        <h2>Plans & Pricing</h2>
+      </div>
+    </div>
+
+    <div class="qx-grid">
+      <article class="qx-card qx-card--light">
+        <div class="qx-top">
+          <h3>Drift</h3>
+          <span class="qx-price">$15</span>
+        </div>
+        <p class="qx-note">For small launches and quick tests.</p>
+        <ul class="qx-list">
+          <li>2 active projects</li>
+          <li>Starter analytics</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#partners" class="qx-btn">Start Drift</a>
+      </article>
+
+      <article class="qx-card qx-card--core">
+        <div class="qx-flag">Best value</div>
+        <div class="qx-top">
+          <h3>Pulse</h3>
+          <span class="qx-price">$49</span>
+        </div>
+        <p class="qx-note">For teams shipping every week.</p>
+        <ul class="qx-list">
+          <li>Unlimited projects</li>
+          <li>Priority support</li>
+          <li>Automations suite</li>
+        </ul>
+        <a href="#partners" class="qx-btn qx-btn--dark">Choose Pulse</a>
+      </article>
+
+      <article class="qx-card qx-card--light">
+        <div class="qx-top">
+          <h3>Orbit</h3>
+          <span class="qx-price">$99</span>
+        </div>
+        <p class="qx-note">For high volume and custom flows.</p>
+        <ul class="qx-list">
+          <li>Dedicated manager</li>
+          <li>Custom workflows</li>
+          <li>Enterprise SLA</li>
+        </ul>
+        <a href="#contact" class="qx-btn">Talk to sales</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .qx-plans {
+    color: var(--textColor1);
+  }
+
+  .qx-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .qx-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .qx-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: var(--secondStyleColor);
+    margin-bottom: 8px;
+  }
+
+  .qx-sub {
+    max-width: 420px;
+    text-wrap: balance;
+    opacity: 0.8;
+  }
+
+  .qx-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    position: relative;
+  }
+
+  .qx-grid::before {
+    content: "";
+    position: absolute;
+    inset: -14px;
+    border-radius: calc(var(--borderRadius) + 6px);
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    z-index: 0;
+  }
+
+  .qx-card {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--borderRadius);
+    padding: 26px 26px 28px;
+    border: 1px solid var(--secondStyleColor);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: rgba(0, 0, 0, 0.12);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .qx-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .qx-card--core {
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+    border-color: transparent;
+    transform: translateY(-10px);
+  }
+
+  .qx-card--core .qx-btn {
+    border-color: var(--textColor2);
+    color: var(--textColor2);
+  }
+
+  .qx-flag {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--textColor2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .qx-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .qx-price {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .qx-note {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  .qx-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .qx-list li {
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .qx-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.7;
+  }
+
+  .qx-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--secondStyleColor);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: inherit;
+    transition: transform 0.2s ease;
+  }
+
+  .qx-btn--dark {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .qx-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .qx-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .qx-link {
+    padding: 8px 18px;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--textColor1);
+    transition: transform 0.2s ease;
+  }
+
+  .qx-link:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    .qx-head {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .qx-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .qx-card--core {
+      transform: none;
+    }
+  }
+</style>
