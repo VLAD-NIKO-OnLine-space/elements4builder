@@ -1,0 +1,131 @@
+<section class="plx-tableSection" id="plans">
+  <div class="container plx-wrap">
+    <div class="plx-head">
+      <h2>Plans & Pricing</h2>
+      <p>
+        A compact table layout that stays clean on desktop and becomes cards on
+        mobile.
+      </p>
+    </div>
+
+    <div class="plx-table">
+      <div class="plx-row plx-row--head">
+        <div>Tier</div>
+        <div>Users</div>
+        <div>Storage</div>
+        <div>Support</div>
+        <div>Price</div>
+      </div>
+
+      <div class="plx-row">
+        <div data-label="Tier">Starter</div>
+        <div data-label="Users">2</div>
+        <div data-label="Storage">5 GB</div>
+        <div data-label="Support">Email</div>
+        <div data-label="Price">$9</div>
+      </div>
+
+      <div class="plx-row plx-row--spot">
+        <div data-label="Tier">Team</div>
+        <div data-label="Users">10</div>
+        <div data-label="Storage">50 GB</div>
+        <div data-label="Support">Priority</div>
+        <div data-label="Price">$39</div>
+      </div>
+
+      <div class="plx-row">
+        <div data-label="Tier">Scale</div>
+        <div data-label="Users">Unlimited</div>
+        <div data-label="Storage">500 GB</div>
+        <div data-label="Support">Dedicated</div>
+        <div data-label="Price">$99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .plx-tableSection {
+    color: var(--textColor1);
+  }
+
+  .plx-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .plx-head {
+    max-width: 560px;
+  }
+
+  .plx-head p {
+    opacity: 0.8;
+    text-wrap: balance;
+  }
+
+  .plx-table {
+    display: grid;
+    gap: 12px;
+  }
+
+  .plx-row {
+    display: grid;
+    grid-template-columns: 1.2fr repeat(4, 1fr);
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--secondStyleColor);
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  .plx-row--head {
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+
+  .plx-row--spot {
+    border-width: 2px;
+    background: rgba(0, 0, 0, 0.22);
+  }
+
+  .plx-row div:last-child {
+    font-weight: 700;
+    color: var(--secondStyleColor);
+  }
+
+  @media (max-width: 800px) {
+    .plx-row {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .plx-row--head {
+      display: none;
+    }
+
+    .plx-row div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+
+    .plx-row div:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .plx-row div::before {
+      content: attr(data-label);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      opacity: 0.7;
+    }
+  }
+</style>
