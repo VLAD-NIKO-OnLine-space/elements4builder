@@ -1,0 +1,335 @@
+﻿<section id="faq" class="faq faq--timeline">
+  <div class="container">
+    <div class="faqHeader">
+      <p class="faqEyebrow">Clear Answers</p>
+      <h2>Frequently Asked Questions</h2>
+      <p class="faqIntro">
+        Everything you need to know before planning, ordering, and building —
+        written for teams that value speed and predictability.
+      </p>
+    </div>
+
+    <div class="faqGrid" role="list">
+      <div class="faqCol" role="presentation">
+        <article class="faqCard is-open" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="true">
+            <h3>How do I choose the right system for my site conditions?</h3>
+            <span class="faqBadge" aria-hidden="true">01</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              Start with the constraints: soil, moisture, load, and access.
+              Share a simple sketch, measurements, and photos. We will outline a
+              short list of options and explain the trade-offs in cost,
+              durability, and install time.
+            </p>
+          </div>
+        </article>
+
+        <article class="faqCard" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="false">
+            <h3>What are typical lead times and delivery windows?</h3>
+            <span class="faqBadge" aria-hidden="true">03</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              Common items usually ship within a few business days. Custom
+              packages depend on scope, but we will confirm the timeline up
+              front and provide milestone updates so you can schedule labor with
+              confidence.
+            </p>
+          </div>
+        </article>
+
+        <article class="faqCard" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="false">
+            <h3>Do you support installation questions after delivery?</h3>
+            <span class="faqBadge" aria-hidden="true">05</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              Absolutely. We provide practical guidance on compatibility,
+              fastening, and detail decisions. If something looks off in the
+              field, send a photo — we will help you resolve it before it
+              becomes rework.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="faqCol" role="presentation">
+        <article class="faqCard" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="false">
+            <h3>Can you review plans and provide a takeoff?</h3>
+            <span class="faqBadge" aria-hidden="true">02</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              Yes. We can work from drawings, PDFs, or a quick dimension list.
+              Your takeoff will include quantities, sensible waste factors, and
+              notes on sequencing so the crew is not waiting on missing pieces.
+            </p>
+          </div>
+        </article>
+
+        <article class="faqCard" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="false">
+            <h3>What happens if field conditions change mid-project?</h3>
+            <span class="faqBadge" aria-hidden="true">04</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              It happens. We can revise quantities quickly, swap compatible
+              items, and split shipments to keep momentum. The goal is to avoid
+              stoppages and protect both schedule and margin.
+            </p>
+          </div>
+        </article>
+
+        <article class="faqCard" role="listitem">
+          <button class="faqQuestion" type="button" aria-expanded="false">
+            <h3>How do pricing and change requests work?</h3>
+            <span class="faqBadge" aria-hidden="true">06</span>
+          </button>
+          <div class="faqAnswer">
+            <p>
+              Quotes are line-item clear. When changes come in, we flag what
+              shifts in quantity, what stays fixed, and what alternatives can
+              reduce cost without compromising performance.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .faq--timeline {
+    padding: var(--sectionPadding);
+    border-radius: var(--borderRadius);
+  }
+
+  .faq--timeline .container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .faqEyebrow {
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    font-size: 13px;
+  }
+
+  .faqHeader h2 {
+    margin: 0 0 10px 0;
+  }
+
+  .faqIntro {
+    margin: 0;
+    color: var(--textColor1);
+    opacity: 0.9;
+  }
+
+  /* Two fixed columns prevent items from jumping between columns */
+  .faqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+  }
+
+  .faqCol {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .faqCard {
+    position: relative;
+    border-radius: calc(var(--borderRadius) * 0.8);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+    background: color-mix(in srgb, var(--mainStyleColor) 7%, transparent);
+    overflow: hidden;
+    transition:
+      border-color 0.25s ease,
+      transform 0.25s ease,
+      background-color 0.25s ease;
+  }
+
+  .faqCard::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--secondStyleColor);
+    opacity: 0.35;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+    transform: scaleY(0.4);
+    transform-origin: top;
+  }
+
+  .faqCard:hover {
+    transform: translateY(-2px);
+    border-color: var(--secondStyleColor);
+  }
+
+  .faqCard.is-open::before {
+    opacity: 0.9;
+    transform: scaleY(1);
+  }
+
+  .faqQuestion {
+    width: 100%;
+    min-height: 80px;
+    padding: 18px 18px 14px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    border: 0;
+    background: transparent;
+    color: var(--textColor1);
+    text-align: left;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .faqQuestion:focus-visible {
+    outline: 2px solid var(--secondStyleColor);
+    outline-offset: 2px;
+    border-radius: calc(var(--borderRadius) * 0.6);
+  }
+
+  .faqBadge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    color: var(--secondStyleColor);
+    font-weight: 900;
+    font-size: 14px;
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  }
+
+  .faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 20px;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      padding 0.25s ease;
+  }
+
+  .faqAnswer p {
+    margin: 0;
+    padding: 0 0 18px 0;
+    color: var(--textColor1);
+    opacity: 0.95;
+  }
+
+  .faqCard.is-open .faqAnswer {
+    opacity: 1;
+    padding-bottom: 2px;
+  }
+
+  @media (max-width: 980px) {
+    .faqGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .faqQuestion {
+      font-size: 17px;
+      padding: 16px 16px 12px 16px;
+    }
+
+    .faqAnswer {
+      padding: 0 16px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var root = document.querySelector(".faq--timeline");
+    if (!root) return;
+
+    var cards = Array.prototype.slice.call(root.querySelectorAll(".faqCard"));
+
+    function setOpen(card, shouldOpen) {
+      var button = card.querySelector(".faqQuestion");
+      var answer = card.querySelector(".faqAnswer");
+      if (!button || !answer) return;
+
+      if (shouldOpen) {
+        card.classList.add("is-open");
+        button.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        card.classList.remove("is-open");
+        button.setAttribute("aria-expanded", "false");
+        answer.style.maxHeight = "0px";
+      }
+    }
+
+    function openOnly(target) {
+      cards.forEach(function (card) {
+        setOpen(card, card === target);
+      });
+    }
+
+    cards.forEach(function (card, index) {
+      var button = card.querySelector(".faqQuestion");
+      var answer = card.querySelector(".faqAnswer");
+      if (!button || !answer) return;
+
+      if (card.classList.contains("is-open") || index === 0) {
+        card.classList.add("is-open");
+        button.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = "0px";
+      }
+
+      button.addEventListener("click", function () {
+        var isOpen = button.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          setOpen(card, false);
+        } else {
+          openOnly(card);
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      cards.forEach(function (card) {
+        var button = card.querySelector(".faqQuestion");
+        var answer = card.querySelector(".faqAnswer");
+        if (!button || !answer) return;
+        if (button.getAttribute("aria-expanded") === "true") {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  });
+</script>
