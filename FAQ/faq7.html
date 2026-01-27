@@ -1,0 +1,346 @@
+﻿<section id="faq" class="faq faq--builder">
+  <div class="container">
+    <aside class="faqImageWrap" aria-hidden="true">
+      <div class="faqImagePlaceholder">
+        <img data-image alt="" />
+      </div>
+    </aside>
+    <div class="faqContent">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="containerFAQ" role="list">
+        <article class="accord__item" role="listitem">
+          <button class="accord__trigger" type="button" aria-expanded="true">
+            <span class="accord__title"
+              >How do I know which material is right for my project?</span
+            >
+            <span class="accord__icon" aria-hidden="true">−</span>
+          </button>
+          <div class="accord__panel show">
+            <p>
+              Start with the operating conditions: humidity, load, temperature
+              fluctuations, and required service life. If you’re unsure, send us
+              your plan/sketch and site photos — we’ll suggest 2–3 reliable
+              options with different price and durability levels.
+            </p>
+          </div>
+        </article>
+
+        <article class="accord__item" role="listitem">
+          <button class="accord__trigger" type="button" aria-expanded="false">
+            <span class="accord__title"
+              >Can I order a volume calculation and estimate?</span
+            >
+            <span class="accord__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accord__panel">
+            <p>
+              Yes. We calculate quantities based on drawings or a simple list of
+              dimensions. You’ll receive a clear estimate: items, units of
+              measure, a trimming allowance, and recommendations on where you
+              can save without sacrificing quality.
+            </p>
+          </div>
+        </article>
+
+        <article class="accord__item" role="listitem">
+          <button class="accord__trigger" type="button" aria-expanded="false">
+            <span class="accord__title"
+              >How quickly can you deliver materials to the site?</span
+            >
+            <span class="accord__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accord__panel">
+            <p>
+              For standard items, we ship within 24–72 hours. For custom orders,
+              we provide a realistic lead time upfront and keep you updated on
+              the status — no “surprises” on installation day.
+            </p>
+          </div>
+        </article>
+
+        <article class="accord__item" role="listitem">
+          <button class="accord__trigger" type="button" aria-expanded="false">
+            <span class="accord__title"
+              >What if something changes on-site during the project?</span
+            >
+            <span class="accord__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accord__panel">
+            <p>
+              That’s normal. We can quickly recalculate quantities, propose
+              alternatives on the fly, and split delivery into phases so you
+              don’t freeze your budget or slow down the crew.
+            </p>
+          </div>
+        </article>
+
+        <article class="accord__item" role="listitem">
+          <button class="accord__trigger" type="button" aria-expanded="false">
+            <span class="accord__title"
+              >Do you provide a warranty and support after purchase?</span
+            >
+            <span class="accord__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accord__panel">
+            <p>
+              Yes. We provide a warranty on the supply and support your project
+              during installation: guidance on connections, fasteners, and
+              material compatibility — so you don’t lose time on rework.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+  .faq--builder {
+    padding: var(--sectionPadding);
+    border-radius: var(--borderRadius);
+  }
+
+  .faq--builder .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 1.2fr);
+    gap: clamp(24px, 4vw, 56px);
+    align-items: stretch;
+  }
+
+  .faqContent {
+    width: 100%;
+  }
+
+  .faqContent h2 {
+    margin: 0 0 12px 0;
+  }
+
+  .faqLead {
+    margin: 0 0 28px 0;
+    color: var(--textColor1);
+    opacity: 0.9;
+    max-width: 70ch;
+  }
+
+  .containerFAQ {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .accord__item {
+    border: 1px dotted
+      color-mix(in srgb, var(--secondStyleColor) 55%, transparent);
+    border-radius: calc(var(--borderRadius) * 0.75);
+    overflow: clip;
+    transition:
+      border-color 0.25s ease,
+      background-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .accord__item:hover {
+    border-color: var(--secondStyleColor);
+    transform: translateY(-1px);
+  }
+
+  .accord__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    text-align: left;
+    color: var(--textColor1);
+  }
+
+  .accord__trigger:focus-visible {
+    outline: 2px solid var(--secondStyleColor);
+    outline-offset: 2px;
+    border-radius: calc(var(--borderRadius) * 0.6);
+  }
+
+  .accord__title {
+    font-size: clamp(16px, 1.6vw, 19px);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .accord__icon {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--secondStyleColor);
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .accord__panel {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      padding 0.25s ease;
+    padding: 0 20px;
+  }
+
+  .accord__panel p {
+    margin: 0;
+    padding: 0 0 18px 0;
+    color: var(--textColor1);
+    opacity: 0.95;
+  }
+
+  .accord__panel.show {
+    opacity: 1;
+    padding-top: 2px;
+  }
+
+  .faqImageWrap {
+    display: block;
+    height: 100%;
+  }
+
+  .faqImagePlaceholder {
+    width: 100%;
+    height: 600px;
+    min-height: 320px;
+    border-radius: var(--borderRadius);
+    border: 1px dashed
+      color-mix(in srgb, var(--secondStyleColor) 65%, transparent);
+    background:
+      radial-gradient(
+        120% 120% at 100% 0%,
+        color-mix(in srgb, var(--secondStyleColor) 18%, transparent) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--mainStyleColor) 12%, transparent),
+        transparent 60%
+      );
+    padding: 12px;
+  }
+
+  .faqImagePlaceholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--borderRadius);
+  }
+
+  @media (max-width: 980px) {
+    .faq--builder .container {
+      grid-template-columns: 1fr;
+      && h2 {
+        text-align: center;
+      }
+    }
+
+    .faqImageWrap {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .accord__trigger {
+      padding: 16px 16px;
+    }
+
+    .accord__panel {
+      padding: 0 16px;
+    }
+
+    .faqLead {
+      margin-bottom: 22px;
+    }
+
+    .faqImageWrap {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var faqRoot = document.querySelector(".faq--builder");
+    if (!faqRoot) return;
+
+    var items = Array.prototype.slice.call(
+      faqRoot.querySelectorAll(".accord__item"),
+    );
+
+    function setOpen(item, shouldOpen) {
+      var trigger = item.querySelector(".accord__trigger");
+      var panel = item.querySelector(".accord__panel");
+      var icon = item.querySelector(".accord__icon");
+      if (!trigger || !panel || !icon) return;
+
+      if (shouldOpen) {
+        panel.classList.add("show");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        trigger.setAttribute("aria-expanded", "true");
+        icon.textContent = "−";
+      } else {
+        panel.classList.remove("show");
+        panel.style.maxHeight = "0px";
+        trigger.setAttribute("aria-expanded", "false");
+        icon.textContent = "+";
+      }
+    }
+
+    function openOnly(target) {
+      items.forEach(function (item) {
+        setOpen(item, item === target);
+      });
+    }
+
+    items.forEach(function (item, index) {
+      var trigger = item.querySelector(".accord__trigger");
+      var panel = item.querySelector(".accord__panel");
+      if (!trigger || !panel) return;
+
+      if (index === 0) {
+        panel.classList.add("show");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } else {
+        panel.style.maxHeight = "0px";
+      }
+
+      trigger.addEventListener("click", function () {
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          setOpen(item, false);
+        } else {
+          openOnly(item);
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      items.forEach(function (item) {
+        var trigger = item.querySelector(".accord__trigger");
+        var panel = item.querySelector(".accord__panel");
+        if (!trigger || !panel) return;
+        if (trigger.getAttribute("aria-expanded") === "true") {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  });
+</script>
