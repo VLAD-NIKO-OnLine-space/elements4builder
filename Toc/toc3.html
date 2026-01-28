@@ -10,7 +10,7 @@
 
 <style>
   :root {
-    --scrollbarBg: rgba(0, 0, 0, 0.1);
+    --scrollbarBg: rgba(255, 255, 255, 0.1);
     --itemBgColor: transparent;
   }
   .swiper {
@@ -24,7 +24,7 @@
   .toc h2 {
     margin: 0 !important;
     text-align: center;
-    color: var(--bodyBG);
+    color: var(--textColor1);
   }
 
   .toc {
@@ -43,20 +43,13 @@
     -moz-transition: color 0.3s ease-in-out;
     -ms-transition: color 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out;
-    border: 2px solid var(--bodyBG);
     padding: 10px 20px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    background-color: var(--itemBgColor);
-  }
-
-  .toc a:active,
-  .toc a:hover,
-  .toc a:focus {
-    background-color: rgba(17, 17, 17, 0.2);
+    background-color: var(--secondStyleColor);
   }
 
   .toc .swiper-wrapper {
@@ -71,7 +64,7 @@
   }
 
   .toc-swiper .swiper-scrollbar-drag {
-    background: var(--bodyBG);
+    background: var(--secondStyleColor);
     border-radius: 2px;
     width: 20%;
   }
@@ -80,7 +73,6 @@
     margin: 0 auto;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    background-color: var(--secondStyleColor);
   }
 
   .toc-swiper {
