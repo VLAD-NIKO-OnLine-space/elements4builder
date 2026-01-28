@@ -1,0 +1,175 @@
+<section id="plans">
+  <div class="container">
+    <div class="r8h">
+      <h2>Plans & Pricing</h2>
+      <p>
+        A compact table layout that stays clean on desktop and becomes cards on
+        mobile.
+      </p>
+    </div>
+    <div class="u3m">
+      <div class="b6x">
+        <div class="k1t">
+          <img class="n9z" data-image loading="lazy" />
+          <div class="p4w">
+            <h3 class="s2d">
+              <span class="c7y">Started </span>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <p class="f5j">
+              <span>$ 114</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="b6x">
+        <div class="k1t">
+          <img class="n9z" data-image loading="lazy" />
+          <div class="p4w">
+            <h3 class="s2d">
+              <span class="c7y">Team </span>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <p class="f5j">
+              <span>$ 223</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="b6x">
+        <div class="k1t">
+          <img class="n9z" data-image loading="lazy" />
+          <div class="p4w">
+            <h3 class="s2d">
+              <span class="c7y">Unlimited </span>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <p class="f5j">
+              <span>$ 319</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #plans .u3m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .r8h {
+    margin-bottom: 40px;
+  }
+  .r8h h2,
+  .r8h p {
+    text-align: center;
+    color: var(--textColor1);
+  }
+
+  .b6x {
+    color: var(--textColor2);
+    max-width: 420px;
+    border-radius: var(--borderRadius);
+    overflow: clip;
+    padding: 20px;
+    background: var(--bodyBG);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    backdrop-filter: blur(20px);
+    position: relative;
+    font-weight: 200;
+    transition: 0.2s all linear;
+  }
+
+  .b6x:hover {
+    transform: translateY(-5px);
+  }
+
+  .k1t {
+    grid-template-areas: "stack";
+    position: relative;
+    border-radius: var(--borderRadius);
+    overflow: clip;
+    display: grid;
+    box-shadow:
+      inset 0 0 4px -2px #ffffff55,
+      0 0 4px -2px #ffffff55;
+  }
+
+  .k1t img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--borderRadius);
+    object-fit: cover;
+  }
+
+  .k1t::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--borderRadius);
+    backdrop-filter: blur(100px);
+    -webkit-mask: linear-gradient(-14deg, black 30%, transparent 66%);
+    mask: linear-gradient(-14deg, black 30%, transparent 66%);
+  }
+
+  .n9z {
+    grid-area: stack;
+  }
+
+  .p4w {
+    z-index: 1;
+    grid-area: stack;
+    margin-top: auto;
+    padding: 1rem 2rem;
+  }
+
+  .s2d {
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+
+  .v1e {
+    width: 30px;
+    height: 30px;
+  }
+
+  .c7y {
+    font-weight: 900;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .f5j {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 20px;
+  }
+
+  .f5j span {
+    font-size: 44px;
+    font-weight: 900;
+  }
+
+  @media (max-width: 800px) {
+    #plans .u3m {
+      flex-direction: column;
+    }
+    .r8h {
+      margin-bottom: 20px;
+    }
+  }
+</style>
