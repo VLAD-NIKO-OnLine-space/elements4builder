@@ -1,0 +1,327 @@
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <h2>Galery</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolore.
+        Cum blanditiis velit vel dignissimos magni, magnam quibusdam ab ullam?
+      </p>
+    </div>
+    <div class="gallery">
+      <div class="gallery__image-wrapper" data-id="0">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-0"
+          title="title-0"
+          loading="lazy" />
+      </div>
+
+      <div class="gallery__image-wrapper" data-id="1">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-1"
+          title="title-1"
+          loading="lazy" />
+      </div>
+
+      <div class="gallery__image-wrapper" data-id="2">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-2"
+          title="title-2"
+          loading="lazy" />
+      </div>
+
+      <div class="gallery__image-wrapper" data-id="3">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-3"
+          title="title-3"
+          loading="lazy" />
+      </div>
+
+      <div class="gallery__image-wrapper" data-id="4">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-4"
+          title="title-4"
+          loading="lazy" />
+      </div>
+
+      <div class="gallery__image-wrapper" data-id="5">
+        <img
+          class="gallery__image"
+          data-image
+          alt="alt-5"
+          title="title-5"
+          loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --images-amount: 6;
+    --highlight: var(--secondStyleColor);
+    --border-a: rgba(247, 176, 91, 0.16);
+    --border-b: rgba(247, 147, 76, 0.16);
+    --transition-duration: 620ms;
+    --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .gallery {
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5em;
+    padding: 10px;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  #gallery .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+    && p {
+      text-align: center;
+      max-width: 90%;
+      margin: 0 auto;
+      text-wrap: balance;
+    }
+  }
+
+  .gallery__image-wrapper {
+    position: relative;
+    cursor: pointer;
+    padding-top: 75%;
+    width: 100%;
+    height: 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+    grid-row: span 2;
+    grid-column: span 2;
+    box-sizing: content-box;
+    backface-visibility: hidden;
+    perspective: 1px;
+    transform: translate3d(0, 0, 1px);
+    border-radius: var(--borderRadius);
+
+    && img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+    }
+  }
+
+  .gallery__image-wrapper::before,
+  .gallery__image-wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery__image-wrapper::after {
+    background: #000;
+    opacity: 0.33;
+    z-index: 1;
+    transform: translate(0, 0);
+    transition: all 500ms ease-out;
+  }
+
+  .gallery__image-wrapper::before {
+    opacity: 0;
+    z-index: 2;
+    background: var(--secondStyleColor);
+    transition: all 160ms ease-in;
+    mix-blend-mode: hard-light;
+  }
+
+  .gallery__image-wrapper:hover:not(.gallery__image-wrapper--selected)::before {
+    opacity: 0.32;
+  }
+
+  .gallery__image-wrapper:nth-child(1) {
+    order: 2;
+  }
+  .gallery__image-wrapper:nth-child(2) {
+    order: 4;
+  }
+  .gallery__image-wrapper:nth-child(3) {
+    order: 6;
+  }
+  .gallery__image-wrapper:nth-child(4) {
+    order: 8;
+  }
+  .gallery__image-wrapper:nth-child(5) {
+    order: 10;
+  }
+  .gallery__image-wrapper:nth-child(6) {
+    order: 12;
+  }
+
+  .gallery__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    border-radius: var(--borderRadius);
+    width: auto;
+    transform: translate(-50%, -50%);
+    transition: all 320ms ease;
+  }
+
+  .gallery__image-wrapper.gallery__image-wrapper--selected {
+    grid-row: span 4;
+    grid-column: span 4;
+    z-index: 1;
+  }
+
+  .gallery__image-wrapper.gallery__image-wrapper--selected:nth-child(
+      odd
+    )::after {
+    transform: translate(0, 100%);
+  }
+
+  .gallery__image-wrapper.gallery__image-wrapper--selected:nth-child(
+      even
+    )::after {
+    transform: translate(100%, 0);
+  }
+
+  /* SCSS: &:nth-child(images-amount / 2) => 3 */
+  .gallery__image-wrapper.gallery__image-wrapper--selected:nth-child(3) {
+    order: 3;
+  }
+
+  /* SCSS: &:nth-child(images-amount) => 6 */
+  .gallery__image-wrapper.gallery__image-wrapper--selected:nth-child(6) {
+    order: 9;
+  }
+
+  /* ===== Mobile adaptive (paste at the end of your CSS) ===== */
+  @media (max-width: 640px) {
+    .gallery {
+      width: 100%;
+      max-width: 560px;
+      gap: 0.35em;
+      padding: 0.35em;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: none;
+      grid-auto-rows: 1fr;
+    }
+    .gallery-header {
+      margin-bottom: 20px;
+    }
+
+    .gallery__image-wrapper {
+      grid-column: span 1;
+      pointer-events: none;
+      grid-row: span 1;
+      padding-top: 78%;
+    }
+
+    /* выбранный элемент — на всю ширину */
+    .gallery__image-wrapper.gallery__image-wrapper--selected {
+      grid-column: 1 / -1;
+      grid-row: span 2;
+    }
+
+    /* На мобиле лучше не мудрить с order — стабильно и предсказуемо */
+    .gallery__image-wrapper {
+      order: initial !important;
+    }
+    .gallery__image-wrapper.gallery__image-wrapper--selected {
+      order: -1 !important; /* выбранная уедет вверх */
+    }
+  }
+
+  /* Extra-small phones: 1 колонка */
+  @media (max-width: 420px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery__image-wrapper {
+      grid-column: span 1;
+      grid-row: span 1;
+      padding-top: 75%;
+    }
+
+    .gallery__image-wrapper.gallery__image-wrapper--selected {
+      grid-column: span 1;
+      grid-row: span 1; /* чтобы не занимала слишком много */
+    }
+  }
+</style>
+
+<script>
+  const CURRENT_WRAPPER = "gallery__image-wrapper--selected";
+  const TRANSITION_DURATION = 620;
+  const EASE = "cubic-bezier(0.65, 0, 0.35, 1)";
+  const DEFAULT_TRANSFORM = "scale(1) translate3d(0, 0, 1px)";
+
+  const gallery = document.getElementById("gallery");
+  const wrapperElements = Array.from(
+    gallery.querySelectorAll(".gallery__image-wrapper"),
+  );
+
+  function selectImage(id) {
+    const currentElement = wrapperElements[id];
+    if (!currentElement) return;
+
+    const prevRects = wrapperElements.map((el) => el.getBoundingClientRect());
+
+    wrapperElements.forEach((el) => {
+      el.style.transition = "none";
+      el.style.transform = DEFAULT_TRANSFORM;
+      el.classList.remove(CURRENT_WRAPPER);
+    });
+
+    currentElement.classList.add(CURRENT_WRAPPER);
+
+    wrapperElements.forEach((el, i) => {
+      const prevRect = prevRects[i];
+      const newRect = el.getBoundingClientRect();
+
+      const scale = prevRect.width / newRect.width;
+      const x = (prevRect.x - newRect.x) / scale;
+      const y = (prevRect.y - newRect.y) / scale;
+
+      el.style.transform = `scale(${scale}) translate3d(${x}px, ${y}px, 1px)`;
+
+      setTimeout(() => {
+        el.style.transition = `all ${TRANSITION_DURATION}ms ${EASE}`;
+        el.style.transform = DEFAULT_TRANSFORM;
+      }, 0);
+    });
+  }
+
+  gallery.addEventListener("click", (e) => {
+    const wrapper = e.target.closest(".gallery__image-wrapper");
+    if (!wrapper) return;
+    selectImage(Number(wrapper.dataset.id));
+  });
+
+  // init
+  selectImage(0);
+  setTimeout(() => selectImage(wrapperElements.length - 1), 1000);
+</script>
