@@ -1,0 +1,57 @@
+<section class="x9p">
+  <img data-image alt="" loading="lazy" />
+  <div class="container">
+    <span class="i7a l3k">Lorem ipsum dolor sit</span>
+  </div>
+</section>
+
+<style>
+  .x9p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+
+    overflow: hidden;
+    position: relative;
+
+    && img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.1;
+      filter: blur(15px);
+    }
+  }
+
+  .i7a {
+    font-size: 70px;
+    color: var(--secondStyleColor);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .l3k {
+    color: var(--textColor1);
+    text-decoration: none;
+    transition: text-shadow 300ms ease-in;
+    text-shadow:
+      0 2ex color-mix(in srgb, var(--secondStyleColor) 35%, transparent),
+      0 -2ex color-mix(in srgb, var(--secondStyleColor) 35%, transparent),
+      0 4ex color-mix(in srgb, var(--secondStyleColor) 15%, transparent),
+      0 -4ex color-mix(in srgb, var(--secondStyleColor) 15%, transparent),
+      0 6ex color-mix(in srgb, var(--secondStyleColor) 7.5%, transparent),
+      0 -6ex color-mix(in srgb, var(--secondStyleColor) 7.5%, transparent);
+  }
+
+  @media (max-width: 800px) {
+    .i7a {
+      font-size: 24px;
+    }
+    .x9p {
+      min-height: 200px;
+    }
+  }
+</style>
