@@ -1,0 +1,182 @@
+<section id="reviews">
+  <div class="container">
+    <div class="revierhweaul-head">
+      <h2>Clients Rewiew</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facere
+        vel magni illum nostrum, dolore delectus deleniti rerum ut ducimus?
+      </p>
+    </div>
+    <ul>
+      <li style="--i: 1">
+        <img
+          src="https://i.postimg.cc/ZRCLqjNq/user-img1.jpg"
+          loading="lazy"
+          alt="user image" />
+        <div class="content">
+          <h3>Denny Davis</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+            facere vel magni illum nostrum, dolore delectus deleniti rerum ut
+            ducimus?
+          </p>
+        </div>
+      </li>
+      <li style="--i: 2">
+        <img
+          src="https://i.postimg.cc/C1XsnDCs/user-img2.jpg"
+          loading="lazy"
+          alt="user image" />
+        <div class="content">
+          <h3>Elira Eloise</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+            facere vel magni illum nostrum, dolore delectus deleniti rerum ut
+            ducimus?
+          </p>
+        </div>
+      </li>
+      <li style="--i: 3">
+        <img
+          src="https://i.postimg.cc/qqKXsRjV/user-img3.jpg"
+          loading="lazy"
+          alt="user image" />
+        <div class="content">
+          <h3>Fabio Franklin</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+            facere vel magni illum nostrum, dolore delectus deleniti rerum ut
+            ducimus?
+          </p>
+        </div>
+      </li>
+      <li style="--i: 4">
+        <img
+          src="https://i.postimg.cc/QNKbG4s4/user-img4.jpg"
+          loading="lazy"
+          alt="user image" />
+        <div class="content">
+          <h3>Gillian Gardner</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+            facere vel magni illum nostrum, dolore delectus deleniti rerum ut
+            ducimus?
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  #reviews .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .revierhweaul-head {
+    margin-bottom: 40px;
+    && h2,
+    p {
+      text-align: center;
+    }
+  }
+
+  #reviews ul {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: 500ms;
+  }
+
+  #reviews ul:hover {
+    gap: 20px;
+  }
+
+  #reviews ul li {
+    position: relative;
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 120px;
+    padding: 16px;
+    background: var(--textColor1);
+    border-radius: var(--borderRadius);
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
+    transition: 500ms;
+    transition-delay: calc(var(--i) * 50ms);
+    cursor: pointer;
+  }
+
+  #reviews ul li:nth-child(1) {
+    transform: translateZ(-75px) translateY(20px);
+    opacity: 0.6;
+    filter: blur(4px);
+  }
+
+  #reviews ul li:nth-child(2) {
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+
+  #reviews ul li:nth-child(3) {
+    transform: translateZ(65px) translateY(-30px);
+  }
+
+  #reviews ul li:nth-child(4) {
+    transform: translateZ(125px) translateY(-68px);
+    filter: blur(1px);
+  }
+
+  #reviews ul:hover li {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateZ(0) translateY(0);
+  }
+
+  #reviews ul li img {
+    max-width: 64px;
+    border-radius: 8px;
+  }
+
+  #reviews ul li .content {
+    width: 100%;
+  }
+
+  #reviews ul li .content h3 {
+    font-weight: 600;
+    margin-bottom: 6px;
+    line-height: 1;
+    color: var(--textColor2);
+  }
+
+  #reviews ul li .content p {
+    color: var(--textColor2);
+    opacity: 0.6;
+    line-height: 1;
+  }
+
+  @media (max-width: 800px) {
+    #reviews ul {
+      perspective: none;
+      gap: 20px;
+    }
+    #reviews ul li:nth-child(1),
+    #reviews ul li:nth-child(2),
+    #reviews ul li:nth-child(3),
+    #reviews ul li:nth-child(4) {
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+      filter: blur(0px);
+      width: 100%;
+    }
+  }
+</style>
