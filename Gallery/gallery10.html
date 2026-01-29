@@ -1,0 +1,153 @@
+<section id="gallery">
+  <div class="container">
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="gallery-wrap">
+      <div class="gallery-item">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img data-image alt="" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+
+  #gallery {
+    padding: 20px 0;
+    background-color: color-mix(
+      in srgb,
+      var(--secondStyleColor) 15%,
+      transparent
+    );
+    position: relative;
+    overflow: hidden;
+
+    &&::after {
+      content: "";
+      position: absolute;
+      left: -12%;
+      bottom: -20%;
+      width: 450px;
+      height: 450px;
+      background-color: var(--bodyBG);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &&::before {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: -25%;
+      width: 350px;
+      height: 350px;
+      background-color: var(--bodyBG);
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+
+  #gallery > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .gallery-title {
+    position: relative;
+    text-transform: uppercase;
+    color: var(--textColor1);
+    letter-spacing: 0.5px;
+  }
+
+  .gallery-wrap {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .gallery-item {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    transition: flex 0.8s ease-out;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--borderRadius);
+  }
+
+  .gallery-item:hover {
+    flex: 7;
+  }
+
+  /* optional: smoother behavior when hovering one item */
+  .gallery-wrap:hover .gallery-item {
+    flex: 1;
+  }
+
+  .gallery-wrap:hover .gallery-item:hover {
+    flex: 7;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    #gallery {
+      &&::after,
+      &&::before {
+        display: none;
+      }
+    }
+
+    .gallery-container {
+      width: 100%;
+      padding: 60px 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-title {
+      margin-bottom: 24px;
+    }
+
+    .gallery-wrap {
+      height: 60vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-wrap {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .gallery-item {
+      height: 220px;
+      transition:
+        height 0.35s ease,
+        flex 0.35s ease;
+    }
+
+    .gallery-item:hover {
+      flex: 1;
+      height: 320px;
+    }
+  }
+</style>
