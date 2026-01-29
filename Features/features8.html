@@ -1,0 +1,209 @@
+<section id="features">
+  <div class="container">
+    <div class="hufla">
+      <h2>Core features</h2>
+      <span></span>
+      <p>
+        A focused toolkit that keeps teams aligned, removes busywork, and helps
+        you ship with confidence.
+      </p>
+    </div>
+
+    <div class="trunox">
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Fast Setup</h3>
+          <p>
+            Launch a workspace in minutes with clean defaults and zero clutter.
+          </p>
+        </a>
+      </div>
+
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Team Sync</h3>
+          <p>
+            Keep everyone aligned with shared context, owners, and clear next
+            steps.
+          </p>
+        </a>
+      </div>
+
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Smart Templates</h3>
+          <p>
+            Reusable blocks that standardize work and prevent “missing details”.
+          </p>
+        </a>
+      </div>
+
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Automation</h3>
+          <p>
+            Remove busywork: triggers, reminders, and updates that run for you.
+          </p>
+        </a>
+      </div>
+
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Progress View</h3>
+          <p>
+            See what’s moving, what’s stuck, and what needs attention—instantly.
+          </p>
+        </a>
+      </div>
+
+      <div class="mivra">
+        <a class="praxu">
+          <h3>Secure Access</h3>
+          <p>
+            Roles and permissions that protect data without slowing teams down.
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* центрирование блока по высоте */
+  #features {
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+  }
+  #features .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hufla {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .hufla h2,
+  .hufla p {
+    text-align: center;
+  }
+  .hufla > span {
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: var(--borderRadius);
+    height: 2px;
+    background-color: var(--secondStyleColor);
+  }
+
+  .trunox {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .mivra {
+    position: relative;
+    --x-px: calc(var(--x) * 1px);
+    --y-px: calc(var(--y) * 1px);
+    --border: 2px;
+    background: rgba(255, 255, 255, 0.125);
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+  }
+
+  .mivra::before,
+  .mivra::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      800px circle at var(--x-px) var(--y-px),
+      var(--secondStyleColor),
+      transparent 40%
+    );
+    pointer-events: none;
+  }
+
+  .mivra::before {
+    z-index: 1;
+  }
+
+  .mivra::after {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+  }
+
+  .mivra:hover::after {
+    opacity: 1;
+  }
+
+  .praxu {
+    background: var(--textColor2);
+    border-radius: inherit;
+    color: var(--textColor1);
+    text-decoration: none;
+    position: absolute;
+    inset: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 3;
+    && p {
+      text-align: center;
+      text-wrap: balance;
+    }
+    && h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .praxu > p {
+    opacity: 0.7;
+  }
+  @media (max-width: 800px) {
+    .trunox {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      height: auto;
+      gap: 12px;
+    }
+
+    .mivra {
+      min-height: 240px;
+    }
+    .hufla {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<script>
+  console.clear();
+
+  const trunoxEl = document.querySelector(".trunox");
+  const mivraEls = document.querySelectorAll(".mivra");
+
+  trunoxEl.addEventListener("pointermove", (ev) => {
+    mivraEls.forEach((mivraEl) => {
+      const rect = mivraEl.getBoundingClientRect();
+      mivraEl.style.setProperty("--x", ev.clientX - rect.left);
+      mivraEl.style.setProperty("--y", ev.clientY - rect.top);
+    });
+  });
+</script>
