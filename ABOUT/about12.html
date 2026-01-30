@@ -1,0 +1,136 @@
+﻿<section id="about">
+  <img data-image alt="" loading="lazy" />
+  <div class="container">
+    <div class="ab-lllller">
+      <span>Award Winning Design</span>
+      <h2>Explore limitless possibilities with quyra</h2>
+      <span><span id="utiterhgserht"></span>+</span>
+    </div>
+    <div class="ab-rrrrorjg">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error eos
+        maxime eaque omnis sapiente cum eveniet harum ipsa ad magni ipsam
+        tempora aliquid sit expedita necessitatibus, quod mollitia aut, nemo
+        alias repellat quas neque eius inventore? Explicabo vero inventore
+        mollitia?
+      </p>
+      <a href="#partners">exlore demos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*  */
+
+  #about {
+    min-height: 500px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    && img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      object-position: 50% 20%;
+      opacity: 0.1;
+    }
+  }
+
+  #about .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    && h2 {
+      text-transform: uppercase;
+      color: var(--textColor1);
+    }
+  }
+  .ab-lllller {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ab-rrrrorjg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 40px;
+    && p {
+      font-style: italic;
+      color: var(--textColor1);
+    }
+    && a {
+      text-transform: uppercase;
+      padding: 15px 20px;
+      border-radius: var(--borderRadius);
+      background-color: var(--secondStyleColor);
+      width: fit-content;
+      font-weight: 900;
+      transition: 0.2s all linear;
+      color: var(--textColor2);
+      &&:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+  .ab-lllller > span:nth-of-type(1) {
+    color: var(--secondStyleColor);
+    font-style: italic;
+  }
+  .ab-lllller > span:nth-of-type(2) {
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--secondStyleColor);
+    font-style: italic;
+  }
+
+  @media (max-width: 800px) {
+    #about .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .ab-lllller {
+      align-items: center;
+      && h2 {
+        text-align: center;
+      }
+    }
+    .ab-rrrrorjg {
+      align-items: center;
+      padding: 20px;
+      && p {
+        text-align: center;
+        text-wrap: balance;
+      }
+    }
+    .ab-lllller > span:nth-of-type(2) {
+      font-size: 90px;
+    }
+  }
+</style>
+
+<script>
+  function animateCount(el, to, duration = 1200) {
+    const from = 0;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const value = Math.round(from + (to - from) * progress);
+      el.textContent = value;
+
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  const counterEl = document.getElementById("utiterhgserht");
+  animateCount(counterEl, 1500, 1500); // до 100 за 1.5с
+</script>
