@@ -37,7 +37,12 @@
       height: 600px;
       z-index: 1;
       border-radius: var(--borderRadius);
-      background-color: #ffffff;
+      background: radial-gradient(
+        80% 60% at 30% 20%,
+        color-mix(in srgb, var(--secondStyleColor) 15%, transparent),
+        transparent 60%
+      );
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
   }
   .uergv .container {
@@ -66,7 +71,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    color: var(--textColor2);
+    color: var(--textColor1);
     && h1 {
       text-transform: uppercase;
       line-height: 1;
@@ -76,10 +81,10 @@
       text-wrap: balance;
     }
     && a {
-      color: var(--textColor2);
+      color: var(--textColor1);
       width: fit-content;
       font-size: 24px;
-      border-bottom: 2px solid var(--textColor2);
+      border-bottom: 2px solid var(--textColor1);
       padding-bottom: 8px;
       transition: 0.2s all linear;
       &&:hover {
