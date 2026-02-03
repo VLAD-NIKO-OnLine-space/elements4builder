@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a data-href="site_domain" class="site-headerA"
+          ><span class="logo-text" data-var="domain_name"></span
+        ></a>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#about">About US</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="mobile__menu">
+          <div class="burger" aria-label="Open menu" role="button" tabindex="0">
+            <div class="icon-left"></div>
+            <div class="icon-right"></div>
+          </div>
+        </div>
+        <a class="header-cta" href="#partners">Book a Table</a>
+      </div>
+    </header>
+
+    <style>
+      :root {
+        --bodyBG: #161616;
+        --textColor1: #eaeaea;
+        --textColor2: #161616;
+
+        --maxWidthContainer: 1320px;
+        --secondStyleColor: #00c8ff;
+        --borderRadius: 18px;
+      }
+
+      html {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-moz-box-sizing: border-box;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        margin: 0;
+      }
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--bodyBG);
+        color: var(--textColor1);
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .container {
+        max-width: var(--maxWidthContainer);
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+
+      /* ===========================
+          HEADER
+        =========================== */
+
+      .site-header {
+        position: relative;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        background: color-mix(
+          in srgb,
+          var(--secondStyleColor) 10%,
+          transparent
+        );
+        /* border-bottom: 1px solid var(--secondStyleColor); */
+      }
+      .site-headerA {
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--textColor1);
+      }
+
+      .header-cta {
+        padding: 12px 20px;
+        color: var(--textColor2);
+        font-weight: 500;
+        border-radius: var(--borderRadius);
+        background-color: var(--secondStyleColor);
+      }
+
+      /* layout */
+
+      .site-header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 18px;
+      }
+
+      /* ===========================
+   LOGO
+=========================== */
+
+      .logo {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.1;
+        letter-spacing: 0.16em;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 3px;
+        color: var(--text-main);
+      }
+
+      .logo span:first-child {
+        background: linear-gradient(120deg, var(--accent-2), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .logo span:last-child {
+        font-weight: 500;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      /* ===========================
+   NAV DESKTOP
+=========================== */
+
+      .nav {
+        display: flex;
+        gap: 22px;
+        align-items: center;
+      }
+
+      .header__nav > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 10px 20px;
+        border-radius: var(--borderRadius);
+        border: 1px solid var(--secondStyleColor);
+      }
+
+      /* ссылки */
+
+      .nav a,
+      .header__nav > ul a {
+        position: relative;
+        color: var(--textColor1);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        border-radius: var(--borderRadius);
+        padding: 10px 20px;
+      }
+
+      /* подчёркивание — неоновая линия */
+
+      .nav a::before,
+      .header__nav > ul a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent-2), var(--accent));
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: transform 0.22s ease;
+      }
+
+      .nav a:hover,
+      .header__nav > ul a:hover {
+        transform: translateY(-1px);
+      }
+
+      .nav a:hover::before,
+      .header__nav > ul a:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* ===========================
+   BURGER BUTTON
+=========================== */
+
+      .burger {
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        border: 1px solid var(--secondStyleColor);
+        background: radial-gradient(
+          circle at 0 0,
+          rgba(77, 243, 255, 0.22),
+          transparent 65%
+        );
+        cursor: pointer;
+        transition: all 0.25s ease;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 100;
+      }
+
+      /* три полоски */
+
+      .burger::before,
+      .burger::after,
+      .burger .icon-left {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--textColor1);
+        transition: all 0.25s ease;
+      }
+
+      .burger::before {
+        top: 13px;
+        transform: translateX(-50%);
+      }
+
+      .burger::after {
+        bottom: 13px;
+        transform: translateX(-50%);
+      }
+
+      .burger .icon-left {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .burger.open::before {
+        top: 50%;
+        transform: translateX(-50%) rotate(45deg);
+      }
+
+      .burger.open::after {
+        top: 50%;
+        bottom: auto;
+        transform: translateX(-50%) rotate(-45deg);
+      }
+
+      .burger.open .icon-left {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+
+      /* icon-right не используется, оставляем выключенным */
+      .burger .icon-right {
+        display: none;
+      }
+
+      /* ===========================
+   MOBILE MENU
+=========================== */
+
+      .mobile__menu {
+        display: none;
+      }
+
+      /* off-canvas навигация */
+
+      @media (max-width: 1024px) {
+        .header-cta {
+          display: none;
+        }
+        .nav {
+          display: none;
+        }
+
+        .burger {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        .mobile__menu {
+          display: block;
+          -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        .header__nav {
+          position: fixed;
+          inset: 0;
+          width: 100vw;
+          height: 100dvh;
+          background: var(--bodyBG);
+          backdrop-filter: blur(22px);
+          -webkit-backdrop-filter: blur(22px);
+          z-index: 50;
+          transform: translateX(-120%);
+          transition: transform 0.35s ease;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .header__nav > ul {
+          margin-top: 90px;
+          margin-left: 24px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 26px;
+          height: 80vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+          border: none;
+        }
+
+        .header__nav > ul a {
+          font-size: 18px;
+          color: var(--text-main);
+        }
+
+        /* CTA-кнопка в моб.меню */
+        .header__nav > a {
+          display: inline-block !important;
+          margin: auto 24px 36px;
+          max-width: 90%;
+          text-align: center;
+          color: #050814 !important;
+          background: var(--secondStyleColor);
+          border-radius: 999px;
+          padding: 12px 18px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.18em;
+        }
+
+        .navOpen {
+          transform: translateX(0%);
+        }
+
+        header .btn {
+          display: none;
+        }
+      }
+
+      /* ===========================
+   ACCESSIBILITY & MOTION
+=========================== */
+
+      .header__nav > ul a:focus-visible,
+      .burger:focus-visible {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 4px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .burger,
+        .burger * {
+          transition: none !important;
+        }
+        .header__nav {
+          transition: none !important;
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".mobile__menu");
+        const burgerIcon = document.querySelector(".burger");
+        const nav = document.querySelector(".header__nav");
+        const html = document.querySelector("html");
+        const navLinks = document.querySelectorAll(".header__nav a");
+
+        burger.addEventListener("click", function () {
+          burgerIcon.classList.toggle("open");
+          nav.classList.toggle("navOpen");
+
+          if (html.style.overflow === "hidden") {
+            html.style.overflow = "";
+          } else {
+            html.style.overflow = "hidden";
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            burger.classList.remove("open");
+            nav.classList.remove("navOpen");
+            burgerIcon.classList.remove("open");
+            html.style.overflow = "";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
