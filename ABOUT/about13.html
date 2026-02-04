@@ -1,0 +1,141 @@
+﻿<section id="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="ab-i-wr">
+      <div>
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div>
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div>
+        <img data-image alt="" loading="lazy" />
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit
+      fugiat ratione praesentium nostrum! Dolore voluptate inventore nobis!
+      Numquam quam officia saepe? Saepe veritatis, ullam, numquam porro odio sed
+      sit blanditiis sapiente fuga a provident voluptates repudiandae incidunt
+      hic consectetur.
+    </p>
+    <a href="#partners">Learn More</a>
+  </div>
+</section>
+
+<style>
+  /*  */
+  #about {
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--secondStyleColor) 10%, transparent) 80%,
+      var(--bodyBG) 100%
+    );
+  }
+
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    && h2 {
+      text-align: center;
+    }
+
+    && p {
+      text-align: center;
+      text-wrap: balance;
+    }
+    && a {
+      padding: 15px 40px;
+      background-color: var(--secondStyleColor);
+      border-radius: var(--borderRadius);
+      color: var(--textColor2);
+      font-size: 20px;
+      font-weight: 700;
+      transition: 0.2s all linear;
+      &&:hover {
+        transform: translateY(-4px);
+      }
+    }
+  }
+  .ab-i-wr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    position: relative;
+  }
+  .ab-i-wr div:nth-of-type(1) {
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 999px;
+    && img {
+      border-radius: inherit;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+      transition: 0.2s all linear;
+      &&:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .ab-i-wr div:nth-of-type(2) {
+    position: absolute;
+    height: 300px;
+    left: 10%;
+    top: 10%;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 50%;
+    && img {
+      border-radius: inherit;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+      transition: 0.2s all linear;
+      &&:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .ab-i-wr div:nth-of-type(3) {
+    position: absolute;
+    height: 300px;
+    right: 10%;
+    top: 10%;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    && img {
+      border-radius: inherit;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+      transition: 0.2s all linear;
+      &&:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    #about .container {
+      flex-direction: column;
+    }
+    .ab-i-wr div:nth-of-type(2),
+    .ab-i-wr div:nth-of-type(3) {
+      display: none;
+    }
+  }
+</style>
