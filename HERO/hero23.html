@@ -1,0 +1,295 @@
+<section class="k9zQ1m">
+  <div class="vP0a7n" aria-hidden="true"></div>
+  <div class="w2Yt3b" aria-hidden="true"></div>
+  <div class="n8uL4x" aria-hidden="true"></div>
+  <div class="container">
+    <div class="r7Xc2p">
+      <div class="s1qV9d">
+        <p class="u0pN6s">Smart Scheduler</p>
+      </div>
+      <h1 class="c3eT8w" data-var="domain_name"></h1>
+      <p class="m5nB0q">
+        Imagine ABA scheduling for all patients happening automatically.
+      </p>
+      <a class="b8Qv3y" href="#partners">
+        <span class="t2cH7u">Book a Demo</span>
+      </a>
+      <div class="g6dS1e" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .k9zQ1m {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    min-height: 700px;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(
+        900px 380px at 50% 0%,
+        color-mix(in srgb, var(--secondStyleColor) 25%, transparent),
+        color-mix(in srgb, var(--secondStyleColor) 1%, transparent) 35%
+      ),
+      radial-gradient(
+        700px 460px at 50% 110%,
+        color-mix(in srgb, var(--secondStyleColor) 45%, transparent),
+        transparent 64%
+      ),
+      linear-gradient(180deg, color-mix(in srgb, var(--bodyBG) 5%, transparent));
+  }
+
+  /* точечный паттерн сверху */
+  .n8uL4x {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 18px 18px;
+    opacity: 0.35;
+    transform: translateY(-14px);
+    mask-image: radial-gradient(
+      520px 220px at 50% 10%,
+      #000 35%,
+      transparent 78%
+    );
+  }
+
+  /* левый “шар” (оранжевый) */
+  .vP0a7n {
+    position: absolute;
+    left: -365px;
+    bottom: -288px;
+    width: clamp(340px, 46vw, 640px);
+    height: clamp(340px, 46vw, 640px);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        circle at 35% 30%,
+        rgba(255, 255, 255, 0.28),
+        rgba(255, 255, 255, 0) 36%
+      ),
+      radial-gradient(
+        circle at 45% 55%,
+        rgba(255, 122, 42, 0.65),
+        rgba(255, 59, 26, 0.25) 44%,
+        rgba(7, 3, 18, 0) 72%
+      ),
+      conic-gradient(
+        from 220deg,
+        rgba(255, 140, 70, 0),
+        rgba(255, 140, 70, 0.55),
+        rgba(255, 255, 255, 0.22),
+        rgba(255, 59, 26, 0.55),
+        rgba(255, 140, 70, 0)
+      );
+    filter: blur(0.2px) saturate(1.1);
+  }
+
+  /* дуги поверх левого шара */
+  .vP0a7n::before,
+  .vP0a7n::after {
+    content: "";
+    position: absolute;
+    inset: 80px;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .vP0a7n::before {
+    border: 2px solid rgba(255, 255, 255, 0.38);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(18deg);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.18));
+  }
+
+  .vP0a7n::after {
+    inset: 120px;
+    border: 2px solid rgba(255, 122, 42, 0.55);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(18deg);
+    filter: drop-shadow(0 0 16px rgba(255, 122, 42, 0.18));
+  }
+
+  /* правый “шар” (фиолетовый) */
+  .w2Yt3b {
+    position: absolute;
+    right: -456px;
+    bottom: 154px;
+    width: clamp(360px, 50vw, 690px);
+    height: clamp(360px, 50vw, 690px);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(
+        circle at 40% 30%,
+        rgba(255, 255, 255, 0.22),
+        rgba(255, 255, 255, 0) 34%
+      ),
+      radial-gradient(
+        circle at 55% 58%,
+        rgba(166, 75, 255, 0.7),
+        rgba(111, 34, 255, 0.24) 46%,
+        rgba(7, 3, 18, 0) 74%
+      ),
+      conic-gradient(
+        from 310deg,
+        rgba(166, 75, 255, 0),
+        rgba(166, 75, 255, 0.62),
+        rgba(255, 255, 255, 0.18),
+        rgba(111, 34, 255, 0.62),
+        rgba(166, 75, 255, 0)
+      );
+    filter: blur(0.2px) saturate(1.12);
+  }
+
+  /* дуги поверх правого шара */
+  .w2Yt3b::before,
+  .w2Yt3b::after {
+    content: "";
+    position: absolute;
+    inset: 88px;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .w2Yt3b::before {
+    border: 2px solid rgba(255, 255, 255, 0.36);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-14deg);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.16));
+  }
+
+  .w2Yt3b::after {
+    inset: 128px;
+    border: 2px solid rgba(166, 75, 255, 0.55);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-14deg);
+    filter: drop-shadow(0 0 18px rgba(166, 75, 255, 0.18));
+  }
+
+  /* контент */
+  .r7Xc2p {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .s1qV9d {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 20px;
+    border-radius: 999px;
+    color: var(--textColor1);
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    position: relative;
+  }
+
+  .h4mR2k {
+    color: rgba(255, 255, 255, 0.92);
+    filter: drop-shadow(0 0 10px rgba(166, 75, 255, 0.35));
+  }
+
+  .c3eT8w {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.06;
+    color: var(--textColor1);
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.45),
+      0 0 30px rgba(166, 75, 255, 0.1);
+  }
+
+  .x6Jp1a {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .m5nB0q {
+    margin: 0;
+    max-width: 620px;
+    color: var(--textColor1);
+    line-height: 1.55;
+  }
+
+  .b8Qv3y {
+    margin-top: 6px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--textColor1);
+    font-size: 20px;
+    border: 1px solid var(--secondStyleColor);
+    transition: 0.2s all linear;
+    &&:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .t2cH7u {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* мелкие точки вокруг кнопки */
+  .g6dS1e {
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 72px);
+    transform: translateX(-50%);
+    width: 380px;
+    height: 160px;
+    pointer-events: none;
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.14) 1px,
+      transparent 1px
+    );
+    background-size: 16px 16px;
+    opacity: 0.22;
+    mask-image: radial-gradient(
+      170px 70px at 50% 55%,
+      #000 30%,
+      transparent 78%
+    );
+  }
+
+  /* адаптив */
+  @media (max-width: 900px) {
+    .vP0a7n,
+    .w2Yt3b {
+      display: none;
+    }
+
+    .k9zQ1m {
+      min-height: 500px;
+    }
+  }
+</style>
