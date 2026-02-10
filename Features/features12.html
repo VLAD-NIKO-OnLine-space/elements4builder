@@ -1,0 +1,267 @@
+<section class="ft12" id="features">
+  <div class="container">
+    <div class="ft12__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft12__grid">
+      <!-- Card with image -->
+      <article class="ft12__card ft12__card--img">
+        <div class="ft12__thumb">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft12__body">
+          <h3>Powerful dashboard</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat, arcu vitae facilisis tempus.
+          </p>
+        </div>
+      </article>
+
+      <!-- Text card -->
+      <article class="ft12__card">
+        <div class="ft12__ico">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h3>End-to-end encryption</h3>
+        <p>
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero.
+        </p>
+      </article>
+
+      <!-- Text card -->
+      <article class="ft12__card">
+        <div class="ft12__ico">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h3>Auto-sync everywhere</h3>
+        <p>
+          Cras in malesuada est. Pellentesque a orci semper, efficitur arcu ac,
+          dignissim metus.
+        </p>
+      </article>
+
+      <!-- Card with image -->
+      <article class="ft12__card ft12__card--img">
+        <div class="ft12__thumb">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft12__body">
+          <h3>Team workspace</h3>
+          <p>
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus
+            scelerisque, ut volutpat nunc accumsan.
+          </p>
+        </div>
+      </article>
+
+      <!-- Text card -->
+      <article class="ft12__card">
+        <div class="ft12__ico">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <h3>Modular architecture</h3>
+        <p>
+          Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim
+          lacus vel iaculis.
+        </p>
+      </article>
+
+      <!-- Text card -->
+      <article class="ft12__card">
+        <div class="ft12__ico">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <h3>Version history</h3>
+        <p>
+          Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor
+          quis pharetra.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v12 — Mixed grid: image cards + icon cards ===== */
+
+  .ft12 {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+  }
+
+  .ft12__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 55px;
+  }
+
+  .ft12__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft12__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .ft12__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  /* Card base */
+  .ft12__card {
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ft12__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  }
+
+  /* Image card */
+  .ft12__card--img {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ft12__thumb {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .ft12__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+  }
+
+  .ft12__card--img:hover .ft12__thumb img {
+    transform: scale(1.05);
+  }
+
+  .ft12__body {
+    padding: 22px 22px 24px;
+  }
+
+  .ft12__body h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ft12__body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Icon */
+  .ft12__ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ft12__card:hover .ft12__ico {
+    transform: rotate(-6deg) scale(1.1);
+  }
+
+  .ft12__ico i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft12__card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ft12__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft12__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft12__card {
+      padding: 24px 18px;
+    }
+
+    .ft12__card h3,
+    .ft12__body h3 {
+      font-size: 16px;
+    }
+
+    .ft12__card p,
+    .ft12__body p {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft12 {
+      padding: 50px 0;
+    }
+
+    .ft12__head {
+      margin-bottom: 36px;
+    }
+
+    .ft12__head h2 {
+      font-size: 24px;
+    }
+
+    .ft12__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ft12__body {
+      padding: 18px 18px 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft12__card,
+    .ft12__ico,
+    .ft12__thumb img {
+      transition: none;
+    }
+  }
+</style>

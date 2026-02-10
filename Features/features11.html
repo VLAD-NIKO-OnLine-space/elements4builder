@@ -1,0 +1,298 @@
+<section class="ft11" id="features">
+  <div class="container">
+    <div class="ft11__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft11__showcase">
+      <!-- Central image -->
+      <div class="ft11__center">
+        <div class="ft11__frame">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft11__glow" aria-hidden="true"></div>
+      </div>
+
+      <!-- Floating features around image -->
+      <div class="ft11__pills">
+        <div class="ft11__pill ft11__pill--tl">
+          <div class="ft11__pill-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div>
+            <h3>Speed</h3>
+            <p>Optimized for instant load times</p>
+          </div>
+        </div>
+
+        <div class="ft11__pill ft11__pill--tr">
+          <div class="ft11__pill-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h3>Security</h3>
+            <p>Enterprise-grade protection</p>
+          </div>
+        </div>
+
+        <div class="ft11__pill ft11__pill--bl">
+          <div class="ft11__pill-icon">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <h3>Analytics</h3>
+            <p>Real-time data insights</p>
+          </div>
+        </div>
+
+        <div class="ft11__pill ft11__pill--br">
+          <div class="ft11__pill-icon">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div>
+            <h3>Automation</h3>
+            <p>Smart workflows built-in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v11 — Central image with floating pills ===== */
+
+  .ft11 {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ft11__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 60px;
+  }
+
+  .ft11__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft11__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .ft11__showcase {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Central image */
+  .ft11__center {
+    position: relative;
+    z-index: 1;
+    width: min(380px, 50%);
+  }
+
+  .ft11__frame {
+    border-radius: calc(var(--borderRadius) * 1.2);
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+    aspect-ratio: 3 / 4;
+  }
+
+  .ft11__frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .ft11__glow {
+    position: absolute;
+    inset: -30px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    opacity: 0.06;
+    filter: blur(60px);
+    z-index: -1;
+    animation: ft11Breathe 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes ft11Breathe {
+    0% { opacity: 0.04; transform: scale(0.95); }
+    100% { opacity: 0.1; transform: scale(1.05); }
+  }
+
+  /* Floating pills */
+  .ft11__pills {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .ft11__pill {
+    position: absolute;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+    max-width: 260px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ft11__pill:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+  }
+
+  .ft11__pill--tl { top: 5%; left: 0; }
+  .ft11__pill--tr { top: 10%; right: 0; }
+  .ft11__pill--bl { bottom: 10%; left: 0; }
+  .ft11__pill--br { bottom: 5%; right: 0; }
+
+  .ft11__pill-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ft11__pill-icon i {
+    font-size: 16px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft11__pill h3 {
+    margin: 0 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .ft11__pill p {
+    margin: 0;
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+    line-height: 1.4;
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft11__pill {
+      max-width: 220px;
+      padding: 14px 16px;
+    }
+
+    .ft11__center {
+      width: min(320px, 45%);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft11__showcase {
+      flex-direction: column;
+      min-height: auto;
+      gap: 24px;
+    }
+
+    .ft11__pills {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .ft11__pill {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      max-width: 100%;
+    }
+
+    .ft11__center {
+      width: min(340px, 80%);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft11 {
+      padding: 50px 0;
+    }
+
+    .ft11__head {
+      margin-bottom: 36px;
+    }
+
+    .ft11__head h2 {
+      font-size: 24px;
+    }
+
+    .ft11__pills {
+      grid-template-columns: 1fr;
+    }
+
+    .ft11__pill {
+      padding: 14px 16px;
+      gap: 12px;
+    }
+
+    .ft11__pill h3 {
+      font-size: 14px;
+    }
+
+    .ft11__pill-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .ft11__pill-icon i {
+      font-size: 14px;
+    }
+
+    .ft11__center {
+      width: min(280px, 85%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft11__glow {
+      animation: none;
+    }
+    .ft11__pill {
+      transition: none;
+    }
+  }
+</style>

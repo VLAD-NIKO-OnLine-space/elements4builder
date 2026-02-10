@@ -1,0 +1,277 @@
+<section class="ft13" id="features">
+  <div class="container">
+    <div class="ft13__layout">
+      <div class="ft13__left">
+        <span class="ft13__kicker">Why choose us</span>
+        <h2>Features</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          consequatur minus harum molestias saepe mollitia, veniam architecto.
+        </p>
+        <a href="#partners" class="ft13__btn">Get started</a>
+      </div>
+
+      <div class="ft13__right">
+        <div class="ft13__list">
+          <div class="ft13__item">
+            <div class="ft13__num">01</div>
+            <div class="ft13__bar" aria-hidden="true">
+              <div class="ft13__fill" style="--w: 95%"></div>
+            </div>
+            <div class="ft13__text">
+              <h3>Blazing fast speed</h3>
+              <p>Pages load in under 200ms with our edge network.</p>
+            </div>
+          </div>
+
+          <div class="ft13__item">
+            <div class="ft13__num">02</div>
+            <div class="ft13__bar" aria-hidden="true">
+              <div class="ft13__fill" style="--w: 88%"></div>
+            </div>
+            <div class="ft13__text">
+              <h3>99.9% uptime guarantee</h3>
+              <p>Reliable infrastructure you can count on 24/7.</p>
+            </div>
+          </div>
+
+          <div class="ft13__item">
+            <div class="ft13__num">03</div>
+            <div class="ft13__bar" aria-hidden="true">
+              <div class="ft13__fill" style="--w: 80%"></div>
+            </div>
+            <div class="ft13__text">
+              <h3>Advanced encryption</h3>
+              <p>Bank-level AES-256 encryption for all data.</p>
+            </div>
+          </div>
+
+          <div class="ft13__item">
+            <div class="ft13__num">04</div>
+            <div class="ft13__bar" aria-hidden="true">
+              <div class="ft13__fill" style="--w: 72%"></div>
+            </div>
+            <div class="ft13__text">
+              <h3>One-click integrations</h3>
+              <p>Connect your favorite tools without any code.</p>
+            </div>
+          </div>
+
+          <div class="ft13__item">
+            <div class="ft13__num">05</div>
+            <div class="ft13__bar" aria-hidden="true">
+              <div class="ft13__fill" style="--w: 65%"></div>
+            </div>
+            <div class="ft13__text">
+              <h3>Priority support</h3>
+              <p>Dedicated team responds in under 15 minutes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v13 — Split layout with progress bars ===== */
+
+  .ft13 {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+  }
+
+  .ft13__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(30px, 5vw, 60px);
+    align-items: start;
+  }
+
+  /* Left */
+  .ft13__left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 80px;
+  }
+
+  .ft13__kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .ft13__left h2 {
+    margin: 0;
+    font-size: clamp(30px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft13__left p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+    max-width: 400px;
+  }
+
+  .ft13__btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 28px;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .ft13__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  /* Right — list */
+  .ft13__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .ft13__item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.3s ease;
+  }
+
+  .ft13__item:first-child {
+    padding-top: 0;
+  }
+
+  .ft13__item:last-child {
+    border-bottom: none;
+  }
+
+  .ft13__num {
+    grid-row: 1 / 3;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    opacity: 0.25;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .ft13__item:hover .ft13__num {
+    opacity: 0.6;
+  }
+
+  .ft13__text h3 {
+    margin: 0 0 4px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .ft13__text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Progress bar */
+  .ft13__bar {
+    grid-column: 2;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.06);
+    margin-top: 12px;
+    overflow: hidden;
+  }
+
+  .ft13__fill {
+    height: 100%;
+    width: var(--w, 0%);
+    border-radius: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--secondStyleColor),
+      color-mix(in srgb, var(--secondStyleColor) 40%, transparent)
+    );
+    transition: width 0.6s ease;
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft13__left {
+      position: static;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft13__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .ft13__left {
+      text-align: center;
+      align-items: center;
+    }
+
+    .ft13__left p {
+      max-width: 100%;
+    }
+
+    .ft13__text h3 {
+      font-size: 16px;
+    }
+
+    .ft13__text p {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft13 {
+      padding: 50px 0;
+    }
+
+    .ft13__left h2 {
+      font-size: 24px;
+    }
+
+    .ft13__item {
+      grid-template-columns: 40px 1fr;
+      padding: 18px 0;
+    }
+
+    .ft13__num {
+      font-size: 22px;
+    }
+
+    .ft13__text h3 {
+      font-size: 15px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft13__btn,
+    .ft13__num,
+    .ft13__fill {
+      transition: none;
+    }
+  }
+</style>
