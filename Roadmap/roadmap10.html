@@ -1,0 +1,407 @@
+<section class="rm10" id="roadmap">
+  <div class="container">
+    <div class="rm10__head">
+      <span class="rm10__eyebrow">Roadmap</span>
+      <h2>From vision to reality</h2>
+      <p>
+        Full-width milestone strips that show exactly where we are and what
+        comes next.
+      </p>
+    </div>
+
+    <!-- SVG vertical connector -->
+    <div class="rm10__timeline">
+      <div class="rm10__connector" aria-hidden="true">
+        <svg preserveAspectRatio="none" viewBox="0 0 4 100" class="rm10__connector-svg">
+          <line x1="2" y1="0" x2="2" y2="100" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 7" />
+        </svg>
+        <div class="rm10__connector-glow"></div>
+      </div>
+
+      <!-- Strip 1 -->
+      <div class="rm10__strip rm10__strip--done">
+        <div class="rm10__strip-marker">
+          <div class="rm10__dot"></div>
+        </div>
+        <div class="rm10__strip-content">
+          <div class="rm10__strip-left">
+            <span class="rm10__phase">Phase 1</span>
+            <h3>Foundation & research</h3>
+            <p>
+              Collected requirements, mapped out the main pages, decided on tone
+              of voice and gathered all assets for the first version.
+            </p>
+          </div>
+          <div class="rm10__strip-right">
+            <div class="rm10__strip-ico"><i class="fa-solid fa-flag"></i></div>
+            <span class="rm10__status rm10__status--done">Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strip 2 -->
+      <div class="rm10__strip rm10__strip--done">
+        <div class="rm10__strip-marker">
+          <div class="rm10__dot"></div>
+        </div>
+        <div class="rm10__strip-content">
+          <div class="rm10__strip-left">
+            <span class="rm10__phase">Phase 2</span>
+            <h3>Design system & components</h3>
+            <p>
+              Aligned typography, spacing and colour tokens into a consistent
+              theme with a growing library of reusable sections.
+            </p>
+          </div>
+          <div class="rm10__strip-right">
+            <div class="rm10__strip-ico"><i class="fa-solid fa-swatchbook"></i></div>
+            <span class="rm10__status rm10__status--done">Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strip 3 — active -->
+      <div class="rm10__strip rm10__strip--active">
+        <div class="rm10__strip-marker">
+          <div class="rm10__dot rm10__dot--pulse"></div>
+        </div>
+        <div class="rm10__strip-content">
+          <div class="rm10__strip-left">
+            <span class="rm10__phase">Phase 3</span>
+            <h3>Automation & content pipeline</h3>
+            <p>
+              Wiring content manifests and image pools so new sites are
+              generated automatically with a single command.
+            </p>
+          </div>
+          <div class="rm10__strip-right">
+            <div class="rm10__strip-ico"><i class="fa-solid fa-gears"></i></div>
+            <span class="rm10__status rm10__status--active">In progress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strip 4 -->
+      <div class="rm10__strip">
+        <div class="rm10__strip-marker">
+          <div class="rm10__dot rm10__dot--empty"></div>
+        </div>
+        <div class="rm10__strip-content">
+          <div class="rm10__strip-left">
+            <span class="rm10__phase">Phase 4</span>
+            <h3>Launch, scale & optimize</h3>
+            <p>
+              Deploy the full network, monitor real traffic and continuously
+              refine performance, SEO and conversion rates.
+            </p>
+          </div>
+          <div class="rm10__strip-right">
+            <div class="rm10__strip-ico"><i class="fa-solid fa-rocket"></i></div>
+            <span class="rm10__status">Upcoming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP v10 — Full-width strips + SVG dashed connector + glow ===== */
+
+  .rm10 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .rm10__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 55px;
+  }
+
+  .rm10__eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .rm10__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rm10__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Timeline */
+  .rm10__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* SVG connector */
+  .rm10__connector {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    z-index: 0;
+  }
+
+  .rm10__connector-svg {
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+  }
+
+  .rm10__connector-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 50px;
+    margin-left: -3px;
+    background: var(--secondStyleColor);
+    border-radius: 6px;
+    filter: blur(5px);
+    opacity: 0.5;
+    animation: rm10Travel 4.5s ease-in-out infinite;
+  }
+
+  @keyframes rm10Travel {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { top: calc(100% - 50px); opacity: 0; }
+  }
+
+  /* Strip */
+  .rm10__strip {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .rm10__strip:last-child {
+    border-bottom: none;
+  }
+
+  /* Marker column */
+  .rm10__strip-marker {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+  }
+
+  .rm10__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+  }
+
+  .rm10__dot--pulse {
+    animation: rm10DotPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes rm10DotPulse {
+    0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondStyleColor) 20%, transparent); }
+    50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--secondStyleColor) 0%, transparent); }
+  }
+
+  .rm10__dot--empty {
+    background: transparent;
+    border: 2px solid color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    box-shadow: none;
+  }
+
+  /* Content area */
+  .rm10__strip-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 20px 26px 16px;
+    transition: background 0.3s ease;
+  }
+
+  .rm10__strip:hover .rm10__strip-content {
+    background: rgba(255, 255, 255, 0.015);
+  }
+
+  .rm10__strip--active .rm10__strip-content {
+    background: color-mix(in srgb, var(--secondStyleColor) 3%, transparent);
+  }
+
+  .rm10__strip-left {
+    flex: 1;
+  }
+
+  .rm10__phase {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 8px;
+  }
+
+  .rm10__strip-left h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .rm10__strip-left p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .rm10__strip-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .rm10__strip-ico {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .rm10__strip:hover .rm10__strip-ico {
+    transform: scale(1.1);
+  }
+
+  .rm10__strip-ico i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .rm10__status {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    white-space: nowrap;
+  }
+
+  .rm10__status--done {
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    color: var(--secondStyleColor);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  .rm10__status--active {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .rm10__strip-left h3 {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .rm10__strip-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .rm10__strip-right {
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    .rm10__strip-left p {
+      font-size: 13px;
+    }
+
+    .rm10__strip-ico {
+      width: 40px;
+      height: 40px;
+    }
+
+    .rm10__strip-ico i {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rm10 {
+      padding: 50px 0;
+    }
+
+    .rm10__head {
+      margin-bottom: 36px;
+    }
+
+    .rm10__head h2 {
+      font-size: 24px;
+    }
+
+    .rm10__strip {
+      grid-template-columns: 40px 1fr;
+    }
+
+    .rm10__connector {
+      left: 18px;
+    }
+
+    .rm10__strip-content {
+      padding: 20px 12px 20px 10px;
+    }
+
+    .rm10__strip-left h3 {
+      font-size: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rm10__connector-glow {
+      animation: none;
+    }
+
+    .rm10__dot--pulse {
+      animation: none;
+    }
+
+    .rm10__strip-content,
+    .rm10__strip-ico {
+      transition: none;
+    }
+  }
+</style>

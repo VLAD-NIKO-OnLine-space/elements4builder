@@ -1,0 +1,406 @@
+<section class="rm7" id="roadmap">
+  <div class="container">
+    <div class="rm7__head">
+      <span class="rm7__eyebrow">Roadmap</span>
+      <h2>Project milestones</h2>
+      <p>
+        Click any phase to see the details. Each milestone builds on the
+        previous one.
+      </p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="rm7__progress" aria-hidden="true">
+      <div class="rm7__progress-fill"></div>
+      <div class="rm7__progress-dots">
+        <span class="rm7__pdot rm7__pdot--done"></span>
+        <span class="rm7__pdot rm7__pdot--done"></span>
+        <span class="rm7__pdot rm7__pdot--active"></span>
+        <span class="rm7__pdot"></span>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="rm7__list">
+      <details class="rm7__item" open>
+        <summary class="rm7__summary">
+          <span class="rm7__num">01</span>
+          <span class="rm7__label">Foundation</span>
+          <span class="rm7__status rm7__status--done">Completed</span>
+          <span class="rm7__arrow"></span>
+        </summary>
+        <div class="rm7__body">
+          <div class="rm7__ico"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div>
+            <p>
+              Initial planning, structural layout and feature scoping.
+              Establishing a stable framework for all future improvements.
+            </p>
+            <ul class="rm7__checks">
+              <li><i class="fa-solid fa-check"></i> Project structure defined</li>
+              <li><i class="fa-solid fa-check"></i> Core architecture built</li>
+              <li><i class="fa-solid fa-check"></i> Design tokens established</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="rm7__item">
+        <summary class="rm7__summary">
+          <span class="rm7__num">02</span>
+          <span class="rm7__label">Design system</span>
+          <span class="rm7__status rm7__status--done">Completed</span>
+          <span class="rm7__arrow"></span>
+        </summary>
+        <div class="rm7__body">
+          <div class="rm7__ico"><i class="fa-solid fa-palette"></i></div>
+          <div>
+            <p>
+              Align typography, spacing, and colour tokens into a consistent
+              theme that scales across every page variation.
+            </p>
+            <ul class="rm7__checks">
+              <li><i class="fa-solid fa-check"></i> Color palette finalized</li>
+              <li><i class="fa-solid fa-check"></i> Component library created</li>
+              <li><i class="fa-solid fa-check"></i> Responsive breakpoints set</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="rm7__item">
+        <summary class="rm7__summary">
+          <span class="rm7__num">03</span>
+          <span class="rm7__label">Automation</span>
+          <span class="rm7__status rm7__status--active">In progress</span>
+          <span class="rm7__arrow"></span>
+        </summary>
+        <div class="rm7__body">
+          <div class="rm7__ico"><i class="fa-solid fa-gears"></i></div>
+          <div>
+            <p>
+              Wire content manifests and image pools so new sites are generated
+              with a single command and minimal effort.
+            </p>
+            <ul class="rm7__checks">
+              <li><i class="fa-solid fa-check"></i> Template engine ready</li>
+              <li><i class="fa-solid fa-spinner fa-spin"></i> Content pipeline in progress</li>
+              <li><i class="fa-regular fa-circle"></i> Image optimization pending</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details class="rm7__item">
+        <summary class="rm7__summary">
+          <span class="rm7__num">04</span>
+          <span class="rm7__label">Launch & scale</span>
+          <span class="rm7__status">Upcoming</span>
+          <span class="rm7__arrow"></span>
+        </summary>
+        <div class="rm7__body">
+          <div class="rm7__ico"><i class="fa-solid fa-rocket"></i></div>
+          <div>
+            <p>
+              Deploy the network, monitor real traffic and continuously refine
+              performance, SEO and conversion rates.
+            </p>
+            <ul class="rm7__checks">
+              <li><i class="fa-regular fa-circle"></i> Production deployment</li>
+              <li><i class="fa-regular fa-circle"></i> Analytics integration</li>
+              <li><i class="fa-regular fa-circle"></i> Performance tuning</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP v7 — Progress bar + accordion phases ===== */
+
+  .rm7 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .rm7__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  .rm7__eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .rm7__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rm7__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Progress bar */
+  .rm7__progress {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 44px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .rm7__progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 62%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--secondStyleColor), color-mix(in srgb, var(--secondStyleColor) 50%, transparent));
+  }
+
+  .rm7__progress-dots {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .rm7__pdot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .rm7__pdot--done {
+    background: var(--secondStyleColor);
+    border-color: var(--secondStyleColor);
+  }
+
+  .rm7__pdot--active {
+    background: transparent;
+    border-color: var(--secondStyleColor);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  /* Accordion list */
+  .rm7__list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .rm7__item {
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.025);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .rm7__item[open] {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  .rm7__summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 22px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .rm7__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rm7__num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  .rm7__label {
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .rm7__status {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    flex-shrink: 0;
+  }
+
+  .rm7__status--done {
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    color: var(--secondStyleColor);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  .rm7__status--active {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  .rm7__arrow {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .rm7__arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid color-mix(in srgb, var(--textColor1) 40%, transparent);
+    border-bottom: 2px solid color-mix(in srgb, var(--textColor1) 40%, transparent);
+    transform: translate(-50%, -70%) rotate(45deg);
+    transition: transform 0.25s ease;
+  }
+
+  .rm7__item[open] .rm7__arrow::before {
+    transform: translate(-50%, -30%) rotate(-135deg);
+  }
+
+  /* Body content */
+  .rm7__body {
+    display: flex;
+    gap: 16px;
+    padding: 0 22px 22px;
+    align-items: flex-start;
+  }
+
+  .rm7__ico {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rm7__ico i {
+    font-size: 16px;
+    color: var(--secondStyleColor);
+  }
+
+  .rm7__body p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  .rm7__checks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .rm7__checks li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .rm7__checks i {
+    font-size: 11px;
+    color: var(--secondStyleColor);
+    width: 14px;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .rm7__progress {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .rm7__label {
+      font-size: 15px;
+    }
+
+    .rm7__body p {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rm7 {
+      padding: 50px 0;
+    }
+
+    .rm7__head {
+      margin-bottom: 30px;
+    }
+
+    .rm7__head h2 {
+      font-size: 24px;
+    }
+
+    .rm7__summary {
+      padding: 16px 16px;
+      gap: 10px;
+    }
+
+    .rm7__body {
+      padding: 0 16px 18px;
+      flex-direction: column;
+    }
+
+    .rm7__status {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rm7__item,
+    .rm7__arrow::before {
+      transition: none;
+    }
+  }
+</style>

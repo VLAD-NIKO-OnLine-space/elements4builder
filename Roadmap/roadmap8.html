@@ -1,0 +1,307 @@
+<section class="rm8" id="roadmap">
+  <div class="container">
+    <div class="rm8__head">
+      <span class="rm8__eyebrow">Roadmap</span>
+      <h2>Where we're headed</h2>
+      <p>
+        A metro-style map of our key milestones — from first prototype to full
+        network launch.
+      </p>
+    </div>
+
+    <div class="rm8__metro">
+      <!-- SVG metro line with nodes -->
+      <svg class="rm8__line" viewBox="0 0 1000 80" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <!-- Main line -->
+        <line x1="60" y1="40" x2="940" y2="40" class="rm8__rail" />
+        <line x1="60" y1="40" x2="940" y2="40" class="rm8__rail rm8__rail--active" />
+        <!-- Nodes -->
+        <circle cx="60" cy="40" r="12" class="rm8__node rm8__node--done" />
+        <circle cx="353" cy="40" r="12" class="rm8__node rm8__node--done" />
+        <circle cx="647" cy="40" r="12" class="rm8__node rm8__node--current" />
+        <circle cx="940" cy="40" r="12" class="rm8__node" />
+        <!-- Inner dots -->
+        <circle cx="60" cy="40" r="4" class="rm8__inner" />
+        <circle cx="353" cy="40" r="4" class="rm8__inner" />
+        <circle cx="647" cy="40" r="4" class="rm8__inner--pulse" />
+      </svg>
+
+      <!-- Cards under nodes -->
+      <div class="rm8__cards">
+        <article class="rm8__card">
+          <span class="rm8__tag rm8__tag--done">Completed</span>
+          <h3>Foundation</h3>
+          <p>
+            Initial setup, core mechanics, essential UI and system
+            stabilization across all viewports.
+          </p>
+          <div class="rm8__card-ico"><i class="fa-solid fa-flag"></i></div>
+        </article>
+
+        <article class="rm8__card">
+          <span class="rm8__tag rm8__tag--done">Completed</span>
+          <h3>Section library</h3>
+          <p>
+            Built dozens of reusable sections — headers, heroes, features,
+            galleries, reviews and more.
+          </p>
+          <div class="rm8__card-ico"><i class="fa-solid fa-layer-group"></i></div>
+        </article>
+
+        <article class="rm8__card rm8__card--active">
+          <span class="rm8__tag rm8__tag--active">In progress</span>
+          <h3>Automation</h3>
+          <p>
+            Wiring content pools, randomization rules and image manifests for
+            one-command site generation.
+          </p>
+          <div class="rm8__card-ico"><i class="fa-solid fa-robot"></i></div>
+        </article>
+
+        <article class="rm8__card">
+          <span class="rm8__tag">Upcoming</span>
+          <h3>Scale & optimize</h3>
+          <p>
+            Deploy the full network, monitor traffic, A/B test layouts and
+            continuously improve performance.
+          </p>
+          <div class="rm8__card-ico"><i class="fa-solid fa-chart-line"></i></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ROADMAP v8 — Metro-style horizontal line with nodes + cards ===== */
+
+  .rm8 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .rm8__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+  }
+
+  .rm8__eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .rm8__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rm8__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Metro container */
+  .rm8__metro {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* SVG line */
+  .rm8__line {
+    width: 100%;
+    height: 80px;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .rm8__rail {
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+
+  .rm8__rail--active {
+    stroke: var(--secondStyleColor);
+    stroke-dasharray: 580;
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+
+  .rm8__node {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.15);
+    stroke-width: 2;
+  }
+
+  .rm8__node--done {
+    fill: color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    stroke: var(--secondStyleColor);
+  }
+
+  .rm8__node--current {
+    fill: transparent;
+    stroke: var(--secondStyleColor);
+    stroke-width: 2.5;
+  }
+
+  .rm8__inner {
+    fill: var(--secondStyleColor);
+  }
+
+  .rm8__inner--pulse {
+    fill: var(--secondStyleColor);
+    animation: rm8Pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes rm8Pulse {
+    0%, 100% { r: 4; opacity: 1; }
+    50% { r: 7; opacity: 0.5; }
+  }
+
+  /* Cards grid */
+  .rm8__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .rm8__card {
+    position: relative;
+    padding: 22px 20px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+  }
+
+  .rm8__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .rm8__card--active {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--secondStyleColor) 6%, transparent),
+      transparent
+    );
+  }
+
+  .rm8__tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    margin-bottom: 14px;
+  }
+
+  .rm8__tag--done {
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    color: var(--secondStyleColor);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  .rm8__tag--active {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  .rm8__card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .rm8__card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 66%, transparent);
+  }
+
+  .rm8__card-ico {
+    position: absolute;
+    bottom: 14px;
+    right: 16px;
+    font-size: 28px;
+    color: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    transition: color 0.3s ease;
+    pointer-events: none;
+  }
+
+  .rm8__card:hover .rm8__card-ico {
+    color: color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .rm8__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .rm8__line {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .rm8__card h3 {
+      font-size: 15px;
+    }
+
+    .rm8__card p {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rm8 {
+      padding: 50px 0;
+    }
+
+    .rm8__head {
+      margin-bottom: 36px;
+    }
+
+    .rm8__head h2 {
+      font-size: 24px;
+    }
+
+    .rm8__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .rm8__card {
+      padding: 18px 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rm8__inner--pulse {
+      animation: none;
+    }
+
+    .rm8__card,
+    .rm8__card-ico {
+      transition: none;
+    }
+  }
+</style>
