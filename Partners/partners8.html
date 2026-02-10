@@ -1,236 +1,160 @@
-<section class="pt8" id="partners">
-  <div class="container">
-    <div class="pt8__layout">
-      <div class="pt8__card">
-        <div class="pt8__shimmer" aria-hidden="true"></div>
-        <a data-partner-link class="pt8__logo-wrap">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
-      </div>
-
-      <div class="pt8__info">
-        <p class="pt8__kicker">Strategic Partner</p>
+<section class="pt9" id="partners">
+  <div class="pt9__strip">
+    <div class="container pt9__inner">
+      <div class="pt9__text">
         <h2>Partners</h2>
-        <p class="pt8__desc">
+        <p>
           We have established several strategic partnerships to enhance the
-          platform's functionality and expand its reach. Below, we present our
-          key partners.
+          platform's functionality and expand its reach.
         </p>
-        <ul class="pt8__list">
-          <li>
-            <span class="pt8__bullet" aria-hidden="true"></span>
-            Stable specifications across project phases
-          </li>
-          <li>
-            <span class="pt8__bullet" aria-hidden="true"></span>
-            Faster substitutions with known compatibility
-          </li>
-          <li>
-            <span class="pt8__bullet" aria-hidden="true"></span>
-            Clear communication from quote to delivery
-          </li>
-        </ul>
       </div>
+      <div class="pt9__divider" aria-hidden="true"></div>
+      <a data-partner-link class="pt9__logo-box">
+        <img data-partner-logo alt="Partner logo" loading="lazy" />
+      </a>
     </div>
   </div>
 </section>
 
 <style>
-  /* ===== PARTNERS v8 — Glassmorphism card + info ===== */
+  /* ===== PARTNERS v9 — Minimal full-width strip ===== */
 
-  .pt8 {
-    padding: clamp(60px, 7vw, 100px) 0;
+  .pt9 {
     color: var(--textColor1);
   }
 
-  .pt8__layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-    gap: clamp(30px, 5vw, 60px);
-    align-items: center;
-  }
-
-  /* Glass card */
-  .pt8__card {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    max-width: 400px;
-    border-radius: calc(var(--borderRadius) * 1.3);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+  .pt9__strip {
+    border-top: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    padding: clamp(40px, 5vw, 70px) 0;
     background: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.07),
+      90deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.04),
       rgba(255, 255, 255, 0.02)
     );
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .pt9__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: clamp(30px, 4vw, 60px);
   }
 
-  .pt8__card:hover {
-    transform: translateY(-5px);
-    box-shadow:
-      0 30px 70px rgba(0, 0, 0, 0.3),
-      0 0 40px color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+  .pt9__text {
+    flex: 1;
   }
 
-  /* Shimmer */
-  .pt8__shimmer {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      105deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.06) 50%,
-      transparent 70%
-    );
-    pointer-events: none;
-  }
-
-  .pt8__card:hover .pt8__shimmer {
-    animation: pt8Sweep 0.9s ease forwards;
-  }
-
-  @keyframes pt8Sweep {
-    to { left: 140%; }
-  }
-
-  .pt8__logo-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-  }
-
-  .pt8__logo-wrap:hover {
-    transform: scale(1.05);
-  }
-
-  .pt8__logo-wrap img {
-    max-width: min(200px, 60%);
-    height: auto;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
-  }
-
-  /* Info */
-  .pt8__info {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .pt8__kicker {
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--secondStyleColor);
-  }
-
-  .pt8__info h2 {
-    margin: 0;
-    font-size: clamp(28px, 4vw, 44px);
+  .pt9__text h2 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 3.5vw, 38px);
     font-weight: 700;
     letter-spacing: -0.02em;
   }
 
-  .pt8__desc {
+  .pt9__text p {
     margin: 0;
     font-size: 15px;
-    line-height: 1.7;
-    color: color-mix(in srgb, var(--textColor1) 72%, transparent);
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+    max-width: 480px;
   }
 
-  .pt8__list {
-    margin: 6px 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  /* Vertical divider */
+  .pt9__divider {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--secondStyleColor),
+      transparent
+    );
+    opacity: 0.4;
+    flex-shrink: 0;
   }
 
-  .pt8__list li {
+  /* Logo */
+  .pt9__logo-box {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 14px;
-    color: color-mix(in srgb, var(--textColor1) 80%, transparent);
+    justify-content: center;
+    padding: 24px 36px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.3s ease, transform 0.3s ease;
   }
 
-  .pt8__bullet {
-    flex-shrink: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: var(--secondStyleColor);
-    box-shadow: 0 0 8px color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  .pt9__logo-box:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+    transform: translateY(-3px);
+  }
+
+  .pt9__logo-box img {
+    max-width: 200px;
+    max-height: 70px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
   }
 
   /* Responsive */
-  @media (max-width: 950px) {
-    .pt8__card {
-      max-width: 340px;
-    }
-  }
-
   @media (max-width: 800px) {
-    .pt8__layout {
-      grid-template-columns: 1fr;
-      justify-items: center;
+    .pt9__inner {
+      flex-direction: column;
       text-align: center;
     }
 
-    .pt8__info {
-      align-items: center;
+    .pt9__divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--secondStyleColor),
+        transparent
+      );
     }
 
-    .pt8__card {
-      max-width: 300px;
+    .pt9__text p {
+      max-width: 100%;
     }
 
-    .pt8__list li {
-      justify-content: center;
+    .pt9__logo-box {
+      padding: 20px 30px;
+    }
+
+    .pt9__logo-box img {
+      max-width: 170px;
     }
   }
 
   @media (max-width: 600px) {
-    .pt8 {
-      padding: 50px 0;
+    .pt9__strip {
+      padding: 36px 0;
     }
 
-    .pt8__info h2 {
+    .pt9__text h2 {
       font-size: 24px;
     }
 
-    .pt8__desc {
+    .pt9__text p {
       font-size: 14px;
     }
 
-    .pt8__card {
-      max-width: 260px;
+    .pt9__logo-box {
+      padding: 18px 24px;
     }
 
-    .pt8__list li {
-      font-size: 13px;
+    .pt9__logo-box img {
+      max-width: 140px;
+      max-height: 50px;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .pt8__card:hover .pt8__shimmer {
-      animation: none;
-    }
-    .pt8__card,
-    .pt8__logo-wrap {
+    .pt9__logo-box {
       transition: none;
     }
   }

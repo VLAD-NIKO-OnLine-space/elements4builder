@@ -1,175 +1,250 @@
-<section class="pt6" id="partners">
+<section class="pt7" id="partners">
   <div class="container">
-    <div class="pt6__head">
-      <p class="pt6__kicker">Trusted By</p>
-      <h2>Our Partners</h2>
+    <div class="pt7__head">
+      <h2>Partners</h2>
+      <p>
+        We have established several strategic partnerships to enhance the
+        platform's functionality and expand its reach.
+      </p>
     </div>
 
-    <div class="pt6__marquee" aria-label="Partner logos">
-      <div class="pt6__track">
-        <a data-partner-link class="pt6__item">
+    <div class="pt7__stage">
+      <div class="pt7__hex">
+        <div class="pt7__hex-glow" aria-hidden="true"></div>
+        <a data-partner-link class="pt7__hex-inner">
           <img data-partner-logo alt="Partner logo" loading="lazy" />
         </a>
-        <a data-partner-link class="pt6__item">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
-        <a data-partner-link class="pt6__item">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
-        <a data-partner-link class="pt6__item">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
-        <a data-partner-link class="pt6__item">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
-        <a data-partner-link class="pt6__item">
-          <img data-partner-logo alt="Partner logo" loading="lazy" />
-        </a>
+      </div>
+
+      <div class="pt7__lines" aria-hidden="true">
+        <span class="pt7__line pt7__line--1"></span>
+        <span class="pt7__line pt7__line--2"></span>
+        <span class="pt7__line pt7__line--3"></span>
+      </div>
+
+      <div class="pt7__badges">
+        <div class="pt7__badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Verified</span>
+        </div>
+        <div class="pt7__badge">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Official</span>
+        </div>
+        <div class="pt7__badge">
+          <i class="fa-solid fa-certificate"></i>
+          <span>Certified</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* ===== PARTNERS v6 — Infinite marquee ticker ===== */
+  /* ===== PARTNERS v7 — Hexagonal showcase ===== */
 
-  .pt6 {
-    padding: clamp(50px, 6vw, 90px) 0;
+  .pt7 {
+    padding: clamp(60px, 7vw, 100px) 0;
     color: var(--textColor1);
-    overflow: hidden;
   }
 
-  .pt6__head {
+  .pt7__head {
     text-align: center;
-    margin-bottom: 45px;
+    max-width: 600px;
+    margin: 0 auto 55px;
   }
 
-  .pt6__kicker {
-    margin: 0 0 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--secondStyleColor);
-  }
-
-  .pt6__head h2 {
-    margin: 0;
+  .pt7__head h2 {
+    margin: 0 0 14px;
     font-size: clamp(28px, 4vw, 42px);
     font-weight: 700;
     letter-spacing: -0.02em;
   }
 
-  /* Marquee */
-  .pt6__marquee {
-    position: relative;
-    mask-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      #000 15%,
-      #000 85%,
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      #000 15%,
-      #000 85%,
-      transparent 100%
-    );
+  .pt7__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
   }
 
-  .pt6__track {
+  .pt7__stage {
     display: flex;
-    gap: 50px;
-    width: max-content;
-    animation: pt6Scroll 20s linear infinite;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
   }
 
-  @keyframes pt6Scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  /* Hexagonal container */
+  .pt7__hex {
+    position: relative;
+    width: min(300px, 70vw);
+    aspect-ratio: 1 / 1.15;
   }
 
-  .pt6__item {
-    flex-shrink: 0;
+  .pt7__hex-glow {
+    position: absolute;
+    inset: -20px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--secondStyleColor);
+    opacity: 0.08;
+    filter: blur(20px);
+    animation: pt7Glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes pt7Glow {
+    0% { opacity: 0.06; }
+    100% { opacity: 0.14; }
+  }
+
+  .pt7__hex-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 30px;
-    border-radius: var(--borderRadius);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    );
+    border: none;
+    transition: transform 0.3s ease;
   }
 
-  .pt6__item:hover {
-    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
-    transform: scale(1.05);
+  .pt7__hex-inner::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--bodyBG);
+    z-index: 0;
   }
 
-  .pt6__item img {
-    max-width: 180px;
-    max-height: 60px;
+  .pt7__hex-inner:hover {
+    transform: scale(1.04);
+  }
+
+  .pt7__hex-inner img {
+    position: relative;
+    z-index: 1;
+    max-width: 55%;
     height: auto;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+  }
+
+  /* Connecting lines */
+  .pt7__lines {
+    display: flex;
+    gap: 40px;
+  }
+
+  .pt7__line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(
+      180deg,
+      var(--secondStyleColor),
+      transparent
+    );
+    opacity: 0.4;
+  }
+
+  .pt7__line--1 { animation: pt7Blink 2s ease infinite 0s; }
+  .pt7__line--2 { animation: pt7Blink 2s ease infinite 0.4s; }
+  .pt7__line--3 { animation: pt7Blink 2s ease infinite 0.8s; }
+
+  @keyframes pt7Blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Badges */
+  .pt7__badges {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pt7__badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 13px;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 80%, transparent);
+    transition: border-color 0.3s ease;
+  }
+
+  .pt7__badge:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 50%, transparent);
+  }
+
+  .pt7__badge i {
+    color: var(--secondStyleColor);
+    font-size: 14px;
   }
 
   /* Responsive */
   @media (max-width: 800px) {
-    .pt6__track {
-      gap: 30px;
+    .pt7__hex {
+      width: min(240px, 65vw);
     }
 
-    .pt6__item {
-      padding: 16px 22px;
-    }
-
-    .pt6__item img {
-      max-width: 140px;
-      max-height: 48px;
+    .pt7__badge {
+      padding: 8px 14px;
+      font-size: 12px;
     }
   }
 
   @media (max-width: 600px) {
-    .pt6 {
-      padding: 40px 0;
+    .pt7 {
+      padding: 50px 0;
     }
 
-    .pt6__head {
-      margin-bottom: 30px;
+    .pt7__head {
+      margin-bottom: 36px;
     }
 
-    .pt6__head h2 {
+    .pt7__head h2 {
       font-size: 24px;
     }
 
-    .pt6__track {
-      gap: 20px;
+    .pt7__hex {
+      width: min(200px, 60vw);
     }
 
-    .pt6__item {
-      padding: 14px 18px;
+    .pt7__badges {
+      gap: 10px;
     }
 
-    .pt6__item img {
-      max-width: 120px;
-      max-height: 40px;
+    .pt7__badge {
+      padding: 7px 12px;
+      font-size: 11px;
+    }
+
+    .pt7__lines {
+      gap: 28px;
+    }
+
+    .pt7__line {
+      height: 28px;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .pt6__track {
+    .pt7__hex-glow,
+    .pt7__line {
       animation: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: auto;
     }
-    .pt6__item {
+    .pt7__hex-inner,
+    .pt7__badge {
       transition: none;
     }
   }
