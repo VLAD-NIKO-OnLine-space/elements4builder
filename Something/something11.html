@@ -1,0 +1,151 @@
+<section class="sm11" id="testimonial">
+  <!-- SVG wave background -->
+  <svg class="sm11__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 60 C360 0 1080 120 1440 60 L1440 120 L0 120 Z" fill="currentColor" />
+  </svg>
+
+  <div class="container">
+    <div class="sm11__block">
+      <div class="sm11__quote-mark" aria-hidden="true">"</div>
+      <blockquote class="sm11__quote">
+        Building with this platform changed the way our team ships products.
+        What used to take weeks now takes hours — and the results look
+        incredible every single time.
+      </blockquote>
+      <div class="sm11__author">
+        <div class="sm11__avatar">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="sm11__author-info">
+          <strong>Sarah Mitchell</strong>
+          <span>Head of Product, Acme Inc.</span>
+        </div>
+      </div>
+      <div class="sm11__stars" aria-label="5 out of 5 stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== SOMETHING v11 — Spotlight quote with SVG wave + avatar ===== */
+
+  .sm11 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .sm11__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    color: color-mix(in srgb, var(--secondStyleColor) 4%, transparent);
+    pointer-events: none;
+  }
+
+  .sm11__block {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sm11__quote-mark {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 0.5;
+    color: color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+  }
+
+  .sm11__quote {
+    margin: 0;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 85%, transparent);
+  }
+
+  .sm11__author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sm11__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    flex-shrink: 0;
+  }
+
+  .sm11__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sm11__author-info {
+    text-align: left;
+  }
+
+  .sm11__author-info strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .sm11__author-info span {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+  }
+
+  .sm11__stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  .sm11__stars i {
+    font-size: 14px;
+    color: var(--secondStyleColor);
+  }
+
+  @media (max-width: 800px) {
+    .sm11__quote {
+      font-size: 18px;
+    }
+
+    .sm11__quote-mark {
+      font-size: 60px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sm11 {
+      padding: 50px 0;
+    }
+
+    .sm11__quote {
+      font-size: 16px;
+    }
+
+    .sm11__avatar {
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>

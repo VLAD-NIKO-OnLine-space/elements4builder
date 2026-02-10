@@ -1,0 +1,204 @@
+<section class="sm14" id="team">
+  <div class="container">
+    <div class="sm14__head">
+      <span class="sm14__kicker">Our team</span>
+      <h2>The people behind the product</h2>
+      <p>A small, focused team that ships fast and cares deeply about quality.</p>
+    </div>
+
+    <div class="sm14__grid">
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>Alex Rivera</h3>
+        <span class="sm14__role">CEO & Founder</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>Maria Chen</h3>
+        <span class="sm14__role">Lead Designer</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>James Okoro</h3>
+        <span class="sm14__role">Senior Engineer</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>Sophie Lang</h3>
+        <span class="sm14__role">Product Manager</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>David Kim</h3>
+        <span class="sm14__role">DevOps Lead</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== SOMETHING v14 — Team strip with circular avatars + orbit ring ===== */
+
+  .sm14 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .sm14__head {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 50px;
+  }
+
+  .sm14__kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .sm14__head h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .sm14__head p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  .sm14__grid {
+    display: flex;
+    justify-content: center;
+    gap: clamp(24px, 4vw, 48px);
+    flex-wrap: wrap;
+  }
+
+  .sm14__member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .sm14__avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .sm14__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    transition: transform 0.3s ease;
+  }
+
+  .sm14__member:hover .sm14__avatar img {
+    transform: scale(1.06);
+  }
+
+  .sm14__ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    animation: sm14Spin 20s linear infinite;
+  }
+
+  .sm14__member:hover .sm14__ring {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+  }
+
+  @keyframes sm14Spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .sm14__member h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .sm14__role {
+    font-size: 12px;
+    color: var(--secondStyleColor);
+    font-weight: 500;
+  }
+
+  @media (max-width: 800px) {
+    .sm14__avatar {
+      width: 84px;
+      height: 84px;
+    }
+
+    .sm14__member h3 {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sm14 {
+      padding: 50px 0;
+    }
+
+    .sm14__head {
+      margin-bottom: 36px;
+    }
+
+    .sm14__head h2 {
+      font-size: 24px;
+    }
+
+    .sm14__grid {
+      gap: 20px;
+    }
+
+    .sm14__avatar {
+      width: 72px;
+      height: 72px;
+    }
+
+    .sm14__ring {
+      inset: -5px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm14__ring {
+      animation: none;
+    }
+
+    .sm14__avatar img {
+      transition: none;
+    }
+  }
+</style>

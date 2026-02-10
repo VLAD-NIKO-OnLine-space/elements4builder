@@ -25,21 +25,27 @@
       <details class="rm7__item" open>
         <summary class="rm7__summary">
           <span class="rm7__num">01</span>
-          <span class="rm7__label">Foundation</span>
+          <h3 class="rm7__label">Foundation</h3>
           <span class="rm7__status rm7__status--done">Completed</span>
           <span class="rm7__arrow"></span>
         </summary>
         <div class="rm7__body">
-          <div class="rm7__ico"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="rm7__ico">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
           <div>
             <p>
               Initial planning, structural layout and feature scoping.
               Establishing a stable framework for all future improvements.
             </p>
             <ul class="rm7__checks">
-              <li><i class="fa-solid fa-check"></i> Project structure defined</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Project structure defined
+              </li>
               <li><i class="fa-solid fa-check"></i> Core architecture built</li>
-              <li><i class="fa-solid fa-check"></i> Design tokens established</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Design tokens established
+              </li>
             </ul>
           </div>
         </div>
@@ -48,7 +54,7 @@
       <details class="rm7__item">
         <summary class="rm7__summary">
           <span class="rm7__num">02</span>
-          <span class="rm7__label">Design system</span>
+          <h3 class="rm7__label">Design system</h3>
           <span class="rm7__status rm7__status--done">Completed</span>
           <span class="rm7__arrow"></span>
         </summary>
@@ -61,8 +67,12 @@
             </p>
             <ul class="rm7__checks">
               <li><i class="fa-solid fa-check"></i> Color palette finalized</li>
-              <li><i class="fa-solid fa-check"></i> Component library created</li>
-              <li><i class="fa-solid fa-check"></i> Responsive breakpoints set</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Component library created
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Responsive breakpoints set
+              </li>
             </ul>
           </div>
         </div>
@@ -71,7 +81,7 @@
       <details class="rm7__item">
         <summary class="rm7__summary">
           <span class="rm7__num">03</span>
-          <span class="rm7__label">Automation</span>
+          <h3 class="rm7__label">Automation</h3>
           <span class="rm7__status rm7__status--active">In progress</span>
           <span class="rm7__arrow"></span>
         </summary>
@@ -84,8 +94,13 @@
             </p>
             <ul class="rm7__checks">
               <li><i class="fa-solid fa-check"></i> Template engine ready</li>
-              <li><i class="fa-solid fa-spinner fa-spin"></i> Content pipeline in progress</li>
-              <li><i class="fa-regular fa-circle"></i> Image optimization pending</li>
+              <li>
+                <i class="fa-solid fa-spinner fa-spin"></i> Content pipeline in
+                progress
+              </li>
+              <li>
+                <i class="fa-regular fa-circle"></i> Image optimization pending
+              </li>
             </ul>
           </div>
         </div>
@@ -94,7 +109,7 @@
       <details class="rm7__item">
         <summary class="rm7__summary">
           <span class="rm7__num">04</span>
-          <span class="rm7__label">Launch & scale</span>
+          <h3 class="rm7__label">Launch & scale</h3>
           <span class="rm7__status">Upcoming</span>
           <span class="rm7__arrow"></span>
         </summary>
@@ -106,8 +121,12 @@
               performance, SEO and conversion rates.
             </p>
             <ul class="rm7__checks">
-              <li><i class="fa-regular fa-circle"></i> Production deployment</li>
-              <li><i class="fa-regular fa-circle"></i> Analytics integration</li>
+              <li>
+                <i class="fa-regular fa-circle"></i> Production deployment
+              </li>
+              <li>
+                <i class="fa-regular fa-circle"></i> Analytics integration
+              </li>
               <li><i class="fa-regular fa-circle"></i> Performance tuning</li>
             </ul>
           </div>
@@ -171,7 +190,11 @@
     height: 100%;
     width: 62%;
     border-radius: 4px;
-    background: linear-gradient(90deg, var(--secondStyleColor), color-mix(in srgb, var(--secondStyleColor) 50%, transparent));
+    background: linear-gradient(
+      90deg,
+      var(--secondStyleColor),
+      color-mix(in srgb, var(--secondStyleColor) 50%, transparent)
+    );
   }
 
   .rm7__progress-dots {
@@ -199,7 +222,8 @@
   .rm7__pdot--active {
     background: transparent;
     border-color: var(--secondStyleColor);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    box-shadow: 0 0 0 3px
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
   }
 
   /* Accordion list */
@@ -213,7 +237,8 @@
 
   .rm7__item {
     border-radius: var(--borderRadius);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
     background: rgba(255, 255, 255, 0.025);
     overflow: hidden;
     transition: border-color 0.3s ease;
@@ -257,7 +282,8 @@
     font-weight: 600;
     padding: 4px 12px;
     border-radius: 100px;
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
     color: color-mix(in srgb, var(--textColor1) 50%, transparent);
     flex-shrink: 0;
   }
@@ -288,8 +314,10 @@
     left: 50%;
     width: 8px;
     height: 8px;
-    border-right: 2px solid color-mix(in srgb, var(--textColor1) 40%, transparent);
-    border-bottom: 2px solid color-mix(in srgb, var(--textColor1) 40%, transparent);
+    border-right: 2px solid
+      color-mix(in srgb, var(--textColor1) 40%, transparent);
+    border-bottom: 2px solid
+      color-mix(in srgb, var(--textColor1) 40%, transparent);
     transform: translate(-50%, -70%) rotate(45deg);
     transition: transform 0.25s ease;
   }

@@ -9,8 +9,8 @@
       <h2>Partners</h2>
       <p class="pt5__desc">
         We have established several strategic partnerships to enhance the
-        platform's functionality and expand its reach. Below, we present our
-        key partners.
+        platform's functionality and expand its reach. Below, we present our key
+        partners.
       </p>
       <div class="pt5__stats">
         <div class="pt5__stat">
@@ -103,6 +103,7 @@
   /* Layout */
   .pt5__shell {
     position: relative;
+    width: 100%;
     z-index: 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -162,11 +163,7 @@
   }
 
   .pt5__stat:hover {
-    border-color: color-mix(
-      in srgb,
-      var(--secondStyleColor) 50%,
-      transparent
-    );
+    border-color: color-mix(in srgb, var(--secondStyleColor) 50%, transparent);
   }
 
   .pt5__stat-val {

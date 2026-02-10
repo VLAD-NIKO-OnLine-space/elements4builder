@@ -1,0 +1,273 @@
+<section class="sm13" id="download">
+  <div class="container">
+    <div class="sm13__layout">
+      <!-- Mockup image -->
+      <div class="sm13__visual">
+        <div class="sm13__mockup">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="sm13__glow" aria-hidden="true"></div>
+      </div>
+
+      <!-- Text + pills + buttons -->
+      <div class="sm13__content">
+        <span class="sm13__kicker">Download the app</span>
+        <h2>Take it everywhere with you</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          consequatur minus harum molestias saepe mollitia veniam.
+        </p>
+
+        <div class="sm13__pills">
+          <span class="sm13__pill"><i class="fa-solid fa-bolt"></i> Fast</span>
+          <span class="sm13__pill"><i class="fa-solid fa-shield-halved"></i> Secure</span>
+          <span class="sm13__pill"><i class="fa-solid fa-cloud"></i> Synced</span>
+          <span class="sm13__pill"><i class="fa-solid fa-bell"></i> Notifications</span>
+        </div>
+
+        <div class="sm13__buttons">
+          <a href="#partners" class="sm13__store">
+            <i class="fa-brands fa-apple"></i>
+            <div>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#partners" class="sm13__store">
+            <i class="fa-brands fa-google-play"></i>
+            <div>
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== SOMETHING v13 — App promo: mockup + pills + store buttons ===== */
+
+  .sm13 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .sm13__layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+  }
+
+  /* Visual */
+  .sm13__visual {
+    position: relative;
+    width: clamp(220px, 26vw, 300px);
+  }
+
+  .sm13__mockup {
+    border-radius: calc(var(--borderRadius) * 1.6);
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 9 / 16;
+  }
+
+  .sm13__mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .sm13__mockup:hover img {
+    transform: scale(1.04);
+  }
+
+  .sm13__glow {
+    position: absolute;
+    inset: -20px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    opacity: 0.05;
+    filter: blur(50px);
+    z-index: -1;
+    animation: sm13Breathe 3.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes sm13Breathe {
+    0% { opacity: 0.03; transform: scale(0.95); }
+    100% { opacity: 0.08; transform: scale(1.06); }
+  }
+
+  /* Content */
+  .sm13__content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .sm13__kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .sm13__content h2 {
+    margin: 0;
+    font-size: clamp(24px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .sm13__content > p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+    max-width: 450px;
+  }
+
+  /* Pills */
+  .sm13__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .sm13__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    font-size: 12px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--textColor1) 75%, transparent);
+  }
+
+  .sm13__pill i {
+    font-size: 11px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Store buttons */
+  .sm13__buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .sm13__store {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    color: var(--textColor1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .sm13__store:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+  }
+
+  .sm13__store i {
+    font-size: 24px;
+    color: var(--secondStyleColor);
+  }
+
+  .sm13__store small {
+    display: block;
+    font-size: 10px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+    line-height: 1;
+  }
+
+  .sm13__store strong {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .sm13__visual {
+      width: clamp(200px, 24vw, 260px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .sm13__layout {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .sm13__visual {
+      width: 220px;
+    }
+
+    .sm13__content {
+      align-items: center;
+    }
+
+    .sm13__pills {
+      justify-content: center;
+    }
+
+    .sm13__buttons {
+      justify-content: center;
+    }
+
+    .sm13__content > p {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sm13 {
+      padding: 50px 0;
+    }
+
+    .sm13__content h2 {
+      font-size: 22px;
+    }
+
+    .sm13__buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .sm13__store {
+      justify-content: center;
+    }
+
+    .sm13__visual {
+      width: 180px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm13__glow {
+      animation: none;
+    }
+
+    .sm13__mockup img,
+    .sm13__store {
+      transition: none;
+    }
+  }
+</style>

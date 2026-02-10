@@ -1,0 +1,203 @@
+<section class="sm12" id="compare">
+  <div class="container">
+    <div class="sm12__head">
+      <h2>Compare plans</h2>
+      <p>See what's included in each tier at a glance.</p>
+    </div>
+
+    <div class="sm12__table">
+      <!-- Header row -->
+      <div class="sm12__row sm12__row--head">
+        <div class="sm12__cell sm12__cell--label">Feature</div>
+        <div class="sm12__cell sm12__cell--plan">Basic</div>
+        <div class="sm12__cell sm12__cell--plan sm12__cell--accent">Pro</div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Custom domain</div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Analytics dashboard</div>
+        <div class="sm12__cell"><i class="fa-solid fa-xmark sm12__no"></i></div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Priority support</div>
+        <div class="sm12__cell"><i class="fa-solid fa-xmark sm12__no"></i></div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">API access</div>
+        <div class="sm12__cell"><i class="fa-solid fa-xmark sm12__no"></i></div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Unlimited projects</div>
+        <div class="sm12__cell"><i class="fa-solid fa-xmark sm12__no"></i></div>
+        <div class="sm12__cell"><i class="fa-solid fa-check sm12__yes"></i></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Team collaboration</div>
+        <div class="sm12__cell"><span class="sm12__txt">Up to 3</span></div>
+        <div class="sm12__cell"><span class="sm12__txt sm12__txt--accent">Unlimited</span></div>
+      </div>
+
+      <div class="sm12__row">
+        <div class="sm12__cell sm12__cell--label">Storage</div>
+        <div class="sm12__cell"><span class="sm12__txt">5 GB</span></div>
+        <div class="sm12__cell"><span class="sm12__txt sm12__txt--accent">100 GB</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== SOMETHING v12 — Comparison table Basic vs Pro ===== */
+
+  .sm12 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .sm12__head {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 44px;
+  }
+
+  .sm12__head h2 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .sm12__head p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  .sm12__table {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .sm12__row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.2s ease;
+  }
+
+  .sm12__row:last-child {
+    border-bottom: none;
+  }
+
+  .sm12__row:not(.sm12__row--head):hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .sm12__row--head {
+    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+  }
+
+  .sm12__cell {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .sm12__cell--label {
+    justify-content: flex-start;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 80%, transparent);
+  }
+
+  .sm12__row--head .sm12__cell--label {
+    font-weight: 600;
+    color: var(--textColor1);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .sm12__cell--plan {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .sm12__cell--accent {
+    color: var(--secondStyleColor);
+  }
+
+  .sm12__yes {
+    color: var(--secondStyleColor);
+    font-size: 15px;
+  }
+
+  .sm12__no {
+    color: color-mix(in srgb, var(--textColor1) 25%, transparent);
+    font-size: 14px;
+  }
+
+  .sm12__txt {
+    font-size: 13px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+  }
+
+  .sm12__txt--accent {
+    color: var(--secondStyleColor);
+  }
+
+  @media (max-width: 800px) {
+    .sm12__cell {
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sm12 {
+      padding: 50px 0;
+    }
+
+    .sm12__head h2 {
+      font-size: 24px;
+    }
+
+    .sm12__row {
+      grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    }
+
+    .sm12__cell {
+      padding: 11px 10px;
+      font-size: 12px;
+    }
+
+    .sm12__cell--plan {
+      font-size: 13px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm12__row {
+      transition: none;
+    }
+  }
+</style>

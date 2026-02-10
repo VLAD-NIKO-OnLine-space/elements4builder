@@ -1,0 +1,186 @@
+<section class="sm10" id="subscribe">
+  <!-- SVG decorative envelope lines -->
+  <svg class="sm10__deco" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <path d="M0 100 L300 10 L600 100" fill="none" class="sm10__env-line" />
+    <path d="M0 100 L300 190 L600 100" fill="none" class="sm10__env-line sm10__env-line--2" />
+  </svg>
+
+  <div class="container">
+    <div class="sm10__card">
+      <div class="sm10__text">
+        <span class="sm10__kicker">Stay in the loop</span>
+        <h2>Subscribe to our newsletter</h2>
+        <p>
+          Get the latest updates, tips and product news delivered straight to
+          your inbox. No spam, unsubscribe anytime.
+        </p>
+      </div>
+      <form class="sm10__form" onsubmit="return false">
+        <div class="sm10__field">
+          <input type="email" class="sm10__input" placeholder="Enter your email" />
+          <button type="submit" class="sm10__btn">Subscribe</button>
+        </div>
+        <p class="sm10__hint">Join 5,000+ subscribers. We respect your privacy.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== SOMETHING v10 — Newsletter subscribe with SVG envelope deco ===== */
+
+  .sm10 {
+    position: relative;
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .sm10__deco {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(600px, 90%);
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sm10__env-line {
+    stroke: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    stroke-width: 1;
+    stroke-dasharray: 8 12;
+  }
+
+  .sm10__env-line--2 {
+    stroke: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+  }
+
+  .sm10 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sm10__card {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 36px;
+    border-radius: calc(var(--borderRadius) * 1.2);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(155deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    text-align: center;
+  }
+
+  .sm10__text {
+    margin-bottom: 28px;
+  }
+
+  .sm10__kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .sm10__card h2 {
+    margin: 0 0 12px;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .sm10__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .sm10__field {
+    display: flex;
+    gap: 10px;
+    max-width: 460px;
+    margin: 0 auto 10px;
+  }
+
+  .sm10__input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--textColor1);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .sm10__input::placeholder {
+    color: color-mix(in srgb, var(--textColor1) 40%, transparent);
+  }
+
+  .sm10__input:focus {
+    border-color: var(--secondStyleColor);
+  }
+
+  .sm10__btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .sm10__btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  .sm10__hint {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 45%, transparent);
+  }
+
+  @media (max-width: 800px) {
+    .sm10__card {
+      padding: 32px 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sm10 {
+      padding: 50px 0;
+    }
+
+    .sm10__field {
+      flex-direction: column;
+    }
+
+    .sm10__btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .sm10__card h2 {
+      font-size: 22px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm10__btn,
+    .sm10__input {
+      transition: none;
+    }
+  }
+</style>
