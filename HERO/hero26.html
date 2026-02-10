@@ -5,22 +5,54 @@
   </div>
 
   <!-- SVG animated aurora + grid -->
-  <svg class="hr27__aurora" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <svg
+    class="hr27__aurora"
+    viewBox="0 0 1440 800"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
     <defs>
       <!-- Aurora gradient -->
       <linearGradient id="hr27aGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="var(--secondStyleColor)" stop-opacity="0.3" />
-        <stop offset="50%" stop-color="var(--secondStyleColor)" stop-opacity="0.05" />
-        <stop offset="100%" stop-color="var(--secondStyleColor)" stop-opacity="0.2" />
+        <stop
+          offset="0%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.3"
+        />
+        <stop
+          offset="50%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.05"
+        />
+        <stop
+          offset="100%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.2"
+        />
       </linearGradient>
       <!-- Grid pattern -->
-      <pattern id="hr27grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="0.3" />
+      <pattern
+        id="hr27grid"
+        x="0"
+        y="0"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <path
+          d="M 60 0 L 0 0 0 60"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="0.3"
+        />
       </pattern>
       <!-- Glow filter -->
       <filter id="hr27glow">
         <feGaussianBlur stdDeviation="20" result="blur" />
-        <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
       </filter>
     </defs>
 
@@ -29,26 +61,81 @@
 
     <!-- Aurora waves -->
     <g filter="url(#hr27glow)" opacity="0.4">
-      <path class="hr27__wave1" d="M-200,400 C100,200 400,500 720,300 S1100,450 1640,350" fill="none" stroke="url(#hr27aGrad)" stroke-width="80" stroke-linecap="round" />
-      <path class="hr27__wave2" d="M-200,500 C200,350 500,600 800,400 S1200,550 1640,400" fill="none" stroke="url(#hr27aGrad)" stroke-width="60" stroke-linecap="round" />
+      <path
+        class="hr27__wave1"
+        d="M-200,400 C100,200 400,500 720,300 S1100,450 1640,350"
+        fill="none"
+        stroke="url(#hr27aGrad)"
+        stroke-width="80"
+        stroke-linecap="round"
+      />
+      <path
+        class="hr27__wave2"
+        d="M-200,500 C200,350 500,600 800,400 S1200,550 1640,400"
+        fill="none"
+        stroke="url(#hr27aGrad)"
+        stroke-width="60"
+        stroke-linecap="round"
+      />
     </g>
 
     <!-- Hex nodes -->
-    <g class="hr27__hexes" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.12">
+    <g
+      class="hr27__hexes"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="0.8"
+      opacity="0.12"
+    >
       <polygon points="200,120 230,103 260,120 260,154 230,171 200,154">
-        <animateTransform attributeName="transform" type="rotate" from="0 230 137" to="360 230 137" dur="30s" repeatCount="indefinite" />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 230 137"
+          to="360 230 137"
+          dur="30s"
+          repeatCount="indefinite"
+        />
       </polygon>
       <polygon points="900,80 930,63 960,80 960,114 930,131 900,114">
-        <animateTransform attributeName="transform" type="rotate" from="0 930 97" to="-360 930 97" dur="40s" repeatCount="indefinite" />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 930 97"
+          to="-360 930 97"
+          dur="40s"
+          repeatCount="indefinite"
+        />
       </polygon>
       <polygon points="1150,300 1180,283 1210,300 1210,334 1180,351 1150,334">
-        <animateTransform attributeName="transform" type="rotate" from="0 1180 317" to="360 1180 317" dur="35s" repeatCount="indefinite" />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 1180 317"
+          to="360 1180 317"
+          dur="35s"
+          repeatCount="indefinite"
+        />
       </polygon>
       <polygon points="100,500 130,483 160,500 160,534 130,551 100,534">
-        <animateTransform attributeName="transform" type="rotate" from="0 130 517" to="-360 130 517" dur="45s" repeatCount="indefinite" />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 130 517"
+          to="-360 130 517"
+          dur="45s"
+          repeatCount="indefinite"
+        />
       </polygon>
       <polygon points="700,600 730,583 760,600 760,634 730,651 700,634">
-        <animateTransform attributeName="transform" type="rotate" from="0 730 617" to="360 730 617" dur="38s" repeatCount="indefinite" />
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 730 617"
+          to="360 730 617"
+          dur="38s"
+          repeatCount="indefinite"
+        />
       </polygon>
     </g>
 
@@ -56,34 +143,117 @@
     <g fill="currentColor" opacity="0.5">
       <!-- Orbit 1 -->
       <circle r="3">
-        <animateMotion dur="12s" repeatCount="indefinite" path="M720,400 C900,200 1100,300 1000,500 C900,700 500,700 400,500 C300,300 540,200 720,400Z" />
-        <animate attributeName="opacity" values="0.3;0.8;0.3" dur="12s" repeatCount="indefinite" />
+        <animateMotion
+          dur="12s"
+          repeatCount="indefinite"
+          path="M720,400 C900,200 1100,300 1000,500 C900,700 500,700 400,500 C300,300 540,200 720,400Z"
+        />
+        <animate
+          attributeName="opacity"
+          values="0.3;0.8;0.3"
+          dur="12s"
+          repeatCount="indefinite"
+        />
       </circle>
       <!-- Orbit 2 -->
       <circle r="2.5">
-        <animateMotion dur="16s" repeatCount="indefinite" path="M300,300 C500,100 900,100 1100,300 C1300,500 1100,700 800,600 C500,500 100,500 300,300Z" />
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="16s" repeatCount="indefinite" />
+        <animateMotion
+          dur="16s"
+          repeatCount="indefinite"
+          path="M300,300 C500,100 900,100 1100,300 C1300,500 1100,700 800,600 C500,500 100,500 300,300Z"
+        />
+        <animate
+          attributeName="opacity"
+          values="0.5;1;0.5"
+          dur="16s"
+          repeatCount="indefinite"
+        />
       </circle>
       <!-- Orbit 3 -->
       <circle r="2">
-        <animateMotion dur="10s" repeatCount="indefinite" path="M1200,200 C1000,400 700,500 500,350 C300,200 400,100 700,150 C1000,200 1200,100 1200,200Z" />
-        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="10s" repeatCount="indefinite" />
+        <animateMotion
+          dur="10s"
+          repeatCount="indefinite"
+          path="M1200,200 C1000,400 700,500 500,350 C300,200 400,100 700,150 C1000,200 1200,100 1200,200Z"
+        />
+        <animate
+          attributeName="opacity"
+          values="0.4;0.9;0.4"
+          dur="10s"
+          repeatCount="indefinite"
+        />
       </circle>
     </g>
 
     <!-- Scanning line -->
-    <line x1="0" y1="0" x2="0" y2="800" stroke="currentColor" stroke-width="0.5" opacity="0.08">
-      <animateTransform attributeName="transform" type="translate" values="0,0;1440,0;0,0" dur="8s" repeatCount="indefinite" />
+    <line
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="800"
+      stroke="currentColor"
+      stroke-width="0.5"
+      opacity="0.08"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0;1440,0;0,0"
+        dur="8s"
+        repeatCount="indefinite"
+      />
     </line>
 
     <!-- Pulsing center ring -->
-    <circle cx="720" cy="400" r="180" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="6 10" opacity="0.06">
-      <animateTransform attributeName="transform" type="rotate" from="0 720 400" to="360 720 400" dur="50s" repeatCount="indefinite" />
-      <animate attributeName="r" values="180;200;180" dur="6s" repeatCount="indefinite" />
+    <circle
+      cx="720"
+      cy="400"
+      r="180"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="0.6"
+      stroke-dasharray="6 10"
+      opacity="0.06"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 720 400"
+        to="360 720 400"
+        dur="50s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="r"
+        values="180;200;180"
+        dur="6s"
+        repeatCount="indefinite"
+      />
     </circle>
-    <circle cx="720" cy="400" r="240" fill="none" stroke="currentColor" stroke-width="0.4" stroke-dasharray="3 14" opacity="0.04">
-      <animateTransform attributeName="transform" type="rotate" from="360 720 400" to="0 720 400" dur="70s" repeatCount="indefinite" />
-      <animate attributeName="r" values="240;260;240" dur="8s" repeatCount="indefinite" />
+    <circle
+      cx="720"
+      cy="400"
+      r="240"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="0.4"
+      stroke-dasharray="3 14"
+      opacity="0.04"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="360 720 400"
+        to="0 720 400"
+        dur="70s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="r"
+        values="240;260;240"
+        dur="8s"
+        repeatCount="indefinite"
+      />
     </circle>
   </svg>
 
@@ -100,8 +270,9 @@
         voluptatibus impedit.
       </p>
       <div class="hr27__actions">
-        <a href="#partners" class="hr27__btn hr27__btn--fill">Get started <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#about" class="hr27__btn hr27__btn--glass">Explore</a>
+        <a href="#partners" class="hr27__btn hr27__btn--fill"
+          >Get started <i class="fa-solid fa-arrow-right"></i
+        ></a>
       </div>
       <div class="hr27__metrics">
         <div class="hr27__metric">
@@ -171,13 +342,21 @@
   }
 
   @keyframes hr27Drift1 {
-    0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(-40px) translateX(30px); }
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(-40px) translateX(30px);
+    }
   }
 
   @keyframes hr27Drift2 {
-    0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(30px) translateX(-40px); }
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(30px) translateX(-40px);
+    }
   }
 
   .hr27 .container {
@@ -203,7 +382,8 @@
     padding: 7px 18px;
     border-radius: 100px;
     background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     font-size: 12px;
@@ -223,8 +403,13 @@
   }
 
   @keyframes hr27Blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
   }
 
   .hr27__content h1 {
@@ -260,7 +445,9 @@
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
   }
 
   .hr27__btn--fill {
@@ -275,7 +462,8 @@
 
   .hr27__btn--fill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 36px color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    box-shadow: 0 12px 36px
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
   }
 
   .hr27__btn--fill:hover i {
@@ -283,7 +471,8 @@
   }
 
   .hr27__btn--glass {
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
     color: var(--textColor1);
     background: color-mix(in srgb, var(--bodyBG) 30%, transparent);
     backdrop-filter: blur(8px);
@@ -305,7 +494,8 @@
     padding: 16px 28px;
     border-radius: var(--borderRadius);
     background: color-mix(in srgb, var(--bodyBG) 40%, transparent);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }

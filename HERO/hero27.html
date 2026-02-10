@@ -5,19 +5,48 @@
   </div>
 
   <!-- SVG animated waves -->
-  <svg class="hr28__waves" viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+  <svg
+    class="hr28__waves"
+    viewBox="0 0 1440 800"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
     <defs>
       <linearGradient id="hr28wg1" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="var(--secondStyleColor)" stop-opacity="0.12" />
-        <stop offset="100%" stop-color="var(--secondStyleColor)" stop-opacity="0" />
+        <stop
+          offset="0%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.12"
+        />
+        <stop
+          offset="100%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0"
+        />
       </linearGradient>
       <linearGradient id="hr28wg2" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="var(--secondStyleColor)" stop-opacity="0.08" />
-        <stop offset="100%" stop-color="var(--secondStyleColor)" stop-opacity="0" />
+        <stop
+          offset="0%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.08"
+        />
+        <stop
+          offset="100%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0"
+        />
       </linearGradient>
       <linearGradient id="hr28wg3" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="var(--secondStyleColor)" stop-opacity="0.05" />
-        <stop offset="100%" stop-color="var(--secondStyleColor)" stop-opacity="0" />
+        <stop
+          offset="0%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.05"
+        />
+        <stop
+          offset="100%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0"
+        />
       </linearGradient>
     </defs>
 
@@ -66,29 +95,78 @@
     <!-- Foam particles on wave crests -->
     <g fill="var(--secondStyleColor)" opacity="0.15">
       <circle r="2">
-        <animateMotion dur="6s" repeatCount="indefinite" path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620" />
-        <animate attributeName="r" values="2;3.5;2" dur="3s" repeatCount="indefinite" />
+        <animateMotion
+          dur="6s"
+          repeatCount="indefinite"
+          path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620"
+        />
+        <animate
+          attributeName="r"
+          values="2;3.5;2"
+          dur="3s"
+          repeatCount="indefinite"
+        />
       </circle>
       <circle r="1.5">
-        <animateMotion dur="6s" repeatCount="indefinite" begin="-2s" path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620" />
-        <animate attributeName="r" values="1.5;3;1.5" dur="2.5s" repeatCount="indefinite" />
+        <animateMotion
+          dur="6s"
+          repeatCount="indefinite"
+          begin="-2s"
+          path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620"
+        />
+        <animate
+          attributeName="r"
+          values="1.5;3;1.5"
+          dur="2.5s"
+          repeatCount="indefinite"
+        />
       </circle>
       <circle r="1.8">
-        <animateMotion dur="6s" repeatCount="indefinite" begin="-4s" path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620" />
-        <animate attributeName="r" values="1.8;3;1.8" dur="3.5s" repeatCount="indefinite" />
+        <animateMotion
+          dur="6s"
+          repeatCount="indefinite"
+          begin="-4s"
+          path="M0,620 C160,560 320,680 480,620 C640,560 800,680 960,620 C1120,560 1280,660 1440,620"
+        />
+        <animate
+          attributeName="r"
+          values="1.8;3;1.8"
+          dur="3.5s"
+          repeatCount="indefinite"
+        />
       </circle>
     </g>
 
     <!-- Horizon glow line -->
-    <line x1="0" y1="500" x2="1440" y2="500" stroke="var(--secondStyleColor)" stroke-width="0.5" opacity="0.06">
-      <animate attributeName="y1" values="500;490;510;500" dur="8s" repeatCount="indefinite" />
-      <animate attributeName="y2" values="500;510;490;500" dur="8s" repeatCount="indefinite" />
+    <line
+      x1="0"
+      y1="500"
+      x2="1440"
+      y2="500"
+      stroke="var(--secondStyleColor)"
+      stroke-width="0.5"
+      opacity="0.06"
+    >
+      <animate
+        attributeName="y1"
+        values="500;490;510;500"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="500;510;490;500"
+        dur="8s"
+        repeatCount="indefinite"
+      />
     </line>
   </svg>
 
   <div class="container">
     <div class="hr28__content">
-      <span class="hr28__kicker"><i class="fa-solid fa-wave-square"></i> Ride the wave</span>
+      <span class="hr28__kicker"
+        ><i class="fa-solid fa-wave-square"></i> Ride the wave</span
+      >
       <h1 data-var="domain_name"></h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
@@ -96,8 +174,9 @@
         voluptatibus impedit.
       </p>
       <div class="hr28__actions">
-        <a href="#partners" class="hr28__btn hr28__btn--fill">Get started <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#about" class="hr28__btn hr28__btn--glass">Learn more</a>
+        <a href="#partners" class="hr28__btn hr28__btn--fill"
+          >Get started <i class="fa-solid fa-arrow-right"></i
+        ></a>
       </div>
     </div>
   </div>
@@ -164,7 +243,8 @@
     padding: 7px 18px;
     border-radius: 100px;
     background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     font-size: 12px;
@@ -211,7 +291,9 @@
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
   }
 
   .hr28__btn--fill {
@@ -226,7 +308,8 @@
 
   .hr28__btn--fill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 36px color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    box-shadow: 0 12px 36px
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
   }
 
   .hr28__btn--fill:hover i {
@@ -234,7 +317,8 @@
   }
 
   .hr28__btn--glass {
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
     color: var(--textColor1);
     background: color-mix(in srgb, var(--bodyBG) 30%, transparent);
     backdrop-filter: blur(8px);
