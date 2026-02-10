@@ -1,0 +1,353 @@
+<section class="rv15" id="reviews">
+  <!-- SVG dot pattern bg -->
+  <svg class="rv15__dots" aria-hidden="true">
+    <defs>
+      <pattern id="rv15dot" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1" fill="currentColor" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#rv15dot)" />
+  </svg>
+
+  <div class="container">
+    <div class="rv15__head">
+      <span class="rv15__kicker">Testimonials</span>
+      <h2>What our customers say</h2>
+      <p>Real feedback from people who use our product every day.</p>
+    </div>
+
+    <div class="rv15__layout">
+      <!-- Featured review -->
+      <div class="rv15__featured">
+        <div class="rv15__quote-icon" aria-hidden="true">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <blockquote class="rv15__quote">
+          This platform completely transformed how we approach our workflow.
+          The results speak for themselves — faster delivery, better quality,
+          and a team that's genuinely excited to build.
+        </blockquote>
+        <div class="rv15__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rv15__author">
+          <div class="rv15__avatar rv15__avatar--lg">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div>
+            <strong>Jessica Palmer</strong>
+            <span>VP of Engineering, Nexora</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side cards -->
+      <div class="rv15__stack">
+        <div class="rv15__card">
+          <div class="rv15__card-top">
+            <div class="rv15__author">
+              <div class="rv15__avatar">
+                <img data-image alt="" loading="lazy" />
+              </div>
+              <div>
+                <strong>Mark Sullivan</strong>
+                <span>Founder, Brightlane</span>
+              </div>
+            </div>
+            <div class="rv15__stars rv15__stars--sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p>Switched from our old tool in a day. The onboarding was seamless and support has been outstanding.</p>
+        </div>
+
+        <div class="rv15__card">
+          <div class="rv15__card-top">
+            <div class="rv15__author">
+              <div class="rv15__avatar">
+                <img data-image alt="" loading="lazy" />
+              </div>
+              <div>
+                <strong>Lina Choi</strong>
+                <span>Product Lead, Kova</span>
+              </div>
+            </div>
+            <div class="rv15__stars rv15__stars--sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p>Finally a product that delivers on its promises. Clean UI, fast performance, and reliable uptime.</p>
+        </div>
+
+        <div class="rv15__card">
+          <div class="rv15__card-top">
+            <div class="rv15__author">
+              <div class="rv15__avatar">
+                <img data-image alt="" loading="lazy" />
+              </div>
+              <div>
+                <strong>Daniel Brooks</strong>
+                <span>CTO, Arcline</span>
+              </div>
+            </div>
+            <div class="rv15__stars rv15__stars--sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+          <p>We've cut our development cycle by 40%. The API is well-documented and integrations just work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== REVIEWS v15 — Featured spotlight + stacked side cards ===== */
+
+  .rv15 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .rv15__dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .rv15 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Head */
+  .rv15__head {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 50px;
+  }
+
+  .rv15__kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .rv15__head h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rv15__head p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Layout */
+  .rv15__layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(20px, 3vw, 36px);
+    align-items: start;
+  }
+
+  /* Featured */
+  .rv15__featured {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: clamp(28px, 4vw, 44px);
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: border-color 0.3s ease;
+  }
+
+  .rv15__featured:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .rv15__quote-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rv15__quote-icon i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .rv15__quote {
+    margin: 0;
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 500;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 88%, transparent);
+  }
+
+  .rv15__stars {
+    display: flex;
+    gap: 3px;
+  }
+
+  .rv15__stars i {
+    font-size: 15px;
+    color: var(--secondStyleColor);
+  }
+
+  .rv15__stars--sm i {
+    font-size: 12px;
+  }
+
+  .rv15__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .rv15__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    flex-shrink: 0;
+  }
+
+  .rv15__avatar--lg {
+    width: 54px;
+    height: 54px;
+  }
+
+  .rv15__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rv15__author strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .rv15__author span {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+  }
+
+  /* Side cards */
+  .rv15__stack {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2vw, 16px);
+  }
+
+  .rv15__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(18px, 2.5vw, 24px);
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  .rv15__card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  .rv15__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .rv15__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .rv15__layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rv15 {
+      padding: 50px 0;
+    }
+
+    .rv15__head {
+      margin-bottom: 36px;
+    }
+
+    .rv15__head h2 {
+      font-size: 24px;
+    }
+
+    .rv15__featured {
+      padding: 24px;
+    }
+
+    .rv15__quote {
+      font-size: 16px;
+    }
+
+    .rv15__card-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rv15__featured,
+    .rv15__card {
+      transition: none;
+    }
+  }
+</style>
