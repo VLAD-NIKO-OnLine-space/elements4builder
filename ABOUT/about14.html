@@ -1,0 +1,455 @@
+<section class="ab14" id="about">
+  <!-- SVG decorative circles -->
+  <svg class="ab14__deco" aria-hidden="true">
+    <circle cx="85%" cy="15%" r="140" class="ab14__circle ab14__circle--1" />
+    <circle cx="10%" cy="80%" r="90" class="ab14__circle ab14__circle--2" />
+  </svg>
+
+  <div class="container">
+    <div class="ab14__layout">
+      <!-- Left sticky column -->
+      <div class="ab14__left">
+        <span class="ab14__eyebrow">About us</span>
+        <h2>We build tools that empower creators</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          consequatur minus harum molestias saepe mollitia, veniam architecto
+          dignissimos reprehenderit.
+        </p>
+        <a href="#partners" class="ab14__btn">Learn more</a>
+      </div>
+
+      <!-- Right — stacked content cards -->
+      <div class="ab14__right">
+        <div class="ab14__card ab14__card--img">
+          <div class="ab14__thumb">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="ab14__card-body">
+            <h3>Our mission</h3>
+            <p>
+              Integer placerat arcu vitae facilisis tempus, lacus risus
+              malesuada nibh, vel tincidunt sapien arcu a purus.
+            </p>
+          </div>
+        </div>
+
+        <div class="ab14__card">
+          <div class="ab14__card-ico">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Innovation first</h3>
+          <p>
+            Suspendisse commodo nibh ac pretium vulputate, risus dui faucibus
+            arcu eget lobortis libero ante et urna.
+          </p>
+        </div>
+
+        <div class="ab14__card ab14__card--img">
+          <div class="ab14__thumb">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="ab14__card-body">
+            <h3>Global team</h3>
+            <p>
+              Cras in malesuada est. Pellentesque a orci semper efficitur arcu
+              ac dignissim metus vivamus.
+            </p>
+          </div>
+        </div>
+
+        <div class="ab14__card">
+          <div class="ab14__card-ico">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Community driven</h3>
+          <p>
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus
+            scelerisque ut volutpat nunc accumsan.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="ab14__stats">
+      <div class="ab14__stat">
+        <strong>12K+</strong>
+        <span>Active users</span>
+      </div>
+      <div class="ab14__divider" aria-hidden="true"></div>
+      <div class="ab14__stat">
+        <strong>99.9%</strong>
+        <span>Uptime</span>
+      </div>
+      <div class="ab14__divider" aria-hidden="true"></div>
+      <div class="ab14__stat">
+        <strong>50+</strong>
+        <span>Countries</span>
+      </div>
+      <div class="ab14__divider" aria-hidden="true"></div>
+      <div class="ab14__stat">
+        <strong>4.9</strong>
+        <span>Avg rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ABOUT v14 — Sticky text + stacked cards + SVG deco + stats strip ===== */
+
+  .ab14 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  /* SVG decorative circles */
+  .ab14__deco {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ab14__circle {
+    fill: none;
+    stroke: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    stroke-width: 1;
+  }
+
+  .ab14__circle--1 {
+    stroke-dasharray: 10 14;
+    animation: ab14Spin 40s linear infinite;
+    transform-origin: 85% 15%;
+  }
+
+  .ab14__circle--2 {
+    stroke-dasharray: 6 10;
+    animation: ab14Spin 30s linear infinite reverse;
+    transform-origin: 10% 80%;
+  }
+
+  @keyframes ab14Spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .ab14 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Layout */
+  .ab14__layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: start;
+    margin-bottom: 60px;
+  }
+
+  /* Left sticky */
+  .ab14__left {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ab14__eyebrow {
+    display: inline-block;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    padding: 5px 14px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  .ab14__left h2 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .ab14__left p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+    max-width: 400px;
+  }
+
+  .ab14__btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 28px;
+    width: fit-content;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .ab14__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  /* Right cards */
+  .ab14__right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .ab14__card {
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 26px 22px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ab14__card:hover {
+    transform: translateX(6px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 38%, transparent);
+  }
+
+  /* Image card */
+  .ab14__card--img {
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+  }
+
+  .ab14__thumb {
+    overflow: hidden;
+    min-height: 180px;
+  }
+
+  .ab14__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ab14__card--img:hover .ab14__thumb img {
+    transform: scale(1.05);
+  }
+
+  .ab14__card-body {
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ab14__card-body h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ab14__card-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Icon card */
+  .ab14__card-ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .ab14__card:hover .ab14__card-ico {
+    transform: scale(1.12) rotate(-5deg);
+  }
+
+  .ab14__card-ico i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .ab14__card h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .ab14__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Stats strip */
+  .ab14__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 32px 0 0;
+    border-top: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+  }
+
+  .ab14__stat {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ab14__stat strong {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    line-height: 1;
+  }
+
+  .ab14__stat span {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+  }
+
+  .ab14__divider {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent),
+      transparent
+    );
+    animation: ab14Shimmer 2.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes ab14Shimmer {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ab14__left {
+      position: static;
+    }
+
+    .ab14__layout {
+      gap: 36px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ab14__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .ab14__left {
+      text-align: center;
+      align-items: center;
+    }
+
+    .ab14__left p {
+      max-width: 100%;
+    }
+
+    .ab14__card--img {
+      grid-template-columns: 1fr;
+    }
+
+    .ab14__thumb {
+      min-height: 160px;
+      aspect-ratio: 16 / 8;
+    }
+
+    .ab14__card-body h3,
+    .ab14__card h3 {
+      font-size: 16px;
+    }
+
+    .ab14__card-body p,
+    .ab14__card p {
+      font-size: 13px;
+    }
+
+    .ab14__layout {
+      margin-bottom: 44px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ab14 {
+      padding: 50px 0;
+    }
+
+    .ab14__left h2 {
+      font-size: 24px;
+    }
+
+    .ab14__stats {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 28px;
+    }
+
+    .ab14__divider {
+      display: none;
+    }
+
+    .ab14__stat {
+      flex: 0 0 40%;
+    }
+
+    .ab14__card {
+      padding: 22px 18px;
+    }
+
+    .ab14__card-body {
+      padding: 18px 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab14__circle--1,
+    .ab14__circle--2 {
+      animation: none;
+    }
+
+    .ab14__divider {
+      animation: none;
+    }
+
+    .ab14__card,
+    .ab14__btn,
+    .ab14__card-ico,
+    .ab14__thumb img {
+      transition: none;
+    }
+  }
+</style>
