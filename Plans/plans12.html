@@ -1,0 +1,307 @@
+<section class="pl12" id="pricing">
+  <!-- SVG dot bg -->
+  <svg class="pl12__dots" aria-hidden="true">
+    <defs>
+      <pattern id="pl12dot" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="0.8" fill="currentColor" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#pl12dot)" />
+  </svg>
+
+  <div class="container">
+    <div class="pl12__head">
+      <span class="pl12__kicker">Pricing</span>
+      <h2>Compare every feature</h2>
+      <p>A full breakdown so you can pick the right plan with confidence.</p>
+    </div>
+
+    <div class="pl12__table">
+      <!-- Header -->
+      <div class="pl12__row pl12__row--head">
+        <div class="pl12__cell pl12__cell--label"></div>
+        <div class="pl12__cell pl12__cell--plan">Starter<small>$9/mo</small></div>
+        <div class="pl12__cell pl12__cell--plan pl12__cell--accent">Pro<small>$29/mo</small></div>
+        <div class="pl12__cell pl12__cell--plan">Business<small>$79/mo</small></div>
+      </div>
+
+      <!-- Feature rows -->
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Projects</div>
+        <div class="pl12__cell"><span class="pl12__val">3</span></div>
+        <div class="pl12__cell"><span class="pl12__val pl12__val--accent">Unlimited</span></div>
+        <div class="pl12__cell"><span class="pl12__val">Unlimited</span></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Storage</div>
+        <div class="pl12__cell"><span class="pl12__val">5 GB</span></div>
+        <div class="pl12__cell"><span class="pl12__val pl12__val--accent">100 GB</span></div>
+        <div class="pl12__cell"><span class="pl12__val">Unlimited</span></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Team members</div>
+        <div class="pl12__cell"><span class="pl12__val">1</span></div>
+        <div class="pl12__cell"><span class="pl12__val pl12__val--accent">10</span></div>
+        <div class="pl12__cell"><span class="pl12__val">Unlimited</span></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Custom domain</div>
+        <div class="pl12__cell"><i class="fa-solid fa-xmark pl12__no"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Analytics</div>
+        <div class="pl12__cell"><span class="pl12__val">Basic</span></div>
+        <div class="pl12__cell"><span class="pl12__val pl12__val--accent">Advanced</span></div>
+        <div class="pl12__cell"><span class="pl12__val">Advanced</span></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">API access</div>
+        <div class="pl12__cell"><i class="fa-solid fa-xmark pl12__no"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">Priority support</div>
+        <div class="pl12__cell"><i class="fa-solid fa-xmark pl12__no"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+      </div>
+
+      <div class="pl12__row">
+        <div class="pl12__cell pl12__cell--label">SSO & audit logs</div>
+        <div class="pl12__cell"><i class="fa-solid fa-xmark pl12__no"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-xmark pl12__no"></i></div>
+        <div class="pl12__cell"><i class="fa-solid fa-check pl12__yes"></i></div>
+      </div>
+
+      <!-- CTA row -->
+      <div class="pl12__row pl12__row--cta">
+        <div class="pl12__cell pl12__cell--label"></div>
+        <div class="pl12__cell"><a href="#partners" class="pl12__btn">Choose</a></div>
+        <div class="pl12__cell"><a href="#partners" class="pl12__btn pl12__btn--primary">Choose</a></div>
+        <div class="pl12__cell"><a href="#partners" class="pl12__btn">Contact</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== PLANS v12 — Feature comparison matrix with SVG dot bg ===== */
+
+  .pl12 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .pl12__dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pl12 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pl12__head {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 48px;
+  }
+
+  .pl12__kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .pl12__head h2 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .pl12__head p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Table */
+  .pl12__table {
+    max-width: 820px;
+    margin: 0 auto;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .pl12__row {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.2s ease;
+  }
+
+  .pl12__row:last-child {
+    border-bottom: none;
+  }
+
+  .pl12__row:not(.pl12__row--head):not(.pl12__row--cta):hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .pl12__row--head {
+    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+  }
+
+  .pl12__row--cta {
+    background: color-mix(in srgb, var(--secondStyleColor) 3%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    padding: 8px 0;
+  }
+
+  .pl12__cell {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .pl12__cell--label {
+    justify-content: flex-start;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 80%, transparent);
+  }
+
+  .pl12__cell--plan {
+    flex-direction: column;
+    gap: 2px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .pl12__cell--plan small {
+    font-size: 12px;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+  }
+
+  .pl12__cell--accent {
+    color: var(--secondStyleColor);
+  }
+
+  .pl12__val {
+    font-size: 13px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+  }
+
+  .pl12__val--accent {
+    color: var(--secondStyleColor);
+  }
+
+  .pl12__yes {
+    font-size: 14px;
+    color: var(--secondStyleColor);
+  }
+
+  .pl12__no {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 22%, transparent);
+  }
+
+  /* Buttons */
+  .pl12__btn {
+    padding: 9px 22px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    background: transparent;
+    color: var(--textColor1);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .pl12__btn:hover {
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .pl12__btn--primary {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  .pl12__btn--primary:hover {
+    background: var(--secondStyleColor);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .pl12__row {
+      grid-template-columns: 1.2fr repeat(3, 0.9fr);
+    }
+
+    .pl12__cell {
+      padding: 12px 10px;
+      font-size: 12px;
+    }
+
+    .pl12__cell--plan {
+      font-size: 13px;
+    }
+
+    .pl12__cell--plan small {
+      font-size: 10px;
+    }
+
+    .pl12__btn {
+      padding: 7px 12px;
+      font-size: 11px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pl12 {
+      padding: 50px 0;
+    }
+
+    .pl12__head h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pl12__row,
+    .pl12__btn {
+      transition: none;
+    }
+  }
+</style>

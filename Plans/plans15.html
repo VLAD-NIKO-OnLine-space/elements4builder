@@ -1,0 +1,390 @@
+<section class="pl15" id="pricing">
+  <div class="container">
+    <div class="pl15__layout">
+      <!-- Left — intro -->
+      <div class="pl15__intro">
+        <span class="pl15__kicker">Pricing</span>
+        <h2>Invest in your growth</h2>
+        <p>
+          Every plan includes a 14-day free trial. No credit card required.
+          Cancel anytime, no questions asked.
+        </p>
+        <div class="pl15__stats">
+          <div class="pl15__stat">
+            <strong>10k+</strong>
+            <span>Active users</span>
+          </div>
+          <div class="pl15__stat">
+            <strong>99.9%</strong>
+            <span>Uptime</span>
+          </div>
+          <div class="pl15__stat">
+            <strong>4.9</strong>
+            <span>Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — cards -->
+      <div class="pl15__cards">
+        <div class="pl15__card">
+          <div class="pl15__card-top">
+            <div>
+              <h3>Free</h3>
+              <p>Try the basics with zero commitment.</p>
+            </div>
+            <div class="pl15__price">
+              <span class="pl15__amount">$0</span>
+            </div>
+          </div>
+          <div class="pl15__divider"></div>
+          <div class="pl15__feats">
+            <span><i class="fa-solid fa-check"></i> 1 project</span>
+            <span><i class="fa-solid fa-check"></i> 1 GB storage</span>
+            <span><i class="fa-solid fa-check"></i> Community support</span>
+          </div>
+          <a href="#partners" class="pl15__btn">Start free</a>
+        </div>
+
+        <!-- Connector line -->
+        <div class="pl15__connector" aria-hidden="true">
+          <div class="pl15__dot"></div>
+          <div class="pl15__line"></div>
+          <div class="pl15__dot"></div>
+        </div>
+
+        <div class="pl15__card pl15__card--featured">
+          <div class="pl15__label">Best value</div>
+          <div class="pl15__card-top">
+            <div>
+              <h3>Pro</h3>
+              <p>Everything you need to scale fast.</p>
+            </div>
+            <div class="pl15__price">
+              <span class="pl15__amount">$29</span>
+              <span class="pl15__period">/mo</span>
+            </div>
+          </div>
+          <div class="pl15__divider"></div>
+          <div class="pl15__feats">
+            <span><i class="fa-solid fa-check"></i> Unlimited projects</span>
+            <span><i class="fa-solid fa-check"></i> 100 GB storage</span>
+            <span><i class="fa-solid fa-check"></i> Priority support</span>
+            <span><i class="fa-solid fa-check"></i> Advanced analytics</span>
+            <span><i class="fa-solid fa-check"></i> Custom domain</span>
+          </div>
+          <a href="#partners" class="pl15__btn pl15__btn--primary">Get started</a>
+        </div>
+
+        <div class="pl15__connector" aria-hidden="true">
+          <div class="pl15__dot"></div>
+          <div class="pl15__line"></div>
+          <div class="pl15__dot"></div>
+        </div>
+
+        <div class="pl15__card">
+          <div class="pl15__card-top">
+            <div>
+              <h3>Enterprise</h3>
+              <p>Custom solutions for large teams.</p>
+            </div>
+            <div class="pl15__price">
+              <span class="pl15__amount">$79</span>
+              <span class="pl15__period">/mo</span>
+            </div>
+          </div>
+          <div class="pl15__divider"></div>
+          <div class="pl15__feats">
+            <span><i class="fa-solid fa-check"></i> Everything in Pro</span>
+            <span><i class="fa-solid fa-check"></i> Unlimited storage</span>
+            <span><i class="fa-solid fa-check"></i> SSO & audit logs</span>
+            <span><i class="fa-solid fa-check"></i> Dedicated manager</span>
+          </div>
+          <a href="#partners" class="pl15__btn">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== PLANS v15 — Split intro + vertical card stack with connectors ===== */
+
+  .pl15 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .pl15__layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(36px, 5vw, 70px);
+    align-items: start;
+  }
+
+  /* Intro */
+  .pl15__intro {
+    position: sticky;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pl15__kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .pl15__intro h2 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .pl15__intro > p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+    max-width: 380px;
+  }
+
+  .pl15__stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+  }
+
+  .pl15__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .pl15__stat strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+  }
+
+  .pl15__stat span {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    font-weight: 500;
+  }
+
+  /* Cards column */
+  .pl15__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Card */
+  .pl15__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: clamp(22px, 3vw, 30px);
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.25s ease;
+  }
+
+  .pl15__card:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  .pl15__card--featured {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    box-shadow: 0 0 40px color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+  }
+
+  .pl15__card--featured:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+  }
+
+  .pl15__label {
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    padding: 3px 12px;
+    border-radius: 100px;
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .pl15__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pl15__card-top h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .pl15__card-top p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+  }
+
+  .pl15__price {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .pl15__amount {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    line-height: 1;
+  }
+
+  .pl15__period {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 40%, transparent);
+    font-weight: 500;
+  }
+
+  .pl15__divider {
+    height: 1px;
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+  }
+
+  .pl15__feats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pl15__feats span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 72%, transparent);
+  }
+
+  .pl15__feats i {
+    font-size: 10px;
+    color: var(--secondStyleColor);
+  }
+
+  .pl15__btn {
+    display: block;
+    text-align: center;
+    padding: 11px 24px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    background: transparent;
+    color: var(--textColor1);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    margin-top: auto;
+  }
+
+  .pl15__btn:hover {
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .pl15__btn--primary {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  .pl15__btn--primary:hover {
+    background: var(--secondStyleColor);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  /* Connector */
+  .pl15__connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .pl15__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  .pl15__line {
+    width: 1px;
+    height: 16px;
+    background: color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .pl15__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .pl15__intro {
+      position: static;
+      text-align: center;
+      align-items: center;
+    }
+
+    .pl15__stats {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pl15 {
+      padding: 50px 0;
+    }
+
+    .pl15__intro h2 {
+      font-size: 24px;
+    }
+
+    .pl15__card {
+      padding: 20px;
+    }
+
+    .pl15__card-top {
+      flex-direction: column;
+    }
+
+    .pl15__stats {
+      gap: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pl15__card,
+    .pl15__btn {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,390 @@
+<section class="pl13" id="pricing">
+  <div class="container">
+    <div class="pl13__head">
+      <span class="pl13__kicker">Pricing</span>
+      <h2>One card, every plan</h2>
+      <p>Switch between tiers to find the perfect fit.</p>
+    </div>
+
+    <!-- Tab buttons -->
+    <div class="pl13__tabs">
+      <button class="pl13__tab pl13__tab--active" data-tab="0">Starter</button>
+      <button class="pl13__tab" data-tab="1">Pro</button>
+      <button class="pl13__tab" data-tab="2">Enterprise</button>
+    </div>
+
+    <!-- Single card -->
+    <div class="pl13__card">
+      <div class="pl13__card-inner">
+        <div class="pl13__card-left">
+          <div class="pl13__icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3 class="pl13__name">Starter</h3>
+          <p class="pl13__desc">Perfect for individuals getting started with the platform.</p>
+          <div class="pl13__price">
+            <span class="pl13__amount">$9</span>
+            <span class="pl13__period">/month</span>
+          </div>
+          <a href="#partners" class="pl13__btn">Get started</a>
+        </div>
+
+        <div class="pl13__card-right">
+          <h4>What's included</h4>
+          <ul class="pl13__features">
+            <li><i class="fa-solid fa-check"></i> <span>3 projects</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>5 GB storage</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Email support</span></li>
+            <li><i class="fa-solid fa-check"></i> <span>Basic analytics</span></li>
+            <li class="pl13__off"><i class="fa-solid fa-xmark"></i> <span>Custom domain</span></li>
+            <li class="pl13__off"><i class="fa-solid fa-xmark"></i> <span>API access</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== PLANS v13 — Tab-switched single card ===== */
+
+  .pl13 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .pl13__head {
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  .pl13__kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 12px;
+  }
+
+  .pl13__head h2 {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .pl13__head p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Tabs */
+  .pl13__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 36px;
+    padding: 4px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pl13__tab {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 100px;
+    background: transparent;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.25s ease, background 0.25s ease;
+  }
+
+  .pl13__tab:hover {
+    color: var(--textColor1);
+  }
+
+  .pl13__tab--active {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+  }
+
+  .pl13__tab--active:hover {
+    color: var(--bodyBG);
+  }
+
+  /* Card */
+  .pl13__card {
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+
+  .pl13__card-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pl13__card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  .pl13__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pl13__icon i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .pl13__name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .pl13__desc {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+  }
+
+  .pl13__price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .pl13__amount {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    line-height: 1;
+  }
+
+  .pl13__period {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--textColor1) 45%, transparent);
+    font-weight: 500;
+  }
+
+  .pl13__btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+  }
+
+  .pl13__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+  }
+
+  /* Right side */
+  .pl13__card-right {
+    padding: clamp(28px, 4vw, 44px);
+    border-left: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .pl13__card-right h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+  }
+
+  .pl13__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pl13__features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--textColor1) 78%, transparent);
+  }
+
+  .pl13__features li i {
+    font-size: 12px;
+    color: var(--secondStyleColor);
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .pl13__off {
+    opacity: 0.35;
+  }
+
+  .pl13__off i {
+    color: color-mix(in srgb, var(--textColor1) 35%, transparent) !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .pl13__card-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .pl13__card-right {
+      border-left: none;
+      border-top: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    }
+
+    .pl13__tab {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pl13 {
+      padding: 50px 0;
+    }
+
+    .pl13__head h2 {
+      font-size: 24px;
+    }
+
+    .pl13__card-left,
+    .pl13__card-right {
+      padding: 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pl13__tab,
+    .pl13__btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.querySelector(".pl13");
+    if (!section) return;
+
+    var tabs = section.querySelectorAll(".pl13__tab");
+    var nameEl = section.querySelector(".pl13__name");
+    var descEl = section.querySelector(".pl13__desc");
+    var amountEl = section.querySelector(".pl13__amount");
+    var iconEl = section.querySelector(".pl13__icon i");
+    var featuresEl = section.querySelector(".pl13__features");
+    var btnEl = section.querySelector(".pl13__btn");
+
+    var plans = [
+      {
+        name: "Starter",
+        desc: "Perfect for individuals getting started with the platform.",
+        price: "$9",
+        icon: "fa-solid fa-rocket",
+        btn: "Get started",
+        features: [
+          { text: "3 projects", on: true },
+          { text: "5 GB storage", on: true },
+          { text: "Email support", on: true },
+          { text: "Basic analytics", on: true },
+          { text: "Custom domain", on: false },
+          { text: "API access", on: false }
+        ]
+      },
+      {
+        name: "Pro",
+        desc: "For growing teams that need advanced tools and support.",
+        price: "$29",
+        icon: "fa-solid fa-bolt",
+        btn: "Get started",
+        features: [
+          { text: "Unlimited projects", on: true },
+          { text: "100 GB storage", on: true },
+          { text: "Priority support", on: true },
+          { text: "Advanced analytics", on: true },
+          { text: "Custom domain", on: true },
+          { text: "API access", on: true }
+        ]
+      },
+      {
+        name: "Enterprise",
+        desc: "For large organizations that need scale and compliance.",
+        price: "$79",
+        icon: "fa-solid fa-building",
+        btn: "Contact sales",
+        features: [
+          { text: "Everything in Pro", on: true },
+          { text: "Unlimited storage", on: true },
+          { text: "Dedicated manager", on: true },
+          { text: "SSO & audit logs", on: true },
+          { text: "SLA guarantee", on: true },
+          { text: "Custom integrations", on: true }
+        ]
+      }
+    ];
+
+    function render(idx) {
+      var p = plans[idx];
+      nameEl.textContent = p.name;
+      descEl.textContent = p.desc;
+      amountEl.textContent = p.price;
+      iconEl.className = p.icon;
+      btnEl.textContent = p.btn;
+
+      featuresEl.innerHTML = p.features.map(function (f) {
+        var cls = f.on ? "" : ' class="pl13__off"';
+        var icon = f.on ? "fa-check" : "fa-xmark";
+        return "<li" + cls + '><i class="fa-solid ' + icon + '"></i> <span>' + f.text + "</span></li>";
+      }).join("");
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) { t.classList.remove("pl13__tab--active"); });
+        tab.classList.add("pl13__tab--active");
+        render(parseInt(tab.getAttribute("data-tab")));
+      });
+    });
+  })();
+</script>
