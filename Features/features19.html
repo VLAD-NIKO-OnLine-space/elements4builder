@@ -1,0 +1,323 @@
+<section class="ft19" id="features">
+  <div class="container">
+    <div class="ft19__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft19__layout">
+      <!-- Spotlight hero card -->
+      <article class="ft19__hero">
+        <!-- SVG light rays -->
+        <svg class="ft19__rays" viewBox="0 0 400 400" aria-hidden="true">
+          <line x1="200" y1="200" x2="200" y2="0" class="ft19__ray" />
+          <line x1="200" y1="200" x2="340" y2="40" class="ft19__ray" />
+          <line x1="200" y1="200" x2="400" y2="200" class="ft19__ray" />
+          <line x1="200" y1="200" x2="340" y2="360" class="ft19__ray" />
+          <line x1="200" y1="200" x2="200" y2="400" class="ft19__ray" />
+          <line x1="200" y1="200" x2="60" y2="360" class="ft19__ray" />
+          <line x1="200" y1="200" x2="0" y2="200" class="ft19__ray" />
+          <line x1="200" y1="200" x2="60" y2="40" class="ft19__ray" />
+        </svg>
+        <div class="ft19__hero-img">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft19__hero-body">
+          <span class="ft19__kicker">Featured</span>
+          <h3>Powerful analytics dashboard</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat arcu vitae facilisis tempus, lacus risus malesuada nibh.
+          </p>
+        </div>
+      </article>
+
+      <!-- Side cards -->
+      <div class="ft19__side">
+        <article class="ft19__card">
+          <div class="ft19__ico"><i class="fa-solid fa-bolt"></i></div>
+          <div>
+            <h3>Lightning speed</h3>
+            <p>Sub-200ms response times across all regions globally.</p>
+          </div>
+        </article>
+
+        <article class="ft19__card">
+          <div class="ft19__ico"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h3>Zero-trust security</h3>
+            <p>End-to-end encryption with automatic key rotation.</p>
+          </div>
+        </article>
+
+        <article class="ft19__card">
+          <div class="ft19__ico"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <div>
+            <h3>Auto-sync</h3>
+            <p>Real-time sync across devices without conflicts.</p>
+          </div>
+        </article>
+
+        <article class="ft19__card">
+          <div class="ft19__ico"><i class="fa-solid fa-puzzle-piece"></i></div>
+          <div>
+            <h3>200+ integrations</h3>
+            <p>Connect with the tools your team already uses.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v19 — Spotlight hero with SVG light rays + side cards ===== */
+
+  .ft19 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ft19__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 55px;
+  }
+
+  .ft19__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft19__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .ft19__layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* Hero spotlight card */
+  .ft19__hero {
+    position: relative;
+    border-radius: calc(var(--borderRadius) * 1.2);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .ft19__hero:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  }
+
+  /* SVG rays */
+  .ft19__rays {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 120%;
+    height: 70%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .ft19__ray {
+    stroke: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    stroke-width: 1;
+    animation: ft19Pulse 3s ease-in-out infinite alternate;
+  }
+
+  .ft19__ray:nth-child(2n) {
+    animation-delay: 0.5s;
+    stroke: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+  }
+
+  .ft19__ray:nth-child(3n) {
+    animation-delay: 1s;
+  }
+
+  @keyframes ft19Pulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+
+  .ft19__hero-img {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .ft19__hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .ft19__hero:hover .ft19__hero-img img {
+    transform: scale(1.04);
+  }
+
+  .ft19__hero-body {
+    position: relative;
+    z-index: 1;
+    padding: 24px 26px 28px;
+  }
+
+  .ft19__kicker {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .ft19__hero-body h3 {
+    margin: 0 0 10px;
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-weight: 700;
+  }
+
+  .ft19__hero-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  /* Side cards */
+  .ft19__side {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ft19__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 20px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.025);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ft19__card:hover {
+    transform: translateX(4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .ft19__ico {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .ft19__card:hover .ft19__ico {
+    transform: scale(1.1);
+  }
+
+  .ft19__ico i {
+    font-size: 16px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft19__card h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .ft19__card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft19__layout {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft19__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .ft19__side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ft19__hero-body h3 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft19 {
+      padding: 50px 0;
+    }
+
+    .ft19__head {
+      margin-bottom: 36px;
+    }
+
+    .ft19__head h2 {
+      font-size: 24px;
+    }
+
+    .ft19__side {
+      grid-template-columns: 1fr;
+    }
+
+    .ft19__card {
+      padding: 18px 16px;
+    }
+
+    .ft19__card h3 {
+      font-size: 14px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft19__ray {
+      animation: none;
+    }
+
+    .ft19__hero-img img,
+    .ft19__card,
+    .ft19__ico {
+      transition: none;
+    }
+  }
+</style>

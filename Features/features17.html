@@ -1,0 +1,315 @@
+<section class="ft17" id="features">
+  <div class="container">
+    <div class="ft17__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft17__wheel">
+      <!-- SVG ring + spokes -->
+      <svg class="ft17__svg" viewBox="0 0 600 600" aria-hidden="true">
+        <circle cx="300" cy="300" r="220" class="ft17__ring" />
+        <circle cx="300" cy="300" r="220" class="ft17__ring ft17__ring--dash" />
+        <circle cx="300" cy="300" r="60" class="ft17__core" />
+        <!-- Spoke lines -->
+        <line x1="300" y1="80" x2="300" y2="240" class="ft17__spoke" />
+        <line x1="490" y1="190" x2="355" y2="260" class="ft17__spoke" />
+        <line x1="490" y1="410" x2="355" y2="340" class="ft17__spoke" />
+        <line x1="300" y1="520" x2="300" y2="360" class="ft17__spoke" />
+        <line x1="110" y1="410" x2="245" y2="340" class="ft17__spoke" />
+        <line x1="110" y1="190" x2="245" y2="260" class="ft17__spoke" />
+      </svg>
+
+      <!-- Center label -->
+      <div class="ft17__center">
+        <i class="fa-solid fa-cubes"></i>
+        <span>Core</span>
+      </div>
+
+      <!-- Feature nodes around the wheel -->
+      <div class="ft17__node ft17__node--1">
+        <div class="ft17__dot"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Speed</h3>
+        <p>Blazing fast performance</p>
+      </div>
+
+      <div class="ft17__node ft17__node--2">
+        <div class="ft17__dot"><i class="fa-solid fa-lock"></i></div>
+        <h3>Security</h3>
+        <p>Enterprise encryption</p>
+      </div>
+
+      <div class="ft17__node ft17__node--3">
+        <div class="ft17__dot"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Analytics</h3>
+        <p>Real-time insights</p>
+      </div>
+
+      <div class="ft17__node ft17__node--4">
+        <div class="ft17__dot"><i class="fa-solid fa-cloud"></i></div>
+        <h3>Cloud sync</h3>
+        <p>Always up to date</p>
+      </div>
+
+      <div class="ft17__node ft17__node--5">
+        <div class="ft17__dot"><i class="fa-solid fa-plug"></i></div>
+        <h3>Plugins</h3>
+        <p>Extend with add-ons</p>
+      </div>
+
+      <div class="ft17__node ft17__node--6">
+        <div class="ft17__dot"><i class="fa-solid fa-users"></i></div>
+        <h3>Teams</h3>
+        <p>Collaborate together</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v17 — Radial wheel with SVG ring + spokes ===== */
+
+  .ft17 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ft17__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+  }
+
+  .ft17__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft17__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Wheel container */
+  .ft17__wheel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+  }
+
+  /* SVG background */
+  .ft17__svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ft17__ring {
+    fill: none;
+    stroke: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    stroke-width: 1;
+  }
+
+  .ft17__ring--dash {
+    stroke: var(--secondStyleColor);
+    stroke-width: 1.5;
+    stroke-dasharray: 8 16;
+    animation: ft17Spin 30s linear infinite;
+    transform-origin: center;
+  }
+
+  @keyframes ft17Spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .ft17__core {
+    fill: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    stroke: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    stroke-width: 1;
+  }
+
+  .ft17__spoke {
+    stroke: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    stroke-width: 1;
+    stroke-dasharray: 4 6;
+  }
+
+  /* Center label */
+  .ft17__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+
+  .ft17__center i {
+    font-size: 22px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft17__center span {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+  }
+
+  /* Nodes positioned around the ring */
+  .ft17__node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .ft17__node--1 { top: 8%;  left: 50%; }
+  .ft17__node--2 { top: 27%; left: 88%; }
+  .ft17__node--3 { top: 73%; left: 88%; }
+  .ft17__node--4 { top: 92%; left: 50%; }
+  .ft17__node--5 { top: 73%; left: 12%; }
+  .ft17__node--6 { top: 27%; left: 12%; }
+
+  .ft17__dot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .ft17__node:hover .ft17__dot {
+    transform: scale(1.15);
+    background: color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+  }
+
+  .ft17__dot i {
+    font-size: 16px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft17__node h3 {
+    margin: 0 0 3px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .ft17__node p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.4;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft17__wheel {
+      max-width: 500px;
+    }
+
+    .ft17__node {
+      width: 100px;
+    }
+
+    .ft17__node h3 {
+      font-size: 13px;
+    }
+
+    .ft17__node p {
+      font-size: 10px;
+    }
+
+    .ft17__dot {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  /* Collapse to grid on tablets */
+  @media (max-width: 800px) {
+    .ft17__wheel {
+      aspect-ratio: auto;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .ft17__svg,
+    .ft17__center {
+      display: none;
+    }
+
+    .ft17__node {
+      position: static;
+      transform: none;
+      width: auto;
+      padding: 20px 14px;
+      border-radius: var(--borderRadius);
+      border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ft17__node h3 {
+      font-size: 15px;
+    }
+
+    .ft17__node p {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft17 {
+      padding: 50px 0;
+    }
+
+    .ft17__head {
+      margin-bottom: 36px;
+    }
+
+    .ft17__head h2 {
+      font-size: 24px;
+    }
+
+    .ft17__wheel {
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft17__ring--dash {
+      animation: none;
+    }
+
+    .ft17__dot {
+      transition: none;
+    }
+  }
+</style>

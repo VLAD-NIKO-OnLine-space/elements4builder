@@ -1,0 +1,280 @@
+<section class="ft15" id="features">
+  <!-- SVG dot pattern background -->
+  <svg class="ft15__dots" aria-hidden="true">
+    <defs>
+      <pattern id="ft15dot" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.2" fill="currentColor" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#ft15dot)" />
+  </svg>
+
+  <div class="container">
+    <div class="ft15__head">
+      <span class="ft15__badge">Features</span>
+      <h2>Everything you need to scale</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft15__masonry">
+      <article class="ft15__card ft15__card--tall">
+        <div class="ft15__card-img">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft15__card-body">
+          <h3>Powerful dashboard</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat arcu vitae facilisis tempus.
+          </p>
+        </div>
+      </article>
+
+      <article class="ft15__card">
+        <div class="ft15__ico"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Instant deploys</h3>
+        <p>Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus arcu.</p>
+      </article>
+
+      <article class="ft15__card">
+        <div class="ft15__ico"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Advanced security</h3>
+        <p>Cras in malesuada est. Pellentesque a orci semper efficitur arcu.</p>
+      </article>
+
+      <article class="ft15__card ft15__card--wide">
+        <div class="ft15__card-img">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <div class="ft15__card-body">
+          <h3>Team collaboration</h3>
+          <p>
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus
+            scelerisque ut volutpat nunc.
+          </p>
+        </div>
+      </article>
+
+      <article class="ft15__card">
+        <div class="ft15__ico"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Real-time analytics</h3>
+        <p>Fusce rutrum augue id orci rhoncus molestie nunc auctor.</p>
+      </article>
+
+      <article class="ft15__card">
+        <div class="ft15__ico"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <h3>Plugin ecosystem</h3>
+        <p>Sed fringilla vitae enim sit amet cursus dictum tortor.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v15 — SVG dot-grid bg + staggered masonry ===== */
+
+  .ft15 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ft15__dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .ft15 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ft15__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 55px;
+  }
+
+  .ft15__badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    color: var(--secondStyleColor);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .ft15__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft15__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Masonry grid */
+  .ft15__masonry {
+    columns: 3;
+    column-gap: 18px;
+  }
+
+  .ft15__card {
+    break-inside: avoid;
+    margin-bottom: 18px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 26px 22px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ft15__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  }
+
+  /* Image cards */
+  .ft15__card--tall,
+  .ft15__card--wide {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ft15__card-img {
+    overflow: hidden;
+  }
+
+  .ft15__card--tall .ft15__card-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .ft15__card--wide .ft15__card-img {
+    aspect-ratio: 16 / 8;
+  }
+
+  .ft15__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ft15__card:hover .ft15__card-img img {
+    transform: scale(1.05);
+  }
+
+  .ft15__card-body {
+    padding: 20px 22px 24px;
+  }
+
+  .ft15__card-body h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ft15__card-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Icon cards */
+  .ft15__ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ft15__card:hover .ft15__ico {
+    transform: scale(1.12) rotate(-5deg);
+  }
+
+  .ft15__ico i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft15__card h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .ft15__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft15__masonry {
+      columns: 2;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft15__card h3,
+    .ft15__card-body h3 {
+      font-size: 16px;
+    }
+
+    .ft15__card p,
+    .ft15__card-body p {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft15 {
+      padding: 50px 0;
+    }
+
+    .ft15__head {
+      margin-bottom: 36px;
+    }
+
+    .ft15__head h2 {
+      font-size: 24px;
+    }
+
+    .ft15__masonry {
+      columns: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft15__card,
+    .ft15__ico,
+    .ft15__card-img img {
+      transition: none;
+    }
+  }
+</style>

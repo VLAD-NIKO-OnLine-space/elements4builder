@@ -1,0 +1,288 @@
+<section class="ft18" id="features">
+  <!-- SVG isometric grid background -->
+  <svg class="ft18__grid-bg" aria-hidden="true">
+    <defs>
+      <pattern id="ft18iso" x="0" y="0" width="56" height="48" patternUnits="userSpaceOnUse">
+        <path d="M0 24 L28 0 L56 24 L28 48 Z" fill="none" stroke="currentColor" stroke-width="0.5" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#ft18iso)" />
+  </svg>
+
+  <div class="container">
+    <div class="ft18__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ft18__grid">
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Fast deployment</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat arcu vitae facilisis.
+          </p>
+          <span class="ft18__num">01</span>
+        </div>
+      </article>
+
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Scalable storage</h3>
+          <p>
+            Suspendisse commodo nibh ac pretium vulputate, risus dui faucibus
+            arcu eget lobortis.
+          </p>
+          <span class="ft18__num">02</span>
+        </div>
+      </article>
+
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-code-branch"></i></div>
+          <h3>Version control</h3>
+          <p>
+            Cras in malesuada est. Pellentesque a orci semper efficitur arcu ac
+            dignissim metus.
+          </p>
+          <span class="ft18__num">03</span>
+        </div>
+      </article>
+
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>AI automation</h3>
+          <p>
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus scelerisque
+            ut volutpat nunc.
+          </p>
+          <span class="ft18__num">04</span>
+        </div>
+      </article>
+
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Global CDN</h3>
+          <p>
+            Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim
+            lacus vel iaculis.
+          </p>
+          <span class="ft18__num">05</span>
+        </div>
+      </article>
+
+      <article class="ft18__card">
+        <div class="ft18__card-inner">
+          <div class="ft18__icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Live support</h3>
+          <p>
+            Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor
+            quis pharetra.
+          </p>
+          <span class="ft18__num">06</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v18 — Isometric cards with SVG diamond-grid bg ===== */
+
+  .ft18 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ft18__grid-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .ft18 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ft18__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 55px;
+  }
+
+  .ft18__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft18__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .ft18__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Card with isometric tilt */
+  .ft18__card {
+    perspective: 800px;
+  }
+
+  .ft18__card-inner {
+    position: relative;
+    padding: 30px 24px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.01)
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transform: rotateX(4deg) rotateY(-3deg);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+  }
+
+  .ft18__card:hover .ft18__card-inner {
+    transform: rotateX(0deg) rotateY(0deg) translateY(-6px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .ft18__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .ft18__card:hover .ft18__icon {
+    transform: scale(1.1) rotate(-4deg);
+  }
+
+  .ft18__icon i {
+    font-size: 20px;
+    color: var(--secondStyleColor);
+  }
+
+  .ft18__card-inner h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .ft18__card-inner p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  .ft18__num {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: 800;
+    color: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.3s ease;
+  }
+
+  .ft18__card:hover .ft18__num {
+    color: color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft18__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ft18__card-inner {
+      transform: rotateX(3deg) rotateY(-2deg);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft18__card-inner {
+      padding: 24px 20px;
+    }
+
+    .ft18__card-inner h3 {
+      font-size: 16px;
+    }
+
+    .ft18__card-inner p {
+      font-size: 13px;
+    }
+
+    .ft18__icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .ft18__icon i {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft18 {
+      padding: 50px 0;
+    }
+
+    .ft18__head {
+      margin-bottom: 36px;
+    }
+
+    .ft18__head h2 {
+      font-size: 24px;
+    }
+
+    .ft18__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ft18__card-inner {
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft18__card-inner,
+    .ft18__icon,
+    .ft18__num {
+      transition: none;
+    }
+  }
+</style>

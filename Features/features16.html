@@ -1,0 +1,274 @@
+<section class="ft16" id="features">
+  <div class="container">
+    <div class="ft16__head">
+      <h2>Features</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <!-- Block 1: image left, text right -->
+    <div class="ft16__block">
+      <div class="ft16__media">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="ft16__text">
+        <span class="ft16__label">Dashboard</span>
+        <h3>Real-time monitoring at a glance</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat arcu vitae facilisis tempus, lacus risus malesuada nibh, vel
+          tincidunt sapien arcu a purus.
+        </p>
+        <div class="ft16__tags">
+          <span>Analytics</span>
+          <span>Reports</span>
+          <span>Live data</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG wave divider -->
+    <svg class="ft16__wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 Q300 0 600 30 T1200 30" fill="none" stroke="currentColor" stroke-width="1.5" />
+    </svg>
+
+    <!-- Block 2: text left, image right -->
+    <div class="ft16__block ft16__block--rev">
+      <div class="ft16__media">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="ft16__text">
+        <span class="ft16__label">Security</span>
+        <h3>Enterprise-grade data protection</h3>
+        <p>
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero ante et urna. Cras in malesuada est.
+        </p>
+        <div class="ft16__tags">
+          <span>Encryption</span>
+          <span>SSO</span>
+          <span>Audit logs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG wave divider -->
+    <svg class="ft16__wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 Q300 60 600 30 T1200 30" fill="none" stroke="currentColor" stroke-width="1.5" />
+    </svg>
+
+    <!-- Block 3: image left, text right -->
+    <div class="ft16__block">
+      <div class="ft16__media">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="ft16__text">
+        <span class="ft16__label">Integrations</span>
+        <h3>Connect your favorite tools</h3>
+        <p>
+          Vivamus sed augue velit. Mauris feugiat magna vitae risus scelerisque,
+          ut volutpat nunc accumsan. Sed nec eros vel sapien mattis faucibus.
+        </p>
+        <div class="ft16__tags">
+          <span>API</span>
+          <span>Webhooks</span>
+          <span>Plugins</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== FEATURES v16 — Magazine editorial with SVG wave dividers ===== */
+
+  .ft16 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .ft16__head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 60px;
+  }
+
+  .ft16__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ft16__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Blocks */
+  .ft16__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+  }
+
+  .ft16__block--rev {
+    direction: rtl;
+  }
+
+  .ft16__block--rev > * {
+    direction: ltr;
+  }
+
+  /* Media */
+  .ft16__media {
+    border-radius: calc(var(--borderRadius) * 1.2);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .ft16__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .ft16__block:hover .ft16__media img {
+    transform: scale(1.04);
+  }
+
+  /* Text */
+  .ft16__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ft16__label {
+    display: inline-block;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    padding: 5px 14px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  .ft16__text h3 {
+    margin: 0;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .ft16__text > p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 72%, transparent);
+  }
+
+  .ft16__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .ft16__tags span {
+    padding: 6px 14px;
+    border-radius: var(--borderRadius);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 12px;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 75%, transparent);
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+
+  .ft16__block:hover .ft16__tags span {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    color: var(--textColor1);
+  }
+
+  /* SVG wave divider */
+  .ft16__wave {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 50px 0;
+    color: color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ft16__block {
+      gap: 30px;
+    }
+
+    .ft16__text h3 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft16__block,
+    .ft16__block--rev {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+
+    .ft16__media {
+      aspect-ratio: 16 / 9;
+    }
+
+    .ft16__wave {
+      margin: 36px 0;
+    }
+
+    .ft16__text > p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft16 {
+      padding: 50px 0;
+    }
+
+    .ft16__head {
+      margin-bottom: 40px;
+    }
+
+    .ft16__head h2 {
+      font-size: 24px;
+    }
+
+    .ft16__wave {
+      margin: 28px 0;
+      height: 30px;
+    }
+
+    .ft16__tags span {
+      font-size: 11px;
+      padding: 5px 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ft16__media img,
+    .ft16__tags span {
+      transition: none;
+    }
+  }
+</style>
