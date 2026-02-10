@@ -1,0 +1,437 @@
+<section class="hr25" id="home">
+  <div class="container">
+    <div class="hr25__layout">
+      <!-- Content -->
+      <div class="hr25__content">
+        <span class="hr25__kicker"><i class="fa-solid fa-bolt"></i> Now available</span>
+        <h1>Build faster. Ship smarter. Scale easy.</h1>
+        <p>
+          The all-in-one platform that helps teams design, develop, and deploy
+          products at lightning speed — without the complexity.
+        </p>
+        <div class="hr25__actions">
+          <a href="#partners" class="hr25__btn hr25__btn--primary">Get started free</a>
+          <a href="#about" class="hr25__btn hr25__btn--outline">
+            <i class="fa-solid fa-play"></i> Watch demo
+          </a>
+        </div>
+        <div class="hr25__trust">
+          <div class="hr25__avatars">
+            <span class="hr25__dot"></span>
+            <span class="hr25__dot"></span>
+            <span class="hr25__dot"></span>
+            <span class="hr25__dot"></span>
+          </div>
+          <span>Joined by <strong>10,000+</strong> teams worldwide</span>
+        </div>
+      </div>
+
+      <!-- Visual: SVG blob + floating badges -->
+      <div class="hr25__visual">
+        <svg class="hr25__blob" viewBox="0 0 500 500" aria-hidden="true">
+          <defs>
+            <linearGradient id="hr25grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--secondStyleColor)" stop-opacity="0.25" />
+              <stop offset="100%" stop-color="var(--secondStyleColor)" stop-opacity="0.05" />
+            </linearGradient>
+          </defs>
+          <path class="hr25__blob-path" fill="url(#hr25grad)" />
+        </svg>
+
+        <div class="hr25__badge hr25__badge--1">
+          <i class="fa-solid fa-rocket"></i>
+          <div><strong>3x</strong><span>Faster</span></div>
+        </div>
+        <div class="hr25__badge hr25__badge--2">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div><strong>99.9%</strong><span>Uptime</span></div>
+        </div>
+        <div class="hr25__badge hr25__badge--3">
+          <i class="fa-solid fa-users"></i>
+          <div><strong>10k+</strong><span>Users</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee strip -->
+  <div class="hr25__marquee" aria-hidden="true">
+    <div class="hr25__track">
+      <span>Design</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Develop</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Deploy</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Automate</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Collaborate</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Optimize</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Design</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Develop</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Deploy</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Automate</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Collaborate</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+      <span>Optimize</span>
+      <span class="hr25__star"><i class="fa-solid fa-star"></i></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HERO v25 — Split blob + floating badges + marquee strip ===== */
+
+  .hr25 {
+    position: relative;
+    padding: clamp(80px, 10vw, 140px) 0 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .hr25__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+  }
+
+  /* Content */
+  .hr25__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hr25__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 7px 16px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    color: var(--secondStyleColor);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .hr25__kicker i {
+    font-size: 11px;
+  }
+
+  .hr25__content h1 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .hr25__content > p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+    max-width: 460px;
+  }
+
+  /* Actions */
+  .hr25__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hr25__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--borderRadius);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hr25__btn--primary {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+  }
+
+  .hr25__btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  .hr25__btn--outline {
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    color: var(--textColor1);
+    background: transparent;
+  }
+
+  .hr25__btn--outline:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 50%, transparent);
+    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .hr25__btn--outline i {
+    font-size: 11px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Trust */
+  .hr25__trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .hr25__avatars {
+    display: flex;
+  }
+
+  .hr25__dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    border: 2px solid var(--bodyBG);
+    margin-left: -8px;
+  }
+
+  .hr25__dot:first-child {
+    margin-left: 0;
+  }
+
+  .hr25__trust > span {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+  }
+
+  .hr25__trust strong {
+    color: var(--textColor1);
+  }
+
+  /* Visual */
+  .hr25__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .hr25__blob {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+  }
+
+  .hr25__blob-path {
+    transition: d 0.8s ease;
+  }
+
+  /* Floating badges */
+  .hr25__badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(155deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: hr25Float 4s ease-in-out infinite alternate;
+  }
+
+  .hr25__badge i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .hr25__badge strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .hr25__badge span {
+    font-size: 11px;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    font-weight: 500;
+  }
+
+  .hr25__badge--1 {
+    top: 8%;
+    right: 5%;
+    animation-delay: 0s;
+  }
+
+  .hr25__badge--2 {
+    bottom: 15%;
+    left: 2%;
+    animation-delay: -1.3s;
+  }
+
+  .hr25__badge--3 {
+    bottom: 5%;
+    right: 10%;
+    animation-delay: -2.6s;
+  }
+
+  @keyframes hr25Float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-12px); }
+  }
+
+  /* Marquee */
+  .hr25__marquee {
+    margin-top: clamp(50px, 7vw, 80px);
+    border-top: 1px solid color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    padding: 16px 0;
+    overflow: hidden;
+  }
+
+  .hr25__track {
+    display: flex;
+    gap: 28px;
+    white-space: nowrap;
+    animation: hr25Scroll 20s linear infinite;
+    width: max-content;
+  }
+
+  .hr25__track span {
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 700;
+    color: color-mix(in srgb, var(--textColor1) 18%, transparent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .hr25__star {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .hr25__star i {
+    font-size: 10px;
+    color: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  @keyframes hr25Scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hr25__layout {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hr25__content {
+      align-items: center;
+    }
+
+    .hr25__content > p {
+      max-width: 100%;
+    }
+
+    .hr25__actions {
+      justify-content: center;
+    }
+
+    .hr25__trust {
+      justify-content: center;
+    }
+
+    .hr25__visual {
+      min-height: 300px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hr25 {
+      padding-top: 60px;
+    }
+
+    .hr25__content h1 {
+      font-size: 28px;
+    }
+
+    .hr25__actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .hr25__btn {
+      justify-content: center;
+    }
+
+    .hr25__visual {
+      min-height: 240px;
+    }
+
+    .hr25__badge {
+      padding: 8px 12px;
+    }
+
+    .hr25__badge strong {
+      font-size: 14px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hr25__badge {
+      animation: none;
+    }
+
+    .hr25__track {
+      animation: none;
+    }
+
+    .hr25__btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var path = document.querySelector(".hr25__blob-path");
+    if (!path) return;
+
+    var shapes = [
+      "M250,50 C350,30 450,120 460,220 C470,320 400,430 300,450 C200,470 80,400 50,300 C20,200 100,70 250,50Z",
+      "M220,40 C340,20 470,100 480,230 C490,360 390,450 270,470 C150,490 40,410 30,280 C20,150 100,60 220,40Z",
+      "M260,45 C370,50 460,140 450,260 C440,380 350,460 240,460 C130,460 40,370 50,250 C60,130 150,40 260,45Z",
+      "M240,55 C360,30 480,130 470,250 C460,370 370,470 250,465 C130,460 30,380 40,260 C50,140 120,80 240,55Z"
+    ];
+
+    var idx = 0;
+    path.setAttribute("d", shapes[0]);
+
+    setInterval(function () {
+      idx = (idx + 1) % shapes.length;
+      path.setAttribute("d", shapes[idx]);
+    }, 3000);
+  })();
+</script>
