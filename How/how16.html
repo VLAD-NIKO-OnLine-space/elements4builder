@@ -1,12 +1,3 @@
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-/>
-
 <section class="hw16" id="how-it-works">
   <div class="hw16__bg" aria-hidden="true">
     <div class="hw16__orb hw16__orb--1"></div>
@@ -15,7 +6,7 @@
   </div>
 
   <div class="container">
-    <div class="hw16__head" data-aos="fade-up" data-aos-duration="800">
+    <div class="hw16__head">
       <span class="hw16__eyebrow">
         <i class="fa-solid fa-bolt"></i> How It Works
       </span>
@@ -28,12 +19,7 @@
 
     <div class="hw16__grid">
       <!-- Card 1 -->
-      <div
-        class="hw16__card"
-        data-aos="fade-up"
-        data-aos-delay="0"
-        data-aos-duration="700"
-      >
+      <div class="hw16__card">
         <div class="hw16__shimmer" aria-hidden="true"></div>
         <div class="hw16__icon-wrap">
           <div class="hw16__icon-ring" aria-hidden="true"></div>
@@ -53,12 +39,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div
-        class="hw16__card"
-        data-aos="fade-up"
-        data-aos-delay="150"
-        data-aos-duration="700"
-      >
+      <div class="hw16__card">
         <div class="hw16__shimmer" aria-hidden="true"></div>
         <div class="hw16__icon-wrap">
           <div class="hw16__icon-ring" aria-hidden="true"></div>
@@ -78,12 +59,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div
-        class="hw16__card"
-        data-aos="fade-up"
-        data-aos-delay="300"
-        data-aos-duration="700"
-      >
+      <div class="hw16__card">
         <div class="hw16__shimmer" aria-hidden="true"></div>
         <div class="hw16__icon-wrap">
           <div class="hw16__icon-ring" aria-hidden="true"></div>
@@ -103,12 +79,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div
-        class="hw16__card"
-        data-aos="fade-up"
-        data-aos-delay="450"
-        data-aos-duration="700"
-      >
+      <div class="hw16__card">
         <div class="hw16__shimmer" aria-hidden="true"></div>
         <div class="hw16__icon-wrap">
           <div class="hw16__icon-ring" aria-hidden="true"></div>
@@ -119,8 +90,8 @@
         <div class="hw16__number" aria-hidden="true">04</div>
         <h3>Zdefiniuj dane strony</h3>
         <p>
-          Vivamus sed augue velit. Mauris feugiat magna vitae risus
-          scelerisque, ut volutpat nunc accumsan.
+          Vivamus sed augue velit. Mauris feugiat magna vitae risus scelerisque,
+          ut volutpat nunc accumsan.
         </p>
       </div>
     </div>
@@ -285,11 +256,7 @@
 
   .hw16__card:hover {
     transform: translateY(-8px);
-    border-color: color-mix(
-      in srgb,
-      var(--secondStyleColor) 55%,
-      transparent
-    );
+    border-color: color-mix(in srgb, var(--secondStyleColor) 55%, transparent);
     box-shadow:
       0 28px 60px rgba(0, 0, 0, 0.3),
       0 0 40px color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
@@ -368,8 +335,7 @@
     font-size: 26px;
     color: var(--secondStyleColor);
     filter: drop-shadow(
-      0 4px 10px
-        color-mix(in srgb, var(--secondStyleColor) 40%, transparent)
+      0 4px 10px color-mix(in srgb, var(--secondStyleColor) 40%, transparent)
     );
     transition: transform 0.35s ease;
   }
@@ -583,8 +549,3 @@
     }
   }
 </style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ once: true });
-</script>
