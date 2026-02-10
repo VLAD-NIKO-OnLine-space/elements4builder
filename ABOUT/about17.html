@@ -1,0 +1,373 @@
+<section class="ab17" id="about">
+  <div class="container">
+    <div class="ab17__head">
+      <span class="ab17__eyebrow">Our story</span>
+      <h2>About us</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia.
+      </p>
+    </div>
+
+    <div class="ab17__timeline">
+      <!-- SVG connector -->
+      <svg class="ab17__connector" aria-hidden="true" preserveAspectRatio="none">
+        <line x1="50%" y1="0" x2="50%" y2="100%" stroke="currentColor" stroke-width="1" stroke-dasharray="6 8" />
+      </svg>
+
+      <div class="ab17__item">
+        <div class="ab17__node">
+          <div class="ab17__dot"></div>
+          <span class="ab17__year">2019</span>
+        </div>
+        <article class="ab17__card ab17__card--img">
+          <div class="ab17__thumb">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="ab17__card-text">
+            <h3>Founded with a vision</h3>
+            <p>
+              Started in a small garage with three developers and a dream to
+              change how people build websites.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="ab17__item ab17__item--right">
+        <div class="ab17__node">
+          <div class="ab17__dot"></div>
+          <span class="ab17__year">2020</span>
+        </div>
+        <article class="ab17__card">
+          <h3>First 1,000 users</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat arcu vitae facilisis tempus lacus risus.
+          </p>
+        </article>
+      </div>
+
+      <div class="ab17__item">
+        <div class="ab17__node">
+          <div class="ab17__dot"></div>
+          <span class="ab17__year">2021</span>
+        </div>
+        <article class="ab17__card ab17__card--img">
+          <div class="ab17__thumb">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="ab17__card-text">
+            <h3>Series A funding</h3>
+            <p>
+              Raised $12M to expand our team and build the next generation of
+              creative tools.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="ab17__item ab17__item--right">
+        <div class="ab17__node">
+          <div class="ab17__dot"></div>
+          <span class="ab17__year">2023</span>
+        </div>
+        <article class="ab17__card">
+          <h3>Global expansion</h3>
+          <p>
+            Opened offices in Berlin, Tokyo, and São Paulo. Now serving
+            customers in over 50 countries.
+          </p>
+        </article>
+      </div>
+
+      <div class="ab17__item">
+        <div class="ab17__node">
+          <div class="ab17__dot"></div>
+          <span class="ab17__year">2025</span>
+        </div>
+        <article class="ab17__card ab17__card--img">
+          <div class="ab17__thumb">
+            <img data-image alt="" loading="lazy" />
+          </div>
+          <div class="ab17__card-text">
+            <h3>AI-powered platform</h3>
+            <p>
+              Launched intelligent automation features that reduced build time
+              by 80% for every user.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ABOUT v17 — Company timeline with SVG connector + alternating cards ===== */
+
+  .ab17 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ab17__head {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+  }
+
+  .ab17__eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    margin-bottom: 10px;
+  }
+
+  .ab17__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .ab17__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Timeline */
+  .ab17__timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .ab17__connector {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    margin-left: -2px;
+    color: color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    z-index: 0;
+  }
+
+  /* Items */
+  .ab17__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    align-items: start;
+    z-index: 1;
+  }
+
+  .ab17__item .ab17__card {
+    grid-column: 1;
+  }
+
+  .ab17__item .ab17__node {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .ab17__item--right .ab17__card {
+    grid-column: 3;
+  }
+
+  .ab17__item:not(.ab17__item--right) .ab17__card {
+    grid-column: 1;
+    text-align: right;
+  }
+
+  /* Node */
+  .ab17__node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 16px;
+  }
+
+  .ab17__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    transition: transform 0.3s ease;
+  }
+
+  .ab17__item:hover .ab17__dot {
+    transform: scale(1.3);
+  }
+
+  .ab17__year {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  /* Cards */
+  .ab17__card {
+    padding: 22px 20px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    margin: 0 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ab17__item:hover .ab17__card {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .ab17__item:not(.ab17__item--right):hover .ab17__card {
+    transform: translateX(-4px);
+  }
+
+  .ab17__item--right:hover .ab17__card {
+    transform: translateX(4px);
+  }
+
+  /* Image card */
+  .ab17__card--img {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .ab17__thumb {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .ab17__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ab17__item:hover .ab17__thumb img {
+    transform: scale(1.04);
+  }
+
+  .ab17__card-text {
+    padding: 18px 20px;
+  }
+
+  .ab17__card h3,
+  .ab17__card-text h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .ab17__card p,
+  .ab17__card-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ab17__card {
+      margin: 0 12px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ab17__item,
+    .ab17__item--right {
+      grid-template-columns: 36px 1fr;
+    }
+
+    .ab17__item .ab17__card,
+    .ab17__item--right .ab17__card {
+      grid-column: 2;
+      text-align: left;
+    }
+
+    .ab17__item .ab17__node,
+    .ab17__item--right .ab17__node {
+      grid-column: 1;
+    }
+
+    .ab17__connector {
+      left: 18px;
+      margin-left: 0;
+    }
+
+    .ab17__item:not(.ab17__item--right):hover .ab17__card,
+    .ab17__item--right:hover .ab17__card {
+      transform: translateX(4px);
+    }
+
+    .ab17__card {
+      margin: 0 0 0 12px;
+    }
+
+    .ab17__card h3,
+    .ab17__card-text h3 {
+      font-size: 16px;
+    }
+
+    .ab17__card p,
+    .ab17__card-text p {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ab17 {
+      padding: 50px 0;
+    }
+
+    .ab17__head {
+      margin-bottom: 40px;
+    }
+
+    .ab17__head h2 {
+      font-size: 24px;
+    }
+
+    .ab17__timeline {
+      gap: 24px;
+    }
+
+    .ab17__card {
+      padding: 18px 16px;
+    }
+
+    .ab17__card-text {
+      padding: 14px 16px;
+    }
+
+    .ab17__dot {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab17__dot,
+    .ab17__card,
+    .ab17__thumb img {
+      transition: none;
+    }
+  }
+</style>

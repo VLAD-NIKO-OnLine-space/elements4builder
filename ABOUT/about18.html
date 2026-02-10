@@ -1,0 +1,328 @@
+<section class="ab18" id="about">
+  <div class="container">
+    <div class="ab18__bento">
+      <!-- Large image cell -->
+      <div class="ab18__cell ab18__cell--hero">
+        <img data-image alt="" loading="lazy" />
+      </div>
+
+      <!-- Text heading cell -->
+      <div class="ab18__cell ab18__cell--intro">
+        <span class="ab18__kicker">About us</span>
+        <h2>We design, we build, we ship</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          consequatur minus harum molestias saepe mollitia veniam.
+        </p>
+      </div>
+
+      <!-- Stat cell 1 -->
+      <div class="ab18__cell ab18__cell--stat">
+        <strong>12K+</strong>
+        <span>Users worldwide</span>
+      </div>
+
+      <!-- Stat cell 2 -->
+      <div class="ab18__cell ab18__cell--stat">
+        <strong>99.9%</strong>
+        <span>Uptime SLA</span>
+      </div>
+
+      <!-- Icon feature cell -->
+      <div class="ab18__cell ab18__cell--feat">
+        <div class="ab18__feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Enterprise security</h3>
+        <p>Bank-level encryption for all your data and transfers.</p>
+      </div>
+
+      <!-- Image cell 2 -->
+      <div class="ab18__cell ab18__cell--img2">
+        <img data-image alt="" loading="lazy" />
+      </div>
+
+      <!-- Icon feature cell -->
+      <div class="ab18__cell ab18__cell--feat">
+        <div class="ab18__feat-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Lightning fast</h3>
+        <p>Optimized infrastructure for sub-100ms load times.</p>
+      </div>
+
+      <!-- Quote cell -->
+      <div class="ab18__cell ab18__cell--quote">
+        <svg class="ab18__quote-svg" viewBox="0 0 40 32" aria-hidden="true">
+          <path d="M0 20 Q0 32 12 32 L12 24 Q4 24 4 16 L12 16 L12 0 L0 0 Z M22 20 Q22 32 34 32 L34 24 Q26 24 26 16 L34 16 L34 0 L22 0 Z" fill="currentColor"/>
+        </svg>
+        <p>
+          Building products that people genuinely love is the most rewarding
+          challenge we know.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ABOUT v18 — Bento grid with mixed content cells ===== */
+
+  .ab18 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+  }
+
+  .ab18__bento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 16px;
+  }
+
+  /* Cell base */
+  .ab18__cell {
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.025);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+
+  .ab18__cell:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 32%, transparent);
+  }
+
+  /* Hero image — spans 2 cols, 2 rows */
+  .ab18__cell--hero {
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 0;
+    aspect-ratio: auto;
+  }
+
+  .ab18__cell--hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .ab18__cell--hero:hover img {
+    transform: scale(1.04);
+  }
+
+  /* Intro text — spans 2 cols */
+  .ab18__cell--intro {
+    grid-column: span 2;
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ab18__kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .ab18__cell--intro h2 {
+    margin: 0;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .ab18__cell--intro p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Stat cells */
+  .ab18__cell--stat {
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .ab18__cell--stat strong {
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    line-height: 1;
+  }
+
+  .ab18__cell--stat span {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+    font-weight: 500;
+  }
+
+  /* Feature cells */
+  .ab18__cell--feat {
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ab18__feat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .ab18__cell--feat:hover .ab18__feat-icon {
+    transform: scale(1.12) rotate(-5deg);
+  }
+
+  .ab18__feat-icon i {
+    font-size: 17px;
+    color: var(--secondStyleColor);
+  }
+
+  .ab18__cell--feat h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .ab18__cell--feat p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Image cell 2 */
+  .ab18__cell--img2 {
+    padding: 0;
+    grid-column: span 2;
+    aspect-ratio: 16 / 7;
+  }
+
+  .ab18__cell--img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ab18__cell--img2:hover img {
+    transform: scale(1.04);
+  }
+
+  /* Quote cell */
+  .ab18__cell--quote {
+    grid-column: span 2;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .ab18__quote-svg {
+    width: 36px;
+    height: auto;
+    color: color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+  }
+
+  .ab18__cell--quote p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 80%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ab18__bento {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ab18__cell--hero {
+      grid-column: span 2;
+      grid-row: span 1;
+      aspect-ratio: 16 / 9;
+    }
+
+    .ab18__cell--img2 {
+      grid-column: span 2;
+    }
+
+    .ab18__cell--quote {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ab18__cell--intro h2 {
+      font-size: 22px;
+    }
+
+    .ab18__cell--intro p {
+      font-size: 13px;
+    }
+
+    .ab18__cell--quote p {
+      font-size: 15px;
+    }
+
+    .ab18__cell--feat h3 {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ab18 {
+      padding: 50px 0;
+    }
+
+    .ab18__bento {
+      grid-template-columns: 1fr;
+    }
+
+    .ab18__cell--hero,
+    .ab18__cell--intro,
+    .ab18__cell--img2,
+    .ab18__cell--quote {
+      grid-column: span 1;
+    }
+
+    .ab18__cell--hero {
+      aspect-ratio: 16 / 10;
+    }
+
+    .ab18__cell--img2 {
+      aspect-ratio: 16 / 9;
+    }
+
+    .ab18__cell--stat {
+      padding: 22px 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab18__cell,
+    .ab18__feat-icon,
+    .ab18__cell--hero img,
+    .ab18__cell--img2 img {
+      transition: none;
+    }
+  }
+</style>

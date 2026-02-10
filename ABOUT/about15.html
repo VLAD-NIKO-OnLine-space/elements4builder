@@ -1,0 +1,265 @@
+<section class="ab15" id="about">
+  <!-- SVG cross-hatch background -->
+  <svg class="ab15__bg" aria-hidden="true">
+    <defs>
+      <pattern id="ab15hatch" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="0" x2="20" y2="20" stroke="currentColor" stroke-width="0.4" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#ab15hatch)" />
+  </svg>
+
+  <div class="container">
+    <!-- Hero image with overlay text -->
+    <div class="ab15__hero">
+      <div class="ab15__hero-img">
+        <img data-image alt="" loading="lazy" />
+      </div>
+      <div class="ab15__hero-overlay">
+        <span class="ab15__kicker">About us</span>
+        <h2>Crafting digital experiences since day one</h2>
+      </div>
+    </div>
+
+    <!-- Description + feature row -->
+    <div class="ab15__body">
+      <p class="ab15__desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        consequatur minus harum molestias saepe mollitia, veniam architecto
+        dignissimos reprehenderit quod laboriosam.
+      </p>
+
+      <div class="ab15__features">
+        <div class="ab15__feat">
+          <div class="ab15__feat-ico"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Fast delivery</h3>
+          <p>Ship products in record time with our workflow.</p>
+        </div>
+        <div class="ab15__feat">
+          <div class="ab15__feat-ico"><i class="fa-solid fa-palette"></i></div>
+          <h3>Design-first</h3>
+          <p>Pixel-perfect interfaces your users will love.</p>
+        </div>
+        <div class="ab15__feat">
+          <div class="ab15__feat-ico"><i class="fa-solid fa-code"></i></div>
+          <h3>Clean code</h3>
+          <p>Maintainable architecture built for scale.</p>
+        </div>
+        <div class="ab15__feat">
+          <div class="ab15__feat-ico"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Trusted partner</h3>
+          <p>Long-term relationships with every client.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ABOUT v15 — Hero image with overlay + SVG hatch bg + feature row ===== */
+
+  .ab15 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ab15__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .ab15 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Hero */
+  .ab15__hero {
+    position: relative;
+    border-radius: calc(var(--borderRadius) * 1.4);
+    overflow: hidden;
+    aspect-ratio: 21 / 9;
+    margin-bottom: 50px;
+  }
+
+  .ab15__hero-img {
+    position: absolute;
+    inset: 0;
+  }
+
+  .ab15__hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .ab15__hero:hover .ab15__hero-img img {
+    transform: scale(1.03);
+  }
+
+  .ab15__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(24px, 4vw, 48px);
+    gap: 10px;
+  }
+
+  .ab15__kicker {
+    display: inline-block;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+    padding: 5px 14px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .ab15__hero h2 {
+    margin: 0;
+    font-size: clamp(24px, 3.8vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    max-width: 600px;
+    line-height: 1.15;
+    color: #fff;
+  }
+
+  /* Body */
+  .ab15__body {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .ab15__desc {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 72%, transparent);
+    max-width: 680px;
+    margin: 0 auto 48px;
+  }
+
+  /* Feature row */
+  .ab15__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .ab15__feat {
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.025);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .ab15__feat:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .ab15__feat-ico {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .ab15__feat:hover .ab15__feat-ico {
+    transform: scale(1.12);
+  }
+
+  .ab15__feat-ico i {
+    font-size: 18px;
+    color: var(--secondStyleColor);
+  }
+
+  .ab15__feat h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .ab15__feat p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--textColor1) 62%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ab15__features {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ab15__hero {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ab15__hero h2 {
+      font-size: 22px;
+    }
+
+    .ab15__desc {
+      font-size: 14px;
+    }
+
+    .ab15__feat h3 {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ab15 {
+      padding: 50px 0;
+    }
+
+    .ab15__hero {
+      aspect-ratio: 16 / 10;
+      margin-bottom: 36px;
+    }
+
+    .ab15__features {
+      grid-template-columns: 1fr;
+    }
+
+    .ab15__desc {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab15__hero-img img,
+    .ab15__feat,
+    .ab15__feat-ico {
+      transition: none;
+    }
+  }
+</style>

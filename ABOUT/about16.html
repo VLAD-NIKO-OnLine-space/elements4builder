@@ -1,0 +1,296 @@
+<section class="ab16" id="about">
+  <div class="container">
+    <div class="ab16__split">
+      <!-- Image side -->
+      <div class="ab16__img-wrap">
+        <div class="ab16__img">
+          <img data-image alt="" loading="lazy" />
+        </div>
+        <!-- Floating stat badges -->
+        <div class="ab16__badge ab16__badge--top">
+          <strong>250+</strong>
+          <span>Projects</span>
+        </div>
+        <div class="ab16__badge ab16__badge--bot">
+          <strong>98%</strong>
+          <span>Satisfaction</span>
+        </div>
+        <!-- SVG diagonal accent -->
+        <svg class="ab16__diag" viewBox="0 0 200 400" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="140,0 200,0 60,400 0,400" fill="currentColor" />
+        </svg>
+      </div>
+
+      <!-- Text side -->
+      <div class="ab16__text">
+        <span class="ab16__eyebrow">About us</span>
+        <h2>Building the future, one pixel at a time</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          consequatur minus harum molestias saepe mollitia, veniam architecto
+          dignissimos reprehenderit quod laboriosam tempora.
+        </p>
+        <p>
+          Suspendisse commodo nibh ac pretium vulputate, risus dui faucibus arcu
+          eget lobortis libero ante et urna. Cras in malesuada est.
+        </p>
+        <div class="ab16__highlights">
+          <div class="ab16__hl">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Award-winning design team</span>
+          </div>
+          <div class="ab16__hl">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Agile development process</span>
+          </div>
+          <div class="ab16__hl">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>24/7 dedicated support</span>
+          </div>
+        </div>
+        <a href="#partners" class="ab16__btn">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== ABOUT v16 — Diagonal split with floating stat badges ===== */
+
+  .ab16 {
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .ab16__split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(36px, 5vw, 64px);
+    align-items: center;
+  }
+
+  /* Image side */
+  .ab16__img-wrap {
+    position: relative;
+  }
+
+  .ab16__img {
+    border-radius: calc(var(--borderRadius) * 1.2);
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  .ab16__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .ab16__img:hover img {
+    transform: scale(1.04);
+  }
+
+  /* SVG diagonal */
+  .ab16__diag {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 80px;
+    height: 100%;
+    color: color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Floating badges */
+  .ab16__badge {
+    position: absolute;
+    z-index: 3;
+    padding: 14px 20px;
+    border-radius: var(--borderRadius);
+    background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    animation: ab16Float 3s ease-in-out infinite alternate;
+  }
+
+  .ab16__badge--top {
+    top: 12%;
+    right: -24px;
+  }
+
+  .ab16__badge--bot {
+    bottom: 12%;
+    right: -24px;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes ab16Float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+
+  .ab16__badge strong {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    line-height: 1;
+  }
+
+  .ab16__badge span {
+    font-size: 11px;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+    font-weight: 500;
+  }
+
+  /* Text side */
+  .ab16__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ab16__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .ab16__text h2 {
+    margin: 0;
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .ab16__text > p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  .ab16__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .ab16__hl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .ab16__hl i {
+    color: var(--secondStyleColor);
+    font-size: 14px;
+  }
+
+  .ab16__btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 28px;
+    width: fit-content;
+    border-radius: var(--borderRadius);
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .ab16__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .ab16__badge--top,
+    .ab16__badge--bot {
+      right: -12px;
+    }
+
+    .ab16__diag {
+      right: -16px;
+      width: 50px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ab16__split {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ab16__img-wrap {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .ab16__img {
+      aspect-ratio: 4 / 3;
+    }
+
+    .ab16__text h2 {
+      font-size: 24px;
+    }
+
+    .ab16__text > p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ab16 {
+      padding: 50px 0;
+    }
+
+    .ab16__badge {
+      padding: 10px 14px;
+    }
+
+    .ab16__badge strong {
+      font-size: 20px;
+    }
+
+    .ab16__diag {
+      display: none;
+    }
+
+    .ab16__text h2 {
+      font-size: 22px;
+    }
+
+    .ab16__hl {
+      font-size: 13px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab16__badge {
+      animation: none;
+    }
+
+    .ab16__img img,
+    .ab16__btn {
+      transition: none;
+    }
+  }
+</style>
