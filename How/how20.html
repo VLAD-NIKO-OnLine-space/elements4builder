@@ -1,0 +1,398 @@
+<section class="hw20" id="how-it-works">
+  <div class="container">
+    <div class="hw20__head">
+      <h2>How It Works</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        vehicula sapien nec diam tincidunt, vel fermentum arcu gravida.
+      </p>
+    </div>
+
+    <div class="hw20__track">
+      <!-- Step 1 -->
+      <div class="hw20__card">
+        <div class="hw20__top">
+          <div class="hw20__icon">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <div class="hw20__counter">
+            <svg class="hw20__ring-svg" viewBox="0 0 60 60" aria-hidden="true">
+              <circle class="hw20__ring-bg" cx="30" cy="30" r="26" />
+              <circle
+                class="hw20__ring-fg"
+                cx="30"
+                cy="30"
+                r="26"
+                style="--pct: 25"
+              />
+            </svg>
+            <span class="hw20__ring-num">01</span>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+        </p>
+        <div class="hw20__tags">
+          <span>Research</span>
+          <span>Planning</span>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="hw20__card">
+        <div class="hw20__top">
+          <div class="hw20__icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <div class="hw20__counter">
+            <svg class="hw20__ring-svg" viewBox="0 0 60 60" aria-hidden="true">
+              <circle class="hw20__ring-bg" cx="30" cy="30" r="26" />
+              <circle
+                class="hw20__ring-fg"
+                cx="30"
+                cy="30"
+                r="26"
+                style="--pct: 50"
+              />
+            </svg>
+            <span class="hw20__ring-num">02</span>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero ante et urna.
+        </p>
+        <div class="hw20__tags">
+          <span>Build</span>
+          <span>Prototype</span>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="hw20__card">
+        <div class="hw20__top">
+          <div class="hw20__icon">
+            <i class="fa-solid fa-vial"></i>
+          </div>
+          <div class="hw20__counter">
+            <svg class="hw20__ring-svg" viewBox="0 0 60 60" aria-hidden="true">
+              <circle class="hw20__ring-bg" cx="30" cy="30" r="26" />
+              <circle
+                class="hw20__ring-fg"
+                cx="30"
+                cy="30"
+                r="26"
+                style="--pct: 75"
+              />
+            </svg>
+            <span class="hw20__ring-num">03</span>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Cras in malesuada est. Pellentesque a orci semper, efficitur arcu ac,
+          dignissim metus. Nullam nec dictum velit.
+        </p>
+        <div class="hw20__tags">
+          <span>Testing</span>
+          <span>QA</span>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="hw20__card">
+        <div class="hw20__top">
+          <div class="hw20__icon">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div class="hw20__counter">
+            <svg class="hw20__ring-svg" viewBox="0 0 60 60" aria-hidden="true">
+              <circle class="hw20__ring-bg" cx="30" cy="30" r="26" />
+              <circle
+                class="hw20__ring-fg"
+                cx="30"
+                cy="30"
+                r="26"
+                style="--pct: 100"
+              />
+            </svg>
+            <span class="hw20__ring-num">04</span>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Vivamus sed augue velit. Mauris feugiat magna vitae risus
+          scelerisque, ut volutpat nunc accumsan.
+        </p>
+        <div class="hw20__tags">
+          <span>Launch</span>
+          <span>Scale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v20 — Cards with SVG progress rings + tags ===== */
+
+  .hw20 {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+  }
+
+  .hw20__head {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 55px;
+  }
+
+  .hw20__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hw20__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  .hw20__track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Card */
+  .hw20__card {
+    position: relative;
+    padding: 28px 22px 24px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(
+      170deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.01)
+    );
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .hw20__card:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+  }
+
+  /* Top row: icon + ring */
+  .hw20__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  /* Icon */
+  .hw20__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .hw20__card:hover .hw20__icon {
+    transform: rotate(-8deg) scale(1.08);
+  }
+
+  .hw20__icon i {
+    font-size: 20px;
+    color: var(--secondStyleColor);
+  }
+
+  /* SVG progress ring */
+  .hw20__counter {
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
+
+  .hw20__ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .hw20__ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 3;
+  }
+
+  .hw20__ring-fg {
+    fill: none;
+    stroke: var(--secondStyleColor);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 163.36;
+    stroke-dashoffset: calc(163.36 - 163.36 * var(--pct) / 100);
+    transition: stroke-dashoffset 0.6s ease;
+    opacity: 0.6;
+  }
+
+  .hw20__card:hover .hw20__ring-fg {
+    opacity: 1;
+  }
+
+  .hw20__ring-num {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    opacity: 0.7;
+  }
+
+  .hw20__card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hw20__card p {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+    flex: 1;
+  }
+
+  /* Tags */
+  .hw20__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hw20__tags span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 22%, transparent);
+    font-size: 11px;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+
+  .hw20__card:hover .hw20__tags span {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+    color: var(--secondStyleColor);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .hw20__track {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hw20__card {
+      padding: 24px 18px 20px;
+    }
+
+    .hw20__card h3 {
+      font-size: 16px;
+    }
+
+    .hw20__card p {
+      font-size: 13px;
+    }
+
+    .hw20__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+    }
+
+    .hw20__icon i {
+      font-size: 18px;
+    }
+
+    .hw20__counter {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hw20 {
+      padding: 50px 0;
+    }
+
+    .hw20__head {
+      margin-bottom: 36px;
+    }
+
+    .hw20__head h2 {
+      font-size: 24px;
+    }
+
+    .hw20__track {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .hw20__card {
+      padding: 22px 16px 18px;
+    }
+
+    .hw20__card h3 {
+      font-size: 16px;
+    }
+
+    .hw20__top {
+      margin-bottom: 16px;
+    }
+
+    .hw20__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    .hw20__icon i {
+      font-size: 16px;
+    }
+
+    .hw20__counter {
+      width: 38px;
+      height: 38px;
+    }
+
+    .hw20__ring-num {
+      font-size: 11px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw20__card,
+    .hw20__icon,
+    .hw20__ring-fg,
+    .hw20__tags span {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,320 @@
+<section class="hw18" id="how-it-works">
+  <div class="container">
+    <div class="hw18__head">
+      <h2>How It Works</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        vehicula sapien nec diam tincidunt, vel fermentum arcu gravida.
+      </p>
+    </div>
+
+    <div class="hw18__grid">
+      <!-- Card 1 -->
+      <div class="hw18__card">
+        <div class="hw18__border" aria-hidden="true"></div>
+        <div class="hw18__inner">
+          <div class="hw18__icon-box">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div class="hw18__spark hw18__spark--1" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--2" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--3" aria-hidden="true"></div>
+          </div>
+          <div class="hw18__num">01</div>
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="hw18__card">
+        <div class="hw18__border" aria-hidden="true"></div>
+        <div class="hw18__inner">
+          <div class="hw18__icon-box">
+            <i class="fa-solid fa-cubes"></i>
+            <div class="hw18__spark hw18__spark--1" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--2" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--3" aria-hidden="true"></div>
+          </div>
+          <div class="hw18__num">02</div>
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+            arcu, eget lobortis libero ante et urna.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="hw18__card">
+        <div class="hw18__border" aria-hidden="true"></div>
+        <div class="hw18__inner">
+          <div class="hw18__icon-box">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div class="hw18__spark hw18__spark--1" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--2" aria-hidden="true"></div>
+            <div class="hw18__spark hw18__spark--3" aria-hidden="true"></div>
+          </div>
+          <div class="hw18__num">03</div>
+          <h3>Zdefiniuj dane strony</h3>
+          <p>
+            Cras in malesuada est. Pellentesque a orci semper, efficitur arcu
+            ac, dignissim metus. Nullam nec dictum velit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v18 — Rotating border + spark icons ===== */
+
+  .hw18 {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+  }
+
+  .hw18__head {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 55px;
+  }
+
+  .hw18__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hw18__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  .hw18__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  /* Card wrapper with animated border */
+  .hw18__card {
+    position: relative;
+    border-radius: var(--borderRadius);
+    padding: 2px;
+    overflow: hidden;
+  }
+
+  .hw18__border {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0%,
+      var(--secondStyleColor) 12%,
+      transparent 24%,
+      transparent 100%
+    );
+    animation: hw18Rotate 5s linear infinite;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
+
+  .hw18__card:hover .hw18__border {
+    opacity: 0.8;
+  }
+
+  @keyframes hw18Rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .hw18__inner {
+    position: relative;
+    background: var(--bodyBG);
+    border-radius: calc(var(--borderRadius) - 2px);
+    padding: 32px 24px 28px;
+    text-align: center;
+    height: 100%;
+  }
+
+  /* Icon box with sparks */
+  .hw18__icon-box {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hw18__icon-box i {
+    font-size: 24px;
+    color: var(--secondStyleColor);
+    transition: transform 0.3s ease;
+  }
+
+  .hw18__card:hover .hw18__icon-box i {
+    transform: rotate(-10deg) scale(1.15);
+  }
+
+  /* Sparks */
+  .hw18__spark {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    opacity: 0;
+  }
+
+  .hw18__card:hover .hw18__spark {
+    animation: hw18Spark 0.8s ease forwards;
+  }
+
+  .hw18__spark--1 {
+    top: 4px;
+    right: 8px;
+    animation-delay: 0s;
+  }
+
+  .hw18__spark--2 {
+    top: -2px;
+    left: 14px;
+    animation-delay: 0.15s;
+  }
+
+  .hw18__spark--3 {
+    bottom: 2px;
+    right: 2px;
+    animation-delay: 0.3s;
+  }
+
+  .hw18__card:hover .hw18__spark--2 {
+    animation-delay: 0.15s;
+  }
+
+  .hw18__card:hover .hw18__spark--3 {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes hw18Spark {
+    0% {
+      opacity: 0;
+      transform: scale(0) translate(0, 0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2) translate(-4px, -8px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.6) translate(-8px, -16px);
+    }
+  }
+
+  .hw18__num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--secondStyleColor);
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .hw18__inner h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .hw18__inner p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .hw18__grid {
+      gap: 18px;
+    }
+
+    .hw18__inner {
+      padding: 26px 20px 24px;
+    }
+
+    .hw18__inner h3 {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hw18__grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hw18 {
+      padding: 50px 0;
+    }
+
+    .hw18__head {
+      margin-bottom: 36px;
+    }
+
+    .hw18__head h2 {
+      font-size: 24px;
+    }
+
+    .hw18__inner {
+      padding: 24px 18px 20px;
+    }
+
+    .hw18__inner h3 {
+      font-size: 16px;
+    }
+
+    .hw18__inner p {
+      font-size: 13px;
+    }
+
+    .hw18__icon-box {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+
+    .hw18__icon-box i {
+      font-size: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw18__border {
+      animation: none;
+      opacity: 0.2;
+      background: var(--secondStyleColor);
+    }
+    .hw18__card:hover .hw18__spark {
+      animation: none;
+    }
+    .hw18__icon-box i {
+      transition: none;
+    }
+  }
+</style>
