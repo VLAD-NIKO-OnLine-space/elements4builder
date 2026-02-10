@@ -1,0 +1,443 @@
+<section class="pl11" id="pricing">
+  <!-- SVG wave bg -->
+  <svg class="pl11__wave" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 80 C360 0 720 160 1080 80 S1440 40 1440 80 L1440 180 L0 180 Z" fill="currentColor" />
+  </svg>
+
+  <div class="container">
+    <div class="pl11__head">
+      <span class="pl11__kicker">Pricing</span>
+      <h2>Simple, transparent pricing</h2>
+      <p>No hidden fees. Choose the plan that fits your needs.</p>
+
+      <!-- Billing toggle -->
+      <div class="pl11__toggle">
+        <span class="pl11__toggle-label pl11__toggle-label--active" data-period="monthly">Monthly</span>
+        <button class="pl11__switch" type="button" aria-label="Toggle billing period">
+          <span class="pl11__switch-thumb"></span>
+        </button>
+        <span class="pl11__toggle-label" data-period="yearly">Yearly <small class="pl11__badge">-20%</small></span>
+      </div>
+    </div>
+
+    <div class="pl11__grid">
+      <!-- Starter -->
+      <div class="pl11__card">
+        <div class="pl11__card-head">
+          <h3>Starter</h3>
+          <p>For individuals and side projects.</p>
+        </div>
+        <div class="pl11__price">
+          <span class="pl11__amount" data-m="9" data-y="7">$9</span>
+          <span class="pl11__period">/month</span>
+        </div>
+        <ul class="pl11__features">
+          <li><i class="fa-solid fa-check"></i> 3 projects</li>
+          <li><i class="fa-solid fa-check"></i> 5 GB storage</li>
+          <li><i class="fa-solid fa-check"></i> Email support</li>
+          <li><i class="fa-solid fa-check"></i> Basic analytics</li>
+          <li class="pl11__features--off"><i class="fa-solid fa-xmark"></i> Custom domain</li>
+          <li class="pl11__features--off"><i class="fa-solid fa-xmark"></i> API access</li>
+        </ul>
+        <a href="#partners" class="pl11__btn">Get started</a>
+      </div>
+
+      <!-- Pro — featured -->
+      <div class="pl11__card pl11__card--featured">
+        <div class="pl11__ribbon">Most popular</div>
+        <div class="pl11__card-head">
+          <h3>Pro</h3>
+          <p>For growing teams and businesses.</p>
+        </div>
+        <div class="pl11__price">
+          <span class="pl11__amount" data-m="29" data-y="23">$29</span>
+          <span class="pl11__period">/month</span>
+        </div>
+        <ul class="pl11__features">
+          <li><i class="fa-solid fa-check"></i> Unlimited projects</li>
+          <li><i class="fa-solid fa-check"></i> 100 GB storage</li>
+          <li><i class="fa-solid fa-check"></i> Priority support</li>
+          <li><i class="fa-solid fa-check"></i> Advanced analytics</li>
+          <li><i class="fa-solid fa-check"></i> Custom domain</li>
+          <li><i class="fa-solid fa-check"></i> API access</li>
+        </ul>
+        <a href="#partners" class="pl11__btn pl11__btn--primary">Get started</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pl11__card">
+        <div class="pl11__card-head">
+          <h3>Enterprise</h3>
+          <p>For large organizations at scale.</p>
+        </div>
+        <div class="pl11__price">
+          <span class="pl11__amount" data-m="79" data-y="63">$79</span>
+          <span class="pl11__period">/month</span>
+        </div>
+        <ul class="pl11__features">
+          <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited storage</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated manager</li>
+          <li><i class="fa-solid fa-check"></i> SSO & audit logs</li>
+          <li><i class="fa-solid fa-check"></i> SLA guarantee</li>
+          <li><i class="fa-solid fa-check"></i> Custom integrations</li>
+        </ul>
+        <a href="#partners" class="pl11__btn">Contact sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== PLANS v11 — Glass cards + SVG wave + billing toggle + ribbon ===== */
+
+  .pl11 {
+    position: relative;
+    padding: clamp(70px, 8vw, 110px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  .pl11__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    color: color-mix(in srgb, var(--secondStyleColor) 4%, transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .pl11 .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Head */
+  .pl11__head {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pl11__kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .pl11__head h2 {
+    margin: 0;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .pl11__head > p {
+    margin: 0;
+    font-size: 15px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* Toggle */
+  .pl11__toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .pl11__toggle-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: color-mix(in srgb, var(--textColor1) 45%, transparent);
+    transition: color 0.25s ease;
+    cursor: pointer;
+  }
+
+  .pl11__toggle-label--active {
+    color: var(--textColor1);
+    font-weight: 600;
+  }
+
+  .pl11__badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    color: var(--secondStyleColor);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .pl11__switch {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    border-radius: 100px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.25s ease;
+  }
+
+  .pl11__switch-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    transition: transform 0.25s ease;
+  }
+
+  .pl11__switch.active {
+    background: color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
+  }
+
+  .pl11__switch.active .pl11__switch-thumb {
+    transform: translateX(22px);
+  }
+
+  /* Grid */
+  .pl11__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2.5vw, 24px);
+    align-items: start;
+  }
+
+  /* Card */
+  .pl11__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: clamp(24px, 3vw, 36px);
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pl11__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+  }
+
+  /* Featured card */
+  .pl11__card--featured {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    background: linear-gradient(165deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    box-shadow: 0 0 50px color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .pl11__card--featured:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 50%, transparent);
+    box-shadow: 0 0 70px color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+  }
+
+  /* Ribbon */
+  .pl11__ribbon {
+    position: absolute;
+    top: 16px;
+    right: -1px;
+    padding: 5px 14px 5px 18px;
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+  }
+
+  /* Card head */
+  .pl11__card-head h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .pl11__card-head p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+  }
+
+  /* Price */
+  .pl11__price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .pl11__amount {
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .pl11__period {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--textColor1) 45%, transparent);
+    font-weight: 500;
+  }
+
+  /* Features */
+  .pl11__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pl11__features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--textColor1) 78%, transparent);
+  }
+
+  .pl11__features li i {
+    font-size: 12px;
+    color: var(--secondStyleColor);
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .pl11__features--off {
+    opacity: 0.4;
+  }
+
+  .pl11__features--off i {
+    color: color-mix(in srgb, var(--textColor1) 35%, transparent) !important;
+  }
+
+  /* Button */
+  .pl11__btn {
+    display: block;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    background: transparent;
+    color: var(--textColor1);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    margin-top: auto;
+  }
+
+  .pl11__btn:hover {
+    background: color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .pl11__btn--primary {
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    border-color: var(--secondStyleColor);
+  }
+
+  .pl11__btn--primary:hover {
+    background: var(--secondStyleColor);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .pl11__grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .pl11__card--featured {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pl11 {
+      padding: 50px 0;
+    }
+
+    .pl11__head {
+      margin-bottom: 36px;
+    }
+
+    .pl11__head h2 {
+      font-size: 24px;
+    }
+
+    .pl11__card {
+      padding: 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pl11__card,
+    .pl11__btn,
+    .pl11__switch-thumb,
+    .pl11__toggle-label {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.querySelector(".pl11");
+    if (!section) return;
+
+    var sw = section.querySelector(".pl11__switch");
+    var labels = section.querySelectorAll(".pl11__toggle-label");
+    var amounts = section.querySelectorAll(".pl11__amount");
+    var yearly = false;
+
+    function update() {
+      labels.forEach(function (l) {
+        var isYearly = l.getAttribute("data-period") === "yearly";
+        l.classList.toggle("pl11__toggle-label--active", isYearly === yearly);
+      });
+      sw.classList.toggle("active", yearly);
+
+      amounts.forEach(function (el) {
+        var val = yearly ? el.getAttribute("data-y") : el.getAttribute("data-m");
+        el.textContent = "$" + val;
+      });
+    }
+
+    sw.addEventListener("click", function () {
+      yearly = !yearly;
+      update();
+    });
+
+    labels.forEach(function (l) {
+      l.addEventListener("click", function () {
+        yearly = l.getAttribute("data-period") === "yearly";
+        update();
+      });
+    });
+  })();
+</script>
