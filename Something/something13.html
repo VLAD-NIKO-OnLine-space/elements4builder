@@ -1,272 +1,203 @@
-<section class="sm13" id="download">
+<section class="sm14" id="team">
   <div class="container">
-    <div class="sm13__layout">
-      <!-- Mockup image -->
-      <div class="sm13__visual">
-        <div class="sm13__mockup">
+    <div class="sm14__head">
+      <span class="sm14__kicker">Our team</span>
+      <h2>The people behind the product</h2>
+      <p>A small, focused team that ships fast and cares deeply about quality.</p>
+    </div>
+
+    <div class="sm14__grid">
+      <div class="sm14__member">
+        <div class="sm14__avatar">
           <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
         </div>
-        <div class="sm13__glow" aria-hidden="true"></div>
+        <h3>Alex Rivera</h3>
+        <span class="sm14__role">CEO & Founder</span>
       </div>
 
-      <!-- Text + pills + buttons -->
-      <div class="sm13__content">
-        <span class="sm13__kicker">Download the app</span>
-        <h2>Take it everywhere with you</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          consequatur minus harum molestias saepe mollitia veniam.
-        </p>
-
-        <div class="sm13__pills">
-          <span class="sm13__pill"><i class="fa-solid fa-bolt"></i> Fast</span>
-          <span class="sm13__pill"><i class="fa-solid fa-shield-halved"></i> Secure</span>
-          <span class="sm13__pill"><i class="fa-solid fa-cloud"></i> Synced</span>
-          <span class="sm13__pill"><i class="fa-solid fa-bell"></i> Notifications</span>
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
         </div>
+        <h3>Maria Chen</h3>
+        <span class="sm14__role">Lead Designer</span>
+      </div>
 
-        <div class="sm13__buttons">
-          <a href="#partners" class="sm13__store">
-            <i class="fa-brands fa-apple"></i>
-            <div>
-              <small>Download on the</small>
-              <strong>App Store</strong>
-            </div>
-          </a>
-          <a href="#partners" class="sm13__store">
-            <i class="fa-brands fa-google-play"></i>
-            <div>
-              <small>Get it on</small>
-              <strong>Google Play</strong>
-            </div>
-          </a>
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
         </div>
+        <h3>James Okoro</h3>
+        <span class="sm14__role">Senior Engineer</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>Sophie Lang</h3>
+        <span class="sm14__role">Product Manager</span>
+      </div>
+
+      <div class="sm14__member">
+        <div class="sm14__avatar">
+          <img data-image alt="" loading="lazy" />
+          <div class="sm14__ring" aria-hidden="true"></div>
+        </div>
+        <h3>David Kim</h3>
+        <span class="sm14__role">DevOps Lead</span>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* ===== SOMETHING v13 — App promo: mockup + pills + store buttons ===== */
+  /* ===== SOMETHING v14 — Team strip with circular avatars + orbit ring ===== */
 
-  .sm13 {
+  .sm14 {
     padding: clamp(70px, 8vw, 110px) 0;
     color: var(--textColor1);
-    overflow: hidden;
   }
 
-  .sm13__layout {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: clamp(30px, 5vw, 60px);
-    align-items: center;
+  .sm14__head {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 50px;
   }
 
-  /* Visual */
-  .sm13__visual {
-    position: relative;
-    width: clamp(220px, 26vw, 300px);
-  }
-
-  .sm13__mockup {
-    border-radius: calc(var(--borderRadius) * 1.6);
-    overflow: hidden;
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 18%, transparent);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
-    aspect-ratio: 9 / 16;
-  }
-
-  .sm13__mockup img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.45s ease;
-  }
-
-  .sm13__mockup:hover img {
-    transform: scale(1.04);
-  }
-
-  .sm13__glow {
-    position: absolute;
-    inset: -20px;
-    border-radius: 999px;
-    background: var(--secondStyleColor);
-    opacity: 0.05;
-    filter: blur(50px);
-    z-index: -1;
-    animation: sm13Breathe 3.5s ease-in-out infinite alternate;
-  }
-
-  @keyframes sm13Breathe {
-    0% { opacity: 0.03; transform: scale(0.95); }
-    100% { opacity: 0.08; transform: scale(1.06); }
-  }
-
-  /* Content */
-  .sm13__content {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .sm13__kicker {
+  .sm14__kicker {
+    display: inline-block;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--secondStyleColor);
+    margin-bottom: 12px;
   }
 
-  .sm13__content h2 {
-    margin: 0;
-    font-size: clamp(24px, 3.5vw, 38px);
+  .sm14__head h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 3.5vw, 38px);
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.15;
   }
 
-  .sm13__content > p {
+  .sm14__head p {
     margin: 0;
     font-size: 15px;
-    line-height: 1.7;
-    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
-    max-width: 450px;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
   }
 
-  /* Pills */
-  .sm13__pills {
+  .sm14__grid {
     display: flex;
+    justify-content: center;
+    gap: clamp(24px, 4vw, 48px);
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 4px;
   }
 
-  .sm13__pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 7px 14px;
-    border-radius: 100px;
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
-    background: color-mix(in srgb, var(--secondStyleColor) 5%, transparent);
-    font-size: 12px;
-    font-weight: 600;
-    color: color-mix(in srgb, var(--textColor1) 75%, transparent);
-  }
-
-  .sm13__pill i {
-    font-size: 11px;
-    color: var(--secondStyleColor);
-  }
-
-  /* Store buttons */
-  .sm13__buttons {
+  .sm14__member {
     display: flex;
-    gap: 12px;
-    margin-top: 8px;
-  }
-
-  .sm13__store {
-    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 12px 20px;
-    border-radius: var(--borderRadius);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
-    background: rgba(255, 255, 255, 0.03);
-    text-decoration: none;
-    color: var(--textColor1);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    text-align: center;
   }
 
-  .sm13__store:hover {
-    transform: translateY(-2px);
+  .sm14__avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .sm14__avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    transition: transform 0.3s ease;
+  }
+
+  .sm14__member:hover .sm14__avatar img {
+    transform: scale(1.06);
+  }
+
+  .sm14__ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    animation: sm14Spin 20s linear infinite;
+  }
+
+  .sm14__member:hover .sm14__ring {
     border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
   }
 
-  .sm13__store i {
-    font-size: 24px;
-    color: var(--secondStyleColor);
+  @keyframes sm14Spin {
+    to { transform: rotate(360deg); }
   }
 
-  .sm13__store small {
-    display: block;
-    font-size: 10px;
-    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
-    line-height: 1;
-  }
-
-  .sm13__store strong {
+  .sm14__member h3 {
+    margin: 0;
     font-size: 15px;
     font-weight: 600;
   }
 
-  /* Responsive */
-  @media (max-width: 950px) {
-    .sm13__visual {
-      width: clamp(200px, 24vw, 260px);
-    }
+  .sm14__role {
+    font-size: 12px;
+    color: var(--secondStyleColor);
+    font-weight: 500;
   }
 
   @media (max-width: 800px) {
-    .sm13__layout {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      text-align: center;
+    .sm14__avatar {
+      width: 84px;
+      height: 84px;
     }
 
-    .sm13__visual {
-      width: 220px;
-    }
-
-    .sm13__content {
-      align-items: center;
-    }
-
-    .sm13__pills {
-      justify-content: center;
-    }
-
-    .sm13__buttons {
-      justify-content: center;
-    }
-
-    .sm13__content > p {
-      max-width: 100%;
+    .sm14__member h3 {
+      font-size: 14px;
     }
   }
 
   @media (max-width: 600px) {
-    .sm13 {
+    .sm14 {
       padding: 50px 0;
     }
 
-    .sm13__content h2 {
-      font-size: 22px;
+    .sm14__head {
+      margin-bottom: 36px;
     }
 
-    .sm13__buttons {
-      flex-direction: column;
-      width: 100%;
+    .sm14__head h2 {
+      font-size: 24px;
     }
 
-    .sm13__store {
-      justify-content: center;
+    .sm14__grid {
+      gap: 20px;
     }
 
-    .sm13__visual {
-      width: 180px;
+    .sm14__avatar {
+      width: 72px;
+      height: 72px;
+    }
+
+    .sm14__ring {
+      inset: -5px;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .sm13__glow {
+    .sm14__ring {
       animation: none;
     }
 
-    .sm13__mockup img,
-    .sm13__store {
+    .sm14__avatar img {
       transition: none;
     }
   }
