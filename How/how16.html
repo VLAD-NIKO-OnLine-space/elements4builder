@@ -1,0 +1,590 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+/>
+
+<section class="hw16" id="how-it-works">
+  <div class="hw16__bg" aria-hidden="true">
+    <div class="hw16__orb hw16__orb--1"></div>
+    <div class="hw16__orb hw16__orb--2"></div>
+    <div class="hw16__orb hw16__orb--3"></div>
+  </div>
+
+  <div class="container">
+    <div class="hw16__head" data-aos="fade-up" data-aos-duration="800">
+      <span class="hw16__eyebrow">
+        <i class="fa-solid fa-bolt"></i> How It Works
+      </span>
+      <h2>Four simple steps to get started</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        vehicula sapien nec diam tincidunt, vel fermentum arcu gravida.
+      </p>
+    </div>
+
+    <div class="hw16__grid">
+      <!-- Card 1 -->
+      <div
+        class="hw16__card"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="700"
+      >
+        <div class="hw16__shimmer" aria-hidden="true"></div>
+        <div class="hw16__icon-wrap">
+          <div class="hw16__icon-ring" aria-hidden="true"></div>
+          <div class="hw16__icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+        </div>
+        <div class="hw16__number" aria-hidden="true">01</div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+        </p>
+        <div class="hw16__connector" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="hw16__card"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="700"
+      >
+        <div class="hw16__shimmer" aria-hidden="true"></div>
+        <div class="hw16__icon-wrap">
+          <div class="hw16__icon-ring" aria-hidden="true"></div>
+          <div class="hw16__icon">
+            <i class="fa-solid fa-pen-ruler"></i>
+          </div>
+        </div>
+        <div class="hw16__number" aria-hidden="true">02</div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero ante et urna.
+        </p>
+        <div class="hw16__connector" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="hw16__card"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="700"
+      >
+        <div class="hw16__shimmer" aria-hidden="true"></div>
+        <div class="hw16__icon-wrap">
+          <div class="hw16__icon-ring" aria-hidden="true"></div>
+          <div class="hw16__icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+        </div>
+        <div class="hw16__number" aria-hidden="true">03</div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Cras in malesuada est. Pellentesque a orci semper, efficitur arcu ac,
+          dignissim metus. Nullam nec dictum velit.
+        </p>
+        <div class="hw16__connector" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="hw16__card"
+        data-aos="fade-up"
+        data-aos-delay="450"
+        data-aos-duration="700"
+      >
+        <div class="hw16__shimmer" aria-hidden="true"></div>
+        <div class="hw16__icon-wrap">
+          <div class="hw16__icon-ring" aria-hidden="true"></div>
+          <div class="hw16__icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+        </div>
+        <div class="hw16__number" aria-hidden="true">04</div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Vivamus sed augue velit. Mauris feugiat magna vitae risus
+          scelerisque, ut volutpat nunc accumsan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v16 — Animated glow cards + AOS + FontAwesome ===== */
+
+  .hw16 {
+    position: relative;
+    padding: clamp(70px, 8vw, 120px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  /* ---- Floating background orbs ---- */
+  .hw16__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hw16__orb {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(100px);
+    opacity: 0.12;
+    animation: hw16Float 14s ease-in-out infinite alternate;
+  }
+
+  .hw16__orb--1 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondStyleColor);
+    top: -10%;
+    left: -5%;
+    animation-duration: 14s;
+  }
+
+  .hw16__orb--2 {
+    width: 300px;
+    height: 300px;
+    background: var(--secondStyleColor);
+    bottom: -8%;
+    right: -3%;
+    animation-duration: 18s;
+    animation-delay: -4s;
+  }
+
+  .hw16__orb--3 {
+    width: 200px;
+    height: 200px;
+    background: var(--secondStyleColor);
+    top: 40%;
+    left: 50%;
+    animation-duration: 22s;
+    animation-delay: -8s;
+  }
+
+  @keyframes hw16Float {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(30px, -20px) scale(1.1);
+    }
+    100% {
+      transform: translate(-20px, 15px) scale(0.95);
+    }
+  }
+
+  /* ---- Head ---- */
+  .hw16__head {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 65px;
+  }
+
+  .hw16__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    color: var(--secondStyleColor);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+
+  .hw16__eyebrow i {
+    font-size: 12px;
+    animation: hw16Pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes hw16Pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.2);
+    }
+  }
+
+  .hw16__head h2 {
+    margin: 0 0 16px;
+    font-size: clamp(30px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+
+  .hw16__head p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+  }
+
+  /* ---- Grid ---- */
+  .hw16__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* ---- Card ---- */
+  .hw16__card {
+    position: relative;
+    padding: 34px 24px 28px;
+    border-radius: var(--borderRadius);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    background: linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.01)
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    overflow: hidden;
+    text-align: center;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .hw16__card:hover {
+    transform: translateY(-8px);
+    border-color: color-mix(
+      in srgb,
+      var(--secondStyleColor) 55%,
+      transparent
+    );
+    box-shadow:
+      0 28px 60px rgba(0, 0, 0, 0.3),
+      0 0 40px color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+  }
+
+  /* Shimmer sweep */
+  .hw16__shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.06) 50%,
+      transparent 70%
+    );
+    pointer-events: none;
+    transition: none;
+  }
+
+  .hw16__card:hover .hw16__shimmer {
+    animation: hw16Shimmer 0.8s ease forwards;
+  }
+
+  @keyframes hw16Shimmer {
+    to {
+      left: 130%;
+    }
+  }
+
+  /* Icon */
+  .hw16__icon-wrap {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 22px;
+  }
+
+  .hw16__icon-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 999px;
+    border: 2px dashed
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    animation: hw16Ring 10s linear infinite;
+  }
+
+  @keyframes hw16Ring {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .hw16__icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--secondStyleColor) 20%, transparent),
+      color-mix(in srgb, var(--secondStyleColor) 6%, transparent)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hw16__card:hover .hw16__icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
+
+  .hw16__icon i {
+    font-size: 26px;
+    color: var(--secondStyleColor);
+    filter: drop-shadow(
+      0 4px 10px
+        color-mix(in srgb, var(--secondStyleColor) 40%, transparent)
+    );
+    transition: transform 0.35s ease;
+  }
+
+  .hw16__card:hover .hw16__icon i {
+    transform: scale(1.15);
+  }
+
+  /* Watermark number */
+  .hw16__number {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    opacity: 0.05;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .hw16__card:hover .hw16__number {
+    opacity: 0.1;
+  }
+
+  .hw16__card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hw16__card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+  }
+
+  /* Arrow connector between cards */
+  .hw16__connector {
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--bodyBG);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .hw16__connector i {
+    font-size: 11px;
+    color: var(--secondStyleColor);
+    animation: hw16Arrow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes hw16Arrow {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(3px);
+    }
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 950px) {
+    .hw16__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    /* Hide horizontal connectors in 2-col */
+    .hw16__card:nth-child(2) .hw16__connector,
+    .hw16__card:nth-child(4) .hw16__connector {
+      display: none;
+    }
+
+    .hw16__card {
+      padding: 28px 20px 24px;
+    }
+
+    .hw16__icon-wrap {
+      width: 64px;
+      height: 64px;
+    }
+
+    .hw16__icon i {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hw16__head {
+      margin-bottom: 45px;
+    }
+
+    .hw16__card h3 {
+      font-size: 16px;
+    }
+
+    .hw16__card p {
+      font-size: 13px;
+    }
+
+    .hw16__number {
+      font-size: 52px;
+    }
+
+    .hw16__orb--1 {
+      width: 250px;
+      height: 250px;
+    }
+    .hw16__orb--2 {
+      width: 200px;
+      height: 200px;
+    }
+    .hw16__orb--3 {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hw16 {
+      padding: 55px 0;
+    }
+
+    .hw16__head {
+      margin-bottom: 36px;
+    }
+
+    .hw16__head h2 {
+      font-size: 24px;
+    }
+
+    .hw16__head p {
+      font-size: 14px;
+    }
+
+    .hw16__eyebrow {
+      font-size: 11px;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+    }
+
+    .hw16__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    /* Hide all connectors on mobile */
+    .hw16__connector {
+      display: none;
+    }
+
+    .hw16__card {
+      padding: 24px 18px 20px;
+    }
+
+    .hw16__icon-wrap {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 16px;
+    }
+
+    .hw16__icon i {
+      font-size: 20px;
+    }
+
+    .hw16__icon-ring {
+      inset: -3px;
+    }
+
+    .hw16__card h3 {
+      font-size: 16px;
+    }
+
+    .hw16__card p {
+      font-size: 13px;
+    }
+
+    .hw16__number {
+      font-size: 44px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw16__orb,
+    .hw16__icon-ring,
+    .hw16__eyebrow i,
+    .hw16__connector i {
+      animation: none;
+    }
+    .hw16__card,
+    .hw16__icon,
+    .hw16__icon i,
+    .hw16__number {
+      transition: none;
+    }
+    .hw16__card:hover .hw16__shimmer {
+      animation: none;
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
