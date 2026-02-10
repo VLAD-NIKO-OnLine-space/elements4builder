@@ -1,0 +1,313 @@
+<section class="hw15__sec" id="how-it-works">
+  <div class="container">
+    <div class="hw15__head">
+      <h2>How It Works</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        vehicula sapien nec diam tincidunt, vel fermentum arcu gravida.
+      </p>
+    </div>
+
+    <div class="hw15__grid">
+      <!-- Card 1 -->
+      <div class="hw15__card">
+        <div class="hw15__glow" aria-hidden="true"></div>
+        <div class="hw15__top">
+          <div class="hw15__num">01</div>
+          <div class="hw15__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="var(--secondStyleColor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+        </p>
+        <div class="hw15__bar" aria-hidden="true">
+          <div class="hw15__fill" style="--w: 100%"></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="hw15__card">
+        <div class="hw15__glow" aria-hidden="true"></div>
+        <div class="hw15__top">
+          <div class="hw15__num">02</div>
+          <div class="hw15__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="var(--secondStyleColor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+          arcu, eget lobortis libero ante et urna.
+        </p>
+        <div class="hw15__bar" aria-hidden="true">
+          <div class="hw15__fill" style="--w: 75%"></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="hw15__card">
+        <div class="hw15__glow" aria-hidden="true"></div>
+        <div class="hw15__top">
+          <div class="hw15__num">03</div>
+          <div class="hw15__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="var(--secondStyleColor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Cras in malesuada est. Pellentesque a orci semper, efficitur arcu ac,
+          dignissim metus. Nullam nec dictum velit.
+        </p>
+        <div class="hw15__bar" aria-hidden="true">
+          <div class="hw15__fill" style="--w: 50%"></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="hw15__card">
+        <div class="hw15__glow" aria-hidden="true"></div>
+        <div class="hw15__top">
+          <div class="hw15__num">04</div>
+          <div class="hw15__arrow" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M5 15L15 5M15 5H7M15 5V13" stroke="var(--secondStyleColor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h3>Zdefiniuj dane strony</h3>
+        <p>
+          Vivamus sed augue velit. Mauris feugiat magna vitae risus
+          scelerisque, ut volutpat nunc accumsan.
+        </p>
+        <div class="hw15__bar" aria-hidden="true">
+          <div class="hw15__fill" style="--w: 25%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v15 — Glow cards with progress bars ===== */
+
+  .hw15__sec {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+  }
+
+  .hw15__head {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 55px;
+  }
+
+  .hw15__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hw15__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  .hw15__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  /* Card */
+  .hw15__card {
+    position: relative;
+    padding: 28px 22px 22px;
+    border-radius: var(--borderRadius);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 16%, transparent);
+    background: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+
+  .hw15__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 50%, transparent);
+  }
+
+  /* Corner glow on hover */
+  .hw15__glow {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    opacity: 0;
+    filter: blur(50px);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .hw15__card:hover .hw15__glow {
+    opacity: 0.15;
+  }
+
+  .hw15__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .hw15__num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--secondStyleColor);
+    opacity: 0.7;
+    line-height: 1;
+  }
+
+  .hw15__arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .hw15__card:hover .hw15__arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .hw15__card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hw15__card p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 68%, transparent);
+    flex: 1;
+  }
+
+  /* Progress bar */
+  .hw15__bar {
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+
+  .hw15__fill {
+    height: 100%;
+    width: var(--w, 0%);
+    border-radius: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--secondStyleColor),
+      color-mix(in srgb, var(--secondStyleColor) 50%, transparent)
+    );
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .hw15__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hw15__card {
+      padding: 24px 18px 18px;
+    }
+
+    .hw15__card h3 {
+      font-size: 16px;
+    }
+
+    .hw15__card p {
+      font-size: 13px;
+    }
+
+    .hw15__num {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hw15__sec {
+      padding: 50px 0;
+    }
+
+    .hw15__head {
+      margin-bottom: 32px;
+    }
+
+    .hw15__head h2 {
+      font-size: 24px;
+    }
+
+    .hw15__grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .hw15__card {
+      padding: 22px 16px 16px;
+    }
+
+    .hw15__card h3 {
+      font-size: 16px;
+    }
+
+    .hw15__card p {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .hw15__num {
+      font-size: 24px;
+    }
+
+    .hw15__top {
+      margin-bottom: 14px;
+    }
+
+    .hw15__arrow {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw15__card,
+    .hw15__arrow,
+    .hw15__glow {
+      transition: none;
+    }
+  }
+</style>
