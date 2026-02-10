@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du:*)",
+      "Bash([ -f .gitignore ])",
+      "Bash(find:*)"
+    ]
+  }
+}

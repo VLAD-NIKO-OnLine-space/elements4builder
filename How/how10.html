@@ -1,0 +1,386 @@
+<section class="hw10__sec" id="how-it-works">
+  <div class="container">
+    <div class="hw10__head">
+      <h2>How It Works</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        vehicula sapien nec diam tincidunt, vel fermentum arcu gravida.
+      </p>
+    </div>
+
+    <div class="hw10__track">
+      <svg
+        class="hw10__svg"
+        viewBox="0 0 800 900"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          class="hw10__path"
+          d="M400,0 C400,80 100,120 100,200 C100,280 700,320 700,400 C700,480 100,520 100,600 C100,680 700,720 700,800 C700,860 400,900 400,900"
+          stroke="var(--secondStyleColor)"
+          stroke-width="2"
+          stroke-dasharray="10 8"
+          opacity="0.35"
+        />
+      </svg>
+
+      <!-- Step 1 — LEFT -->
+      <div class="hw10__row hw10__row--left">
+        <div class="hw10__card">
+          <span class="hw10__watermark" aria-hidden="true">01</span>
+          <div class="hw10__badge">01</div>
+          <h3 class="hw10__h3">Zdefiniuj dane strony</h3>
+          <p class="hw10__p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            placerat, arcu vitae facilisis tempus, lacus risus malesuada nibh.
+          </p>
+        </div>
+        <div class="hw10__dot" aria-hidden="true"></div>
+      </div>
+
+      <!-- Step 2 — RIGHT -->
+      <div class="hw10__row hw10__row--right">
+        <div class="hw10__dot" aria-hidden="true"></div>
+        <div class="hw10__card">
+          <span class="hw10__watermark" aria-hidden="true">02</span>
+          <div class="hw10__badge">02</div>
+          <h3 class="hw10__h3">Zdefiniuj dane strony</h3>
+          <p class="hw10__p">
+            Suspendisse commodo, nibh ac pretium vulputate, risus dui faucibus
+            arcu, eget lobortis libero ante et urna.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 — LEFT -->
+      <div class="hw10__row hw10__row--left">
+        <div class="hw10__card">
+          <span class="hw10__watermark" aria-hidden="true">03</span>
+          <div class="hw10__badge">03</div>
+          <h3 class="hw10__h3">Zdefiniuj dane strony</h3>
+          <p class="hw10__p">
+            Cras in malesuada est. Pellentesque a orci semper, efficitur arcu
+            ac, dignissim metus. Nullam nec dictum velit.
+          </p>
+        </div>
+        <div class="hw10__dot" aria-hidden="true"></div>
+      </div>
+
+      <!-- Step 4 — RIGHT -->
+      <div class="hw10__row hw10__row--right">
+        <div class="hw10__dot" aria-hidden="true"></div>
+        <div class="hw10__card">
+          <span class="hw10__watermark" aria-hidden="true">04</span>
+          <div class="hw10__badge">04</div>
+          <h3 class="hw10__h3">Zdefiniuj dane strony</h3>
+          <p class="hw10__p">
+            Vivamus sed augue velit. Mauris feugiat magna vitae risus
+            scelerisque, ut volutpat nunc accumsan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== HOW v10 — Zigzag serpentine layout ===== */
+
+  .hw10__sec {
+    padding: clamp(60px, 7vw, 100px) 0;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  /* Head */
+  .hw10__head {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 60px;
+  }
+
+  .hw10__head h2 {
+    margin: 0 0 14px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hw10__head p {
+    margin: 0;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+  }
+
+  /* Track — holds SVG + rows */
+  .hw10__track {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Central SVG serpentine */
+  .hw10__svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hw10__path {
+    animation: hw10Dash 25s linear infinite;
+  }
+
+  @keyframes hw10Dash {
+    to {
+      stroke-dashoffset: -360;
+    }
+  }
+
+  /* Row — alternating sides */
+  .hw10__row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+
+  .hw10__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .hw10__row--left {
+    justify-content: flex-start;
+    padding-right: 52%;
+  }
+
+  .hw10__row--right {
+    justify-content: flex-end;
+    padding-left: 52%;
+  }
+
+  /* Dot on the path */
+  .hw10__dot {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--secondStyleColor);
+    box-shadow:
+      0 0 0 4px color-mix(in srgb, var(--secondStyleColor) 25%, transparent),
+      0 0 18px color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+  }
+
+  /* Card — glassmorphism */
+  .hw10__card {
+    position: relative;
+    flex: 1;
+    padding: 28px 24px 24px;
+    border-radius: var(--borderRadius);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.02)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .hw10__card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 55%, transparent);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Watermark number */
+  .hw10__watermark {
+    position: absolute;
+    top: -18px;
+    right: -6px;
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--secondStyleColor);
+    opacity: 0.06;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Badge */
+  .hw10__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--secondStyleColor);
+    color: var(--bodyBG);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 20px
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .hw10__h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .hw10__p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: color-mix(in srgb, var(--textColor1) 75%, transparent);
+  }
+
+  /* ---- Responsive ---- */
+
+  /* Tablets — zigzag сужается */
+  @media (max-width: 950px) {
+    .hw10__track {
+      max-width: 700px;
+    }
+
+    .hw10__row--left {
+      padding-right: 46%;
+    }
+
+    .hw10__row--right {
+      padding-left: 46%;
+    }
+
+    .hw10__row {
+      margin-bottom: 40px;
+      gap: 18px;
+    }
+
+    .hw10__card {
+      padding: 24px 20px 20px;
+    }
+
+    .hw10__watermark {
+      font-size: 90px;
+      top: -12px;
+    }
+
+    .hw10__head {
+      margin-bottom: 45px;
+    }
+  }
+
+  /* Small tablets — zigzag ещё уже */
+  @media (max-width: 800px) {
+    .hw10__row--left {
+      padding-right: 40%;
+    }
+
+    .hw10__row--right {
+      padding-left: 40%;
+    }
+
+    .hw10__h3 {
+      font-size: 16px;
+    }
+
+    .hw10__p {
+      font-size: 13px;
+    }
+
+    .hw10__badge {
+      width: 34px;
+      height: 34px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Mobile — одна колонка, SVG и точки скрыты */
+  @media (max-width: 600px) {
+    .hw10__sec {
+      padding: 50px 0;
+    }
+
+    .hw10__svg {
+      display: none;
+    }
+
+    .hw10__dot {
+      display: none;
+    }
+
+    .hw10__row--left,
+    .hw10__row--right {
+      padding: 0;
+      justify-content: stretch;
+    }
+
+    .hw10__row {
+      margin-bottom: 20px;
+      gap: 0;
+    }
+
+    .hw10__card {
+      width: 100%;
+      padding: 22px 18px 18px;
+    }
+
+    .hw10__head {
+      margin-bottom: 32px;
+    }
+
+    .hw10__head h2 {
+      font-size: 24px;
+    }
+
+    .hw10__head p {
+      font-size: 14px;
+    }
+
+    .hw10__watermark {
+      font-size: 70px;
+      top: -10px;
+      right: -4px;
+    }
+
+    .hw10__h3 {
+      font-size: 16px;
+    }
+
+    .hw10__p {
+      font-size: 13px;
+    }
+
+    .hw10__badge {
+      width: 32px;
+      height: 32px;
+      font-size: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hw10__path {
+      animation: none;
+    }
+    .hw10__card {
+      transition: none;
+    }
+  }
+</style>
