@@ -4,8 +4,8 @@
       <h2>Gallery</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo commodi
-        impedit rem officia fugit repellendus vero recusandae, nihil
-        praesentium laudantium.
+        impedit rem officia fugit repellendus vero recusandae, nihil praesentium
+        laudantium.
       </p>
     </div>
   </div>
@@ -63,10 +63,10 @@
   }
 
   .gl11__head p {
-    max-width: 600px;
     margin: 12px auto 0;
     color: var(--textColor1);
     text-wrap: balance;
+    text-align: center;
   }
 
   .gl11__marquee-wrap {
@@ -87,11 +87,11 @@
   }
 
   .gl11__row--left {
-    animation: gl11-scroll-left 35s linear infinite;
+    animation: gl11-scroll-left 70s linear infinite;
   }
 
   .gl11__row--right {
-    animation: gl11-scroll-right 40s linear infinite;
+    animation: gl11-scroll-right 80s linear infinite;
   }
 
   .gl11__marquee-wrap:hover .gl11__row {
@@ -99,13 +99,21 @@
   }
 
   @keyframes gl11-scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   @keyframes gl11-scroll-right {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .gl11__item {
