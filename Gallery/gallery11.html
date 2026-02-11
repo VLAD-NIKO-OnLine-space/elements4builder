@@ -1,0 +1,179 @@
+<section class="gl11" id="gallery">
+  <div class="container">
+    <div class="gl11__head">
+      <h2>Gallery</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo commodi
+        impedit rem officia fugit repellendus vero recusandae, nihil
+        praesentium laudantium.
+      </p>
+    </div>
+  </div>
+
+  <div class="gl11__marquee-wrap">
+    <div class="gl11__row gl11__row--left">
+      <div class="gl11__track">
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+      </div>
+      <div class="gl11__track" aria-hidden="true">
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+      </div>
+    </div>
+
+    <div class="gl11__row gl11__row--right">
+      <div class="gl11__track">
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+      </div>
+      <div class="gl11__track" aria-hidden="true">
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+        <div class="gl11__item"><img data-image alt="" loading="lazy" /></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gl11 {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
+  .gl11__head {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .gl11__head p {
+    max-width: 600px;
+    margin: 12px auto 0;
+    color: var(--textColor1);
+    text-wrap: balance;
+  }
+
+  .gl11__marquee-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gl11__row {
+    display: flex;
+    width: max-content;
+  }
+
+  .gl11__track {
+    display: flex;
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .gl11__row--left {
+    animation: gl11-scroll-left 35s linear infinite;
+  }
+
+  .gl11__row--right {
+    animation: gl11-scroll-right 40s linear infinite;
+  }
+
+  .gl11__marquee-wrap:hover .gl11__row {
+    animation-play-state: paused;
+  }
+
+  @keyframes gl11-scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes gl11-scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .gl11__item {
+    flex-shrink: 0;
+    width: 340px;
+    height: 240px;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--textColor1) 10%, transparent);
+    transition: border-color 0.3s ease;
+  }
+
+  .gl11__item:hover {
+    border-color: var(--secondStyleColor);
+  }
+
+  .gl11__item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+  }
+
+  .gl11__item:hover img {
+    transform: scale(1.06);
+  }
+
+  @media (max-width: 950px) {
+    .gl11__item {
+      width: 280px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gl11 {
+      padding: 40px 0;
+    }
+
+    .gl11__head {
+      margin-bottom: 28px;
+    }
+
+    .gl11__marquee-wrap {
+      gap: 12px;
+    }
+
+    .gl11__track {
+      gap: 12px;
+      padding-right: 12px;
+    }
+
+    .gl11__item {
+      width: 220px;
+      height: 160px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gl11__row--left,
+    .gl11__row--right {
+      animation: none;
+    }
+
+    .gl11__item img {
+      transition: none;
+    }
+  }
+</style>
