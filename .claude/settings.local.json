@@ -3,7 +3,12 @@
     "allow": [
       "Bash(du:*)",
       "Bash([ -f .gitignore ])",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nadd how10 zigzag layout + CLAUDE.md\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nadd how11-how15: accordion, stepper, bento, strips, glow cards\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nadd reviews15: featured spotlight with stacked side cards and SVG dot pattern\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
