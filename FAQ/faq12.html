@@ -1,0 +1,564 @@
+<section class="faq12" id="faq">
+  <!-- Animated SVG wave background -->
+  <svg
+    class="faq12__bg"
+    viewBox="0 0 1400 900"
+    aria-hidden="true"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <linearGradient id="faq12-waveGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop
+          offset="0%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.04"
+        />
+        <stop
+          offset="50%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.1"
+        />
+        <stop
+          offset="100%"
+          stop-color="var(--secondStyleColor)"
+          stop-opacity="0.04"
+        />
+      </linearGradient>
+    </defs>
+
+    <!-- Wave 1 — top -->
+    <path
+      d="M-200,280 C100,180 300,380 600,280 S1100,180 1400,280 S1700,380 2000,280"
+      fill="none"
+      stroke="url(#faq12-waveGrad)"
+      stroke-width="1"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0;-600,0;0,0"
+        dur="30s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+    <!-- Wave 2 — middle -->
+    <path
+      d="M-200,460 C100,360 300,560 600,460 S1100,360 1400,460 S1700,560 2000,460"
+      fill="none"
+      stroke="url(#faq12-waveGrad)"
+      stroke-width="0.8"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0;500,0;0,0"
+        dur="36s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+    <!-- Wave 3 — bottom -->
+    <path
+      d="M-200,640 C100,540 300,740 600,640 S1100,540 1400,640 S1700,740 2000,640"
+      fill="none"
+      stroke="url(#faq12-waveGrad)"
+      stroke-width="0.6"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0,0;-400,0;0,0"
+        dur="25s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+    <!-- Pulsing dots -->
+    <circle
+      cx="180"
+      cy="140"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.15"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.15;0.4;0.15"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="1220"
+      cy="230"
+      r="2.5"
+      fill="var(--secondStyleColor)"
+      opacity="0.12"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.12;0.35;0.12"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="700"
+      cy="820"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.1"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.1;0.3;0.1"
+        dur="6s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="1020"
+      cy="700"
+      r="3"
+      fill="var(--secondStyleColor)"
+      opacity="0.08"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.08;0.25;0.08"
+        dur="3.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="360"
+      cy="580"
+      r="1.5"
+      fill="var(--secondStyleColor)"
+      opacity="0.13"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.13;0.38;0.13"
+        dur="4.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="880"
+      cy="120"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.11"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.11;0.32;0.11"
+        dur="5.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </svg>
+
+  <!-- Floating glow blobs -->
+  <div class="faq12__glow faq12__glow--1" aria-hidden="true"></div>
+  <div class="faq12__glow faq12__glow--2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="faq12__head">
+      <span class="faq12__eyebrow">FAQ</span>
+      <h2 class="faq12__title">Frequently Asked Questions</h2>
+      <p class="faq12__sub">
+        Clear answers to common questions — no fluff, no jargon
+      </p>
+    </div>
+
+    <div class="faq12__grid">
+      <div class="faq12__col">
+        <article class="faq12__card" style="--float-delay: 0s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">01</span>
+          <h3 class="faq12__question">How fast can we get started?</h3>
+          <p class="faq12__answer">
+            Getting started typically takes just 10-20 minutes. Sign up,
+            complete the quick setup wizard, and your workspace is ready to
+            go.
+          </p>
+        </article>
+
+        <article class="faq12__card" style="--float-delay: 1.2s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">03</span>
+          <h3 class="faq12__question">Can we match our brand identity?</h3>
+          <p class="faq12__answer">
+            Absolutely. Use themes, design tokens, and accent colors. Plug in
+            your own design system so everything feels native to your brand.
+          </p>
+        </article>
+
+        <article class="faq12__card" style="--float-delay: 2.4s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">05</span>
+          <h3 class="faq12__question">How does pricing work?</h3>
+          <p class="faq12__answer">
+            Start small and upgrade as you grow — no hidden fees. Need a
+            custom plan? We can tailor it to your exact workflow and budget.
+          </p>
+        </article>
+      </div>
+
+      <div class="faq12__col faq12__col--offset">
+        <article class="faq12__card" style="--float-delay: 0.6s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">02</span>
+          <h3 class="faq12__question">What about data security?</h3>
+          <p class="faq12__answer">
+            We collect only what's necessary, encrypt data in transit and at
+            rest, and support role-based permissions. Your data stays yours.
+          </p>
+        </article>
+
+        <article class="faq12__card" style="--float-delay: 1.8s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">04</span>
+          <h3 class="faq12__question">Do you offer a free trial?</h3>
+          <p class="faq12__answer">
+            Yes. Book a quick demo or start a free trial to validate the
+            workflow with your team before committing to a plan.
+          </p>
+        </article>
+
+        <article class="faq12__card" style="--float-delay: 3s">
+          <div class="faq12__accent" aria-hidden="true"></div>
+          <span class="faq12__num">06</span>
+          <h3 class="faq12__question">What support is included?</h3>
+          <p class="faq12__answer">
+            Every plan includes email and chat support. Higher tiers unlock
+            priority response, a dedicated manager, and onboarding sessions.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===========================
+     FAQ 12 — Aurora Cascade
+     Staggered glass grid + animated SVG waves + shimmer accents
+     =========================== */
+
+  .faq12 {
+    position: relative;
+    padding: clamp(56px, 6vw, 100px) 0;
+    overflow: hidden;
+    color: var(--textColor1);
+    background: var(--bodyBG);
+  }
+
+  /* SVG wave background */
+  .faq12__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Floating glow blobs */
+  .faq12__glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(120px);
+    will-change: transform;
+  }
+
+  .faq12__glow--1 {
+    width: 460px;
+    height: 460px;
+    background: var(--secondStyleColor);
+    opacity: 0.06;
+    top: -100px;
+    right: -80px;
+    animation: faq12-drift1 28s ease-in-out infinite;
+  }
+
+  .faq12__glow--2 {
+    width: 380px;
+    height: 380px;
+    background: var(--secondStyleColor);
+    opacity: 0.05;
+    bottom: -80px;
+    left: -60px;
+    animation: faq12-drift2 33s ease-in-out infinite;
+  }
+
+  @keyframes faq12-drift1 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(-50px, 60px) scale(1.1);
+    }
+    66% {
+      transform: translate(30px, -40px) scale(0.95);
+    }
+  }
+
+  @keyframes faq12-drift2 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -30px) scale(1.08);
+    }
+    66% {
+      transform: translate(-60px, 50px) scale(0.93);
+    }
+  }
+
+  /* Header */
+  .faq12__head {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 48px;
+    text-align: center;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq12__eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .faq12__title {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+  }
+
+  .faq12__sub {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.55;
+  }
+
+  /* Grid — two columns, right column offset for cascade effect */
+  .faq12__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .faq12__col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .faq12__col--offset {
+    padding-top: 52px;
+  }
+
+  /* Card */
+  .faq12__card {
+    position: relative;
+    padding: 28px 26px 26px;
+    border-radius: var(--borderRadius);
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--secondStyleColor) 5%, transparent) 0%,
+      color-mix(in srgb, var(--bodyBG) 85%, transparent) 40%,
+      color-mix(in srgb, var(--secondStyleColor) 3%, transparent) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    overflow: hidden;
+    transition:
+      transform 0.45s cubic-bezier(0.33, 1, 0.53, 1),
+      border-color 0.4s ease,
+      box-shadow 0.45s ease;
+    animation: faq12-float 8s ease-in-out infinite;
+    animation-delay: var(--float-delay);
+    will-change: transform;
+  }
+
+  .faq12__card:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 40%, transparent);
+    box-shadow:
+      0 12px 40px color-mix(in srgb, var(--secondStyleColor) 14%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    animation-play-state: paused;
+  }
+
+  @keyframes faq12-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  /* Shimmer accent line at top of card */
+  .faq12__accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in srgb, var(--secondStyleColor) 40%, transparent) 30%,
+      var(--secondStyleColor) 50%,
+      color-mix(in srgb, var(--secondStyleColor) 40%, transparent) 70%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: faq12-shimmer 4s ease-in-out infinite;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+  }
+
+  .faq12__card:hover .faq12__accent {
+    opacity: 1;
+  }
+
+  @keyframes faq12-shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Number badge */
+  .faq12__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--secondStyleColor);
+    margin-bottom: 18px;
+    animation: faq12-breathe 3.5s ease-in-out infinite;
+  }
+
+  @keyframes faq12-breathe {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0
+        color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 18px 4px
+        color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    }
+  }
+
+  /* Question */
+  .faq12__question {
+    margin: 0 0 10px;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  /* Answer */
+  .faq12__answer {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.6;
+    opacity: 0.78;
+    transition: opacity 0.3s ease;
+  }
+
+  .faq12__card:hover .faq12__answer {
+    opacity: 1;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .faq12__bg * {
+      animation: none !important;
+    }
+    .faq12__glow {
+      animation: none !important;
+    }
+    .faq12__card {
+      animation: none !important;
+    }
+    .faq12__accent {
+      animation: none !important;
+    }
+    .faq12__num {
+      animation: none !important;
+    }
+  }
+
+  /* Responsive — tablets */
+  @media (max-width: 950px) {
+    .faq12__grid {
+      gap: 18px;
+    }
+    .faq12__col--offset {
+      padding-top: 36px;
+    }
+    .faq12__card {
+      padding: 24px 22px 22px;
+    }
+  }
+
+  /* Responsive — small tablets */
+  @media (max-width: 800px) {
+    .faq12__grid {
+      grid-template-columns: 1fr;
+      max-width: 560px;
+    }
+    .faq12__col--offset {
+      padding-top: 0;
+    }
+  }
+
+  /* Responsive — mobile */
+  @media (max-width: 600px) {
+    .faq12__card {
+      padding: 22px 18px 20px;
+    }
+    .faq12__num {
+      width: 36px;
+      height: 36px;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+  }
+</style>
