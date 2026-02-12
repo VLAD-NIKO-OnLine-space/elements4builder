@@ -1,481 +1,4 @@
 <section class="hr29">
-  <style>
-    /* ── Section ── */
-    .hr29 {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: var(--bodyBG);
-      padding: 100px 20px;
-    }
-
-    /* ── Gradient Mesh Blobs ── */
-    .hr29__mesh {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .hr29__blob {
-      position: absolute;
-      border-radius: 50%;
-      background: var(--secondStyleColor);
-      will-change: transform;
-      contain: layout paint;
-    }
-
-    .hr29__blob--a {
-      width: 550px;
-      height: 550px;
-      top: -15%;
-      left: -10%;
-      opacity: 0.25;
-      filter: blur(100px);
-      animation: hr29-dA 22s ease-in-out infinite;
-    }
-
-    .hr29__blob--b {
-      width: 420px;
-      height: 420px;
-      top: -5%;
-      right: -8%;
-      opacity: 0.2;
-      filter: blur(90px) hue-rotate(45deg);
-      animation: hr29-dB 26s ease-in-out infinite;
-    }
-
-    .hr29__blob--c {
-      width: 480px;
-      height: 480px;
-      bottom: -20%;
-      left: 30%;
-      opacity: 0.22;
-      filter: blur(110px) hue-rotate(-40deg);
-      animation: hr29-dC 20s ease-in-out infinite;
-    }
-
-    .hr29__blob--d {
-      width: 320px;
-      height: 320px;
-      top: 35%;
-      right: 15%;
-      opacity: 0.28;
-      filter: blur(80px) hue-rotate(90deg);
-      animation: hr29-dD 18s ease-in-out infinite;
-    }
-
-    .hr29__blob--e {
-      width: 380px;
-      height: 380px;
-      bottom: -10%;
-      left: -5%;
-      opacity: 0.18;
-      filter: blur(95px) hue-rotate(160deg);
-      animation: hr29-dE 28s ease-in-out infinite;
-    }
-
-    @keyframes hr29-dA {
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-      25% {
-        transform: translate(80px, 60px) scale(1.08);
-      }
-      50% {
-        transform: translate(40px, 120px) scale(0.95);
-      }
-      75% {
-        transform: translate(-30px, 70px) scale(1.04);
-      }
-    }
-
-    @keyframes hr29-dB {
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-      25% {
-        transform: translate(-70px, 50px) scale(0.92);
-      }
-      50% {
-        transform: translate(-110px, -20px) scale(1.1);
-      }
-      75% {
-        transform: translate(30px, -50px) scale(1);
-      }
-    }
-
-    @keyframes hr29-dC {
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-      33% {
-        transform: translate(60px, -80px) scale(1.06);
-      }
-      66% {
-        transform: translate(-50px, -40px) scale(0.94);
-      }
-    }
-
-    @keyframes hr29-dD {
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-      25% {
-        transform: translate(-40px, 30px) scale(1.12);
-      }
-      50% {
-        transform: translate(20px, -50px) scale(0.88);
-      }
-      75% {
-        transform: translate(50px, 20px) scale(1.05);
-      }
-    }
-
-    @keyframes hr29-dE {
-      0%,
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
-      30% {
-        transform: translate(90px, -30px) scale(1.1);
-      }
-      60% {
-        transform: translate(50px, 50px) scale(0.9);
-      }
-    }
-
-    /* ── Dot Grid Overlay ── */
-    .hr29__dots {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-image: radial-gradient(
-        circle,
-        color-mix(in srgb, var(--textColor1) 6%, transparent) 1px,
-        transparent 1px
-      );
-      background-size: 32px 32px;
-      pointer-events: none;
-    }
-
-    /* ── Floating SVG UI Shapes ── */
-    .hr29__shapes {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .hr29__sh {
-      animation: hr29-fade 8s ease-in-out infinite;
-    }
-
-    .hr29__sh:nth-child(2) {
-      animation-duration: 6s;
-      animation-delay: -2s;
-    }
-    .hr29__sh:nth-child(3) {
-      animation-duration: 10s;
-      animation-delay: -4s;
-    }
-    .hr29__sh:nth-child(4) {
-      animation-duration: 7s;
-      animation-delay: -1s;
-    }
-    .hr29__sh:nth-child(5) {
-      animation-duration: 9s;
-      animation-delay: -6s;
-    }
-    .hr29__sh:nth-child(6) {
-      animation-duration: 11s;
-      animation-delay: -3s;
-    }
-
-    @keyframes hr29-fade {
-      0%,
-      100% {
-        opacity: 0.08;
-      }
-      50% {
-        opacity: 0.16;
-      }
-    }
-
-    .hr29__sh rect,
-    .hr29__sh circle,
-    .hr29__sh line,
-    .hr29__sh polygon {
-      fill: none;
-      stroke: var(--secondStyleColor);
-      stroke-width: 1.5;
-    }
-
-    /* ── Center Glow ── */
-    .hr29__glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 900px;
-      height: 700px;
-      transform: translate(-50%, -50%);
-      background:
-        radial-gradient(
-          ellipse,
-          color-mix(in srgb, var(--secondStyleColor) 6%, transparent) 0%,
-          transparent 50%
-        ),
-        radial-gradient(
-          ellipse,
-          color-mix(in srgb, var(--bodyBG) 70%, transparent) 0%,
-          transparent 70%
-        );
-      z-index: 3;
-      pointer-events: none;
-    }
-
-    /* ── Content ── */
-    .hr29 .container {
-      position: relative;
-      max-width: var(--maxWidthContainer);
-      width: 100%;
-      z-index: 5;
-    }
-
-    .hr29__content {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .hr29__kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 20px;
-      border-radius: 100px;
-      background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
-      border: 1px solid
-        color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
-      color: var(--secondStyleColor);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-
-    .hr29__kicker i {
-      font-size: 11px;
-    }
-
-    .hr29__content h1 {
-      font-size: clamp(32px, 5vw, 60px);
-      font-weight: 800;
-      color: var(--textColor1);
-      line-height: 1.1;
-      margin: 0 0 20px;
-      letter-spacing: -0.02em;
-    }
-
-    .hr29__sub {
-      font-size: clamp(16px, 1.8vw, 19px);
-      color: color-mix(in srgb, var(--textColor1) 65%, transparent);
-      line-height: 1.65;
-      max-width: 560px;
-      margin: 0 auto 36px;
-    }
-
-    /* ── Buttons ── */
-    .hr29__actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 48px;
-    }
-
-    .hr29__btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: var(--borderRadius);
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
-
-    .hr29__btn--fill {
-      background: var(--secondStyleColor);
-      color: var(--textColor2);
-    }
-
-    .hr29__btn--fill:hover {
-      filter: brightness(1.1);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px
-        color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
-    }
-
-    .hr29__btn--fill i {
-      font-size: 13px;
-      transition: transform 0.25s ease;
-    }
-
-    .hr29__btn--fill:hover i {
-      transform: translateX(3px);
-    }
-
-    .hr29__btn--line {
-      background: transparent;
-      color: var(--textColor1);
-      border: 1px solid color-mix(in srgb, var(--textColor1) 20%, transparent);
-    }
-
-    .hr29__btn--line:hover {
-      border-color: color-mix(in srgb, var(--textColor1) 40%, transparent);
-      background: color-mix(in srgb, var(--textColor1) 5%, transparent);
-      transform: translateY(-2px);
-    }
-
-    .hr29__btn--line i {
-      font-size: 11px;
-    }
-
-    /* ── Stats ── */
-    .hr29__stats {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-    }
-
-    .hr29__stat {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .hr29__stat strong {
-      font-size: clamp(22px, 2.5vw, 30px);
-      font-weight: 800;
-      color: var(--textColor1);
-    }
-
-    .hr29__stat span {
-      font-size: 13px;
-      color: color-mix(in srgb, var(--textColor1) 50%, transparent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 500;
-    }
-
-    .hr29__stat-sep {
-      width: 1px;
-      height: 36px;
-      background: color-mix(in srgb, var(--textColor1) 12%, transparent);
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 950px) {
-      .hr29 {
-        padding: 80px 20px;
-      }
-      .hr29__blob--a {
-        width: 400px;
-        height: 400px;
-      }
-      .hr29__blob--b {
-        width: 320px;
-        height: 320px;
-      }
-      .hr29__blob--c {
-        width: 380px;
-        height: 380px;
-      }
-      .hr29__blob--d {
-        width: 250px;
-        height: 250px;
-      }
-      .hr29__blob--e {
-        width: 300px;
-        height: 300px;
-      }
-    }
-
-    @media (max-width: 800px) {
-      .hr29__glow {
-        width: 600px;
-        height: 500px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hr29 {
-        padding: 60px 16px;
-        min-height: 100svh;
-      }
-      .hr29__kicker {
-        font-size: 11px;
-        padding: 6px 14px;
-      }
-      .hr29__actions {
-        flex-direction: column;
-        gap: 12px;
-      }
-      .hr29__btn {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 24px;
-      }
-      .hr29__stats {
-        gap: 20px;
-      }
-      .hr29__stat-sep {
-        height: 28px;
-      }
-      .hr29__stat strong {
-        font-size: 22px;
-      }
-      .hr29__shapes {
-        display: none;
-      }
-      .hr29__dots {
-        background-size: 24px 24px;
-      }
-      .hr29__glow {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    /* ── Reduced Motion ── */
-    @media (prefers-reduced-motion: reduce) {
-      .hr29__blob {
-        animation: none;
-      }
-      .hr29__sh {
-        animation: none;
-      }
-      .hr29__shapes {
-        display: none;
-      }
-    }
-  </style>
-
   <!-- Gradient Mesh -->
   <div class="hr29__mesh" aria-hidden="true">
     <div class="hr29__blob hr29__blob--a"></div>
@@ -609,7 +132,7 @@
       <span class="hr29__kicker"
         ><i class="fa-solid fa-bolt"></i> Next Generation Platform</span
       >
-      <h1 data-var="domain_name">Build Something Extraordinary</h1>
+      <h1 data-var="domain_name"></h1>
       <p class="hr29__sub">
         Empower your workflow with cutting-edge tools designed for modern teams.
         Ship faster, scale effortlessly, and deliver exceptional digital
@@ -639,3 +162,480 @@
     </div>
   </div>
 </section>
+
+<style>
+  /* ── Section ── */
+  .hr29 {
+    position: relative;
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bodyBG);
+    padding: 100px 20px;
+  }
+
+  /* ── Gradient Mesh Blobs ── */
+  .hr29__mesh {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hr29__blob {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    will-change: transform;
+    contain: layout paint;
+  }
+
+  .hr29__blob--a {
+    width: 550px;
+    height: 550px;
+    top: -15%;
+    left: -10%;
+    opacity: 0.25;
+    filter: blur(100px);
+    animation: hr29-dA 22s ease-in-out infinite;
+  }
+
+  .hr29__blob--b {
+    width: 420px;
+    height: 420px;
+    top: -5%;
+    right: -8%;
+    opacity: 0.2;
+    filter: blur(90px) hue-rotate(45deg);
+    animation: hr29-dB 26s ease-in-out infinite;
+  }
+
+  .hr29__blob--c {
+    width: 480px;
+    height: 480px;
+    bottom: -20%;
+    left: 30%;
+    opacity: 0.22;
+    filter: blur(110px) hue-rotate(-40deg);
+    animation: hr29-dC 20s ease-in-out infinite;
+  }
+
+  .hr29__blob--d {
+    width: 320px;
+    height: 320px;
+    top: 35%;
+    right: 15%;
+    opacity: 0.28;
+    filter: blur(80px) hue-rotate(90deg);
+    animation: hr29-dD 18s ease-in-out infinite;
+  }
+
+  .hr29__blob--e {
+    width: 380px;
+    height: 380px;
+    bottom: -10%;
+    left: -5%;
+    opacity: 0.18;
+    filter: blur(95px) hue-rotate(160deg);
+    animation: hr29-dE 28s ease-in-out infinite;
+  }
+
+  @keyframes hr29-dA {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(80px, 60px) scale(1.08);
+    }
+    50% {
+      transform: translate(40px, 120px) scale(0.95);
+    }
+    75% {
+      transform: translate(-30px, 70px) scale(1.04);
+    }
+  }
+
+  @keyframes hr29-dB {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(-70px, 50px) scale(0.92);
+    }
+    50% {
+      transform: translate(-110px, -20px) scale(1.1);
+    }
+    75% {
+      transform: translate(30px, -50px) scale(1);
+    }
+  }
+
+  @keyframes hr29-dC {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(60px, -80px) scale(1.06);
+    }
+    66% {
+      transform: translate(-50px, -40px) scale(0.94);
+    }
+  }
+
+  @keyframes hr29-dD {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(-40px, 30px) scale(1.12);
+    }
+    50% {
+      transform: translate(20px, -50px) scale(0.88);
+    }
+    75% {
+      transform: translate(50px, 20px) scale(1.05);
+    }
+  }
+
+  @keyframes hr29-dE {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    30% {
+      transform: translate(90px, -30px) scale(1.1);
+    }
+    60% {
+      transform: translate(50px, 50px) scale(0.9);
+    }
+  }
+
+  /* ── Dot Grid Overlay ── */
+  .hr29__dots {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--textColor1) 6%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  /* ── Floating SVG UI Shapes ── */
+  .hr29__shapes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hr29__sh {
+    animation: hr29-fade 8s ease-in-out infinite;
+  }
+
+  .hr29__sh:nth-child(2) {
+    animation-duration: 6s;
+    animation-delay: -2s;
+  }
+  .hr29__sh:nth-child(3) {
+    animation-duration: 10s;
+    animation-delay: -4s;
+  }
+  .hr29__sh:nth-child(4) {
+    animation-duration: 7s;
+    animation-delay: -1s;
+  }
+  .hr29__sh:nth-child(5) {
+    animation-duration: 9s;
+    animation-delay: -6s;
+  }
+  .hr29__sh:nth-child(6) {
+    animation-duration: 11s;
+    animation-delay: -3s;
+  }
+
+  @keyframes hr29-fade {
+    0%,
+    100% {
+      opacity: 0.08;
+    }
+    50% {
+      opacity: 0.16;
+    }
+  }
+
+  .hr29__sh rect,
+  .hr29__sh circle,
+  .hr29__sh line,
+  .hr29__sh polygon {
+    fill: none;
+    stroke: var(--secondStyleColor);
+    stroke-width: 1.5;
+  }
+
+  /* ── Center Glow ── */
+  .hr29__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 700px;
+    transform: translate(-50%, -50%);
+    background:
+      radial-gradient(
+        ellipse,
+        color-mix(in srgb, var(--secondStyleColor) 6%, transparent) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse,
+        color-mix(in srgb, var(--bodyBG) 70%, transparent) 0%,
+        transparent 70%
+      );
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* ── Content ── */
+  .hr29 .container {
+    position: relative;
+    max-width: var(--maxWidthContainer);
+    width: 100%;
+    z-index: 5;
+  }
+
+  .hr29__content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hr29__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
+    color: var(--secondStyleColor);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .hr29__kicker i {
+    font-size: 11px;
+  }
+
+  .hr29__content h1 {
+    font-size: clamp(32px, 5vw, 60px);
+    font-weight: 800;
+    color: var(--textColor1);
+    line-height: 1.1;
+    margin: 0 0 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .hr29__sub {
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: color-mix(in srgb, var(--textColor1) 65%, transparent);
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 36px;
+  }
+
+  /* ── Buttons ── */
+  .hr29__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .hr29__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+
+  .hr29__btn--fill {
+    background: var(--secondStyleColor);
+    color: var(--textColor2);
+  }
+
+  .hr29__btn--fill:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+  }
+
+  .hr29__btn--fill i {
+    font-size: 13px;
+    transition: transform 0.25s ease;
+  }
+
+  .hr29__btn--fill:hover i {
+    transform: translateX(3px);
+  }
+
+  .hr29__btn--line {
+    background: transparent;
+    color: var(--textColor1);
+    border: 1px solid color-mix(in srgb, var(--textColor1) 20%, transparent);
+  }
+
+  .hr29__btn--line:hover {
+    border-color: color-mix(in srgb, var(--textColor1) 40%, transparent);
+    background: color-mix(in srgb, var(--textColor1) 5%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .hr29__btn--line i {
+    font-size: 11px;
+  }
+
+  /* ── Stats ── */
+  .hr29__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .hr29__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hr29__stat strong {
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 800;
+    color: var(--textColor1);
+  }
+
+  .hr29__stat span {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .hr29__stat-sep {
+    width: 1px;
+    height: 36px;
+    background: color-mix(in srgb, var(--textColor1) 12%, transparent);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 950px) {
+    .hr29 {
+      padding: 80px 20px;
+    }
+    .hr29__blob--a {
+      width: 400px;
+      height: 400px;
+    }
+    .hr29__blob--b {
+      width: 320px;
+      height: 320px;
+    }
+    .hr29__blob--c {
+      width: 380px;
+      height: 380px;
+    }
+    .hr29__blob--d {
+      width: 250px;
+      height: 250px;
+    }
+    .hr29__blob--e {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hr29__glow {
+      width: 600px;
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hr29 {
+      padding: 60px 16px;
+      min-height: 700px;
+    }
+    .hr29__kicker {
+      font-size: 11px;
+      padding: 6px 14px;
+    }
+    .hr29__actions {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .hr29__btn {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 24px;
+    }
+    .hr29__stats {
+      gap: 20px;
+    }
+    .hr29__stat-sep {
+      height: 28px;
+    }
+    .hr29__stat strong {
+      font-size: 22px;
+    }
+    .hr29__shapes {
+      display: none;
+    }
+    .hr29__dots {
+      background-size: 24px 24px;
+    }
+    .hr29__glow {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .hr29__blob {
+      animation: none;
+    }
+    .hr29__sh {
+      animation: none;
+    }
+    .hr29__shapes {
+      display: none;
+    }
+  }
+</style>

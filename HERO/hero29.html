@@ -1,0 +1,374 @@
+<section class="hr30">
+  <style>
+    /* ── Section ── */
+    .hr30 {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--bodyBG);
+      padding: 120px 20px 80px;
+    }
+
+    /* ── Background Image ── */
+    .hr30__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* ── Dimmer ── */
+    .hr30__dim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        radial-gradient(ellipse at 30% 30%, color-mix(in srgb, var(--bodyBG) 55%, transparent), transparent 60%),
+        color-mix(in srgb, var(--bodyBG) 72%, transparent);
+    }
+
+    /* ── Broken Glass SVG ── */
+    .hr30__glass {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hr30__crack {
+      fill: none;
+      stroke: color-mix(in srgb, var(--textColor1) 18%, transparent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+    }
+
+    .hr30__crack--fine {
+      stroke: color-mix(in srgb, var(--textColor1) 11%, transparent);
+      stroke-width: 1;
+    }
+
+    .hr30__shard {
+      fill: var(--textColor1);
+      stroke: none;
+    }
+
+    .hr30__spark {
+      fill: var(--textColor1);
+    }
+
+    .hr30__impact-ring {
+      fill: none;
+      stroke: var(--textColor1);
+      stroke-width: 1;
+    }
+
+    /* ── Content ── */
+    .hr30 .container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: var(--maxWidthContainer);
+      margin: 0 auto;
+    }
+
+    .hr30__body {
+      text-align: center;
+    }
+
+    .hr30__body h1 {
+      font-size: clamp(32px, 5.2vw, 58px);
+      font-weight: 800;
+      color: var(--textColor1);
+      line-height: 1.1;
+      margin: 0 0 20px;
+      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hr30__sub {
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: color-mix(in srgb, var(--textColor1) 62%, transparent);
+      line-height: 1.7;
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+
+    /* ── Button ── */
+    .hr30__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 36px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--textColor2);
+      background: var(--secondStyleColor);
+      border-radius: var(--borderRadius);
+      transition: all 0.25s ease;
+    }
+
+    .hr30__cta i {
+      font-size: 13px;
+      transition: transform 0.25s ease;
+    }
+
+    .hr30__cta:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    }
+
+    .hr30__cta:hover i {
+      transform: translateX(3px);
+    }
+
+    /* ── Cards ── */
+    .hr30__cards {
+      display: flex;
+      gap: 24px;
+      max-width: 820px;
+      margin: 56px auto 0;
+      text-align: left;
+    }
+
+    .hr30__card {
+      flex: 1;
+      padding: 32px 28px;
+      background: color-mix(in srgb, var(--bodyBG) 45%, transparent);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid color-mix(in srgb, var(--textColor1) 10%, transparent);
+      border-radius: var(--borderRadius);
+      transition: all 0.3s ease;
+    }
+
+    .hr30__card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--secondStyleColor) 28%, transparent);
+      box-shadow: 0 16px 48px color-mix(in srgb, var(--bodyBG) 50%, transparent);
+    }
+
+    .hr30__card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondStyleColor);
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+
+    .hr30__card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--textColor1);
+      margin: 0 0 10px;
+    }
+
+    .hr30__card p {
+      font-size: 14px;
+      color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 950px) {
+      .hr30 { padding: 100px 20px 60px; }
+    }
+
+    @media (max-width: 800px) {
+      .hr30__cards {
+        flex-direction: column;
+        max-width: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hr30 {
+        padding: 80px 16px 48px;
+        min-height: 100svh;
+      }
+      .hr30__body h1 {
+        font-size: clamp(28px, 7vw, 40px);
+      }
+      .hr30__cta {
+        width: 100%;
+        justify-content: center;
+      }
+      .hr30__card {
+        padding: 24px 20px;
+      }
+    }
+
+    /* ── Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .hr30__spark { animation: none; }
+      .hr30__shimmer-g { display: none; }
+    }
+  </style>
+
+  <!-- Background Image -->
+  <img data-image class="hr30__bg" alt="background" loading="lazy" />
+
+  <!-- Dimmer -->
+  <div class="hr30__dim" aria-hidden="true"></div>
+
+  <!-- Broken Glass Overlay -->
+  <svg class="hr30__glass" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hr30-shim" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="white" stop-opacity="0" />
+        <stop offset="0.35" stop-color="white" stop-opacity="0" />
+        <stop offset="0.5" stop-color="white" stop-opacity="1" />
+        <stop offset="0.65" stop-color="white" stop-opacity="0" />
+        <stop offset="1" stop-color="white" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+
+    <!-- ── Shard Fills (inner facets) ── -->
+    <g class="hr30__shard">
+      <polygon points="350,230 215,138 288,102" opacity="0.04" />
+      <polygon points="350,230 288,102 408,118" opacity="0.06" />
+      <polygon points="350,230 408,118 518,155" opacity="0.03" />
+      <polygon points="350,230 518,155 535,248" opacity="0.055" />
+      <polygon points="350,230 535,248 510,358" opacity="0.04" />
+      <polygon points="350,230 510,358 442,448" opacity="0.025" />
+      <polygon points="350,230 442,448 365,478" opacity="0.05" />
+      <polygon points="350,230 365,478 258,445" opacity="0.035" />
+      <polygon points="350,230 258,445 192,372" opacity="0.045" />
+      <polygon points="350,230 192,372 175,278" opacity="0.06" />
+      <polygon points="350,230 175,278 190,198" opacity="0.03" />
+      <polygon points="350,230 190,198 215,138" opacity="0.05" />
+    </g>
+
+    <!-- ── Outer shard fills ── -->
+    <g class="hr30__shard">
+      <polygon points="215,138 288,102 278,62 102,65" opacity="0.025" />
+      <polygon points="288,102 408,118 488,75 278,62" opacity="0.035" />
+      <polygon points="518,155 535,248 1010,218 878,105" opacity="0.02" />
+      <polygon points="535,248 510,358 955,385 1010,218" opacity="0.03" />
+      <polygon points="365,478 258,445 215,670 530,705" opacity="0.025" />
+      <polygon points="192,372 175,278 105,348 98,558" opacity="0.04" />
+    </g>
+
+    <!-- ── Primary Radial Cracks ── -->
+    <g class="hr30__crack">
+      <line x1="350" y1="230" x2="0" y2="0" />
+      <line x1="350" y1="230" x2="250" y2="0" />
+      <line x1="350" y1="230" x2="550" y2="0" />
+      <line x1="350" y1="230" x2="900" y2="0" />
+      <line x1="350" y1="230" x2="1300" y2="0" />
+      <line x1="350" y1="230" x2="1440" y2="200" />
+      <line x1="350" y1="230" x2="1440" y2="500" />
+      <line x1="350" y1="230" x2="1440" y2="900" />
+      <line x1="350" y1="230" x2="1050" y2="900" />
+      <line x1="350" y1="230" x2="600" y2="900" />
+      <line x1="350" y1="230" x2="150" y2="900" />
+      <line x1="350" y1="230" x2="0" y2="700" />
+      <line x1="350" y1="230" x2="0" y2="400" />
+      <line x1="350" y1="230" x2="0" y2="120" />
+    </g>
+
+    <!-- ── Inner Ring ── -->
+    <path class="hr30__crack"
+      d="M215,138 L288,102 L408,118 L518,155 L535,248 L510,358 L442,448 L365,478 L258,445 L192,372 L175,278 L190,198 Z" />
+
+    <!-- ── Outer Ring ── -->
+    <path class="hr30__crack--fine hr30__crack"
+      d="M102,65 L278,62 L488,75 L712,82 L878,105 L1010,218 L955,385 L900,570 L772,632 L530,705 L215,670 L98,558 L105,348 L100,152 Z" />
+
+    <!-- ── Branch Cracks (inner → outer) ── -->
+    <g class="hr30__crack--fine hr30__crack">
+      <line x1="215" y1="138" x2="102" y2="65" />
+      <line x1="288" y1="102" x2="278" y2="62" />
+      <line x1="408" y1="118" x2="488" y2="75" />
+      <line x1="518" y1="155" x2="878" y2="105" />
+      <line x1="535" y1="248" x2="1010" y2="218" />
+      <line x1="510" y1="358" x2="955" y2="385" />
+      <line x1="442" y1="448" x2="900" y2="570" />
+      <line x1="365" y1="478" x2="530" y2="705" />
+      <line x1="258" y1="445" x2="215" y2="670" />
+      <line x1="192" y1="372" x2="98" y2="558" />
+      <line x1="175" y1="278" x2="105" y2="348" />
+      <line x1="190" y1="198" x2="100" y2="152" />
+    </g>
+
+    <!-- ── Micro-cracks near impact ── -->
+    <g class="hr30__crack" stroke-width="1">
+      <path d="M350,230 L328,212 L348,192" />
+      <path d="M350,230 L375,218 L392,232" />
+      <path d="M350,230 L338,258 L312,248" />
+    </g>
+
+    <!-- ── Impact Point ── -->
+    <circle cx="350" cy="230" r="20" class="hr30__impact-ring" opacity="0.15" />
+    <circle cx="350" cy="230" r="8" class="hr30__impact-ring" opacity="0.25" />
+    <circle cx="350" cy="230" r="3" fill="white" opacity="0.35" />
+
+    <!-- ── Sparkle Points ── -->
+    <g class="hr30__spark">
+      <circle cx="215" cy="138" r="2" opacity="0.3">
+        <animate attributeName="opacity" values="0.15;0.5;0.15" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="518" cy="155" r="1.8" opacity="0.25">
+        <animate attributeName="opacity" values="0.1;0.55;0.1" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="510" cy="358" r="2" opacity="0.2">
+        <animate attributeName="opacity" values="0.1;0.45;0.1" dur="3.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="258" cy="445" r="1.5" opacity="0.3">
+        <animate attributeName="opacity" values="0.15;0.5;0.15" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="175" cy="278" r="2" opacity="0.2">
+        <animate attributeName="opacity" values="0.1;0.5;0.1" dur="4.2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="878" cy="105" r="1.5" opacity="0.15">
+        <animate attributeName="opacity" values="0.08;0.35;0.08" dur="5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="530" cy="705" r="1.8" opacity="0.15">
+        <animate attributeName="opacity" values="0.08;0.4;0.08" dur="3.8s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- ── Shimmer Sweep ── -->
+    <g class="hr30__shimmer-g" opacity="0.06">
+      <animateTransform attributeName="transform" type="translate" values="-700,0; 2300,0" dur="7s" repeatCount="indefinite" />
+      <rect x="0" y="-100" width="350" height="1200" transform="rotate(25 175 500)" fill="url(#hr30-shim)" />
+    </g>
+
+  </svg>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="hr30__body">
+      <h1 data-var="domain_name">Transform Your Vision Into Reality</h1>
+      <p class="hr30__sub">A powerful platform that brings your ideas to life with modern tools, seamless collaboration, and enterprise-grade reliability.</p>
+      <a href="#partners" class="hr30__cta"><span>Start Building</span> <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="hr30__cards">
+        <article class="hr30__card">
+          <div class="hr30__card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Lightning Fast</h3>
+          <p>Built on cutting-edge infrastructure delivering sub-millisecond response times and effortless horizontal scaling.</p>
+        </article>
+        <article class="hr30__card">
+          <div class="hr30__card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Enterprise Ready</h3>
+          <p>SOC 2 compliant with end-to-end encryption, 99.99% uptime guarantee, and dedicated 24/7 support for your team.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
