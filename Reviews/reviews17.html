@@ -1,0 +1,624 @@
+<section class="rv17" id="reviews">
+  <!-- Animated SVG constellation background -->
+  <svg
+    class="rv17__bg"
+    viewBox="0 0 1400 800"
+    aria-hidden="true"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <!-- Constellation connection lines -->
+    <g
+      class="rv17__lines"
+      stroke="var(--secondStyleColor)"
+      stroke-width="0.5"
+      fill="none"
+    >
+      <!-- Top chain -->
+      <line x1="120" y1="100" x2="350" y2="60" opacity="0.08" />
+      <line x1="350" y1="60" x2="580" y2="140" opacity="0.06" />
+      <line x1="580" y1="140" x2="820" y2="80" opacity="0.07" />
+      <line x1="820" y1="80" x2="1050" y2="120" opacity="0.06" />
+      <line x1="1050" y1="120" x2="1280" y2="70" opacity="0.08" />
+      <!-- Middle chain -->
+      <line x1="200" y1="340" x2="450" y2="290" opacity="0.07" />
+      <line x1="450" y1="290" x2="700" y2="370" opacity="0.06" />
+      <line x1="700" y1="370" x2="950" y2="310" opacity="0.08" />
+      <line x1="950" y1="310" x2="1200" y2="350" opacity="0.06" />
+      <!-- Bottom chain -->
+      <line x1="100" y1="590" x2="330" y2="540" opacity="0.06" />
+      <line x1="330" y1="540" x2="600" y2="610" opacity="0.07" />
+      <line x1="600" y1="610" x2="860" y2="570" opacity="0.06" />
+      <line x1="860" y1="570" x2="1100" y2="630" opacity="0.08" />
+      <line x1="1100" y1="630" x2="1320" y2="550" opacity="0.06" />
+      <!-- Cross connections -->
+      <line x1="120" y1="100" x2="200" y2="340" opacity="0.05" />
+      <line x1="350" y1="60" x2="450" y2="290" opacity="0.06" />
+      <line x1="580" y1="140" x2="700" y2="370" opacity="0.05" />
+      <line x1="820" y1="80" x2="950" y2="310" opacity="0.06" />
+      <line x1="1050" y1="120" x2="1200" y2="350" opacity="0.05" />
+      <line x1="200" y1="340" x2="100" y2="590" opacity="0.06" />
+      <line x1="450" y1="290" x2="330" y2="540" opacity="0.05" />
+      <line x1="700" y1="370" x2="600" y2="610" opacity="0.06" />
+      <line x1="950" y1="310" x2="860" y2="570" opacity="0.05" />
+      <line x1="1200" y1="350" x2="1100" y2="630" opacity="0.06" />
+      <line x1="1280" y1="70" x2="1320" y2="550" opacity="0.04" />
+      <!-- Diagonal cross -->
+      <line x1="350" y1="60" x2="200" y2="340" opacity="0.04" />
+      <line x1="700" y1="370" x2="820" y2="80" opacity="0.04" />
+      <line x1="330" y1="540" x2="600" y2="370" opacity="0.04"
+        ><animate
+          attributeName="opacity"
+          values="0.04;0.1;0.04"
+          dur="6s"
+          repeatCount="indefinite"
+      /></line>
+      <line x1="950" y1="310" x2="1100" y2="630" opacity="0.04"
+        ><animate
+          attributeName="opacity"
+          values="0.04;0.1;0.04"
+          dur="7s"
+          repeatCount="indefinite"
+      /></line>
+    </g>
+
+    <!-- Constellation nodes -->
+    <g fill="var(--secondStyleColor)">
+      <!-- Top row -->
+      <circle cx="120" cy="100" r="2.5" opacity="0.15">
+        <animate
+          attributeName="opacity"
+          values="0.15;0.45;0.15"
+          dur="3.5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="350" cy="60" r="3" opacity="0.2">
+        <animate
+          attributeName="opacity"
+          values="0.2;0.5;0.2"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="580" cy="140" r="2" opacity="0.12">
+        <animate
+          attributeName="opacity"
+          values="0.12;0.4;0.12"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="820" cy="80" r="2.5" opacity="0.18">
+        <animate
+          attributeName="opacity"
+          values="0.18;0.48;0.18"
+          dur="3.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="1050" cy="120" r="2" opacity="0.14">
+        <animate
+          attributeName="opacity"
+          values="0.14;0.42;0.14"
+          dur="4.5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="1280" cy="70" r="3" opacity="0.16">
+        <animate
+          attributeName="opacity"
+          values="0.16;0.44;0.16"
+          dur="5.5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <!-- Middle row -->
+      <circle cx="200" cy="340" r="2" opacity="0.13">
+        <animate
+          attributeName="opacity"
+          values="0.13;0.38;0.13"
+          dur="4.2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="450" cy="290" r="2.5" opacity="0.17">
+        <animate
+          attributeName="opacity"
+          values="0.17;0.45;0.17"
+          dur="3.6s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="700" cy="370" r="3" opacity="0.2">
+        <animate
+          attributeName="opacity"
+          values="0.2;0.5;0.2"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="950" cy="310" r="2" opacity="0.15">
+        <animate
+          attributeName="opacity"
+          values="0.15;0.42;0.15"
+          dur="4.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="1200" cy="350" r="2.5" opacity="0.12">
+        <animate
+          attributeName="opacity"
+          values="0.12;0.38;0.12"
+          dur="3.4s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <!-- Bottom row -->
+      <circle cx="100" cy="590" r="2" opacity="0.1">
+        <animate
+          attributeName="opacity"
+          values="0.1;0.35;0.1"
+          dur="5.2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="330" cy="540" r="2.5" opacity="0.14">
+        <animate
+          attributeName="opacity"
+          values="0.14;0.4;0.14"
+          dur="4s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="600" cy="610" r="2" opacity="0.16">
+        <animate
+          attributeName="opacity"
+          values="0.16;0.44;0.16"
+          dur="3.2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="860" cy="570" r="3" opacity="0.18">
+        <animate
+          attributeName="opacity"
+          values="0.18;0.48;0.18"
+          dur="4.6s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="1100" cy="630" r="2" opacity="0.12">
+        <animate
+          attributeName="opacity"
+          values="0.12;0.36;0.12"
+          dur="5.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="1320" cy="550" r="2.5" opacity="0.14">
+        <animate
+          attributeName="opacity"
+          values="0.14;0.4;0.14"
+          dur="3.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </g>
+  </svg>
+
+  <div class="container">
+    <div class="rv17__head">
+      <span class="rv17__eyebrow">Testimonials</span>
+      <h2 class="rv17__title">Trusted by Teams Worldwide</h2>
+      <p class="rv17__sub">
+        See why thousands of teams rely on us to power their workflow
+      </p>
+    </div>
+
+    <div class="rv17__grid">
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="rv17__text">
+            "The platform changed how we approach projects. Everything from
+            planning to delivery is faster and more transparent than anything
+            we've used before."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">AL</div>
+            <div>
+              <p class="rv17__name">Alex Layton</p>
+              <p class="rv17__role">Engineering Manager, StreamOps</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="rv17__text">
+            "We evaluated five tools before choosing this one. Six months in,
+            zero regrets. The collaboration features alone save us hours
+            every week."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">KP</div>
+            <div>
+              <p class="rv17__name">Kira Patel</p>
+              <p class="rv17__role">Product Director, Lumin Labs</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="rv17__text">
+            "Support team is incredible. We had a complex migration edge case
+            and they walked us through every step. Felt like they were part
+            of our own team."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">JR</div>
+            <div>
+              <p class="rv17__name">James Russo</p>
+              <p class="rv17__role">CTO, Vertex Digital</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="rv17__text">
+            "The API is beautifully designed. We built custom integrations in
+            days, not weeks. Documentation is clear and the SDK is
+            first-class."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">MW</div>
+            <div>
+              <p class="rv17__name">Mia Wong</p>
+              <p class="rv17__role">Lead Developer, CodeForge</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="rv17__text">
+            "Scaling from 10 to 200 users was seamless. Performance stayed
+            rock solid. The admin controls give us exactly the visibility we
+            need."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">TS</div>
+            <div>
+              <p class="rv17__name">Thomas Silva</p>
+              <p class="rv17__role">VP Operations, ScaleUp Inc</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv17__card">
+        <div class="rv17__border" aria-hidden="true"></div>
+        <div class="rv17__inner">
+          <div class="rv17__stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="rv17__text">
+            "Finally, a tool that understands design teams. The workflow is
+            intuitive, feedback loops are tight, and handoff to engineering
+            is effortless."
+          </p>
+          <div class="rv17__author">
+            <div class="rv17__avatar">LH</div>
+            <div>
+              <p class="rv17__name">Lena Hoffmann</p>
+              <p class="rv17__role">Design Lead, Forma Studio</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===========================
+     Reviews 17 — Constellation Network
+     Animated SVG mesh background + rotating gradient card borders
+     =========================== */
+
+  @property --rv17-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .rv17 {
+    position: relative;
+    padding: clamp(56px, 6vw, 100px) 0;
+    overflow: hidden;
+    color: var(--textColor1);
+    background:
+      radial-gradient(
+        1200px 700px at 20% 20%,
+        color-mix(in srgb, var(--secondStyleColor) 6%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        1000px 600px at 80% 80%,
+        color-mix(in srgb, var(--secondStyleColor) 5%, transparent) 0%,
+        transparent 65%
+      ),
+      var(--bodyBG);
+  }
+
+  /* SVG constellation background */
+  .rv17__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Header */
+  .rv17__head {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 48px;
+    text-align: center;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rv17__eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .rv17__title {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+  }
+
+  .rv17__sub {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.55;
+  }
+
+  /* Grid */
+  .rv17__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Card — wrapper for rotating border */
+  .rv17__card {
+    position: relative;
+    border-radius: var(--borderRadius);
+  }
+
+  /* Rotating conic-gradient border */
+  .rv17__border {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--borderRadius);
+    padding: 1.5px;
+    background: conic-gradient(
+      from var(--rv17-angle),
+      transparent 0%,
+      var(--secondStyleColor) 6%,
+      color-mix(in srgb, var(--secondStyleColor) 55%, transparent) 14%,
+      transparent 26%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .rv17__card:hover .rv17__border {
+    opacity: 1;
+    animation: rv17-rotate 4s linear infinite;
+  }
+
+  @keyframes rv17-rotate {
+    to {
+      --rv17-angle: 360deg;
+    }
+  }
+
+  /* Card inner content */
+  .rv17__inner {
+    position: relative;
+    padding: 28px 24px 24px;
+    border-radius: var(--borderRadius);
+    background: color-mix(in srgb, var(--bodyBG) 78%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    transition:
+      border-color 0.4s ease,
+      box-shadow 0.4s ease,
+      transform 0.4s cubic-bezier(0.33, 1, 0.53, 1);
+  }
+
+  .rv17__card:hover .rv17__inner {
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow:
+      0 10px 36px color-mix(in srgb, var(--secondStyleColor) 12%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+  }
+
+  /* Stars */
+  .rv17__stars {
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Text */
+  .rv17__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--textColor1);
+    opacity: 0.85;
+    flex: 1;
+  }
+
+  /* Author */
+  .rv17__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .rv17__avatar {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--secondStyleColor);
+  }
+
+  .rv17__name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .rv17__role {
+    margin: 0;
+    font-size: 12px;
+    color: var(--textColor1);
+    opacity: 0.6;
+    line-height: 1.4;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .rv17__bg * {
+      animation: none !important;
+    }
+    .rv17__border {
+      animation: none !important;
+    }
+    .rv17__inner {
+      transition: none !important;
+    }
+  }
+
+  /* Responsive — tablets */
+  @media (max-width: 950px) {
+    .rv17__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .rv17__inner {
+      padding: 24px 20px 20px;
+    }
+  }
+
+  /* Responsive — small tablets */
+  @media (max-width: 800px) {
+    .rv17__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Responsive — mobile */
+  @media (max-width: 600px) {
+    .rv17__grid {
+      grid-template-columns: 1fr;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .rv17__inner {
+      padding: 22px 18px 20px;
+    }
+  }
+</style>

@@ -1,0 +1,483 @@
+<section class="rv18" id="reviews">
+  <!-- Floating glow blobs -->
+  <div class="rv18__glow rv18__glow--1" aria-hidden="true"></div>
+  <div class="rv18__glow rv18__glow--2" aria-hidden="true"></div>
+  <div class="rv18__glow rv18__glow--3" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="rv18__head">
+      <span class="rv18__eyebrow">Reviews</span>
+      <h2 class="rv18__title">Loved by Teams Everywhere</h2>
+      <p class="rv18__sub">
+        Hover any card to spotlight it — real stories from real users
+      </p>
+    </div>
+
+    <div class="rv18__grid">
+      <!-- Featured large card -->
+      <article class="rv18__card rv18__card--featured">
+        <i class="fa-solid fa-quote-left rv18__quote-icon"></i>
+        <p class="rv18__text rv18__text--large">
+          "This platform fundamentally changed how our distributed team
+          collaborates. What used to take days now takes hours. The real-time
+          features, combined with enterprise-grade security, made adoption
+          effortless across all departments."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar rv18__avatar--lg">SC</div>
+          <div>
+            <p class="rv18__name">Sarah Coleman</p>
+            <p class="rv18__role">VP of Engineering, GlobalTech Inc.</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="rv18__card">
+        <div class="rv18__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv18__text">
+          "Best-in-class onboarding. We were productive on day one. The
+          learning curve is practically zero for anyone who's used modern
+          tools."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar">MB</div>
+          <div>
+            <p class="rv18__name">Michael Brown</p>
+            <p class="rv18__role">CEO, Horizon Enterprises</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="rv18__card">
+        <div class="rv18__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv18__text">
+          "The analytics alone justify the price. We discovered bottlenecks
+          we didn't know existed and improved delivery speed by 40%."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar">DK</div>
+          <div>
+            <p class="rv18__name">David Kim</p>
+            <p class="rv18__role">Data Lead, InsightPulse</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="rv18__card">
+        <div class="rv18__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="rv18__text">
+          "We needed something that scales. From 5 users to 500, not a
+          single hiccup. Infrastructure just works — that's rare."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar">NR</div>
+          <div>
+            <p class="rv18__name">Nina Ramirez</p>
+            <p class="rv18__role">CTO, Launchpad.io</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="rv18__card">
+        <div class="rv18__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv18__text">
+          "Support team treats you like a partner, not a ticket number. They
+          proactively suggested optimizations we hadn't even considered."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar">OT</div>
+          <div>
+            <p class="rv18__name">Oscar Torres</p>
+            <p class="rv18__role">Operations Lead, Meridian</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+
+      <article class="rv18__card">
+        <div class="rv18__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv18__text">
+          "Clean API, great docs, responsive team. Integration took two days
+          instead of the two weeks we budgeted. Seriously impressed."
+        </p>
+        <div class="rv18__author">
+          <div class="rv18__avatar">YC</div>
+          <div>
+            <p class="rv18__name">Yuki Chen</p>
+            <p class="rv18__role">Senior Developer, ByteCraft</p>
+          </div>
+        </div>
+        <div class="rv18__shine" aria-hidden="true"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===========================
+     Reviews 18 — Spotlight Mosaic
+     Bento grid + CSS hover spotlight (dim others) + holographic shine
+     =========================== */
+
+  .rv18 {
+    position: relative;
+    padding: clamp(56px, 6vw, 100px) 0;
+    overflow: hidden;
+    color: var(--textColor1);
+    background: var(--bodyBG);
+  }
+
+  /* Floating glow blobs */
+  .rv18__glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(130px);
+    will-change: transform;
+  }
+
+  .rv18__glow--1 {
+    width: 500px;
+    height: 500px;
+    background: var(--secondStyleColor);
+    opacity: 0.05;
+    top: -120px;
+    left: 10%;
+    animation: rv18-drift1 24s ease-in-out infinite;
+  }
+
+  .rv18__glow--2 {
+    width: 400px;
+    height: 400px;
+    background: var(--secondStyleColor);
+    opacity: 0.04;
+    bottom: -100px;
+    right: 5%;
+    animation: rv18-drift2 28s ease-in-out infinite;
+  }
+
+  .rv18__glow--3 {
+    width: 300px;
+    height: 300px;
+    background: var(--secondStyleColor);
+    opacity: 0.035;
+    top: 50%;
+    left: 55%;
+    animation: rv18-drift3 20s ease-in-out infinite;
+  }
+
+  @keyframes rv18-drift1 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(50px, 40px) scale(1.1);
+    }
+  }
+
+  @keyframes rv18-drift2 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-40px, -50px) scale(1.08);
+    }
+  }
+
+  @keyframes rv18-drift3 {
+    0%,
+    100% {
+      transform: translate(-50%, 0) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -35px) scale(1.12);
+    }
+  }
+
+  /* Header */
+  .rv18__head {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 48px;
+    text-align: center;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rv18__eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .rv18__title {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+  }
+
+  .rv18__sub {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.55;
+  }
+
+  /* Bento grid */
+  .rv18__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 18px;
+  }
+
+  /* Featured card spans 2 rows */
+  .rv18__card--featured {
+    grid-row: 1 / 3;
+  }
+
+  /* Card */
+  .rv18__card {
+    position: relative;
+    padding: 28px 24px 24px;
+    border-radius: var(--borderRadius);
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--secondStyleColor) 4%, transparent) 0%,
+      color-mix(in srgb, var(--bodyBG) 85%, transparent) 50%,
+      color-mix(in srgb, var(--secondStyleColor) 2%, transparent) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    transition:
+      opacity 0.45s ease,
+      filter 0.45s ease,
+      transform 0.45s cubic-bezier(0.33, 1, 0.53, 1),
+      border-color 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  /* ── Spotlight effect: hover grid → dim all, un-dim hovered ── */
+  .rv18__grid:hover .rv18__card {
+    opacity: 0.4;
+    filter: blur(2px) saturate(0.6);
+  }
+
+  .rv18__grid:hover .rv18__card:hover {
+    opacity: 1;
+    filter: blur(0) saturate(1);
+    transform: scale(1.03);
+    z-index: 2;
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+    box-shadow:
+      0 16px 48px color-mix(in srgb, var(--secondStyleColor) 16%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+  }
+
+  /* Holographic shine sweep on hover */
+  .rv18__shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      color-mix(in srgb, var(--secondStyleColor) 8%, transparent) 45%,
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent) 50%,
+      color-mix(in srgb, var(--secondStyleColor) 8%, transparent) 55%,
+      transparent 70%
+    );
+    background-size: 250% 100%;
+    background-position: 200% 0;
+    pointer-events: none;
+    transition: background-position 0.8s ease;
+  }
+
+  .rv18__card:hover .rv18__shine {
+    background-position: -50% 0;
+  }
+
+  /* Quote icon (featured card) */
+  .rv18__quote-icon {
+    font-size: 28px;
+    color: var(--secondStyleColor);
+    opacity: 0.3;
+  }
+
+  /* Stars */
+  .rv18__stars {
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Text */
+  .rv18__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--textColor1);
+    opacity: 0.85;
+    flex: 1;
+  }
+
+  .rv18__text--large {
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.75;
+  }
+
+  /* Author */
+  .rv18__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 6px;
+  }
+
+  .rv18__avatar {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--secondStyleColor);
+  }
+
+  .rv18__avatar--lg {
+    width: 52px;
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .rv18__name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .rv18__role {
+    margin: 0;
+    font-size: 12px;
+    color: var(--textColor1);
+    opacity: 0.6;
+    line-height: 1.4;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .rv18__glow {
+      animation: none !important;
+    }
+    .rv18__card {
+      transition: none !important;
+    }
+    .rv18__shine {
+      transition: none !important;
+    }
+  }
+
+  /* Responsive — tablets */
+  @media (max-width: 950px) {
+    .rv18__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    .rv18__card--featured {
+      grid-row: auto;
+      grid-column: 1 / -1;
+    }
+    .rv18__card {
+      padding: 24px 20px 20px;
+    }
+  }
+
+  /* Responsive — small tablets */
+  @media (max-width: 800px) {
+    .rv18__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Responsive — mobile */
+  @media (max-width: 600px) {
+    .rv18__grid {
+      grid-template-columns: 1fr;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .rv18__card--featured {
+      grid-column: auto;
+    }
+    .rv18__card {
+      padding: 22px 18px 20px;
+    }
+    /* Disable spotlight on mobile (no hover) */
+    .rv18__grid:hover .rv18__card {
+      opacity: 1;
+      filter: none;
+    }
+    .rv18__grid:hover .rv18__card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+</style>
