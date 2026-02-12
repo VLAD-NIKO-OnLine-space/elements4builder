@@ -1,0 +1,817 @@
+<section class="rv16" id="reviews">
+  <!-- SVG decorative background -->
+  <svg
+    class="rv16__bg"
+    viewBox="0 0 1400 800"
+    aria-hidden="true"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <!-- Orbit rings -->
+    <circle
+      cx="700"
+      cy="400"
+      r="340"
+      fill="none"
+      stroke="var(--secondStyleColor)"
+      stroke-width="0.4"
+      stroke-dasharray="3 12"
+      opacity="0.06"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 700 400"
+        to="360 700 400"
+        dur="160s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="700"
+      cy="400"
+      r="220"
+      fill="none"
+      stroke="var(--secondStyleColor)"
+      stroke-width="0.4"
+      stroke-dasharray="2 10"
+      opacity="0.05"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 700 400"
+        to="-360 700 400"
+        dur="120s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+    <!-- Pulsing dots -->
+    <circle
+      cx="200"
+      cy="120"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.12"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.12;0.35;0.12"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="1200"
+      cy="200"
+      r="2.5"
+      fill="var(--secondStyleColor)"
+      opacity="0.1"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.1;0.3;0.1"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="350"
+      cy="650"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.14"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.14;0.4;0.14"
+        dur="3.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="1050"
+      cy="600"
+      r="1.8"
+      fill="var(--secondStyleColor)"
+      opacity="0.1"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.1;0.32;0.1"
+        dur="6s"
+        repeatCount="indefinite"
+      />
+    </circle>
+    <circle
+      cx="900"
+      cy="100"
+      r="2"
+      fill="var(--secondStyleColor)"
+      opacity="0.08"
+    >
+      <animate
+        attributeName="opacity"
+        values="0.08;0.28;0.08"
+        dur="4.5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </svg>
+
+  <!-- Floating glow blobs -->
+  <div class="rv16__glow rv16__glow--1" aria-hidden="true"></div>
+  <div class="rv16__glow rv16__glow--2" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <div class="container">
+    <div class="rv16__head">
+      <span class="rv16__eyebrow">Testimonials</span>
+      <h2 class="rv16__title">What People Are Saying</h2>
+      <p class="rv16__sub">
+        Real feedback from real teams using our platform every day
+      </p>
+    </div>
+  </div>
+
+  <!-- Marquee Row 1 — scrolls left -->
+  <div class="rv16__marquee">
+    <div class="rv16__track rv16__track--left">
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "The onboarding was seamless. Within a day our entire team was up
+          and running. The interface is intuitive and the performance is
+          outstanding."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">EL</div>
+          <div>
+            <p class="rv16__name">Emma Li</p>
+            <p class="rv16__role">Senior Engineer, CloudScale</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "We reduced our deployment time by 60%. The automation features
+          alone justified the switch. Best decision we made this year."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">MK</div>
+          <div>
+            <p class="rv16__name">Marcus Kim</p>
+            <p class="rv16__role">DevOps Lead, NovaTech</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Customer support is world-class. Every question answered within
+          minutes. They genuinely care about helping you succeed with the
+          product."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">SN</div>
+          <div>
+            <p class="rv16__name">Sophie Nguyen</p>
+            <p class="rv16__role">Product Manager, Relay Studio</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="4 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="rv16__text">
+          "The analytics dashboard gives us insights we never had before.
+          Data-driven decisions are now part of our daily workflow thanks to
+          this tool."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">AR</div>
+          <div>
+            <p class="rv16__name">Arjun Rao</p>
+            <p class="rv16__role">Head of Analytics, DataPulse</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicated for seamless loop -->
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "The onboarding was seamless. Within a day our entire team was up
+          and running. The interface is intuitive and the performance is
+          outstanding."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">EL</div>
+          <div>
+            <p class="rv16__name">Emma Li</p>
+            <p class="rv16__role">Senior Engineer, CloudScale</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "We reduced our deployment time by 60%. The automation features
+          alone justified the switch. Best decision we made this year."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">MK</div>
+          <div>
+            <p class="rv16__name">Marcus Kim</p>
+            <p class="rv16__role">DevOps Lead, NovaTech</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Customer support is world-class. Every question answered within
+          minutes. They genuinely care about helping you succeed with the
+          product."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">SN</div>
+          <div>
+            <p class="rv16__name">Sophie Nguyen</p>
+            <p class="rv16__role">Product Manager, Relay Studio</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="rv16__text">
+          "The analytics dashboard gives us insights we never had before.
+          Data-driven decisions are now part of our daily workflow thanks to
+          this tool."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">AR</div>
+          <div>
+            <p class="rv16__name">Arjun Rao</p>
+            <p class="rv16__role">Head of Analytics, DataPulse</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Marquee Row 2 — scrolls right -->
+  <div class="rv16__marquee">
+    <div class="rv16__track rv16__track--right">
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Migrating from our legacy system was painless. The import tools
+          handled everything and we were live in production the same week."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">DR</div>
+          <div>
+            <p class="rv16__name">Daniel Reyes</p>
+            <p class="rv16__role">CTO, Horizon Enterprises</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "The collaboration features transformed how our remote team works.
+          Real-time updates, shared workspaces, and zero friction. Game
+          changer."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">LM</div>
+          <div>
+            <p class="rv16__name">Laura Martinez</p>
+            <p class="rv16__role">Team Lead, Venture Group</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Security was our top concern, and they exceeded every
+          requirement. SOC 2, encryption, audit logs — everything we needed
+          out of the box."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">RC</div>
+          <div>
+            <p class="rv16__name">Ravi Chandra</p>
+            <p class="rv16__role">Security Architect, FinEdge</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card">
+        <div class="rv16__stars" aria-label="4 out of 5 stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="rv16__text">
+          "Pricing is transparent and fair. We started on the free tier and
+          scaled naturally. No surprises, no hidden costs, just value at
+          every level."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">NK</div>
+          <div>
+            <p class="rv16__name">Neha Kulkarni</p>
+            <p class="rv16__role">COO, Orbit Lab</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicated for seamless loop -->
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Migrating from our legacy system was painless. The import tools
+          handled everything and we were live in production the same week."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">DR</div>
+          <div>
+            <p class="rv16__name">Daniel Reyes</p>
+            <p class="rv16__role">CTO, Horizon Enterprises</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "The collaboration features transformed how our remote team works.
+          Real-time updates, shared workspaces, and zero friction. Game
+          changer."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">LM</div>
+          <div>
+            <p class="rv16__name">Laura Martinez</p>
+            <p class="rv16__role">Team Lead, Venture Group</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rv16__text">
+          "Security was our top concern, and they exceeded every
+          requirement. SOC 2, encryption, audit logs — everything we needed
+          out of the box."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">RC</div>
+          <div>
+            <p class="rv16__name">Ravi Chandra</p>
+            <p class="rv16__role">Security Architect, FinEdge</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rv16__card" aria-hidden="true">
+        <div class="rv16__stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <p class="rv16__text">
+          "Pricing is transparent and fair. We started on the free tier and
+          scaled naturally. No surprises, no hidden costs, just value at
+          every level."
+        </p>
+        <div class="rv16__author">
+          <div class="rv16__avatar">NK</div>
+          <div>
+            <p class="rv16__name">Neha Kulkarni</p>
+            <p class="rv16__role">COO, Orbit Lab</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===========================
+     Reviews 16 — Infinite Marquee
+     Two auto-scrolling rows in opposite directions,
+     glass cards, animated SVG background
+     =========================== */
+
+  .rv16 {
+    position: relative;
+    padding: clamp(56px, 6vw, 100px) 0;
+    overflow: hidden;
+    color: var(--textColor1);
+    background: var(--bodyBG);
+  }
+
+  /* SVG decorative background */
+  .rv16__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Floating glow blobs */
+  .rv16__glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(120px);
+    will-change: transform;
+  }
+
+  .rv16__glow--1 {
+    width: 420px;
+    height: 420px;
+    background: var(--secondStyleColor);
+    opacity: 0.06;
+    top: -80px;
+    left: -60px;
+    animation: rv16-drift1 26s ease-in-out infinite;
+  }
+
+  .rv16__glow--2 {
+    width: 360px;
+    height: 360px;
+    background: var(--secondStyleColor);
+    opacity: 0.05;
+    bottom: -60px;
+    right: -80px;
+    animation: rv16-drift2 30s ease-in-out infinite;
+  }
+
+  @keyframes rv16-drift1 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(60px, 50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-30px, -40px) scale(0.95);
+    }
+  }
+
+  @keyframes rv16-drift2 {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(-50px, -30px) scale(1.08);
+    }
+    66% {
+      transform: translate(40px, 60px) scale(0.93);
+    }
+  }
+
+  /* Header */
+  .rv16__head {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 48px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rv16__eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--secondStyleColor);
+  }
+
+  .rv16__title {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+  }
+
+  .rv16__sub {
+    margin: 0;
+    color: var(--textColor1);
+    line-height: 1.55;
+  }
+
+  /* Marquee container */
+  .rv16__marquee {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 8%,
+      #000 92%,
+      transparent 100%
+    );
+  }
+
+  .rv16__marquee + .rv16__marquee {
+    margin-top: 20px;
+  }
+
+  /* Track */
+  .rv16__track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .rv16__track--left {
+    animation: rv16-scroll-left 45s linear infinite;
+  }
+
+  .rv16__track--right {
+    animation: rv16-scroll-right 45s linear infinite;
+  }
+
+  .rv16__marquee:hover .rv16__track {
+    animation-play-state: paused;
+  }
+
+  @keyframes rv16-scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 10px));
+    }
+  }
+
+  @keyframes rv16-scroll-right {
+    0% {
+      transform: translateX(calc(-50% - 10px));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Card */
+  .rv16__card {
+    flex-shrink: 0;
+    width: 360px;
+    padding: 26px 24px 24px;
+    border-radius: var(--borderRadius);
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--secondStyleColor) 5%, transparent) 0%,
+      color-mix(in srgb, var(--bodyBG) 82%, transparent) 40%,
+      color-mix(in srgb, var(--secondStyleColor) 3%, transparent) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition:
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      transform 0.35s ease;
+  }
+
+  .rv16__card:hover {
+    border-color: color-mix(in srgb, var(--secondStyleColor) 45%, transparent);
+    box-shadow:
+      0 8px 32px color-mix(in srgb, var(--secondStyleColor) 12%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--secondStyleColor) 6%, transparent);
+    transform: translateY(-4px);
+  }
+
+  /* Stars */
+  .rv16__stars {
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+    color: var(--secondStyleColor);
+  }
+
+  /* Text */
+  .rv16__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--textColor1);
+    opacity: 0.85;
+    flex: 1;
+  }
+
+  /* Author row */
+  .rv16__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .rv16__avatar {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--secondStyleColor) 14%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--secondStyleColor);
+  }
+
+  .rv16__name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .rv16__role {
+    margin: 0;
+    font-size: 12px;
+    color: var(--textColor1);
+    opacity: 0.6;
+    line-height: 1.4;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .rv16__track {
+      animation: none !important;
+    }
+    .rv16__bg * {
+      animation: none !important;
+    }
+    .rv16__glow {
+      animation: none !important;
+    }
+  }
+
+  /* Responsive — tablets */
+  @media (max-width: 950px) {
+    .rv16__card {
+      width: 320px;
+      padding: 22px 20px 20px;
+    }
+    .rv16__track--left {
+      animation-duration: 38s;
+    }
+    .rv16__track--right {
+      animation-duration: 38s;
+    }
+  }
+
+  /* Responsive — small tablets */
+  @media (max-width: 800px) {
+    .rv16__card {
+      width: 300px;
+    }
+  }
+
+  /* Responsive — mobile */
+  @media (max-width: 600px) {
+    .rv16__card {
+      width: 280px;
+      padding: 20px 18px 18px;
+    }
+    .rv16__track--left {
+      animation-duration: 30s;
+    }
+    .rv16__track--right {
+      animation-duration: 30s;
+    }
+    .rv16__marquee + .rv16__marquee {
+      margin-top: 14px;
+    }
+  }
+</style>
