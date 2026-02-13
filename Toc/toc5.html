@@ -1,0 +1,142 @@
+<section class="toc wrapper">
+  <div class="container">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="swiper toc-swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --scrollbarBg: rgba(255, 255, 255, 0.1);
+    --itemBgColor: transparent;
+  }
+
+  .swiper {
+    padding-bottom: 10px !important;
+  }
+
+  .toc .swiper-slide {
+    width: fit-content;
+  }
+
+  .toc h2 {
+    margin: 0 !important;
+    text-align: center;
+    color: var(--textColor1);
+  }
+
+  .toc {
+    background-color: transparent;
+  }
+
+  .toc a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: nowrap;
+    color: var(--textColor1);
+    padding: 10px 24px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: var(--itemBgColor);
+    border: 1.5px solid color-mix(in srgb, var(--textColor1) 12%, transparent);
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s ease, border-color 0.35s ease;
+    -webkit-transition: color 0.35s ease, border-color 0.35s ease;
+    -moz-transition: color 0.35s ease, border-color 0.35s ease;
+    -ms-transition: color 0.35s ease, border-color 0.35s ease;
+    -o-transition: color 0.35s ease, border-color 0.35s ease;
+  }
+
+  .toc a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--secondStyleColor);
+    border-radius: inherit;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    -ms-transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .toc a:hover::before,
+  .toc a:focus::before {
+    transform: scaleX(1);
+  }
+
+  .toc a:hover,
+  .toc a:focus {
+    color: var(--textColor2);
+    border-color: var(--secondStyleColor);
+  }
+
+  .toc .swiper-wrapper {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .toc-swiper .swiper-scrollbar {
+    background: var(--scrollbarBg);
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .toc-swiper .swiper-scrollbar-drag {
+    background: var(--secondStyleColor);
+    border-radius: 2px;
+    width: 20%;
+  }
+
+  .toc.wrapper {
+    margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .toc-swiper {
+    max-width: calc(var(--maxWidthContainer) - 40px);
+  }
+
+  .swiper-horizontal > .swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  @media screen and (max-width: 750px) {
+    .toc.wrapper {
+      margin-left: auto;
+    }
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toc a,
+    .toc a::before {
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+    }
+  }
+</style>
