@@ -1,0 +1,475 @@
+<section class="gl12">
+  <!-- Decorative background glow -->
+  <div class="gl12__glow gl12__glow--a" aria-hidden="true"></div>
+  <div class="gl12__glow gl12__glow--b" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="gl12__head">
+      <span class="gl12__kicker">
+        <i class="fa-solid fa-images"></i> Showcase
+      </span>
+      <h2>Our Gallery</h2>
+      <p>Explore a curated collection of our finest work, crafted with precision and passion.</p>
+    </div>
+
+    <div class="gl12__grid">
+      <!-- Item 1 — tall -->
+      <article class="gl12__item gl12__item--tall">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Featured</span>
+          <h3>Project Alpha</h3>
+          <p>Creative direction & visual identity</p>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="gl12__item">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Design</span>
+          <h3>Brand System</h3>
+          <p>UI kit & component library</p>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="gl12__item">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Development</span>
+          <h3>Dashboard App</h3>
+          <p>Real-time analytics platform</p>
+        </div>
+      </article>
+
+      <!-- Item 4 — wide -->
+      <article class="gl12__item gl12__item--wide">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Photography</span>
+          <h3>Aerial Series</h3>
+          <p>Drone photography & cinematography</p>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="gl12__item">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Branding</span>
+          <h3>Identity Refresh</h3>
+          <p>Logo & brand guideline overhaul</p>
+        </div>
+      </article>
+
+      <!-- Item 6 — tall -->
+      <article class="gl12__item gl12__item--tall">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Motion</span>
+          <h3>Kinetic Type</h3>
+          <p>Animated typography & transitions</p>
+        </div>
+      </article>
+
+      <!-- Item 7 -->
+      <article class="gl12__item">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">Web</span>
+          <h3>E-Commerce</h3>
+          <p>Full-stack storefront build</p>
+        </div>
+      </article>
+
+      <!-- Item 8 -->
+      <article class="gl12__item">
+        <div class="gl12__border" aria-hidden="true"></div>
+        <div class="gl12__img-wrap">
+          <img data-image loading="lazy" alt="Gallery image" />
+        </div>
+        <div class="gl12__overlay">
+          <span class="gl12__tag">3D</span>
+          <h3>Product Render</h3>
+          <p>Photorealistic visualization</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Section ── */
+  .gl12 {
+    position: relative;
+    overflow: hidden;
+    background: var(--bodyBG);
+    padding: 100px 20px;
+  }
+
+  /* ── Background Glows ── */
+  .gl12__glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(120px);
+    opacity: 0.12;
+    will-change: transform;
+  }
+
+  .gl12__glow--a {
+    width: 500px;
+    height: 500px;
+    background: var(--secondStyleColor);
+    top: -120px;
+    left: -100px;
+    animation: gl12-float-a 16s ease-in-out infinite;
+  }
+
+  .gl12__glow--b {
+    width: 400px;
+    height: 400px;
+    background: var(--secondStyleColor);
+    bottom: -80px;
+    right: -60px;
+    animation: gl12-float-b 20s ease-in-out infinite;
+  }
+
+  @keyframes gl12-float-a {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(60px, 40px); }
+  }
+
+  @keyframes gl12-float-b {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-50px, -30px); }
+  }
+
+  /* ── Container ── */
+  .gl12 .container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+  }
+
+  /* ── Header ── */
+  .gl12__head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .gl12__kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--secondStyleColor);
+    background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .gl12__kicker i {
+    font-size: 11px;
+  }
+
+  .gl12__head h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    color: var(--textColor1);
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .gl12__head p {
+    font-size: clamp(14px, 1.4vw, 17px);
+    color: color-mix(in srgb, var(--textColor1) 55%, transparent);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── Grid ── */
+  .gl12__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 16px;
+  }
+
+  .gl12__item--tall {
+    grid-row: span 2;
+  }
+
+  .gl12__item--wide {
+    grid-column: span 2;
+  }
+
+  /* ── Item ── */
+  .gl12__item {
+    position: relative;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  /* ── Animated Border ── */
+  .gl12__border {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 3;
+    pointer-events: none;
+    padding: 1.5px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    background: conic-gradient(
+      from var(--gl12-border-angle, 0deg),
+      transparent 0%,
+      transparent 25%,
+      var(--secondStyleColor) 50%,
+      transparent 75%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: gl12-spin 4s linear infinite;
+  }
+
+  .gl12__item:hover .gl12__border {
+    opacity: 1;
+  }
+
+  @keyframes gl12-spin {
+    to {
+      --gl12-border-angle: 360deg;
+    }
+  }
+
+  @property --gl12-border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  /* ── Image ── */
+  .gl12__img-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .gl12__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .gl12__item:hover .gl12__img-wrap img {
+    transform: scale(1.08);
+  }
+
+  /* ── Overlay ── */
+  .gl12__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--bodyBG) 85%, transparent) 0%,
+      color-mix(in srgb, var(--bodyBG) 40%, transparent) 40%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .gl12__item:hover .gl12__overlay {
+    opacity: 1;
+  }
+
+  .gl12__tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--textColor2);
+    background: var(--secondStyleColor);
+    border-radius: 100px;
+    margin-bottom: 12px;
+    transform: translateY(10px);
+    transition: transform 0.4s 0.05s ease;
+  }
+
+  .gl12__item:hover .gl12__tag {
+    transform: translateY(0);
+  }
+
+  .gl12__overlay h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--textColor1);
+    margin: 0 0 4px;
+    transform: translateY(10px);
+    transition: transform 0.4s 0.1s ease;
+  }
+
+  .gl12__item:hover .gl12__overlay h3 {
+    transform: translateY(0);
+  }
+
+  .gl12__overlay p {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+    margin: 0;
+    transform: translateY(10px);
+    transition: transform 0.4s 0.15s ease;
+  }
+
+  .gl12__item:hover .gl12__overlay p {
+    transform: translateY(0);
+  }
+
+  /* ── Static border fallback ── */
+  .gl12__item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid color-mix(in srgb, var(--textColor1) 10%, transparent);
+    z-index: 4;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .gl12__item:hover::after {
+    border-color: transparent;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 950px) {
+    .gl12 {
+      padding: 80px 20px;
+    }
+
+    .gl12__grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 200px;
+    }
+
+    .gl12__item--wide {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .gl12__grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 200px;
+      gap: 12px;
+    }
+
+    .gl12__item--tall {
+      grid-row: span 2;
+    }
+
+    .gl12__item--wide {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gl12 {
+      padding: 64px 16px;
+    }
+
+    .gl12__grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 220px;
+    }
+
+    .gl12__item--tall,
+    .gl12__item--wide {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+
+    .gl12__overlay {
+      opacity: 1;
+    }
+
+    .gl12__tag,
+    .gl12__overlay h3,
+    .gl12__overlay p {
+      transform: translateY(0);
+    }
+
+    .gl12__head {
+      margin-bottom: 40px;
+    }
+
+    .gl12__glow {
+      display: none;
+    }
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .gl12__border {
+      animation: none;
+    }
+
+    .gl12__glow {
+      animation: none;
+    }
+
+    .gl12__img-wrap img {
+      transition: none;
+    }
+
+    .gl12__overlay,
+    .gl12__tag,
+    .gl12__overlay h3,
+    .gl12__overlay p {
+      transition: none;
+    }
+  }
+</style>
