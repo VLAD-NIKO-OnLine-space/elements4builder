@@ -1,0 +1,176 @@
+<section class="toc wrapper">
+  <div class="container">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="swiper toc-swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --scrollbarBg: rgba(255, 255, 255, 0.1);
+    --itemBgColor: transparent;
+  }
+
+  .swiper {
+    padding-bottom: 10px !important;
+  }
+
+  .toc .swiper-slide {
+    width: fit-content;
+  }
+
+  .toc h2 {
+    margin: 0 !important;
+    text-align: center;
+    color: var(--textColor1);
+  }
+
+  .toc {
+    background-color: transparent;
+  }
+
+  .toc a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: nowrap;
+    color: var(--textColor1);
+    padding: 10px 24px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background: color-mix(in srgb, var(--textColor1) 6%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--textColor1) 10%, transparent);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .toc a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: var(--secondStyleColor);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+  }
+
+  .toc a:hover::before,
+  .toc a:focus::before {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .toc a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      color-mix(in srgb, var(--secondStyleColor) 25%, transparent),
+      transparent 70%
+    );
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .toc a:hover::after,
+  .toc a:focus::after {
+    opacity: 1;
+  }
+
+  .toc a:hover,
+  .toc a:focus {
+    color: var(--textColor1);
+    background: color-mix(in srgb, var(--secondStyleColor) 12%, transparent);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 30%, transparent);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .toc .swiper-wrapper {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .toc-swiper .swiper-scrollbar {
+    background: var(--scrollbarBg);
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .toc-swiper .swiper-scrollbar-drag {
+    background: var(--secondStyleColor);
+    border-radius: 2px;
+    width: 20%;
+  }
+
+  .toc.wrapper {
+    margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .toc-swiper {
+    max-width: calc(var(--maxWidthContainer) - 40px);
+  }
+
+  .swiper-horizontal > .swiper-scrollbar,
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  @media screen and (max-width: 750px) {
+    .toc.wrapper {
+      margin-left: auto;
+    }
+    .swiper-horizontal > .swiper-scrollbar,
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toc a,
+    .toc a::before,
+    .toc a::after {
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+    }
+
+    .toc a:hover {
+      transform: none;
+    }
+  }
+</style>
