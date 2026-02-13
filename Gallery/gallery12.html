@@ -9,7 +9,10 @@
         <i class="fa-solid fa-images"></i> Showcase
       </span>
       <h2>Our Gallery</h2>
-      <p>Explore a curated collection of our finest work, crafted with precision and passion.</p>
+      <p>
+        Explore a curated collection of our finest work, crafted with precision
+        and passion.
+      </p>
     </div>
 
     <div class="gl12__grid">
@@ -158,13 +161,23 @@
   }
 
   @keyframes gl12-float-a {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(60px, 40px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(60px, 40px);
+    }
   }
 
   @keyframes gl12-float-b {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-50px, -30px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-50px, -30px);
+    }
   }
 
   /* ── Container ── */
@@ -191,7 +204,8 @@
     letter-spacing: 0.04em;
     color: var(--secondStyleColor);
     background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
     border-radius: 100px;
     margin-bottom: 20px;
   }
@@ -213,7 +227,6 @@
     font-size: clamp(14px, 1.4vw, 17px);
     color: color-mix(in srgb, var(--textColor1) 55%, transparent);
     line-height: 1.7;
-    max-width: 480px;
     margin: 0 auto;
   }
 
@@ -249,8 +262,12 @@
     z-index: 3;
     pointer-events: none;
     padding: 1.5px;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     background: conic-gradient(
