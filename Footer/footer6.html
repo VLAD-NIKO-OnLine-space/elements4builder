@@ -1,0 +1,290 @@
+<footer class="ft6">
+  <!-- Decorative top glow -->
+  <div class="ft6__glow" aria-hidden="true"></div>
+
+  <div class="container">
+    <!-- Logo -->
+    <a class="logo ft6__logo" data-href="site_domain">
+      <span class="logo-text" data-var="domain_name"></span>
+    </a>
+
+    <!-- Description -->
+    <p class="ft6__desc">
+      Building the future of digital experiences with modern tools, seamless
+      workflows, and enterprise reliability.
+    </p>
+
+    <!-- Social -->
+    <div class="ft6__social">
+      <a data-social="x" href="#" aria-label="X" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a data-social="instagram" href="#" aria-label="Instagram" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a data-social="youtube" href="#" aria-label="YouTube" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Divider -->
+    <div class="ft6__divider" aria-hidden="true">
+      <span class="ft6__diamond"></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="ft6__nav">
+      <a data-footer-link="about" href="#">About</a>
+      <a data-footer-link="terms" href="#">Terms</a>
+      <a data-footer-link="privacy" href="#">Privacy</a>
+    </nav>
+
+    <!-- Bottom -->
+    <div class="ft6__bottom">
+      <p class="ft6__copy">
+        &copy; 2026 <span data-var="site_domain_plain"></span>.
+        <span data-footer-label="rights_reserved"></span>
+      </p>
+      <p class="ft6__email"><span data-footer-email></span></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ft6 {
+    position: relative;
+    padding: 56px 20px 24px;
+    color: var(--textColor1);
+    overflow: hidden;
+  }
+
+  /* ── Top Glow ── */
+  .ft6__glow {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--secondStyleColor);
+    filter: blur(120px);
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  /* ── Container ── */
+  .ft6 .container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ── Logo ── */
+  .ft6__logo {
+    color: var(--textColor1);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    transition: color 0.2s ease;
+  }
+
+  .ft6__logo:hover {
+    color: var(--secondStyleColor);
+  }
+
+  /* ── Description ── */
+  .ft6__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--textColor1) 50%, transparent);
+    max-width: 400px;
+    margin: 0 0 28px;
+  }
+
+  /* ── Social ── */
+  .ft6__social {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .ft6__social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--textColor1) 7%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--textColor1) 10%, transparent);
+    color: color-mix(in srgb, var(--textColor1) 70%, transparent);
+    text-decoration: none;
+    font-size: 16px;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .ft6__social a:hover {
+    background: color-mix(in srgb, var(--secondStyleColor) 15%, transparent);
+    border-color: color-mix(in srgb, var(--secondStyleColor) 35%, transparent);
+    color: var(--secondStyleColor);
+    transform: translateY(-3px);
+  }
+
+  /* ── Divider ── */
+  .ft6__divider {
+    width: 100%;
+    max-width: 300px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--textColor1) 15%, transparent) 30%,
+      color-mix(in srgb, var(--secondStyleColor) 40%, transparent) 50%,
+      color-mix(in srgb, var(--textColor1) 15%, transparent) 70%,
+      transparent
+    );
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .ft6__diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    background: var(--secondStyleColor);
+    border-radius: 1px;
+  }
+
+  /* ── Navigation ── */
+  .ft6__nav {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+
+  .ft6__nav a {
+    position: relative;
+    color: color-mix(in srgb, var(--textColor1) 60%, transparent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  .ft6__nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: var(--secondStyleColor);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+
+  .ft6__nav a:hover {
+    color: var(--textColor1);
+  }
+
+  .ft6__nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* ── Bottom ── */
+  .ft6__bottom {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .ft6__copy {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 40%, transparent);
+    margin: 0;
+  }
+
+  .ft6__email {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--textColor1) 40%, transparent);
+    margin: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 950px) {
+    .ft6 {
+      padding: 48px 20px 20px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ft6__nav {
+      gap: 20px;
+    }
+
+    .ft6__bottom {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ft6 {
+      padding: 40px 16px 20px;
+    }
+
+    .ft6__desc {
+      font-size: 13px;
+    }
+
+    .ft6__nav {
+      gap: 16px;
+    }
+
+    .ft6__nav a {
+      font-size: 12px;
+    }
+
+    .ft6__social a {
+      width: 36px;
+      height: 36px;
+      font-size: 14px;
+    }
+
+    .ft6__glow {
+      width: 300px;
+      opacity: 0.06;
+    }
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .ft6__social a,
+    .ft6__nav a,
+    .ft6__nav a::after,
+    .ft6__logo {
+      transition: none;
+    }
+  }
+</style>
