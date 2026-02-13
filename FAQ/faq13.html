@@ -30,8 +30,8 @@
             <p>
               Getting started typically takes 10–20 minutes: sign up, run
               through the basic setup, and you're ready to go. We designed the
-              onboarding flow to be as frictionless as possible so your team
-              can hit the ground running from day one.
+              onboarding flow to be as frictionless as possible so your team can
+              hit the ground running from day one.
             </p>
           </div>
         </div>
@@ -60,7 +60,9 @@
       <article class="faq13__item" role="listitem">
         <button class="faq13__trigger" type="button" aria-expanded="false">
           <span class="faq13__num">03</span>
-          <h3 class="faq13__question">Can we customize it to match our brand?</h3>
+          <h3 class="faq13__question">
+            Can we customize it to match our brand?
+          </h3>
           <span class="faq13__icon" aria-hidden="true"></span>
         </button>
         <div class="faq13__body">
@@ -103,9 +105,9 @@
         <div class="faq13__body">
           <div class="faq13__answer">
             <p>
-              Pricing depends on your team size and feature set. Start small
-              and upgrade as you grow — no hidden fees. Need a custom plan? We
-              can tailor it to your specific workflow and requirements.
+              Pricing depends on your team size and feature set. Start small and
+              upgrade as you grow — no hidden fees. Need a custom plan? We can
+              tailor it to your specific workflow and requirements.
             </p>
           </div>
         </div>
@@ -194,7 +196,8 @@
     letter-spacing: 0.04em;
     color: var(--secondStyleColor);
     background: color-mix(in srgb, var(--secondStyleColor) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
+    border: 1px solid
+      color-mix(in srgb, var(--secondStyleColor) 20%, transparent);
     border-radius: 100px;
     margin-bottom: 20px;
   }
@@ -216,7 +219,6 @@
     font-size: clamp(14px, 1.4vw, 16px);
     color: color-mix(in srgb, var(--textColor1) 55%, transparent);
     line-height: 1.7;
-    max-width: 500px;
     margin: 0 auto;
   }
 
@@ -244,7 +246,8 @@
 
   .faq13__item--open {
     border-color: color-mix(in srgb, var(--secondStyleColor) 25%, transparent);
-    box-shadow: 0 8px 32px color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
+    box-shadow: 0 8px 32px
+      color-mix(in srgb, var(--secondStyleColor) 8%, transparent);
   }
 
   /* ── Trigger Button ── */
@@ -473,15 +476,19 @@
     }
 
     // Recalculate on resize
-    window.addEventListener("resize", () => {
-      items.forEach((item) => {
-        if (item.classList.contains("faq13__item--open")) {
-          const body = item.querySelector(".faq13__body");
-          const answer = body.querySelector(".faq13__answer");
-          body.style.height = answer.offsetHeight + "px";
-        }
-      });
-    }, { passive: true });
+    window.addEventListener(
+      "resize",
+      () => {
+        items.forEach((item) => {
+          if (item.classList.contains("faq13__item--open")) {
+            const body = item.querySelector(".faq13__body");
+            const answer = body.querySelector(".faq13__answer");
+            body.style.height = answer.offsetHeight + "px";
+          }
+        });
+      },
+      { passive: true },
+    );
 
     // Recalculate after fonts load
     if (document.fonts && document.fonts.ready) {
